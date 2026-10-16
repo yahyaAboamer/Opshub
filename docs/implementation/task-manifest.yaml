@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "f81611546093c42febf3d81e22bde681e9ec352e11e881c1b61bce24ec09844b",
+  "plan_digest": "9d8921c45320c4cbfc260e5c34a674bdffa43f2f6a5037e50eacbfef0e680599",
   "topological_order": [
     "T0001",
     "T0002",
@@ -660,7 +660,7 @@
       "id": "T0003",
       "milestone": "M0",
       "title": "Qualify PostgreSQL Kysely and explicit migration tooling",
-      "status": "NOT_STARTED",
+      "status": "IN_PROGRESS",
       "type": "QUALIFICATION",
       "risk": "HIGH",
       "complexity": "M",
@@ -839,11 +839,16 @@
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
       "readiness_after_local_approval": "READY",
       "execution_claim": {
-        "owner": null,
-        "branch": null,
-        "worktree": null,
-        "base_main_revision": null,
-        "locks": []
+        "owner": "Claude Code (integration owner: repository owner)",
+        "branch": "claude/t0003-implementation-9f6b77",
+        "worktree": ".claude/worktrees/t0003-implementation-9f6b77",
+        "base_main_revision": "c5560f94de7c135080f08629af52e332e0c4c352",
+        "locks": [
+          "boundary:database",
+          "database-migration-order",
+          "database-grant-catalog",
+          "root-contracts"
+        ]
       }
     },
     {
