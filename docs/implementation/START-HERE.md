@@ -8,7 +8,7 @@ The manifest is the authority for task identity, dependencies, execution status,
 
 Baseline: [298 protected files](../../evidence/implementation/phase6-input-baseline.json), SHA-256 inventory, **captured before any Git repository existed**; the owner has since committed a baseline to Git (see [execution-state](execution-state.md)). Current plan digest is the manifest's plan_digest, verified over canonical sorted JSON excluding that field. Static check command is `python evidence/implementation/verify_plan.py` from the workspace root. Do not recapture the protected baseline to hide drift.
 
-Current state (the manifest is authoritative): **T0001 ACCEPTED** (2026-10-16); in-progress claims: none; **T0002** and **T0003** are READY and start only when a human explicitly selects one. Then use the manifest's first_runway and accepted-dependency/gate checks. Not all launch policies need answering before local coding.
+Current state (the manifest is authoritative): **T0001 ACCEPTED** (2026-10-16); **T0002 IN_REVIEW** (claim holds `boundary:toolchain`, `root-contracts`); **T0003** is READY and starts only when a human explicitly selects it and `root-contracts` is free or separately allocated. Then use the manifest's first_runway and accepted-dependency/gate checks. Not all launch policies need answering before local coding.
 
 One Task ID, one claiming owner and isolated branch/worktree; integration owner serializes manifest and lock changes. T0001 creates Git only if still absent. Thereafter accepted integration baseline is main; no commit is invented now. Two agents never share a Task ID or overlapping edit/lock boundary. Update/revalidate parallel branches after relevant merges.
 

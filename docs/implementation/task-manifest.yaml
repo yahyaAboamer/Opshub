@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "33ab57fed056a90d38974d6559e569eccc2be89e5940cd1a0eefa8f60c9f427b",
+  "plan_digest": "c7cc8b7165b71f33375311379995658ecb2bf65b0a3ba9459eac48d16d5de5a7",
   "topological_order": [
     "T0001",
     "T0002",
@@ -524,7 +524,7 @@
       "id": "T0002",
       "milestone": "M0",
       "title": "Qualify Nest React Vite and Vitest toolchain",
-      "status": "IN_PROGRESS",
+      "status": "IN_REVIEW",
       "type": "QUALIFICATION",
       "risk": "MEDIUM",
       "complexity": "M",
@@ -628,7 +628,12 @@
         }
       ],
       "acceptance_summary": "In an isolated local compatibility package pin supported Node24, Nest Express, TypeScript decorator transformation, React/Vite and Vitest; publish reproducible versions and a minimal DI/controller and client test contract.",
-      "completion_evidence_refs": [],
+      "completion_evidence_refs": [
+        "docs/implementation/completion/T0002.md",
+        "docs/contracts/C-T0002-v1.md",
+        "tests/tasks/T0002/toolchain-qualification.test.mjs",
+        "packages/toolchain-qualification/package-lock.json"
+      ],
       "goal": "Qualify Nest React Vite and Vitest toolchain",
       "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
       "scope": "In an isolated local compatibility package pin supported Node24, Nest Express, TypeScript decorator transformation, React/Vite and Vitest; publish reproducible versions and a minimal DI/controller and client test contract.",
