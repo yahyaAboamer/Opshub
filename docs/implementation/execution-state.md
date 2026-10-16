@@ -2,11 +2,13 @@
 
 Plan: **P6-r2**. Manifest [task-manifest.yaml](task-manifest.yaml) is authoritative; this handoff does not maintain a second status list. Current plan digest is in that manifest and [task-order.json](task-order.json); the verifier checks agreement.
 
-Baseline: evidence/implementation/phase6-input-baseline.json; 298 protected inputs, no Git repository, no commit. Owner scope: Phases1–5 approved/closed; Phase6 planning only. Do not execute generated prompts during Phase6.
+Baseline: evidence/implementation/phase6-input-baseline.json; 298 protected inputs, captured before any Git repository existed. Owner scope: Phases1–6 approved/closed; G-P6 SATISFIED 2026-10-16 for LOCAL implementation of explicitly selected Task IDs only ([approval record](../../evidence/implementation/phase6-owner-approval.json)). No other gate is satisfied.
 
-Accepted tasks: none. In-progress claims: none. Actual completion evidence: none. All unexecuted tasks NOT_STARTED; G-P6 makes current readiness WAITING_AUTHORIZATION. Later independent/release gates remain unresolved at their scoped boundaries.
+Accepted tasks: none. In-progress claims: none. Actual completion evidence: none. All tasks NOT_STARTED. Readiness: T0001 READY; every other task WAITING_DEPENDENCIES. Later independent/release gates remain unresolved at their scoped boundaries.
 
-Exact next candidate after explicit local implementation approval: **T0001**. Next conservative runway: T0002, T0003, T0004, T0005, T0006, T0007, T0008, T0009, T0101, T0102. Each waits its exact accepted contracts; no task starts based only on this list.
+Observed at approval (2026-10-16), for T0001 to inspect: a Git repository now exists. Commit a18ce19 on `main` was made by the owner and is mirrored at `origin`. It tracks `source/` and the protected inputs. With `core.autocrlf=true`, Git stored 119 originally CRLF or mixed-EOL protected files as LF, so a Git checkout does not reproduce the baseline bytes. The on-disk originals in the primary workspace still match all 298 baseline digests. T0001 owns the resolution (trackable allowlist, private custody, line-ending policy). This handoff did not change it.
+
+Exact next eligible task: **T0001** (requires explicit human selection). Next conservative runway: T0002, T0003, T0004, T0005, T0006, T0007, T0008, T0009, T0101, T0102. Each waits its exact accepted contracts; no task starts based only on this list.
 
 Resume:
 1. Inspect current AGENTS.md, START-HERE and canonical manifest; run the planning verifier and inspect existing user work.
@@ -16,4 +18,4 @@ Resume:
 5. Independent review/integration owner accepts or records exact blocker, merges in dependency order, updates canonical status/readiness/digest and refreshes derived views. Keep unrelated work intact.
 6. Record the exact next eligible IDs and evidence links here at each real handoff. Do not mark operational tasks accepted based on local coding.
 
-Planning evidence: [baseline](../../evidence/implementation/phase6-input-baseline.json), [independent source inventory](../../evidence/implementation/source-inventory.json), [verification](../../evidence/implementation/verification.json), [review and walkthrough](../../evidence/implementation/quality-review.md), [input issues](../../evidence/implementation/input-issues.md). The proposed AGENTS phase-status amendment is separate and unadopted.
+Planning evidence: [baseline](../../evidence/implementation/phase6-input-baseline.json), [independent source inventory](../../evidence/implementation/source-inventory.json), [verification](../../evidence/implementation/verification.json), [review and walkthrough](../../evidence/implementation/quality-review.md), [input issues](../../evidence/implementation/input-issues.md). The AGENTS phase-status amendment proposed in evidence/implementation/proposed-agents-update.md was adopted on 2026-10-16 as a recorded protected amendment; root CLAUDE.md adds the Claude Code overlay.

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "plan_revision": "P6-r2",
-  "plan_status": "DRAFT_FOR_OWNER_REVIEW",
-  "approval_status": "PHASE6_NOT_APPROVED_IMPLEMENTATION_NOT_AUTHORIZED",
+  "plan_status": "OWNER_APPROVED",
+  "approval_status": "PHASE6_APPROVED_LOCAL_TASK_IMPLEMENTATION_AUTHORIZED",
   "date": "2026-10-15",
   "input_baseline": {
     "path": "evidence/implementation/phase6-input-baseline.json",
@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "e33f0c023cce4bbb9edac3c1b53e1c542b6e00ae3ac585f04d401584d019abf9",
+  "plan_digest": "c036600becba5662ba9f4d752ed8bf67a3986ce27e41d653aa9979cddacc2d64",
   "topological_order": [
     "T0001",
     "T0002",
@@ -398,20 +398,14 @@
       "risk": "LOW",
       "complexity": "S",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
-      "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        }
-      ],
+      "readiness": "READY",
+      "blockers": [],
       "dependencies": [],
       "decision_gates": [
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -530,13 +524,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0001",
@@ -550,7 +539,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -672,13 +661,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0001",
@@ -692,7 +676,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -873,13 +857,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0002",
@@ -904,7 +883,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -1096,13 +1075,8 @@
       "risk": "MEDIUM",
       "complexity": "S",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0004",
@@ -1116,7 +1090,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -1273,13 +1247,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0002",
@@ -1298,7 +1267,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -1489,13 +1458,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0003",
@@ -1520,7 +1484,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -1699,13 +1663,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0003",
@@ -1730,7 +1689,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -1928,13 +1887,8 @@
       "risk": "MEDIUM",
       "complexity": "S",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0004",
@@ -1960,7 +1914,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -2121,13 +2075,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0005",
@@ -2330,13 +2279,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0003",
@@ -2361,7 +2305,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -2539,13 +2483,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0101",
@@ -2559,7 +2498,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -2747,13 +2686,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0102",
@@ -2773,7 +2707,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -2977,13 +2911,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0101",
@@ -3009,7 +2938,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -3200,13 +3129,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0102",
@@ -3232,7 +3156,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -3463,13 +3387,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0103",
@@ -3489,7 +3408,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -3693,13 +3612,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0104",
@@ -3736,7 +3650,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -3931,13 +3845,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0104",
@@ -3975,7 +3884,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -4179,13 +4088,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0108",
@@ -4199,7 +4103,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -4403,13 +4307,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0107",
@@ -4429,7 +4328,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -4637,13 +4536,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0107",
@@ -4823,13 +4717,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0109",
@@ -4843,7 +4732,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -5089,13 +4978,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0201",
@@ -5115,7 +4999,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -5338,13 +5222,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0202",
@@ -5364,7 +5243,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -5564,13 +5443,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0203",
@@ -5595,7 +5469,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -5789,13 +5663,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0202",
@@ -5821,7 +5690,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -6014,13 +5883,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0204",
@@ -6046,7 +5910,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -6286,13 +6150,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0006",
@@ -6312,7 +6171,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -6521,13 +6380,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0202",
@@ -6564,7 +6418,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -6871,13 +6725,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0201",
@@ -6914,7 +6763,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -7153,13 +7002,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0008",
@@ -7385,13 +7229,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0201",
@@ -7417,7 +7256,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -7623,13 +7462,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0301",
@@ -7660,7 +7494,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -7936,13 +7770,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0302",
@@ -7962,7 +7791,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -8179,13 +8008,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0303",
@@ -8199,7 +8023,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -8387,13 +8211,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0303",
@@ -8413,7 +8232,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -8578,13 +8397,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0303",
@@ -8616,7 +8430,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -8819,13 +8633,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0301",
@@ -8857,7 +8666,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -9117,13 +8926,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0305",
@@ -9160,7 +8964,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
@@ -9403,13 +9207,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0301",
@@ -9682,13 +9481,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0302",
@@ -9708,7 +9502,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -9924,13 +9718,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0401",
@@ -9950,7 +9739,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -10137,13 +9926,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0401",
@@ -10169,7 +9953,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -10324,13 +10108,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0403",
@@ -10350,7 +10129,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -10578,13 +10357,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0404",
@@ -10615,7 +10389,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
@@ -10861,13 +10635,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0301",
@@ -11107,13 +10876,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0303",
@@ -11139,7 +10903,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -11316,13 +11080,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0501",
@@ -11342,7 +11101,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -11525,13 +11284,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0501",
@@ -11551,7 +11305,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -11743,13 +11497,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0503",
@@ -11786,7 +11535,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -12045,13 +11794,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0504",
@@ -12071,7 +11815,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -12289,13 +12033,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0505",
@@ -12321,7 +12060,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -12511,13 +12250,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0506",
@@ -12537,7 +12271,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -12798,13 +12532,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0501",
@@ -12830,7 +12559,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -13040,13 +12769,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0601",
@@ -13071,7 +12795,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -13295,13 +13019,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0602",
@@ -13338,7 +13057,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -13568,13 +13287,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0603",
@@ -13594,7 +13308,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -13825,13 +13539,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0604",
@@ -13856,7 +13565,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -14132,13 +13841,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0602",
@@ -14164,7 +13868,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -14367,13 +14071,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0604",
@@ -14405,7 +14104,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -14588,13 +14287,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0607",
@@ -14614,7 +14308,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -14919,13 +14613,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0608",
@@ -14951,7 +14640,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -15168,13 +14857,8 @@
       "risk": "HIGH",
       "complexity": "S",
       "accountable_role": "OWNER_AND_MERCHANT_ADMIN",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0707",
@@ -15206,7 +14890,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "OWNER_REVIEW"
         }
       ],
@@ -15399,13 +15083,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0608",
@@ -15425,7 +15104,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -15616,13 +15295,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0608",
@@ -15642,7 +15316,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -15843,13 +15517,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0608",
@@ -15869,7 +15538,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -16058,13 +15727,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0608",
@@ -16084,7 +15748,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -16273,13 +15937,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0309",
@@ -16323,7 +15982,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -16520,13 +16179,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0308",
@@ -16573,7 +16227,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
@@ -16803,13 +16457,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0405",
@@ -16856,7 +16505,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
@@ -17149,13 +16798,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0308",
@@ -17208,7 +16852,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
@@ -17496,13 +17140,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0308",
@@ -17549,7 +17188,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
@@ -17792,13 +17431,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0702",
@@ -18006,13 +17640,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0703",
@@ -18234,13 +17863,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0704",
@@ -18450,13 +18074,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0705",
@@ -18670,13 +18289,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0505",
@@ -18696,7 +18310,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -18929,13 +18543,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0505",
@@ -18955,7 +18564,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -19175,13 +18784,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0607",
@@ -19207,7 +18811,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -19411,13 +19015,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0803",
@@ -19455,7 +19054,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -19697,13 +19296,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0801",
@@ -19735,7 +19329,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -19932,13 +19526,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0805",
@@ -19964,7 +19553,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -20166,13 +19755,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0202",
@@ -20215,7 +19799,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -20484,13 +20068,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0901",
@@ -20510,7 +20089,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -20719,13 +20298,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0901",
@@ -20751,7 +20325,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -20954,13 +20528,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0302",
@@ -20986,7 +20555,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -21242,13 +20811,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0901",
@@ -21268,7 +20832,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -21477,13 +21041,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0904",
@@ -21503,7 +21062,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -21721,13 +21280,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0902",
@@ -21759,7 +21313,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -22008,13 +21562,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0906",
@@ -22034,7 +21583,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -22318,13 +21867,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0902",
@@ -22350,7 +21894,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -22510,13 +22054,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0908",
@@ -22542,7 +22081,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -22776,13 +22315,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0909",
@@ -22819,7 +22353,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -23147,13 +22681,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0207",
@@ -23185,7 +22714,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -23437,13 +22966,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0911",
@@ -23475,7 +22999,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -23856,13 +23380,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0904",
@@ -23899,7 +23418,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
@@ -24165,13 +23684,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0301",
@@ -24406,13 +23920,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0108",
@@ -24438,7 +23947,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -24632,13 +24141,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1001",
@@ -24670,7 +24174,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -24913,13 +24417,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0106",
@@ -24945,7 +24444,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -25164,13 +24663,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0307",
@@ -25202,7 +24696,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -25421,13 +24915,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1002",
@@ -25453,7 +24942,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -25633,13 +25122,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0308",
@@ -25676,7 +25160,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
@@ -25897,13 +25381,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0203",
@@ -25935,7 +25414,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -26226,13 +25705,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1102",
@@ -26258,7 +25732,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -26439,13 +25913,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1103",
@@ -26465,7 +25934,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -26844,13 +26313,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1104",
@@ -26876,7 +26340,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -27075,13 +26539,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1105",
@@ -27107,7 +26566,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -27505,13 +26964,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1104",
@@ -27543,7 +26997,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         }
       ],
@@ -27708,13 +27162,8 @@
       "risk": "CRITICAL",
       "complexity": "L",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1101",
@@ -27770,7 +27219,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
@@ -28178,13 +27627,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0004",
@@ -28225,7 +27669,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_STAGING_INFRASTRUCTURE"
         },
         {
@@ -28407,13 +27851,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0008",
@@ -28456,7 +27895,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
@@ -28680,13 +28119,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0107",
@@ -28723,7 +28157,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
@@ -28919,13 +28353,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0009",
@@ -28997,7 +28426,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_STAGING"
         },
         {
@@ -29210,13 +28639,8 @@
       "risk": "CRITICAL",
       "complexity": "L",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0609",
@@ -29270,7 +28694,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
@@ -29920,13 +29344,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0308",
@@ -29969,7 +29388,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
@@ -30203,13 +29622,8 @@
       "risk": "CRITICAL",
       "complexity": "L",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1206",
@@ -30235,7 +29649,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_PRODUCTION_SHADOW"
         },
         {
@@ -30630,13 +30044,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1204",
@@ -30922,13 +30331,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1205",
@@ -31144,13 +30548,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1209",
@@ -31480,13 +30879,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "QUALIFIED_IDENTITY_ENGINEER_WITH_CURRENT_MERCHANT_ADMIN_AND_CONTROLLED_RECIPIENT",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1210",
@@ -31760,13 +31154,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1207",
@@ -31804,7 +31193,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
         },
         {
@@ -32194,13 +31583,8 @@
       "risk": "CRITICAL",
       "complexity": "L",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1301",
@@ -32244,7 +31628,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
         },
         {
@@ -32704,13 +32088,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1207",
@@ -32754,7 +32133,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
         },
         {
@@ -33104,13 +32483,8 @@
       "risk": "CRITICAL",
       "complexity": "L",
       "accountable_role": "QUALIFIED_ENGINEER_WITH_AUTHORIZED_DATA_OR_ACCOUNT_OPERATOR",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1302",
@@ -33141,7 +32515,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
@@ -33367,13 +32741,8 @@
       "risk": "CRITICAL",
       "complexity": "M",
       "accountable_role": "TECHNICAL_REVIEWER_WITH_OWNER_MERCHANT_ADMIN_AND_RECOVERY_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1304",
@@ -33405,7 +32774,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
@@ -33627,13 +32996,8 @@
       "risk": "CRITICAL",
       "complexity": "L",
       "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
-      "readiness": "WAITING_AUTHORIZATION",
+      "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "AUTHORIZATION",
-          "id": "G-P6",
-          "detail": "Phase6/local implementation approval pending"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T1305",
@@ -33647,7 +33011,7 @@
         {
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "EXACT_AUTHORIZED_CUTOVER"
         },
         {

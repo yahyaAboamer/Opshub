@@ -1422,7 +1422,7 @@
     {
       "id": "G-P6",
       "category": "AUTHORIZATION",
-      "status": "PENDING",
+      "status": "SATISFIED",
       "responsible_decision_maker": "Human owner",
       "acceptance_evidence": "Explicit Phase6 plan approval and local task/batch implementation authorization; Phase1-5 approval and this planning request are insufficient.",
       "resolution_mode": "EXPLICIT_AUTHORIZATION",
@@ -1432,791 +1432,791 @@
           "task_id": "T0001",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0002",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0003",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0004",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0005",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0006",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0007",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0008",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0009",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0101",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0102",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0103",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0104",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0105",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0106",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0107",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0108",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0109",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0110",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0201",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0202",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0203",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0204",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0205",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0206",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0207",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0208",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0209",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0301",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0302",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0303",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0304",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0305",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0306",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0307",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0308",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
           "task_id": "T0401",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0402",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0403",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0404",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0405",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
           "task_id": "T0501",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0502",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0503",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0504",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0505",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0506",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0507",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0601",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0602",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0603",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0604",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0605",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0606",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0607",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0608",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0609",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0701",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "OWNER_REVIEW"
         },
         {
           "task_id": "T0702",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0703",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0704",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0705",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0706",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0707",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
           "task_id": "T0708",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
           "task_id": "T0709",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
           "task_id": "T0710",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
           "task_id": "T0801",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0802",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0803",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0804",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0805",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0806",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0901",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0902",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0903",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0904",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0905",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0906",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0907",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0908",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0909",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0910",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0911",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0912",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0913",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T0914",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
           "task_id": "T1001",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1002",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1003",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1004",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1005",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1101",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_READ"
         },
         {
           "task_id": "T1102",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1103",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1104",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1105",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1106",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1107",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1108",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
           "task_id": "T1201",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_STAGING_INFRASTRUCTURE"
         },
         {
           "task_id": "T1202",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
           "task_id": "T1203",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
         },
         {
           "task_id": "T1204",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_STAGING"
         },
         {
           "task_id": "T1205",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
           "task_id": "T1206",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
           "task_id": "T1207",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_PRODUCTION_SHADOW"
         },
         {
           "task_id": "T1301",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
         },
         {
           "task_id": "T1302",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
         },
         {
           "task_id": "T1303",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
         },
         {
           "task_id": "T1304",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "AUTHORIZED_ISOLATED_STAGING"
         },
         {
           "task_id": "T1305",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "LOCAL_SYNTHETIC"
         },
         {
           "task_id": "T1306",
           "gate_id": "G-P6",
           "stage": "START",
-          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "capability": "Local implementation permission for explicitly selected Task IDs only (owner-approved 2026-10-16)",
           "environment": "EXACT_AUTHORIZED_CUTOVER"
         },
         {
@@ -2317,7 +2317,15 @@
           "capability": "Production identity/current access and exact controlled invitation recipient/send envelope only",
           "environment": "AUTHORIZED_PRODUCTION_ACCOUNT_QUALIFICATION"
         }
-      ]
+      ],
+      "resolution": {
+        "decision": "APPROVED",
+        "decided_by": "Human owner",
+        "decision_date": "2026-10-16",
+        "scope": "LOCAL_TASK_IMPLEMENTATION",
+        "scope_detail": "Local implementation of explicitly selected Task IDs only, each subject to its own dependencies, other START gates and permitted environments.",
+        "approval_record": "evidence/implementation/phase6-owner-approval.json"
+      }
     },
     {
       "id": "AUTH-CONTROLLED-READ",

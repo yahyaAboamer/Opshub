@@ -11,6 +11,8 @@ def write(path,text):
 def digest(data):
     return hashlib.sha256(json.dumps({k:v for k,v in data.items() if k!='plan_digest'},sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
 def tasklink(t): return f"[{t['id']}](tasks/{t['id']}.md)"
+NOT_APPROVED='PHASE6_NOT_APPROVED_IMPLEMENTATION_NOT_AUTHORIZED'
+APPROVED='PHASE6_APPROVED_LOCAL_TASK_IMPLEMENTATION_AUTHORIZED'
 
 def render():
     m=read('docs/implementation/task-manifest.yaml')
@@ -20,11 +22,14 @@ def render():
     for t in m['tasks']:
         if t['id'] in ('T0702','T0703','T0704','T0705'):
             t['parallelism']='PARALLEL WITH RESTRICTIONS'
-    if m['approval_status']=='PHASE6_NOT_APPROVED_IMPLEMENTATION_NOT_AUTHORIZED':
+    approved=m['approval_status']==APPROVED
+    if approved or m['approval_status']==NOT_APPROVED:
         gates={g['id']:g for g in read('docs/implementation/decision-gates.yaml')['gates']}
+        status={t['id']:t['status'] for t in m['tasks']}
         for t in m['tasks']:
-            t['blockers']=[{'kind':'AUTHORIZATION','id':'G-P6','detail':'Phase6/local implementation approval pending'}]
-            t['blockers'] += [{'kind':'DEPENDENCY','id':d,'detail':'Predecessor must be ACCEPTED on current main with actual contract/evidence'} for d in t['dependencies']]
+            # After recorded G-P6 approval the local-permission blocker is gone; accepted predecessors stop blocking.
+            t['blockers']=[] if approved else [{'kind':'AUTHORIZATION','id':'G-P6','detail':'Phase6/local implementation approval pending'}]
+            t['blockers'] += [{'kind':'DEPENDENCY','id':d,'detail':'Predecessor must be ACCEPTED on current main with actual contract/evidence'} for d in t['dependencies'] if not (approved and status[d]=='ACCEPTED')]
             for ref in t['decision_gates']:
                 if ref['stage']=='START' and ref['gate_id']!='G-P6':
                     gate=gates[ref['gate_id']]
@@ -32,6 +37,7 @@ def render():
                     t['blockers'].append({'kind':kind,'id':ref['gate_id'],'detail':ref['capability']})
             later=[b['kind'] for b in t['blockers'] if b['id']!='G-P6']
             t['readiness_after_local_approval']='WAITING_DEPENDENCIES' if 'DEPENDENCY' in later else 'WAITING_AUTHORIZATION' if 'AUTHORIZATION' in later else 'WAITING_DECISION' if 'DECISION' in later else 'READY'
+            if approved and t['status']=='NOT_STARTED': t['readiness']=t['readiness_after_local_approval']
     m['plan_digest']=digest(m)
     write('docs/implementation/task-manifest.yaml',json.dumps(m,ensure_ascii=False,indent=2))
     by={t['id']:t for t in m['tasks']}
@@ -76,7 +82,7 @@ After a predecessor merge, each consumer branch updates from accepted main and r
             f"<!-- manifest-digest: {m['plan_digest']} -->",
             f"Milestone **{t['milestone']}** · **{t['type']}** · risk **{t['risk']}** · complexity **{t['complexity']}**. Execution **{t['status']}**; readiness **{t['readiness']}**. The [manifest](../task-manifest.yaml) owns status and dependency metadata; this is a generated view.",
             '## Goal\n\n'+t['goal'],'## Why\n\n'+t['why']+'\n\nRequirements: '+', '.join(t['requirement_ids'])+'. Validation contracts: '+(', '.join(t['validation_contract_ids']) or 'None directly; named engineering prerequisites above')+'.',
-            '## Dependencies and contracts consumed\n\n'+ ('\n'.join(f"- **{c['task_id']} / {c['contract_id']}**: {c['consumes']}" for c in t['consumed_contracts']) or 'No predecessor task. Human plan/local implementation approval remains required.'),
+            '## Dependencies and contracts consumed\n\n'+ ('\n'.join(f"- **{c['task_id']} / {c['contract_id']}**: {c['consumes']}" for c in t['consumed_contracts']) or ('No predecessor task. G-P6 local implementation approval is recorded; this Task ID must still be explicitly selected.' if m['approval_status']==APPROVED else 'No predecessor task. Human plan/local implementation approval remains required.')),
             '## Definition of Ready and smallest reading set\n\n'+t['definition_of_ready'],
             '## Relevant specifications\n\n'+'\n'.join(f"- [{s['path']}:{s['line']}]({Path('../../../'+s['path']).as_posix()}): "+re.sub(r'\[([^\]]+)\]\([^)]+\)',r'\1',s['section'])+f" (lines {s['line']}–{s['end_line']})." for s in t['spec_refs']),
             '## Contract produced\n\n'+'\n'.join(f"**{c['id']}**, boundary `{c['boundary']}`. {c['meaning']}\n\nFuture record `{c['record']}`: {c['required_content']}" for c in t['produced_contracts']),
