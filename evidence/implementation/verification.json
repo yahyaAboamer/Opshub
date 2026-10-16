@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-16T14:47:45.742086+00:00",
+  "generated_at_utc": "2026-10-16T16:10:49.386300+00:00",
   "plan_revision": "P6-r2",
-  "plan_digest": "7813c84982f54df00d2499949f5d2c1091b9213ee067ff34dcb4c00c0445c88a",
+  "plan_digest": "8cf0c8659739132a7b0652f8bf35ecffa370c88c58a91439bd7e5dc8b76db77b",
   "result": "PASS",
   "scope": "Static schema, independently derived declared traceability, dependency/gate/contract/parallel/view integrity and protected content digests only. Not application execution or semantic/security/provider certification.",
   "counts": {
@@ -17,7 +17,8 @@
     "gates": 75,
     "golden_scenarios": 43,
     "kpi_contracts": 21,
-    "protected_files": 298
+    "protected_files": 298,
+    "protected_in_private_custody_not_checked": 0
   },
   "negative_controls": [
     {
