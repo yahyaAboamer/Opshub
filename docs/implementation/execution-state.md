@@ -13,9 +13,9 @@ Exact next eligible task: **T0003**, READY (requires explicit human selection). 
 Resume:
 1. Inspect current AGENTS.md, START-HERE and canonical manifest; run the planning verifier and inspect existing user work.
 2. Confirm current direct/recorded authorization. An explicit later human request to implement a selected local task is valid evidence; record its scope rather than demanding a special phrase.
-3. Integration owner claims the selected eligible ID/locks on current main (or establishes Git in T0001), assigns Codex or Claude Code, records branch/worktree/base revision and marks IN_PROGRESS.
+3. The human owner assigns the selected eligible ID and any shared locks to an agent or session; the claim on current main records branch/worktree/base revision and marks IN_PROGRESS.
 4. Agent reads selected task/specs/produced predecessor boundaries, implements only that scope and submits actual evidence.
-5. Independent review/integration owner accepts or records exact blocker, merges in dependency order, updates canonical status/readiness/digest and refreshes derived views. Keep unrelated work intact.
+5. The human owner reviews (optionally with a separate fresh review session) and accepts or records the exact blocker. After owner approval, merge in dependency order, update canonical status/readiness/digest and refresh derived views. Keep unrelated work intact.
 6. Record the exact next eligible IDs and evidence links here at each real handoff. Do not mark operational tasks accepted based on local coding.
 
 Planning evidence: [baseline](../../evidence/implementation/phase6-input-baseline.json), [independent source inventory](../../evidence/implementation/source-inventory.json), [verification](../../evidence/implementation/verification.json), [review and walkthrough](../../evidence/implementation/quality-review.md), [input issues](../../evidence/implementation/input-issues.md). The AGENTS phase-status amendment proposed in evidence/implementation/proposed-agents-update.md was adopted on 2026-10-16 as a recorded protected amendment; root CLAUDE.md adds the Claude Code overlay.

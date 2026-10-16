@@ -2,6 +2,12 @@
 
 This file adds Claude Code working rules. [AGENTS.md](AGENTS.md) is the governing instruction file. Obey it first; nothing here relaxes it.
 
+## Authority and roles
+
+- The repository's canonical implementation files (AGENTS.md, this file, `docs/implementation/`, accepted contracts on `main`) are sufficient for normal execution. External guidance conversations are advisory only and are never a task dependency or a source of authorization.
+- The human owner assigns Task IDs, accepts tasks and approves merges. No permanent separate integration owner or independent reviewer is assumed. Where repository files say "integration owner" or "independent review", see the role rule in [20-agent-execution-protocol.md](docs/implementation/20-agent-execution-protocol.md).
+- A separate fresh Claude review session may be used when a task or gate explicitly requires review, or when high-risk work benefits from independent context. It never replaces a gate's named decision maker or the owner's acceptance.
+
 ## Before any edit
 
 Read, in order, and nothing broader unless an actual cited conflict requires it:
@@ -19,14 +25,16 @@ Read, in order, and nothing broader unless an actual cited conflict requires it:
 - Never take a Task ID, editable area or shared-change lock that another agent (Codex or another Claude session) holds. Check the manifest `execution_claim` and existing branches.
 - Implement only the task's listed scope and editable areas. Record anything else you notice as a follow-up; do not fix it.
 
-## Branches and baseline
+## Branches, worktrees and sessions
 
 - One branch and one worktree per Task ID (`claude/tNNNN-scope`), started from current accepted `main`.
 - After a predecessor or shared-contract change merges, update or rebase onto `main` and rerun the affected tests and contract checks before requesting acceptance.
+- A fresh Claude session per Task ID is preferred, not mandatory. The same session may take another explicitly assigned Task ID only after all of these hold: the previous task is accepted and merged; its branch and worktree are cleaned up; `main` is refreshed; the new task's reading set (above) is reread; and the session's context is still reliable. Otherwise, start a fresh session.
+- Continuing in one session never merges Task-ID boundaries: separate branch, worktree, claim, evidence, brief and recap for each ID.
 
 ## Protected shared surfaces
 
-Do not change shared migrations, RLS/auth/grants, shared contracts/DTOs, provider ports, action/recovery protocols, lockfiles, package roots or global config unless the selected task owns that lock and the integration owner has assigned it. Never edit `source/` or closed Phase 1–6 material.
+Do not change shared migrations, RLS/auth/grants, shared contracts/DTOs, provider ports, action/recovery protocols, lockfiles, package roots or global config unless the selected task owns that lock and the human owner has assigned it. Never edit `source/` or closed Phase 1–6 material.
 
 ## When blocked
 
@@ -36,15 +44,19 @@ If the task requires an unresolved product, domain, policy or provider decision,
 
 ### Task Start Brief
 
-For every explicitly assigned Task ID, after validating its readiness, dependencies and gates but before the first file edit (including the claim record), send the brief as its own visible message, headed **Task Start Brief**, with all five numbered items:
+For every explicitly assigned Task ID, after validating its readiness, dependencies and gates but before the first file edit (including the claim record), send the brief as its own visible message, headed **Task Start Brief**, with all seven numbered items:
 
 1. **Purpose:** what the task accomplishes, in plain English.
 2. **Why now:** why it is dependency-ready, and which accepted predecessor work enables it.
-3. **Technical scope:** the main systems, files and contracts expected to be touched.
-4. **Expected result:** what should work or exist when the task succeeds.
-5. **Reviewable output:** what the human can run, inspect or understand afterward, if applicable.
+3. **Layers involved:** only those that apply: Frontend, Backend/API, Database, Background jobs, Auth/security, External providers, Infrastructure/deployment.
+4. **Technical scope:** the main systems, files and contracts expected to be touched.
+5. **Expected result:** what should work or exist when the task succeeds.
+6. **Reviewable output:** what the human can run, inspect or understand afterward, if applicable.
+7. **Approved skills selected:** the smallest relevant set of approved skills, each with a short reason it applies, or "No specialized skill selected."
 
-Keep it concise. Derive it from the task file (Goal, Dependencies and contracts consumed, Scope, Expected code and editable areas, Tests, Acceptance criteria), the manifest and accepted predecessor contracts; don't paste the specification. A one-line summary, a status sentence ("T0002 is ready, I'll now build…") or tool-gate/hook output does not satisfy this; if any of the five items is missing, the brief has not been given. Each item is one or two sentences.
+Keep it concise. Derive it from the task file (Goal, Dependencies and contracts consumed, Scope, Expected code and editable areas, Tests, Acceptance criteria), the manifest and accepted predecessor contracts; don't paste the specification. Derive layers and skills from the selected task each time; task files don't list them. A one-line summary, a status sentence ("T0002 is ready, I'll now build…") or tool-gate/hook output does not satisfy this; if any of the seven items is missing, the brief has not been given. Each item is one or two sentences.
+
+Never select or load a skill merely because it is installed. Skills never override approved task or specification behavior, and an unavailable skill is not a blocker.
 
 If the human already explicitly assigned a READY Task ID, the brief needs no second confirmation: give it, then begin that task. If the Task ID was not explicitly assigned, is not READY, lacks a required START gate, or conflicts with an active claim or shared lock, don't implement it. Say why instead.
 
@@ -64,11 +76,12 @@ This handoff keeps every technical evidence requirement of the task and of the c
 Only after the task is actually recorded as ACCEPTED in the manifest, give a concise recap:
 
 1. **Plain English:** what was accomplished and why it matters.
-2. **Technical:** the main code, files, APIs, database objects, contracts or infrastructure changed.
-3. **Result:** what is now possible that was not possible before.
-4. **Validation:** the important checks and tests, each PASS, FAIL or NOT_CHECKED.
-5. **Important notes:** significant decisions, limitations, risks or deferred work only.
-6. **Next task:**
+2. **Layers changed:** the layers actually modified (same list as the brief).
+3. **Technical:** the main code, files, APIs, database objects, contracts or infrastructure changed.
+4. **Result:** what is now possible that was not possible before.
+5. **Validation:** the important checks and tests, each PASS, FAIL or NOT_CHECKED.
+6. **Important notes:** significant decisions, limitations, risks or deferred work only.
+7. **Next task:**
    - the exact Task IDs now READY according to the canonical manifest;
    - the logical recommended next Task ID;
    - one sentence on what that task will do;
