@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-16T17:27:05.489538+00:00",
+  "generated_at_utc": "2026-10-16T19:18:39.072437+00:00",
   "plan_revision": "P6-r2",
-  "plan_digest": "c7cc8b7165b71f33375311379995658ecb2bf65b0a3ba9459eac48d16d5de5a7",
+  "plan_digest": "f81611546093c42febf3d81e22bde681e9ec352e11e881c1b61bce24ec09844b",
   "result": "PASS",
   "scope": "Static schema, independently derived declared traceability, dependency/gate/contract/parallel/view integrity and protected content digests only. Not application execution or semantic/security/provider certification.",
   "counts": {

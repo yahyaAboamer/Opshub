@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "c7cc8b7165b71f33375311379995658ecb2bf65b0a3ba9459eac48d16d5de5a7",
+  "plan_digest": "f81611546093c42febf3d81e22bde681e9ec352e11e881c1b61bce24ec09844b",
   "topological_order": [
     "T0001",
     "T0002",
@@ -524,7 +524,7 @@
       "id": "T0002",
       "milestone": "M0",
       "title": "Qualify Nest React Vite and Vitest toolchain",
-      "status": "IN_REVIEW",
+      "status": "ACCEPTED",
       "type": "QUALIFICATION",
       "risk": "MEDIUM",
       "complexity": "M",
@@ -649,14 +649,11 @@
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
       "readiness_after_local_approval": "READY",
       "execution_claim": {
-        "owner": "Claude Code (integration owner: repository owner)",
-        "branch": "claude/t0002-toolchain-qualification",
-        "worktree": ".claude/worktrees/peaceful-shtern-01be1c",
-        "base_main_revision": "caa564ac7b7b823f5eaf1fd55af7753112578fcd",
-        "locks": [
-          "boundary:toolchain",
-          "root-contracts"
-        ]
+        "owner": null,
+        "branch": null,
+        "worktree": null,
+        "base_main_revision": null,
+        "locks": []
       }
     },
     {
@@ -860,11 +857,6 @@
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
       "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0002",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0003",
@@ -1274,11 +1266,6 @@
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
       "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0002",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "A08-NEST",
