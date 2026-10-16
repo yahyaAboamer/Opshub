@@ -1,6 +1,6 @@
 # Workspace boundary
 
-Established by T0001 ([contract C-T0001-v1](../contracts/C-T0001-v1.md)). The repository owner approved it on 16 October 2026. The machine-readable inventory is [workspace-inventory.json](workspace-inventory.json).
+Established by T0001 ([contract C-T0001-v1](../contracts/C-T0001-v1.md), amended by its v2 section). The repository owner approved it on 16 October 2026. The machine-readable inventory is [workspace-inventory.json](workspace-inventory.json).
 
 ## Two inventories
 
@@ -13,8 +13,8 @@ Private-custody files are never committed, pushed, copied into fixtures, pasted 
 
 ## What may be tracked
 
-- **Root files:** `.gitattributes`, `.gitignore`, `AGENTS.md`, `CLAUDE.md`, `package.json`, `package-lock.json`.
-- **Root directories:** `.github/`, `apps/`, `docs/`, `evidence/`, `ops/`, `packages/`, `scripts/`, `tests/`.
+- **Root files:** `.gitattributes`, `.gitignore`, `AGENTS.md`, `CLAUDE.md`, `package.json`, `package-lock.json`, `skills-lock.json` (v2).
+- **Root directories:** `.github/`, `apps/`, `docs/`, `evidence/`, `ops/`, `packages/`, `scripts/`, `tests/`, and `.claude/skills/` only (v2). The rest of `.claude/` (worktrees, local settings) is ignored.
 
 Adding any other root-level file or directory, or changing an ignore rule, needs a versioned amendment of C-T0001 under the `root-contracts` lock. This keeps files like `.npmrc` tokens or ad-hoc dumps out by default.
 

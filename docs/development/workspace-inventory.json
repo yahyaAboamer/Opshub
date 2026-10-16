@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "task": "T0001",
-  "contract": "C-T0001-v1",
-  "approved": "Repository owner, in chat, 2026-10-16: trackable allowlist \"Exclude + purge history\"; line endings \"Yes, fix line endings\".",
+  "contract": "C-T0001-v2",
+  "approved": "Repository owner, in chat, 2026-10-16: trackable allowlist \"Exclude + purge history\"; line endings \"Yes, fix line endings\". v2 (2026-10-16): owner approved tracking the project skills directory and its lockfile (\"Draft C-T0001-v2\").",
   "baseline": {
     "path": "evidence/implementation/phase6-input-baseline.json",
     "sha256": "edc6d6e7d5130312dff8ba52388ae6d5dc91985c1b52b2a38f3f0cb8088bb52a",
@@ -15,9 +15,11 @@
     "AGENTS.md",
     "CLAUDE.md",
     "package.json",
-    "package-lock.json"
+    "package-lock.json",
+    "skills-lock.json"
   ],
   "trackable_root_dirs": [
+    ".claude/skills/",
     ".github/",
     "apps/",
     "docs/",
