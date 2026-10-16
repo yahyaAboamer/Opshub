@@ -4,11 +4,12 @@ import copy,datetime,hashlib,json,re,sys
 from collections import Counter
 import jsonschema
 from inventory_sources import derive
-from render_plan import digest
+from render_plan import digest,APPROVED,NOT_APPROVED
 
 ROOT=Path(__file__).resolve().parents[2]
 def read(path): return json.loads((ROOT/path).read_text(encoding='utf-8'))
 def sha(path): return hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
+def sha_lf(path): return hashlib.sha256((ROOT/path).read_bytes().replace(b'\r\n',b'\n')).hexdigest()
 
 def validate(m,coverage,gates,inventory,files=True):
     errors=[]
@@ -18,6 +19,10 @@ def validate(m,coverage,gates,inventory,files=True):
     ids=[t['id'] for t in m['tasks']]; by={t['id']:t for t in m['tasks']}; gs={g['id']:g for g in gates['gates']}
     if len(ids)!=len(set(ids)): fail('DUPLICATE_TASK','Task IDs must be unique')
     if len(gs)!=len(gates['gates']): fail('DUPLICATE_GATE','Gate IDs must be unique')
+    approved=m['approval_status']==APPROVED
+    if m['approval_status'] not in (APPROVED,NOT_APPROVED): fail('APPROVAL_STATUS',m['approval_status'])
+    p6=gs.get('G-P6',{}); p6res=p6.get('resolution') or {}
+    if approved!=(p6.get('status')=='SATISFIED') or (approved and (p6res.get('scope')!='LOCAL_TASK_IMPLEMENTATION' or not p6res.get('approval_record'))): fail('APPROVAL_RECORD','G-P6 status/resolution must match manifest approval_status')
     ancestors={tid:set() for tid in by}
     for t in m['tasks']:
         for d in t['dependencies']:
@@ -43,7 +48,9 @@ def validate(m,coverage,gates,inventory,files=True):
         if t['complexity']=='XL' and not t['complexity_rationale']: fail('UNJUSTIFIED_XL',t['id'])
         if t['status']=='NOT_STARTED' and t['completion_evidence_refs']: fail('FALSE_COMPLETION_EVIDENCE',t['id'])
         if t['status']=='ACCEPTED' and not t['completion_evidence_refs']: fail('MISSING_COMPLETION_EVIDENCE',t['id'])
-        if m['approval_status']=='PHASE6_NOT_APPROVED_IMPLEMENTATION_NOT_AUTHORIZED' and (t['status']!='NOT_STARTED' or t['readiness']!='WAITING_AUTHORIZATION'): fail('APPROVAL_BOUNDARY',t['id'])
+        if m['approval_status']==NOT_APPROVED and (t['status']!='NOT_STARTED' or t['readiness']!='WAITING_AUTHORIZATION'): fail('APPROVAL_BOUNDARY',t['id'])
+        if approved and any(b['id']=='G-P6' for b in t['blockers']): fail('APPROVAL_BOUNDARY',t['id']+' still blocked by satisfied G-P6')
+        if approved and t['status']=='NOT_STARTED' and t['readiness']!=t['readiness_after_local_approval']: fail('READINESS_DERIVATION',t['id'])
         if not any(x['gate_id']=='G-P6' and x['stage']=='START' for x in t['decision_gates']): fail('IMPLEMENTATION_PERMISSION',t['id'])
         for ref in t['decision_gates']:
             if ref['gate_id'] not in gs: fail('UNKNOWN_GATE',t['id']+' '+ref['gate_id']); continue
@@ -132,8 +139,13 @@ def validate(m,coverage,gates,inventory,files=True):
         if m['plan_digest']!=digest(m): fail('PLAN_DIGEST','Manifest digest mismatch')
         if sha(m['input_baseline']['path'])!=m['input_baseline']['sha256']: fail('BASELINE_DIGEST','Baseline file drift')
         baseline=read(m['input_baseline']['path'])
+        # A protected file may differ from baseline only via an owner-approved amendment recorded with both digests.
+        amended={a['path']:a for a in (read(p6res['approval_record']).get('authorized_protected_amendments',[]) if p6res.get('approval_record') else [])}
         for record in baseline['protected_files']:
-            if not (ROOT/record['path']).is_file() or sha(record['path'])!=record['sha256']: fail('PROTECTED_INPUT',record['path'])
+            if not (ROOT/record['path']).is_file(): fail('PROTECTED_INPUT',record['path']); continue
+            if sha(record['path'])==record['sha256']: continue
+            a=amended.get(record['path'])
+            if not a or a['baseline_sha256']!=record['sha256'] or sha_lf(record['path'])!=a['amended_sha256_lf']: fail('PROTECTED_INPUT',record['path'])
         protected={x['path'] for x in baseline['protected_files']}
         for folder in ('source','docs','evidence'):
             for p in (ROOT/folder).rglob('*'):
@@ -180,7 +192,7 @@ def main():
     m=read('docs/implementation/task-manifest.yaml'); c=read('docs/implementation/requirements-coverage.yaml'); g=read('docs/implementation/decision-gates.yaml'); inventory=derive()
     errors=validate(m,c,g,inventory)
     controls=[]
-    for name,expected in [('dangling_dependency','DANGLING_DEPENDENCY'),('dependency_cycle','CYCLE'),('missing_coverage','COVERAGE_INVENTORY'),('missing_contact_safety','SAFETY_PREDECESSOR'),('unsafe_shared_parallel_lock','SHARED_LOCK'),('invalid_status_schema','SCHEMA'),('missing_assertion_reference','COVERAGE_TEST_REFERENCE')]:
+    for name,expected in [('dangling_dependency','DANGLING_DEPENDENCY'),('dependency_cycle','CYCLE'),('missing_coverage','COVERAGE_INVENTORY'),('missing_contact_safety','SAFETY_PREDECESSOR'),('unsafe_shared_parallel_lock','SHARED_LOCK'),('invalid_status_schema','SCHEMA'),('missing_assertion_reference','COVERAGE_TEST_REFERENCE'),('approval_without_record','APPROVAL_RECORD')]:
         mm,cc=copy.deepcopy(m),copy.deepcopy(c)
         if name=='dangling_dependency': mm['tasks'][0]['dependencies'].append('T9999')
         if name=='dependency_cycle': mm['tasks'][0]['dependencies'].append('T1306')
@@ -191,7 +203,12 @@ def main():
                 if t['id'] in ('T0702','T0703'): t['shared_change_locks'].append('negative-control:shared')
         if name=='invalid_status_schema': mm['tasks'][0]['status']='DONE'
         if name=='missing_assertion_reference': cc['mappings'][0]['test_refs']=['NONEXISTENT-TEST']
-        found={e['code'] for e in validate(mm,cc,g,inventory,files=False)}
+        gg=copy.deepcopy(g)
+        if name=='approval_without_record':
+            mm['approval_status']=APPROVED
+            for x in gg['gates']:
+                if x['id']=='G-P6': x['status']='PENDING'; x.pop('resolution',None)
+        found={e['code'] for e in validate(mm,cc,gg,inventory,files=False)}
         controls.append({'name':name,'expected_rejection':expected,'result':'PASS' if expected in found else 'FAIL'})
     output={'schema_version':'1.0','generated_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'plan_revision':m['plan_revision'],'plan_digest':m['plan_digest'],
         'result':'PASS' if not errors and all(x['result']=='PASS' for x in controls) else 'FAIL',

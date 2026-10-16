@@ -16,6 +16,6 @@ Recommended first session order (each waits its exact dependencies and locks):
 10. [T0101](tasks/T0101.md) — Persist shared identity and independent participation.
 11. [T0102](tasks/T0102.md) — Enforce tenant unit of work RLS and scoped grants.
 
-Only T0001 has no task predecessor; G-P6 still blocks it today. T0002/T0003 can be separately scheduled after T0001 but share root/migration coordination; the listed serial runway is the conservative default. No owner launch-policy answer is required for these synthetic foundation sessions. T0101/T0102 lead toward the first signed-in isolated-merchant journey; subsequent exact eligible IDs are computed from accepted contracts/current gates, never guessed from milestone number.
+Only T0001 has no task predecessor; G-P6 was satisfied on 2026-10-16, so T0001 is READY once explicitly selected. T0002/T0003 can be separately scheduled after T0001 but share root/migration coordination; the listed serial runway is the conservative default. No owner launch-policy answer is required for these synthetic foundation sessions. T0101/T0102 lead toward the first signed-in isolated-merchant journey; subsequent exact eligible IDs are computed from accepted contracts/current gates, never guessed from milestone number.
 
-All commands/results in task files are PLANNED until those tasks define and run them. Do not execute this runway in Phase6.
+All commands/results in task files are PLANNED until those tasks define and run them. Execute runway tasks one explicitly selected Task ID at a time; this list is not a batch authorization.

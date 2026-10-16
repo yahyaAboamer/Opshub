@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "record_id": "G-P6-APPROVAL-2026-10-16",
+  "gate_id": "G-P6",
+  "decision": "APPROVED",
+  "decided_by": "Human owner",
+  "decision_date": "2026-10-16",
+  "evidence": "Explicit human-owner instruction in a Claude Code session on 2026-10-16: \"Phases 1–6 have been reviewed and approved by the human owner.\" The instruction directed the transition from Phase 6 planning into authorized LOCAL task-based implementation and said to record G-P6 as satisfied.",
+  "scope": "LOCAL_TASK_IMPLEMENTATION",
+  "scope_detail": "Local implementation of explicitly selected Task IDs in docs/implementation/task-manifest.yaml only. One Task ID is one bounded scope.",
+  "not_authorized": [
+    "live provider calls or effects",
+    "customer or account communication",
+    "infrastructure provisioning",
+    "deployment",
+    "production shadow",
+    "controlled real actions",
+    "cutover",
+    "any gate other than G-P6 (all remain PENDING or DEFERRED_SCOPE)"
+  ],
+  "plan_revision": "P6-r2",
+  "pre_approval_plan_digest": "e33f0c023cce4bbb9edac3c1b53e1c542b6e00ae3ac585f04d401584d019abf9",
+  "task_status_changes": "None. All tasks remain NOT_STARTED with empty completion evidence and no execution claims. Readiness is re-derived without the G-P6 blocker.",
+  "authorized_protected_amendments": [
+    {
+      "path": "AGENTS.md",
+      "baseline_sha256": "0ce70592eed176b0fd801da35f75ac668bd2bd2f828203315125299441c8b27f",
+      "amended_sha256_lf": "7cd6ea9b62a66960cb11b500da9f3e0e4cf850d5a295c96e20e0e34f289ab7c5",
+      "digest_note": "amended_sha256_lf is SHA-256 over the file with CRLF normalized to LF, so a Git checkout with core.autocrlf verifies identically.",
+      "reason": "Owner-directed adoption of the operating-status amendment proposed in evidence/implementation/proposed-agents-update.md; durable safety/provenance rules preserved."
+    }
+  ],
+  "tooling_changes": {
+    "evidence/implementation/render_plan.py": "Supports the approved status: no G-P6 blocker, ACCEPTED predecessors stop blocking, NOT_STARTED readiness = readiness_after_local_approval.",
+    "evidence/implementation/verify_plan.py": "Accepts only the two known approval statuses; requires G-P6 SATISFIED with LOCAL_TASK_IMPLEMENTATION resolution and this record when approved; rejects residual G-P6 blockers and underived readiness; permits a protected-file difference only when listed here with matching baseline and amended digests; adds negative control approval_without_record."
+  },
+  "verification": {
+    "command": "python evidence/implementation/verify_plan.py",
+    "authoritative_run": "PASS on 2026-10-16 over the primary workspace on-disk originals (all 298 protected files byte-identical to baseline) with this change overlaid; 0 errors; 8/8 negative controls PASS; 127 tasks. evidence/implementation/verification.json is that run's output.",
+    "git_checkout_run": "FAIL in a Git checkout, before and after this change, because commit a18ce19 stored 119 CRLF/mixed-EOL protected files as LF (430 SPEC_DIGEST, 118 PROTECTED_INPUT, BASELINE_DIGEST, INVENTORY_DRIFT). This change adds no new error and resolves the AGENTS.md entry. Resolution belongs to T0001."
+  }
+}

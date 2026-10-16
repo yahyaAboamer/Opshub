@@ -1,8 +1,8 @@
 # OpsHub Phase 6 implementation plan
 
-15 October 2026 · **Planning package complete; human approval remains pending.** The current request approves Phases 1–5 and authorizes planning. Historical proposed/pending labels remain protected history. Gentry is legacy evidence; OpsHub is the target SaaS.
+15 October 2026 · **Planning package complete; owner-approved 16 October 2026 (G-P6) for LOCAL implementation of explicitly selected Task IDs only.** Phases 1–6 are approved and closed. Historical proposed/pending labels remain protected history. Gentry is legacy evidence; OpsHub is the target SaaS.
 
-The canonical [manifest](task-manifest.yaml) contains **127 tasks in 14 outcome milestones (M0–M13)**. All execution statuses start NOT_STARTED, with empty actual completion evidence. Current readiness is WAITING_AUTHORIZATION because Phase6 approval/local implementation permission has not been granted. [START-HERE](START-HERE.md) is the fresh-chat entry; [roadmap](03-milestone-roadmap.md) gives actors/demos, [DAG](02-dependency-graph.md) the actual order, and [runway](22-first-coding-runway.md) the first bounded sessions.
+The canonical [manifest](task-manifest.yaml) contains **127 tasks in 14 outcome milestones (M0–M13)**. All execution statuses start NOT_STARTED, with empty actual completion evidence. With G-P6 satisfied, T0001 is READY and every other task is WAITING_DEPENDENCIES; no provider, shadow, external-effect, production or cutover gate is satisfied. [START-HERE](START-HERE.md) is the fresh-chat entry; [roadmap](03-milestone-roadmap.md) gives actors/demos, [DAG](02-dependency-graph.md) the actual order, and [runway](22-first-coding-runway.md) the first bounded sessions.
 
 The normal supported MVP remains Shopify commerce → OpsHub merchant work/Admin decision → qualified Bosta booking/Shopify supported replacement/cancellation/required annotation → independently reconciled result. Product/SKU performance, Meta spend and canonical ROAS are MVP. Manual import/export/execution is safe exception fallback. Pilots are production tenants on a **$0 offering** with real tenancy/commercial primitives; payment processing waits commercialization.
 
