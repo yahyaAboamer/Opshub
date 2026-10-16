@@ -4,3 +4,5 @@ node_modules/
 dist/
 coverage/
 .DS_Store
+# Original evidence stays in private custody on disk; never commit it (owner, 2026-10-16).
+/source/
