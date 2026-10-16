@@ -36,7 +36,7 @@ If the task requires an unresolved product, domain, policy or provider decision,
 
 ### Task Start Brief
 
-For every explicitly assigned Task ID, after validating its readiness, dependencies and gates but before editing anything, give the human a short brief:
+For every explicitly assigned Task ID, after validating its readiness, dependencies and gates but before the first file edit (including the claim record), send the brief as its own visible message, headed **Task Start Brief**, with all five numbered items:
 
 1. **Purpose:** what the task accomplishes, in plain English.
 2. **Why now:** why it is dependency-ready, and which accepted predecessor work enables it.
@@ -44,7 +44,7 @@ For every explicitly assigned Task ID, after validating its readiness, dependenc
 4. **Expected result:** what should work or exist when the task succeeds.
 5. **Reviewable output:** what the human can run, inspect or understand afterward, if applicable.
 
-Keep it concise. Derive it from the task file (Goal, Dependencies and contracts consumed, Scope, Expected code and editable areas, Tests, Acceptance criteria), the manifest and accepted predecessor contracts; don't paste the specification.
+Keep it concise. Derive it from the task file (Goal, Dependencies and contracts consumed, Scope, Expected code and editable areas, Tests, Acceptance criteria), the manifest and accepted predecessor contracts; don't paste the specification. A one-line summary, a status sentence ("T0002 is ready, I'll now build…") or tool-gate/hook output does not satisfy this; if any of the five items is missing, the brief has not been given. Each item is one or two sentences.
 
 If the human already explicitly assigned a READY Task ID, the brief needs no second confirmation: give it, then begin that task. If the Task ID was not explicitly assigned, is not READY, lacks a required START gate, or conflicts with an active claim or shared lock, don't implement it. Say why instead.
 
