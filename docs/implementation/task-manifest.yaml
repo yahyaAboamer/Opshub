@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "8cf0c8659739132a7b0652f8bf35ecffa370c88c58a91439bd7e5dc8b76db77b",
+  "plan_digest": "946759c719b1236cb4d69f585d7f8f61458bdb2473d13c73cd995fb6ae7f6fe3",
   "topological_order": [
     "T0001",
     "T0002",
@@ -393,7 +393,7 @@
       "id": "T0001",
       "milestone": "M0",
       "title": "Initialize the versioned workspace boundary",
-      "status": "IN_REVIEW",
+      "status": "ACCEPTED",
       "type": "ENGINEERING",
       "risk": "LOW",
       "complexity": "S",
@@ -513,14 +513,11 @@
       "engineering_justification": "Necessary enabling or verification dependency of ADR-001; no extra product capability.",
       "readiness_after_local_approval": "READY",
       "execution_claim": {
-        "owner": "Claude Code (integration owner: repository owner)",
-        "branch": "claude/t0001-workspace-boundary",
-        "worktree": ".claude/worktrees/opshub-phase6-housekeeping-02cda3",
-        "base_main_revision": "9894fb9b801fee81ff1dc38236931f33bc9d434d",
-        "locks": [
-          "boundary:repo",
-          "root-contracts"
-        ]
+        "owner": null,
+        "branch": null,
+        "worktree": null,
+        "base_main_revision": null,
+        "locks": []
       }
     },
     {
@@ -532,14 +529,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_DEPENDENCIES",
-      "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0001",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        }
-      ],
+      "readiness": "READY",
+      "blockers": [],
       "dependencies": [
         "T0001"
       ],
@@ -651,7 +642,7 @@
       "branch_isolation": "One claimed Task ID: codex/t0002-<short-scope> or claude/t0002-<short-scope>, in its own worktree after Git exists. Never dual-own. Base on accepted main; update from current main after any predecessor/shared contract merge and rerun affected checks before acceptance.",
       "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
-      "readiness_after_local_approval": "WAITING_DEPENDENCIES",
+      "readiness_after_local_approval": "READY",
       "execution_claim": {
         "owner": null,
         "branch": null,
@@ -669,14 +660,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_DEPENDENCIES",
-      "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0001",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        }
-      ],
+      "readiness": "READY",
+      "blockers": [],
       "dependencies": [
         "T0001"
       ],
@@ -847,7 +832,7 @@
       "branch_isolation": "One claimed Task ID: codex/t0003-<short-scope> or claude/t0003-<short-scope>, in its own worktree after Git exists. Never dual-own. Base on accepted main; update from current main after any predecessor/shared contract merge and rerun affected checks before acceptance.",
       "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
-      "readiness_after_local_approval": "WAITING_DEPENDENCIES",
+      "readiness_after_local_approval": "READY",
       "execution_claim": {
         "owner": null,
         "branch": null,
