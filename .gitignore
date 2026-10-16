@@ -1,8 +1,47 @@
-node_modules/
+# OpsHub workspace boundary — T0001, contract docs/contracts/C-T0001-v1.md (owner-approved 2026-10-16).
+# A new ignore rule or a new tracked root-level file needs a versioned C-T0001 amendment.
+
+# --- Private custody: originals stay only on the owner's disk, never in Git or its history ---
+/source/
+/evidence/artifacts/text/*.extracted.txt
+/evidence/artifacts/text/*.blocks.json
+/evidence/artifacts/text/*.pdf-text.json
+/evidence/artifacts/text/review-page-*.png
+/evidence/live/phase1b/assets/
+# Real-data or private fixtures. Synthetic fixtures under tests/fixtures/ stay tracked.
+/tests/fixtures/private/
+*.private.*
+
+# --- Secrets and credentials ---
 .env
 .env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa*
+id_ed25519*
+id_ecdsa*
+secrets/
+secret/
+
+# --- Dependencies, build and test output ---
+node_modules/
 dist/
+build/
 coverage/
+playwright-report/
+test-results/
+blob-report/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+
+# --- Local tooling and OS files ---
 .DS_Store
-# Original evidence stays in private custody on disk; never commit it (owner, 2026-10-16).
-/source/
+Thumbs.db
+*.log

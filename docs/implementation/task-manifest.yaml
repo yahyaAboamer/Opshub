@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "7813c84982f54df00d2499949f5d2c1091b9213ee067ff34dcb4c00c0445c88a",
+  "plan_digest": "946759c719b1236cb4d69f585d7f8f61458bdb2473d13c73cd995fb6ae7f6fe3",
   "topological_order": [
     "T0001",
     "T0002",
@@ -393,7 +393,7 @@
       "id": "T0001",
       "milestone": "M0",
       "title": "Initialize the versioned workspace boundary",
-      "status": "NOT_STARTED",
+      "status": "ACCEPTED",
       "type": "ENGINEERING",
       "risk": "LOW",
       "complexity": "S",
@@ -491,7 +491,12 @@
         }
       ],
       "acceptance_summary": "Create Git only after local implementation approval; preserve all 298 protected files on disk and their private custody/digests, while separately approving a trackable clone allowlist for safe docs/synthetic fixtures. Define workspace/ignore boundaries with source/customer/private evidence and secrets excluded. Record Node24 baseline without choosing unverified patches.",
-      "completion_evidence_refs": [],
+      "completion_evidence_refs": [
+        "docs/implementation/completion/T0001.md",
+        "docs/contracts/C-T0001-v1.md",
+        "tests/tasks/T0001/workspace-boundary.test.mjs",
+        "docs/development/workspace-inventory.json"
+      ],
       "goal": "Initialize the versioned workspace boundary",
       "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
       "scope": "Create Git only after local implementation approval; preserve all 298 protected files on disk and their private custody/digests, while separately approving a trackable clone allowlist for safe docs/synthetic fixtures. Define workspace/ignore boundaries with source/customer/private evidence and secrets excluded. Record Node24 baseline without choosing unverified patches.",
@@ -524,14 +529,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_DEPENDENCIES",
-      "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0001",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        }
-      ],
+      "readiness": "READY",
+      "blockers": [],
       "dependencies": [
         "T0001"
       ],
@@ -643,7 +642,7 @@
       "branch_isolation": "One claimed Task ID: codex/t0002-<short-scope> or claude/t0002-<short-scope>, in its own worktree after Git exists. Never dual-own. Base on accepted main; update from current main after any predecessor/shared contract merge and rerun affected checks before acceptance.",
       "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
-      "readiness_after_local_approval": "WAITING_DEPENDENCIES",
+      "readiness_after_local_approval": "READY",
       "execution_claim": {
         "owner": null,
         "branch": null,
@@ -661,14 +660,8 @@
       "risk": "HIGH",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_DEPENDENCIES",
-      "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0001",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        }
-      ],
+      "readiness": "READY",
+      "blockers": [],
       "dependencies": [
         "T0001"
       ],
@@ -839,7 +832,7 @@
       "branch_isolation": "One claimed Task ID: codex/t0003-<short-scope> or claude/t0003-<short-scope>, in its own worktree after Git exists. Never dual-own. Base on accepted main; update from current main after any predecessor/shared contract merge and rerun affected checks before acceptance.",
       "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
-      "readiness_after_local_approval": "WAITING_DEPENDENCIES",
+      "readiness_after_local_approval": "READY",
       "execution_claim": {
         "owner": null,
         "branch": null,
