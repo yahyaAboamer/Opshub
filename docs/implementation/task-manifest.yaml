@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "b1e7a84ee987ed148de6bc77ab47c12c0babf4357bea67a7fe7e1bca3f2dfe8c",
+  "plan_digest": "8cf0c8659739132a7b0652f8bf35ecffa370c88c58a91439bd7e5dc8b76db77b",
   "topological_order": [
     "T0001",
     "T0002",
@@ -393,7 +393,7 @@
       "id": "T0001",
       "milestone": "M0",
       "title": "Initialize the versioned workspace boundary",
-      "status": "IN_PROGRESS",
+      "status": "IN_REVIEW",
       "type": "ENGINEERING",
       "risk": "LOW",
       "complexity": "S",
@@ -491,7 +491,12 @@
         }
       ],
       "acceptance_summary": "Create Git only after local implementation approval; preserve all 298 protected files on disk and their private custody/digests, while separately approving a trackable clone allowlist for safe docs/synthetic fixtures. Define workspace/ignore boundaries with source/customer/private evidence and secrets excluded. Record Node24 baseline without choosing unverified patches.",
-      "completion_evidence_refs": [],
+      "completion_evidence_refs": [
+        "docs/implementation/completion/T0001.md",
+        "docs/contracts/C-T0001-v1.md",
+        "tests/tasks/T0001/workspace-boundary.test.mjs",
+        "docs/development/workspace-inventory.json"
+      ],
       "goal": "Initialize the versioned workspace boundary",
       "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
       "scope": "Create Git only after local implementation approval; preserve all 298 protected files on disk and their private custody/digests, while separately approving a trackable clone allowlist for safe docs/synthetic fixtures. Define workspace/ignore boundaries with source/customer/private evidence and secrets excluded. Record Node24 baseline without choosing unverified patches.",
