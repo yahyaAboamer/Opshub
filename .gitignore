@@ -1,5 +1,5 @@
 # OpsHub workspace boundary — T0001, contract docs/contracts/C-T0001-v1.md (owner-approved 2026-10-16).
-# A new ignore rule or a new tracked root-level file needs a versioned C-T0001 amendment.
+# A new ignore rule or a new tracked root-level file needs a versioned C-T0001 amendment (current: v2).
 
 # --- Private custody: originals stay only on the owner's disk, never in Git or its history ---
 /source/
@@ -42,6 +42,9 @@ __pycache__/
 *.pyc
 
 # --- Local tooling and OS files ---
+# Claude Code: only the owner-approved project skills are tracked (C-T0001 v2); worktrees and local settings stay out.
+/.claude/*
+!/.claude/skills/
 .DS_Store
 Thumbs.db
 *.log

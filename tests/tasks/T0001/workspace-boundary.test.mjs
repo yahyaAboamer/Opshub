@@ -87,12 +87,13 @@ test('T0001-TEST02: ignore rules reject secret/private paths and keep synthetic 
     'evidence/artifacts/text/new_sop.blocks.json', 'evidence/artifacts/text/review-page-9.png',
     'evidence/live/phase1b/assets/abc.js', 'evidence/implementation/__pycache__/x.cpython-314.pyc',
     'node_modules/x/index.js', 'apps/web/dist/index.html', 'coverage/lcov.info', 'playwright-report/index.html', 'test-results/a.png',
+    '.claude/settings.local.json', '.claude/worktrees/t0003/README.md',
   ];
   const mustKeep = [
     '.env.example', 'apps/api/.env.example', 'tests/fixtures/shared/merchant-ma.json', 'tests/fixtures/synthetic/orders.json',
     'tests/tasks/T0001/workspace-boundary.test.mjs', 'docs/development/workspace-boundary.md',
     'evidence/artifacts/text/nonworkbook-analysis.md', 'evidence/live/phase1b/static-analysis.md', 'apps/web/src/main.tsx',
-    'package.json', 'package-lock.json',
+    'package.json', 'package-lock.json', 'skills-lock.json', '.claude/skills/frontend-design/SKILL.md',
   ];
   assert.deepEqual(mustIgnore.filter((p) => !ignored(p)), [], 'secret/private path not ignored');
   assert.deepEqual(mustKeep.filter(ignored), [], 'approved trackable path wrongly ignored');

@@ -40,6 +40,23 @@ Do not change shared migrations, RLS/auth/grants, shared contracts/DTOs, provide
 
 If the task requires an unresolved product, domain, policy or provider decision, stop. Record the exact source locator, the missing decision, affected Task IDs and the safe completed scope. Do not invent an answer or choose a default.
 
+## Approved skills
+
+Project skills live in `.claude/skills/`. They were installed once with `npx skills@1.7.2 add <source> --skill <name> --agent claude-code --copy`, recorded in `skills-lock.json`, with attributions in `.claude/skills/THIRD_PARTY_NOTICES.md`. They are advisory execution aids only: OpsHub specifications, Task IDs, contracts, gates and acceptance criteria always override them.
+
+| Skill | Source | Select only for |
+|---|---|---|
+| `frontend-design` | `anthropics/skills` | Visual direction in UI tasks (the T0004 shell, `apps/web/features/`). Accepted T0004 tokens and shell override it. |
+| `vercel-react-best-practices` | `vercel-labs/agent-skills` | React render, bundle and async performance in `apps/web`. Ignore its Next.js-only rules (RSC, server actions, `next/dynamic`, `after()`), and never add a dependency it suggests unless the task lists it. |
+| `supabase-postgres-best-practices` | `supabase/agent-skills` | PostgreSQL schema, index, locking, pagination and RLS-performance work. OpsHub's tenancy, RLS and Auth0 design override its Supabase `auth.uid()` and role examples. |
+| `differential-review` | `trailofbits/skills` | Security review of high-risk diffs (migrations, RLS/auth, provider/action/recovery protocols) or a fresh review session. Write its report to the session scratchpad, or to the task's completion record when that record calls for it; never elsewhere in the repo. |
+
+- Select the smallest relevant set for each task, and name it in the Task Start Brief. No task loads every skill by default.
+- Never install, update, remove or substitute a skill during a Task ID. `npx skills update` and any new `npx skills add` need explicit owner approval and their own branch; installed skills are never updated automatically.
+- `find-skills` (installed at user level, not a project skill) is discovery-only: it may search and report, never install, update or substitute a skill. Ignore its `npx skills add … -g -y` step.
+- Rejected on 2026-10-16: `web-design-guidelines` (fetches unpinned remote instructions on every use) and `spec-to-code-compliance` (needs a plugin-only multi-agent workflow and writes into the repo root).
+- A user-level skill or plugin with the same name (for example the `frontend-design:frontend-design` plugin) is not the reviewed project copy; use the project skill.
+
 ## Human task briefings
 
 ### Task Start Brief
