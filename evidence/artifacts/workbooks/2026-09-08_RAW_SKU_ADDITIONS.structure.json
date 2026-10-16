@@ -1,0 +1,68 @@
+{
+  "source": "2026-09-08_RAW_SKU_ADDITIONS.xlsx",
+  "sha256": "b50c01862e18a57166b86c216f25c728571983c507e09185ba76eb6fdd114c73",
+  "size_bytes": 5754,
+  "sheets": [
+    {
+      "name": "RAW_SKU_ADDITIONS",
+      "visibility": "visible",
+      "dimension": "A1:F24",
+      "populated_cells": 109,
+      "stored_cells": 109,
+      "max_populated_row": 24,
+      "headers_row1": [
+        {
+          "cell": "A1",
+          "label": "variant_key"
+        },
+        {
+          "cell": "B1",
+          "label": "product"
+        },
+        {
+          "cell": "C1",
+          "label": "size"
+        },
+        {
+          "cell": "D1",
+          "label": "price_egp"
+        },
+        {
+          "cell": "E1",
+          "label": "cogs_egp"
+        },
+        {
+          "cell": "F1",
+          "label": "SOURCE"
+        }
+      ],
+      "formula_count": 0,
+      "formula_patterns": [],
+      "formula_functions": {},
+      "formula_sheet_dependencies": {},
+      "formula_cache_missing_count": 0,
+      "errors": [],
+      "data_validations": [],
+      "conditional_formats": [],
+      "auto_filter": null,
+      "merged_ranges": [],
+      "hidden_rows": [],
+      "hidden_columns": [],
+      "charts": [],
+      "freeze_panes": [],
+      "sheet_protection_present": false
+    }
+  ],
+  "calculation_properties": {
+    "calcId": "124519",
+    "fullCalcOnLoad": "1"
+  },
+  "defined_names": [],
+  "external_link_files": [],
+  "chart_parts": [],
+  "table_parts": [],
+  "pivot_parts": [],
+  "connection_parts": [],
+  "vba_present": false,
+  "workbook_protection_present": true
+}

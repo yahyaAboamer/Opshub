@@ -1,0 +1,258 @@
+{
+  "tasks": [
+    {
+      "id": "T0010",
+      "milestone": "M0",
+      "title": "Implement scrubbed Sentry and OpenTelemetry runtime exporters",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "LOW",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0005",
+        "T0009"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local implementation after Phase6 approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/12-observability-and-operations.md",
+          "section": "OpsHub — observability and operations",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "7065bedfd6856bfd0ff62dd59eee4f2fbd7288d79312169a2f908e1a1f747e2c"
+        },
+        {
+          "path": "docs/architecture/11-audit-provenance-and-privacy.md",
+          "section": "OpsHub — provenance, audit and privacy",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "92b838d6e18be1e8bc069cc8276982ab619739e92d222759a398556660ca573d"
+        },
+        {
+          "path": "docs/architecture/15-technology-selection.md",
+          "section": "OpsHub — concrete MVP technology selection",
+          "line": 1,
+          "end_line": 19,
+          "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0010.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0010-v1",
+          "boundary": "telemetry_runtime",
+          "meaning": "Implement concrete pinned Sentry and OpenTelemetry SDK exporters/wiring behind accepted observability ports, with scrubbing before serialization and controlled mock sink by default; correlate safe API/job/effect IDs without customer payloads.",
+          "record": "docs/contracts/C-T0010-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "packages/observability/exporters/",
+        "apps/api/bootstrap/observability/",
+        "apps/worker/bootstrap/observability/",
+        "tests/tasks/T0010/",
+        "docs/contracts/C-T0010-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:telemetry_runtime"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0010-TEST01",
+          "assertion": "Mock collector captures only allowlisted redacted fields after raw error/body/token/phone/address/signed-URL injection",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0010-TEST02",
+          "assertion": "sampling/disable and API-to-worker context remain correct",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0010-TEST03",
+          "assertion": "local runtime cannot reach real vendor endpoint.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0010-AC01",
+          "criterion": "Implement concrete pinned Sentry and OpenTelemetry SDK exporters/wiring behind accepted observability ports, with scrubbing before serialization and controlled mock sink by default; correlate safe API/job/effect IDs without customer payloads. Exact named mock-wire/sink assertions pass."
+        },
+        {
+          "id": "T0010-AC02",
+          "criterion": "Actual pinned versions and deterministic test evidence accepted independently; real destination/account use remains separately authorized."
+        }
+      ],
+      "acceptance_summary": "Implement concrete pinned Sentry and OpenTelemetry SDK exporters/wiring behind accepted observability ports, with scrubbing before serialization and controlled mock sink by default; correlate safe API/job/effect IDs without customer payloads.",
+      "completion_evidence_refs": [],
+      "goal": "Implement scrubbed Sentry and OpenTelemetry runtime exporters",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Implement concrete pinned Sentry and OpenTelemetry SDK exporters/wiring behind accepted observability ports, with scrubbing before serialization and controlled mock sink by default; correlate safe API/job/effect IDs without customer payloads.",
+      "explicit_non_scope": "No live telemetry transmission without environment-specific permission, residency/retention review and actual destination scrubbing validation. No protected or unrelated edits.",
+      "data_changes": "No new business-schema allocation; consume accepted audit/mail/observability state and protocols.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock collector captures only allowlisted redacted fields after raw error/body/token/phone/address/signed-URL injection; sampling/disable and API-to-worker context remain correct; local runtime cannot reach real vendor endpoint.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed T0010 branch/worktree from current main; no dual ownership; frozen predecessor contracts.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "engineering_justification": "Necessary enabling or verification dependency of AUD02; no extra product capability.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0111",
+      "milestone": "M1",
+      "title": "Implement Resend invitation and account-support delivery transport",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "HIGH",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0107",
+        "T0007",
+        "T0005"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local implementation after Phase6 approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/15-technology-selection.md",
+          "section": "OpsHub — concrete MVP technology selection",
+          "line": 1,
+          "end_line": 19,
+          "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081"
+        },
+        {
+          "path": "docs/architecture/03-multi-tenancy-and-identity.md",
+          "section": "OpsHub — multi-tenancy, identity and authorization",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "ecc03a2b8c8fa9833e2733884a62f9ca660e01832f0c41264fdcbd734b80f0fe"
+        },
+        {
+          "path": "docs/product/02-personas-and-permissions.md",
+          "section": "OpsHub — personas and permissions",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "e07af4dd56d635ed885a013396807d55016b2a28e24e38230138e471134af4e3"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0111.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0111-v1",
+          "boundary": "resend_runtime",
+          "meaning": "Implement concrete pinned Resend invitation/account-support client behind mail port with stable invitation/message identity, recipient/scope checks and duplicate/resend suppression; token/recipient body never logged, local endpoint mock only.",
+          "record": "docs/contracts/C-T0111-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/identity/mail/resend/",
+        "tests/tasks/T0111/",
+        "docs/contracts/C-T0111-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:resend_runtime"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0111-TEST01",
+          "assertion": "Mock HTTP proves one intended recipient and exact message identity, transport replay suppression and missing/expired/revoked invitation no membership effect",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0111-TEST02",
+          "assertion": "provider errors redact body/token and retain auditable delivery state.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0111-AC01",
+          "criterion": "Implement concrete pinned Resend invitation/account-support client behind mail port with stable invitation/message identity, recipient/scope checks and duplicate/resend suppression; token/recipient body never logged, local endpoint mock only. Exact named mock-wire/sink assertions pass."
+        },
+        {
+          "id": "T0111-AC02",
+          "criterion": "Actual pinned versions and deterministic test evidence accepted independently; real destination/account use remains separately authorized."
+        }
+      ],
+      "acceptance_summary": "Implement concrete pinned Resend invitation/account-support client behind mail port with stable invitation/message identity, recipient/scope checks and duplicate/resend suppression; token/recipient body never logged, local endpoint mock only.",
+      "completion_evidence_refs": [],
+      "goal": "Implement Resend invitation and account-support delivery transport",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Implement concrete pinned Resend invitation/account-support client behind mail port with stable invitation/message identity, recipient/scope checks and duplicate/resend suppression; token/recipient body never logged, local endpoint mock only.",
+      "explicit_non_scope": "No customer outreach, real send or IdP membership activation from delivery; actual controlled recipient qualification remains T1203 under AUTH-ACCOUNT-MAIL. No protected or unrelated edits.",
+      "data_changes": "No new business-schema allocation; consume accepted audit/mail/observability state and protocols.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock HTTP proves one intended recipient and exact message identity, transport replay suppression and missing/expired/revoked invitation no membership effect; provider errors redact body/token and retain auditable delivery state.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed T0111 branch/worktree from current main; no dual ownership; frozen predecessor contracts.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    }
+  ],
+  "extra_requirement_owners": {
+    "T0010": [
+      "ADR-009",
+      "AUD02",
+      "TR04",
+      "TI14",
+      "PV01",
+      "ARC-TECH"
+    ],
+    "T0111": [
+      "MR02",
+      "ARC-SESSION",
+      "ADR-004",
+      "COM02"
+    ]
+  }
+}

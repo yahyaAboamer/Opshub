@@ -1,0 +1,109 @@
+[
+  {
+    "sheet": "RAW_SKU_ADDITIONS",
+    "header_row": 1,
+    "first_data_row": 2,
+    "headers": [
+      {
+        "cell": "A1",
+        "label": "variant_key"
+      },
+      {
+        "cell": "B1",
+        "label": "product"
+      },
+      {
+        "cell": "C1",
+        "label": "size"
+      },
+      {
+        "cell": "D1",
+        "label": "price_egp"
+      },
+      {
+        "cell": "E1",
+        "label": "cogs_egp"
+      },
+      {
+        "cell": "F1",
+        "label": "SOURCE"
+      }
+    ],
+    "row_count_with_stored_values_or_formulas": 22,
+    "columns": {
+      "variant_key": {
+        "column": "A",
+        "nonempty_values": 22,
+        "input_nonempty_values": 22,
+        "distinct_values": 22,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 24
+      },
+      "product": {
+        "column": "B",
+        "nonempty_values": 21,
+        "input_nonempty_values": 21,
+        "distinct_values": 10,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 24
+      },
+      "size": {
+        "column": "C",
+        "nonempty_values": 21,
+        "input_nonempty_values": 21,
+        "distinct_values": 6,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 24
+      },
+      "price_egp": {
+        "column": "D",
+        "nonempty_values": 9,
+        "input_nonempty_values": 9,
+        "distinct_values": 2,
+        "numeric_count": 9,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 10,
+        "numeric_summary": {
+          "min": 900,
+          "max": 950,
+          "sum": 8250,
+          "mean": 916.6666666666666
+        }
+      },
+      "cogs_egp": {
+        "column": "E",
+        "nonempty_values": 9,
+        "input_nonempty_values": 9,
+        "distinct_values": 1,
+        "numeric_count": 9,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 10,
+        "numeric_summary": {
+          "min": 520,
+          "max": 520,
+          "sum": 4680,
+          "mean": 520.0
+        }
+      },
+      "SOURCE": {
+        "column": "F",
+        "nonempty_values": 21,
+        "input_nonempty_values": 21,
+        "distinct_values": 7,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 24
+      }
+    },
+    "formula_columns": {}
+  }
+]

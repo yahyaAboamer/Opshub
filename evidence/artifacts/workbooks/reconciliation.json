@@ -1,0 +1,1379 @@
+{
+  "privacy": "Only aggregate statistics, schema, formula/cell references and control values retained. Raw customer names, emails, phones, addresses and private transaction identifiers are never output. Source and live CSV opened read-only.",
+  "raw_workbook_profiles": {
+    "02_Gentry_Delivery_Performance_System.xlsx": {
+      "RAW_Bosta": {
+        "records": 569,
+        "nonnull_keys": 569,
+        "unique_keys": 569,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 571,
+        "types": {
+          "RTO": 210,
+          "EXCHANGE_return": 20,
+          "CUSTOMER_RETURN_PICKUP": 26,
+          "SEND": 313
+        },
+        "delivery_states": {
+          "Returned to origin": 210,
+          "Exchanged & Returned": 20,
+          "Returned": 26,
+          "Delivered": 313
+        },
+        "created_dates": {
+          "min": "2026-05-20",
+          "max": "2026-09-06",
+          "present": 569
+        },
+        "business_reference": {
+          "records": 569,
+          "nonnull_keys": 565,
+          "unique_keys": 534,
+          "duplicate_key_values": 28,
+          "duplicate_rows_beyond_first": 31,
+          "first_row": 3,
+          "last_row": 571
+        },
+        "attempt_counts": {
+          "1": 295,
+          "2": 162,
+          "3": 90,
+          "4": 17,
+          "7": 1,
+          "6": 1,
+          "5": 3
+        },
+        "cod_total": 384057.5,
+        "description_line_counts": {
+          "1": 438,
+          "2": 97,
+          "4": 2,
+          "3": 32
+        },
+        "phone_nonempty": 569,
+        "unique_phones_trim_only": 486
+      },
+      "RAW_Costs": {
+        "records": 1381,
+        "nonnull_keys": 1381,
+        "unique_keys": 1381,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 1383,
+        "total_fees": 134233.55,
+        "shipping_fees": 96622,
+        "vat": 16607.66,
+        "order_status": {
+          "RETURNED": 643,
+          "DELIVERED": 738
+        },
+        "order_types": {
+          "SEND": 1258,
+          "CUSTOMER_RETURN_PICKUP": 68,
+          "EXCHANGE": 54,
+          "CASH_COLLECTION": 1
+        },
+        "completed_dates": {
+          "min": "2026-04-30",
+          "max": "2026-09-07",
+          "present": 1381
+        }
+      },
+      "RAW_Intake": {
+        "records": 75,
+        "nonnull_keys": 75,
+        "unique_keys": 75,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 77,
+        "call_status": {
+          "Reached": 45,
+          "No Answer": 23,
+          "": 7
+        },
+        "root_causes": {
+          "LEGACY - fit, size unspecified": 25,
+          "LEGACY - quality unspecified": 3,
+          "": 30,
+          "Customer refused to give reason": 15,
+          "Courier never called": 1,
+          "Wrong item shipped": 1
+        },
+        "resolutions": {
+          "Not recoverable": 37,
+          "": 33,
+          "Pending": 5
+        },
+        "blank_return_type": 75,
+        "blank_size_detail": 75,
+        "blank_refund": 75,
+        "blank_recoverable": 75
+      },
+      "RAW_SKU": {
+        "records": 60,
+        "nonnull_keys": 60,
+        "unique_keys": 60,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 62,
+        "unique_products": 19,
+        "sum_variant_prices": 44050,
+        "sum_variant_cogs": 25355,
+        "numeric_prices": 60,
+        "numeric_cogs": 60
+      },
+      "RAW_Shopify": {
+        "records": 2082,
+        "nonnull_keys": 2082,
+        "unique_keys": 1635,
+        "duplicate_key_values": 354,
+        "duplicate_rows_beyond_first": 447,
+        "first_row": 3,
+        "last_row": 2084,
+        "line_item_rows": 2082,
+        "order_header_rows_by_nonblank_financial_status": 1635,
+        "header_unique_order_refs": 1635,
+        "created_dates": {
+          "min": "2026-04-01",
+          "max": "2026-09-08",
+          "present": 1635
+        },
+        "financial_status": {
+          "pending": 71,
+          "paid": 909,
+          "voided": 634,
+          "refunded": 3,
+          "partially_refunded": 14,
+          "partially_paid": 4
+        },
+        "fulfillment_status": {
+          "unfulfilled": 83,
+          "fulfilled": 1549,
+          "partial": 3
+        },
+        "shipping_methods": {
+          "Cairo": 993,
+          "Other": 231,
+          "Giza": 214,
+          "Alexandria": 125,
+          "90 Office": 69,
+          "": 3
+        },
+        "cancelled_headers": 637,
+        "header_total_value_after_numeric_text_conversion": 2304412.5,
+        "header_total_values_stored_as_number": 1635,
+        "header_total_values_stored_as_text": 0,
+        "tag_tokens": {
+          "Confirmation Sent": 25,
+          "Confirmed": 305,
+          "bosta_synced": 1513,
+          "1/3": 41,
+          "Cancelled": 28,
+          "confirmed omar": 37,
+          "2/3": 13,
+          "Message Undeliverable": 15,
+          "3/3": 7,
+          "bosta_sync_failed": 63,
+          "From Easy Bundle": 15,
+          "wrong number": 1,
+          "WHAPI-Template-Error": 26,
+          "Whatsapp Disconnected": 210
+        }
+      }
+    },
+    "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx": {
+      "RAW_Bosta": {
+        "records": 237,
+        "nonnull_keys": 237,
+        "unique_keys": 237,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 239,
+        "types": {
+          "RTO": 79,
+          "SEND": 133,
+          "CUSTOMER_RETURN_PICKUP": 15,
+          "EXCHANGE_return": 10
+        },
+        "delivery_states": {
+          "Returned to origin": 79,
+          "Delivered": 133,
+          "Returned": 15,
+          "Exchanged & Returned": 10
+        },
+        "created_dates": {
+          "min": "2026-06-18",
+          "max": "2026-08-17",
+          "present": 237
+        },
+        "business_reference": {
+          "records": 237,
+          "nonnull_keys": 234,
+          "unique_keys": 220,
+          "duplicate_key_values": 13,
+          "duplicate_rows_beyond_first": 14,
+          "first_row": 3,
+          "last_row": 239
+        },
+        "attempt_counts": {
+          "3": 30,
+          "6": 1,
+          "2": 64,
+          "1": 125,
+          "7": 1,
+          "4": 13,
+          "5": 3
+        },
+        "cod_total": 176399.0,
+        "description_line_counts": {
+          "1": 174,
+          "2": 41,
+          "3": 21,
+          "4": 1
+        },
+        "phone_nonempty": 237,
+        "unique_phones_trim_only": 208
+      },
+      "RAW_Costs": {
+        "records": 237,
+        "nonnull_keys": 237,
+        "unique_keys": 237,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 239,
+        "total_fees": 23710.11,
+        "shipping_fees": 16818,
+        "vat": 2911.78,
+        "order_status": {
+          "DELIVERED": 133,
+          "RETURNED": 104
+        },
+        "order_types": {
+          "SEND": 209,
+          "CUSTOMER_RETURN_PICKUP": 15,
+          "EXCHANGE": 13
+        },
+        "completed_dates": {
+          "min": "2026-07-01",
+          "max": "2026-08-18",
+          "present": 237
+        }
+      },
+      "RAW_Intake": {
+        "records": 75,
+        "nonnull_keys": 75,
+        "unique_keys": 75,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 77,
+        "call_status": {
+          "Reached": 45,
+          "No Answer": 23,
+          "": 7
+        },
+        "root_causes": {
+          "LEGACY - fit, size unspecified": 25,
+          "LEGACY - quality unspecified": 3,
+          "": 30,
+          "Customer refused to give reason": 15,
+          "Courier never called": 1,
+          "Wrong item shipped": 1
+        },
+        "resolutions": {
+          "Not recoverable": 37,
+          "": 33,
+          "Pending": 5
+        },
+        "blank_return_type": 75,
+        "blank_size_detail": 75,
+        "blank_refund": 75,
+        "blank_recoverable": 75
+      },
+      "RAW_SKU": {
+        "records": 51,
+        "nonnull_keys": 51,
+        "unique_keys": 51,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 53,
+        "unique_products": 16,
+        "sum_variant_prices": 35800,
+        "sum_variant_cogs": 20675,
+        "numeric_prices": 51,
+        "numeric_cogs": 51
+      }
+    },
+    "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx": {
+      "RAW_Bosta": {
+        "records": 237,
+        "nonnull_keys": 237,
+        "unique_keys": 237,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 239,
+        "types": {
+          "RTO": 79,
+          "SEND": 133,
+          "CUSTOMER_RETURN_PICKUP": 15,
+          "EXCHANGE_return": 10
+        },
+        "delivery_states": {
+          "Returned to origin": 79,
+          "Delivered": 133,
+          "Returned": 15,
+          "Exchanged & Returned": 10
+        },
+        "created_dates": {
+          "min": "2026-06-18",
+          "max": "2026-08-17",
+          "present": 237
+        },
+        "business_reference": {
+          "records": 237,
+          "nonnull_keys": 234,
+          "unique_keys": 220,
+          "duplicate_key_values": 13,
+          "duplicate_rows_beyond_first": 14,
+          "first_row": 3,
+          "last_row": 239
+        },
+        "attempt_counts": {
+          "3": 30,
+          "6": 1,
+          "2": 64,
+          "1": 125,
+          "7": 1,
+          "4": 13,
+          "5": 3
+        },
+        "cod_total": 176399.0,
+        "description_line_counts": {
+          "1": 174,
+          "2": 41,
+          "3": 21,
+          "4": 1
+        },
+        "phone_nonempty": 237,
+        "unique_phones_trim_only": 208
+      },
+      "RAW_Costs": {
+        "records": 237,
+        "nonnull_keys": 237,
+        "unique_keys": 237,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 239,
+        "total_fees": 23710.11,
+        "shipping_fees": 16818,
+        "vat": 2911.78,
+        "order_status": {
+          "DELIVERED": 133,
+          "RETURNED": 104
+        },
+        "order_types": {
+          "SEND": 209,
+          "CUSTOMER_RETURN_PICKUP": 15,
+          "EXCHANGE": 13
+        },
+        "completed_dates": {
+          "min": "2026-07-01",
+          "max": "2026-08-18",
+          "present": 237
+        }
+      },
+      "RAW_Intake": {
+        "records": 75,
+        "nonnull_keys": 75,
+        "unique_keys": 75,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 77,
+        "call_status": {
+          "Reached": 45,
+          "No Answer": 23,
+          "": 7
+        },
+        "root_causes": {
+          "LEGACY - fit, size unspecified": 25,
+          "LEGACY - quality unspecified": 3,
+          "": 30,
+          "Customer refused to give reason": 15,
+          "Courier never called": 1,
+          "Wrong item shipped": 1
+        },
+        "resolutions": {
+          "Not recoverable": 37,
+          "": 33,
+          "Pending": 5
+        },
+        "blank_return_type": 75,
+        "blank_size_detail": 75,
+        "blank_refund": 75,
+        "blank_recoverable": 75
+      },
+      "RAW_SKU": {
+        "records": 51,
+        "nonnull_keys": 51,
+        "unique_keys": 51,
+        "duplicate_key_values": 0,
+        "duplicate_rows_beyond_first": 0,
+        "first_row": 3,
+        "last_row": 53,
+        "unique_products": 16,
+        "sum_variant_prices": 35800,
+        "sum_variant_cogs": 20675,
+        "numeric_prices": 51,
+        "numeric_cogs": 51
+      },
+      "RAW_Shopify": {
+        "records": 495,
+        "nonnull_keys": 495,
+        "unique_keys": 353,
+        "duplicate_key_values": 103,
+        "duplicate_rows_beyond_first": 142,
+        "first_row": 3,
+        "last_row": 497,
+        "line_item_rows": 495,
+        "order_header_rows_by_nonblank_financial_status": 353,
+        "header_unique_order_refs": 353,
+        "created_dates": {
+          "min": "2026-06-18",
+          "max": "2026-08-17",
+          "present": 353
+        },
+        "financial_status": {
+          "paid": 205,
+          "voided": 125,
+          "pending": 21,
+          "refunded": 2
+        },
+        "fulfillment_status": {
+          "fulfilled": 322,
+          "unfulfilled": 31
+        },
+        "shipping_methods": {
+          "Cairo": 203,
+          "Alexandria": 30,
+          "90 Office": 30,
+          "Other": 45,
+          "Giza": 43,
+          "": 2
+        },
+        "cancelled_headers": 126,
+        "header_total_value_after_numeric_text_conversion": 579818.5,
+        "header_total_values_stored_as_number": 0,
+        "header_total_values_stored_as_text": 353,
+        "tag_tokens": {
+          "bosta_synced": 299,
+          "Confirmed": 214,
+          "confirmed omar": 23,
+          "Cancelled": 19,
+          "1/3": 19,
+          "2/3": 3,
+          "bosta_sync_failed": 17,
+          "Message Undeliverable": 10,
+          "3/3": 2,
+          "From Easy Bundle": 15,
+          "wrong number": 1,
+          "WHAPI-Template-Error": 26,
+          "Whatsapp Disconnected": 37
+        }
+      }
+    }
+  },
+  "backup_input_comparisons": [
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+      "left": "RAW_Bosta",
+      "right": "RAW_Bosta",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 569,
+      "right_records": 237,
+      "left_unique_keys": 569,
+      "right_unique_keys": 237,
+      "shared_keys": 237,
+      "left_only_keys": 332,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 237,
+      "changed_columns_on_shared_keys": {
+        "X": 138,
+        "Z": 237,
+        "AA": 237,
+        "AB": 217,
+        "AC": 217
+      },
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+      "left": "RAW_Costs",
+      "right": "RAW_Costs",
+      "key_columns": [
+        "C",
+        "C"
+      ],
+      "left_records": 1381,
+      "right_records": 237,
+      "left_unique_keys": 1381,
+      "right_unique_keys": 237,
+      "shared_keys": 237,
+      "left_only_keys": 1144,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 237,
+      "changed_columns_on_shared_keys": {
+        "K": 219,
+        "L": 218,
+        "AG": 38
+      },
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+      "left": "RAW_Intake",
+      "right": "RAW_Intake",
+      "key_columns": [
+        "D",
+        "D"
+      ],
+      "left_records": 75,
+      "right_records": 75,
+      "left_unique_keys": 75,
+      "right_unique_keys": 75,
+      "shared_keys": 75,
+      "left_only_keys": 0,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 0,
+      "changed_columns_on_shared_keys": {},
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+      "left": "RAW_SKU",
+      "right": "RAW_SKU",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 60,
+      "right_records": 51,
+      "left_unique_keys": 60,
+      "right_unique_keys": 51,
+      "shared_keys": 51,
+      "left_only_keys": 9,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 0,
+      "changed_columns_on_shared_keys": {},
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "left": "RAW_Bosta",
+      "right": "RAW_Bosta",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 569,
+      "right_records": 237,
+      "left_unique_keys": 569,
+      "right_unique_keys": 237,
+      "shared_keys": 237,
+      "left_only_keys": 332,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 237,
+      "changed_columns_on_shared_keys": {
+        "X": 138,
+        "Z": 237,
+        "AA": 237,
+        "AB": 217,
+        "AC": 217
+      },
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "left": "RAW_Costs",
+      "right": "RAW_Costs",
+      "key_columns": [
+        "C",
+        "C"
+      ],
+      "left_records": 1381,
+      "right_records": 237,
+      "left_unique_keys": 1381,
+      "right_unique_keys": 237,
+      "shared_keys": 237,
+      "left_only_keys": 1144,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 168,
+      "changed_columns_on_shared_keys": {
+        "K": 101,
+        "L": 89,
+        "AG": 38
+      },
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "left": "RAW_Intake",
+      "right": "RAW_Intake",
+      "key_columns": [
+        "D",
+        "D"
+      ],
+      "left_records": 75,
+      "right_records": 75,
+      "left_unique_keys": 75,
+      "right_unique_keys": 75,
+      "shared_keys": 75,
+      "left_only_keys": 0,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 0,
+      "changed_columns_on_shared_keys": {},
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "left": "RAW_SKU",
+      "right": "RAW_SKU",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 60,
+      "right_records": 51,
+      "left_unique_keys": 60,
+      "right_unique_keys": 51,
+      "shared_keys": 51,
+      "left_only_keys": 9,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 0,
+      "changed_columns_on_shared_keys": {},
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "left_workbook": "02_Gentry_Delivery_Performance_System.xlsx",
+      "right_workbook": "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "left": "RAW_Shopify",
+      "right": "RAW_Shopify",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 2082,
+      "right_records": 495,
+      "left_unique_keys": 1635,
+      "right_unique_keys": 353,
+      "shared_keys": 353,
+      "left_only_keys": 1282,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 2,
+      "changed_columns_on_shared_keys": {
+        "C": 2,
+        "AS": 1,
+        "AU": 1,
+        "CA": 2,
+        "AX": 1
+      },
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    }
+  ],
+  "staged_input_comparisons": [
+    {
+      "staged_source": "2026-09-08_RAW_Bosta_STAGED_20May-06Sep.xlsx",
+      "left": "RAW_Bosta",
+      "right": "RAW_Bosta_PASTE",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 569,
+      "right_records": 569,
+      "left_unique_keys": 569,
+      "right_unique_keys": 569,
+      "shared_keys": 569,
+      "left_only_keys": 0,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 0,
+      "changed_columns_on_shared_keys": {},
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "staged_source": "2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx",
+      "left": "RAW_Shopify",
+      "right": "RAW_Shopify_PASTE",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 2082,
+      "right_records": 664,
+      "left_unique_keys": 1635,
+      "right_unique_keys": 476,
+      "shared_keys": 476,
+      "left_only_keys": 1159,
+      "right_only_keys": 0,
+      "shared_keys_with_different_last_record_values": 476,
+      "changed_columns_on_shared_keys": {
+        "CC": 476,
+        "C": 2,
+        "AS": 1,
+        "AU": 1,
+        "CA": 2,
+        "AX": 1
+      },
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "staged_source": "2026-09-08_RAW_SKU_ADDITIONS.xlsx",
+      "left": "RAW_SKU",
+      "right": "RAW_SKU_ADDITIONS",
+      "key_columns": [
+        "A",
+        "A"
+      ],
+      "left_records": 60,
+      "right_records": 22,
+      "left_unique_keys": 60,
+      "right_unique_keys": 22,
+      "shared_keys": 9,
+      "left_only_keys": 51,
+      "right_only_keys": 13,
+      "shared_keys_with_different_last_record_values": 0,
+      "changed_columns_on_shared_keys": {},
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    },
+    {
+      "staged_source": "2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx",
+      "left": "RAW_Intake",
+      "right": "PASTE_AT_A102",
+      "key_columns": [
+        "D",
+        "D"
+      ],
+      "left_records": 75,
+      "right_records": 27,
+      "left_unique_keys": 75,
+      "right_unique_keys": 27,
+      "shared_keys": 0,
+      "left_only_keys": 75,
+      "right_only_keys": 27,
+      "shared_keys_with_different_last_record_values": 0,
+      "changed_columns_on_shared_keys": {},
+      "method": "trimmed exact identifier string match; compare last row per key; normalize decimal representation only when comparing field values, never when matching identifiers. For line-item datasets this is a last-row comparison, not a complete item-sequence equivalence test. No names, phones or addresses retained."
+    }
+  ],
+  "source_csv_profile": {
+    "source": "2026-08-28_Shopify_orders_18Jun-17Aug.csv",
+    "headers": [
+      "Name",
+      "Email",
+      "Financial Status",
+      "Paid at",
+      "Fulfillment Status",
+      "Fulfilled at",
+      "Accepts Marketing",
+      "Currency",
+      "Subtotal",
+      "Shipping",
+      "Taxes",
+      "Total",
+      "Discount Code",
+      "Discount Amount",
+      "Shipping Method",
+      "Created at",
+      "Lineitem quantity",
+      "Lineitem name",
+      "Lineitem price",
+      "Lineitem compare at price",
+      "Lineitem sku",
+      "Lineitem requires shipping",
+      "Lineitem taxable",
+      "Lineitem fulfillment status",
+      "Billing Name",
+      "Billing Street",
+      "Billing Address1",
+      "Billing Address2",
+      "Billing Company",
+      "Billing City",
+      "Billing Zip",
+      "Billing Province",
+      "Billing Country",
+      "Billing Phone",
+      "Shipping Name",
+      "Shipping Street",
+      "Shipping Address1",
+      "Shipping Address2",
+      "Shipping Company",
+      "Shipping City",
+      "Shipping Zip",
+      "Shipping Province",
+      "Shipping Country",
+      "Shipping Phone",
+      "Notes",
+      "Note Attributes",
+      "Cancelled at",
+      "Payment Method",
+      "Payment Reference",
+      "Refunded Amount",
+      "Vendor",
+      "Outstanding Balance",
+      "Employee",
+      "Location",
+      "Device ID",
+      "Id",
+      "Tags",
+      "Risk Level",
+      "Source",
+      "Lineitem discount",
+      "Tax 1 Name",
+      "Tax 1 Value",
+      "Tax 2 Name",
+      "Tax 2 Value",
+      "Tax 3 Name",
+      "Tax 3 Value",
+      "Tax 4 Name",
+      "Tax 4 Value",
+      "Tax 5 Name",
+      "Tax 5 Value",
+      "Phone",
+      "Receipt Number",
+      "Duties",
+      "Billing Province Name",
+      "Shipping Province Name",
+      "Payment ID",
+      "Payment Terms Name",
+      "Next Payment Due At",
+      "Payment References"
+    ],
+    "line_item_rows": 495,
+    "unique_order_refs": 353,
+    "order_header_rows": 353,
+    "date_range": {
+      "min": "2026-06-18",
+      "max": "2026-08-17",
+      "present": 353
+    },
+    "financial_status_counts": {
+      "paid": 205,
+      "voided": 125,
+      "pending": 21,
+      "refunded": 2
+    },
+    "fulfillment_status_counts": {
+      "fulfilled": 322,
+      "unfulfilled": 31
+    },
+    "tag_tokens": {
+      "bosta_synced": 299,
+      "Confirmed": 214,
+      "confirmed omar": 23,
+      "Cancelled": 19,
+      "1/3": 19,
+      "2/3": 3,
+      "bosta_sync_failed": 17,
+      "Message Undeliverable": 10,
+      "3/3": 2,
+      "From Easy Bundle": 15,
+      "wrong number": 1,
+      "WHAPI-Template-Error": 26,
+      "Whatsapp Disconnected": 37
+    },
+    "workbook_order_key_overlap": {
+      "02_Gentry_Delivery_Performance_System.xlsx": {
+        "shared": 353,
+        "csv_only": 0,
+        "workbook_only": 1282
+      },
+      "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx": {
+        "shared": 353,
+        "csv_only": 0,
+        "workbook_only": 0
+      }
+    }
+  },
+  "independent_formula_reconstruction": {
+    "02_Gentry_Delivery_Performance_System.xlsx": {
+      "method": "Independent Python reproduction of inspected formula semantics from raw input values. No Excel engine, no workbook recalculation, no saved transformed records. Aggregates are evidence about supplied artifacts, not live application results. Case-insensitive SKU matching and trimmed identifiers reproduce MATCH/SUMIF intention; Excel edge coercion is a residual limit.",
+      "references": [
+        "DATA_Master!A4:BC2003",
+        "Orders_Master!A4:X2003",
+        "Config!C34:C40",
+        "RAW_Bosta!A3:AC571",
+        "RAW_Costs!C3:AF1383",
+        "RAW_SKU!A3:E62"
+      ],
+      "shipments": 569,
+      "status_groups": {
+        "Returned": 210,
+        "Exchange return": 20,
+        "Customer return": 26,
+        "Delivered": 313
+      },
+      "channels": {
+        "Outbound": 523,
+        "Exchange return": 20,
+        "Customer return": 26
+      },
+      "created_dates": {
+        "min": "2026-05-20",
+        "max": "2026-09-06",
+        "present": 569
+      },
+      "completed_dates": {
+        "min": "2026-06-13",
+        "max": "2026-09-08",
+        "present": 569
+      },
+      "value_sources": {
+        "SKU list": 248,
+        "COD": 281,
+        "AOV proxy": 40
+      },
+      "courier_fee_rows": 569,
+      "courier_fee_sum": 55951.05,
+      "wallet_rows_without_bosta_match": 812,
+      "sku_value_sum": 591550,
+      "order_value_sum": 734640.7234432234,
+      "margin_lost_sum": 126315.51168710215,
+      "aov_delivered_positive_cod": 1404.580586080586,
+      "blended_cogs_pct": 0.5755959137343928,
+      "gross_margin_pct": 0.4244040862656072,
+      "saved_return_margin_proxy": 596.1097402219422,
+      "unmapped_city_count": 2,
+      "intake_joined_shipments": 75,
+      "return_groups": 256,
+      "return_group_with_root_cause": 45,
+      "return_root_cause_counts": {
+        "[blank]": 211,
+        "Customer refused to give reason": 15,
+        "LEGACY - fit, size unspecified": 25,
+        "Courier never called": 1,
+        "Wrong item shipped": 1,
+        "LEGACY - quality unspecified": 3
+      },
+      "return_call_status_counts": {
+        "[blank]": 188,
+        "Reached": 45,
+        "No Answer": 23
+      },
+      "sku_missing_shipments": 39,
+      "sku_missing_slots": 40,
+      "descriptions_over_four_lines": 0,
+      "outbound_numeric_attempts_mean": 1.684512428298279,
+      "excess_attempts_sum": 130,
+      "orders": {
+        "count": 1635,
+        "placed_dates": {
+          "min": "2026-04-01",
+          "max": "2026-09-08",
+          "present": 1635
+        },
+        "fulfillment_channels": {
+          "Not fulfilled": 485,
+          "Bosta": 534,
+          "Pickup - unrecorded": 547,
+          "Office pickup": 69
+        },
+        "confirmed_by": {
+          "n/a": 1301,
+          "Hadeer / auto": 297,
+          "Omar": 37
+        },
+        "confirmation_coverage_hadeer_auto": 0.181651376146789,
+        "confirmation_coverage_all": 0.20428134556574923,
+        "whappi_signal": {
+          "No failure logged": 1386,
+          "Undeliverable": 13,
+          "Template error": 26,
+          "Disconnected": 210
+        },
+        "cancel_stage": {
+          "none": 998,
+          "Post-dispatch": 183,
+          "Pre-dispatch": 454
+        },
+        "outbound_outcome": {
+          "n/a": 1101,
+          "Delivered": 308,
+          "RTO": 210,
+          "In transit / other": 16
+        },
+        "pickup_status": {
+          "n/a": 1019,
+          "Collected (inferred)": 547,
+          "Open": 10,
+          "Collected": 32,
+          "No-show": 27
+        },
+        "pickup_flags": {
+          "": 1625,
+          "KILL": 10
+        },
+        "office_pickup_with_bosta_legs": 0,
+        "order_value_sum": 2304412.5,
+        "bosta_dispatched": 534,
+        "asof": "2026-09-08"
+      }
+    },
+    "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx": {
+      "method": "Independent Python reproduction of inspected formula semantics from raw input values. No Excel engine, no workbook recalculation, no saved transformed records. Aggregates are evidence about supplied artifacts, not live application results. Case-insensitive SKU matching and trimmed identifiers reproduce MATCH/SUMIF intention; Excel edge coercion is a residual limit.",
+      "references": [
+        "DATA_Master!A4:BC2003",
+        "Orders_Master!A4:X2003",
+        "Config!C34:C40",
+        "RAW_Bosta!A3:AC571",
+        "RAW_Costs!C3:AF1383",
+        "RAW_SKU!A3:E62"
+      ],
+      "shipments": 237,
+      "status_groups": {
+        "Returned": 79,
+        "Delivered": 133,
+        "Customer return": 15,
+        "Exchange return": 10
+      },
+      "channels": {
+        "Outbound": 212,
+        "Customer return": 15,
+        "Exchange return": 10
+      },
+      "created_dates": {
+        "min": "2026-06-18",
+        "max": "2026-08-17",
+        "present": 237
+      },
+      "completed_dates": {
+        "min": "2026-07-01",
+        "max": "2026-08-18",
+        "present": 237
+      },
+      "value_sources": {
+        "SKU list": 102,
+        "COD": 121,
+        "AOV proxy": 14
+      },
+      "courier_fee_rows": 237,
+      "courier_fee_sum": 23710.11,
+      "wallet_rows_without_bosta_match": 0,
+      "sku_value_sum": 270100,
+      "order_value_sum": 326042.551724138,
+      "margin_lost_sum": 53944.02505538432,
+      "aov_delivered_positive_cod": 1517.396551724138,
+      "blended_cogs_pct": 0.577513966480447,
+      "gross_margin_pct": 0.42248603351955305,
+      "saved_return_margin_proxy": 641.0788504141783,
+      "unmapped_city_count": 0,
+      "intake_joined_shipments": 63,
+      "return_groups": 104,
+      "return_group_with_root_cause": 37,
+      "return_root_cause_counts": {
+        "[blank]": 67,
+        "LEGACY - fit, size unspecified": 23,
+        "Customer refused to give reason": 11,
+        "LEGACY - quality unspecified": 3
+      },
+      "return_call_status_counts": {
+        "No Answer": 19,
+        "Reached": 37,
+        "[blank]": 48
+      },
+      "sku_missing_shipments": 3,
+      "sku_missing_slots": 3,
+      "descriptions_over_four_lines": 0,
+      "outbound_numeric_attempts_mean": 1.7122641509433962,
+      "excess_attempts_sum": 64
+    },
+    "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx": {
+      "method": "Independent Python reproduction of inspected formula semantics from raw input values. No Excel engine, no workbook recalculation, no saved transformed records. Aggregates are evidence about supplied artifacts, not live application results. Case-insensitive SKU matching and trimmed identifiers reproduce MATCH/SUMIF intention; Excel edge coercion is a residual limit.",
+      "references": [
+        "DATA_Master!A4:BC2003",
+        "Orders_Master!A4:X2003",
+        "Config!C34:C40",
+        "RAW_Bosta!A3:AC571",
+        "RAW_Costs!C3:AF1383",
+        "RAW_SKU!A3:E62"
+      ],
+      "shipments": 237,
+      "status_groups": {
+        "Returned": 79,
+        "Delivered": 133,
+        "Customer return": 15,
+        "Exchange return": 10
+      },
+      "channels": {
+        "Outbound": 212,
+        "Customer return": 15,
+        "Exchange return": 10
+      },
+      "created_dates": {
+        "min": "2026-06-18",
+        "max": "2026-08-17",
+        "present": 237
+      },
+      "completed_dates": {
+        "min": "2026-07-01",
+        "max": "2026-08-18",
+        "present": 237
+      },
+      "value_sources": {
+        "SKU list": 102,
+        "COD": 121,
+        "AOV proxy": 14
+      },
+      "courier_fee_rows": 237,
+      "courier_fee_sum": 23710.11,
+      "wallet_rows_without_bosta_match": 0,
+      "sku_value_sum": 270100,
+      "order_value_sum": 326042.551724138,
+      "margin_lost_sum": 53944.02505538432,
+      "aov_delivered_positive_cod": 1517.396551724138,
+      "blended_cogs_pct": 0.577513966480447,
+      "gross_margin_pct": 0.42248603351955305,
+      "saved_return_margin_proxy": 641.0788504141783,
+      "unmapped_city_count": 0,
+      "intake_joined_shipments": 63,
+      "return_groups": 104,
+      "return_group_with_root_cause": 37,
+      "return_root_cause_counts": {
+        "[blank]": 67,
+        "LEGACY - fit, size unspecified": 23,
+        "Customer refused to give reason": 11,
+        "LEGACY - quality unspecified": 3
+      },
+      "return_call_status_counts": {
+        "No Answer": 19,
+        "Reached": 37,
+        "[blank]": 48
+      },
+      "sku_missing_shipments": 3,
+      "sku_missing_slots": 3,
+      "descriptions_over_four_lines": 0,
+      "outbound_numeric_attempts_mean": 1.7122641509433962,
+      "excess_attempts_sum": 64,
+      "orders": {
+        "count": 353,
+        "placed_dates": {
+          "min": "2026-06-18",
+          "max": "2026-08-17",
+          "present": 353
+        },
+        "fulfillment_channels": {
+          "Not fulfilled": 62,
+          "Bosta": 213,
+          "Office pickup": 30,
+          "Pickup - unrecorded": 48
+        },
+        "confirmed_by": {
+          "Hadeer / auto": 209,
+          "Omar": 23,
+          "n/a": 121
+        },
+        "confirmation_coverage_hadeer_auto": 0.5920679886685553,
+        "confirmation_coverage_all": 0.6572237960339944,
+        "whappi_signal": {
+          "No failure logged": 282,
+          "Undeliverable": 8,
+          "Template error": 26,
+          "Disconnected": 37
+        },
+        "cancel_stage": {
+          "none": 227,
+          "Pre-dispatch": 60,
+          "Post-dispatch": 66
+        },
+        "outbound_outcome": {
+          "n/a": 140,
+          "Delivered": 131,
+          "RTO": 77,
+          "In transit / other": 5
+        },
+        "pickup_status": {
+          "n/a": 275,
+          "Collected": 14,
+          "Open": 6,
+          "No-show": 10,
+          "Collected (inferred)": 48
+        },
+        "pickup_flags": {
+          "": 347,
+          "OK": 1,
+          "FLAG": 1,
+          "KILL": 4
+        },
+        "office_pickup_with_bosta_legs": 0,
+        "order_value_sum": 579818.5,
+        "bosta_dispatched": 213,
+        "asof": "2026-08-17"
+      }
+    }
+  },
+  "live_csv_comparison": {
+    "source": "D:\\Downloads\\orders-2026-10-13.csv",
+    "headers": [
+      "Order",
+      "Date",
+      "Customer",
+      "Phone",
+      "Channel",
+      "Confirmed by",
+      "Outcome",
+      "Status",
+      "City",
+      "Bosta state",
+      "Attempts",
+      "Items",
+      "Value (EGP)",
+      "Returns by this phone",
+      "Last call"
+    ],
+    "rows": 1339,
+    "order_keys": 1339,
+    "date_range": {
+      "min": "2026-05-07",
+      "max": "2026-10-13",
+      "present": 1339
+    },
+    "channel_counts": {
+      "Delivery": 1215,
+      "Pickup": 124
+    },
+    "outcome_counts": {
+      "Not shipped yet": 29,
+      "Pickup - not yet collected": 11,
+      "Cancelled before dispatch": 85,
+      "In transit": 18,
+      "Delivered & kept": 640,
+      "": 29,
+      "Never received (RTO)": 339,
+      "Exchange return": 35,
+      "Picked up": 43,
+      "Cancelled": 69,
+      "Received then refused": 41
+    },
+    "status_counts": {
+      "Pending": 37,
+      "Cancelled": 480,
+      "Completed": 822
+    },
+    "confirmed_by_counts": {
+      "Not confirmed": 537,
+      "Hadeer": 670,
+      "Whapi (auto)": 41,
+      "Omar": 91
+    },
+    "bosta_state_counts": {
+      "": 266,
+      "Processing": 29,
+      "Delivered": 1019,
+      "Created": 21,
+      "Terminated": 4
+    },
+    "key_match_method": "Exact trimmed Order vs Shopify Name/order_ref strings only. No match based on customer or phone, no numeric identifier inference.",
+    "source_order_overlap": {
+      "02_Gentry_Delivery_Performance_System.xlsx": {
+        "source_orders": 1635,
+        "live_orders": 1339,
+        "exact_shared_keys": 768,
+        "source_only_keys": 867,
+        "live_only_keys": 571,
+        "date_comparable_shared_keys": 768,
+        "date_mismatch_count": 0,
+        "source_only_placed_date_range": {
+          "min": "2026-04-01",
+          "max": "2026-06-01",
+          "present": 867
+        },
+        "shared_source_placed_date_range": {
+          "min": "2026-05-07",
+          "max": "2026-09-08",
+          "present": 768
+        },
+        "live_only_date_range": {
+          "min": "2026-09-08",
+          "max": "2026-10-13",
+          "present": 571
+        },
+        "live_outcomes_on_shared_keys": {
+          "Never received (RTO)": 234,
+          "Delivered & kept": 359,
+          "Cancelled": 31,
+          "Received then refused": 27,
+          "Picked up": 33,
+          "Cancelled before dispatch": 36,
+          "Exchange return": 16,
+          "": 28,
+          "Not shipped yet": 4
+        },
+        "source_formula_outcomes_on_shared_keys": {
+          "RTO": 203,
+          "Delivered": 308,
+          "n/a": 249,
+          "In transit / other": 8
+        }
+      },
+      "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx": {
+        "source_orders": 353,
+        "live_orders": 1339,
+        "exact_shared_keys": 353,
+        "source_only_keys": 0,
+        "live_only_keys": 986,
+        "date_comparable_shared_keys": 353,
+        "date_mismatch_count": 0,
+        "source_only_placed_date_range": {
+          "present": 0
+        },
+        "shared_source_placed_date_range": {
+          "min": "2026-06-18",
+          "max": "2026-08-17",
+          "present": 353
+        },
+        "live_only_date_range": {
+          "min": "2026-05-07",
+          "max": "2026-10-13",
+          "present": 986
+        },
+        "live_outcomes_on_shared_keys": {
+          "Never received (RTO)": 99,
+          "Delivered & kept": 167,
+          "Picked up": 18,
+          "Received then refused": 12,
+          "Cancelled before dispatch": 20,
+          "Cancelled": 12,
+          "Exchange return": 8,
+          "": 13,
+          "Not shipped yet": 4
+        },
+        "source_formula_outcomes_on_shared_keys": {
+          "RTO": 77,
+          "Delivered": 131,
+          "n/a": 140,
+          "In transit / other": 5
+        }
+      }
+    }
+  }
+}

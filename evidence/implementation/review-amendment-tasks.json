@@ -1,0 +1,1440 @@
+{
+  "revision": "P6-r2",
+  "reason": "Independent review IR01-IR07: missing concrete transports, production environment/release, DB prerequisite, deployed candidate freshness, safe clone inventory, fallback experiment reading and accountable roles",
+  "tasks": [
+    {
+      "id": "T0210",
+      "milestone": "M2",
+      "title": "Implement private Amazon S3 runtime storage adapters",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "CRITICAL",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0008",
+        "T0206",
+        "T0208",
+        "T0209"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/13-deployment-and-environments.md",
+          "section": "OpsHub — deployment, environments and recovery",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "28f5cbdd890d6db7c6c958856fb0ec87ff976df667b4136a295f985a87a4ea78"
+        },
+        {
+          "path": "docs/architecture/11-audit-provenance-and-privacy.md",
+          "section": "OpsHub — provenance, audit and privacy",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "92b838d6e18be1e8bc069cc8276982ab619739e92d222759a398556660ca573d"
+        },
+        {
+          "path": "docs/architecture/15-technology-selection.md",
+          "section": "OpsHub — concrete MVP technology selection",
+          "line": 1,
+          "end_line": 19,
+          "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081"
+        },
+        {
+          "path": "docs/migration/11-recovery-validation.md",
+          "section": "Restore and recovery validation contracts",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "6780d6cc63f01333c272a1a893e96ecde369e5c9b6570df6ba1b1b01794af64b"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0210.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0210-v1",
+          "boundary": "s3_runtime",
+          "meaning": "Implement actual private Amazon S3 file and independent recovery/privacy/seed/repair storage drivers behind accepted ports; versioned conditional-create, paginated enumeration/coverage, key binding and runtime no-delete behavior; wire only to mock HTTP locally.",
+          "record": "docs/contracts/C-T0210-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "packages/storage/amazon-s3/",
+        "packages/recovery/amazon-s3/",
+        "tests/tasks/T0210/",
+        "docs/contracts/C-T0210-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:s3_runtime"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0210-TEST01",
+          "assertion": "Mock wire contract verifies exact conditional headers and immutable key/body identity, failed or uncertain write blocks issuance, missing enumeration page/schema blocks coverage",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0210-TEST02",
+          "assertion": "authenticated file metadata precedes object access.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0210-AC01",
+          "criterion": "Implement actual private Amazon S3 file and independent recovery/privacy/seed/repair storage drivers behind accepted ports; versioned conditional-create, paginated enumeration/coverage, key binding and runtime no-delete behavior; wire only to mock HTTP locally. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0210-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Implement actual private Amazon S3 file and independent recovery/privacy/seed/repair storage drivers behind accepted ports; versioned conditional-create, paginated enumeration/coverage, key binding and runtime no-delete behavior; wire only to mock HTTP locally.",
+      "completion_evidence_refs": [],
+      "goal": "Implement private Amazon S3 runtime storage adapters",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Implement actual private Amazon S3 file and independent recovery/privacy/seed/repair storage drivers behind accepted ports; versioned conditional-create, paginated enumeration/coverage, key binding and runtime no-delete behavior; wire only to mock HTTP locally.",
+      "explicit_non_scope": "No S3-compatible substitution or cloud calls in local task; real AWS protection/grants qualification remains T1202 before operational reliance. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock wire contract verifies exact conditional headers and immutable key/body identity, failed or uncertain write blocks issuance, missing enumeration page/schema blocks coverage; authenticated file metadata precedes object access. No S3-compatible substitution or cloud calls in local task; real AWS protection/grants qualification remains T1202 before operational reliance.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0210-scope or claude/t0210-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0309",
+      "milestone": "M3",
+      "title": "Implement versioned Shopify read HTTP driver",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "HIGH",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0301",
+        "T0302",
+        "T0303",
+        "T0304",
+        "T0305"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/migration/08-provider-contract-validation.md",
+          "section": "Controlled provider qualification plan",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff"
+        },
+        {
+          "path": "docs/architecture/15-technology-selection.md",
+          "section": "OpsHub — concrete MVP technology selection",
+          "line": 1,
+          "end_line": 19,
+          "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0309.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0309-v1",
+          "boundary": "shopify_read_driver",
+          "meaning": "Implement concrete version-pinned Shopify authenticated read transport, typed response validation, order/line/catalog nested pagination, updated-time read sweeps and token renewal behind mapper ports; production hosts denied in local tests.",
+          "record": "docs/contracts/C-T0309-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/integrations/shopify/transport/read/",
+        "tests/tasks/T0309/",
+        "docs/contracts/C-T0309-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:shopify_read_driver"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0309-TEST01",
+          "assertion": "Independent mock HTTP verifies auth/account binding, exact pages/IDs/cost headers, cursor expiry and missing history",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0309-TEST02",
+          "assertion": "token-refresh race preserves paired credential version",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0309-TEST03",
+          "assertion": "mapper receives real-shaped response without mutation permission.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0309-AC01",
+          "criterion": "Implement concrete version-pinned Shopify authenticated read transport, typed response validation, order/line/catalog nested pagination, updated-time read sweeps and token renewal behind mapper ports; production hosts denied in local tests. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0309-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Implement concrete version-pinned Shopify authenticated read transport, typed response validation, order/line/catalog nested pagination, updated-time read sweeps and token renewal behind mapper ports; production hosts denied in local tests.",
+      "completion_evidence_refs": [],
+      "goal": "Implement versioned Shopify read HTTP driver",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Implement concrete version-pinned Shopify authenticated read transport, typed response validation, order/line/catalog nested pagination, updated-time read sweeps and token renewal behind mapper ports; production hosts denied in local tests.",
+      "explicit_non_scope": "No live provider call, app registration or write scope use; actual account contract qualifies in T0308. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Independent mock HTTP verifies auth/account binding, exact pages/IDs/cost headers, cursor expiry and missing history; token-refresh race preserves paired credential version; mapper receives real-shaped response without mutation permission. No live provider call, app registration or write scope use; actual account contract qualifies in T0308.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0309-scope or claude/t0309-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0406",
+      "milestone": "M4",
+      "title": "Implement versioned Bosta read HTTP driver",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "HIGH",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0301",
+        "T0302",
+        "T0401",
+        "T0402"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/migration/08-provider-contract-validation.md",
+          "section": "Controlled provider qualification plan",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff"
+        },
+        {
+          "path": "docs/architecture/15-technology-selection.md",
+          "section": "OpsHub — concrete MVP technology selection",
+          "line": 1,
+          "end_line": 19,
+          "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0406.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0406-v1",
+          "boundary": "bosta_read_driver",
+          "meaning": "Implement concrete authenticated Bosta read/detail/history/callback-corroboration transport and schema validation using qualified version contract; read credentials only, account budgets and closure map into accepted ports.",
+          "record": "docs/contracts/C-T0406-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/integrations/bosta/transport/read/",
+        "tests/tasks/T0406/",
+        "docs/contracts/C-T0406-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:bosta_read_driver"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0406-TEST01",
+          "assertion": "Mock HTTP asserts exact account/key and native delivery/tracking forms, interrupted pagination/revoked auth/schema drift and unsupported history remain limited",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0406-TEST02",
+          "assertion": "every request is classified safe read.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0406-AC01",
+          "criterion": "Implement concrete authenticated Bosta read/detail/history/callback-corroboration transport and schema validation using qualified version contract; read credentials only, account budgets and closure map into accepted ports. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0406-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Implement concrete authenticated Bosta read/detail/history/callback-corroboration transport and schema validation using qualified version contract; read credentials only, account budgets and closure map into accepted ports.",
+      "completion_evidence_refs": [],
+      "goal": "Implement versioned Bosta read HTTP driver",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Implement concrete authenticated Bosta read/detail/history/callback-corroboration transport and schema validation using qualified version contract; read credentials only, account budgets and closure map into accepted ports.",
+      "explicit_non_scope": "No provider contact, create or optional termination/reverse operation; actual account read proof is T0405. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock HTTP asserts exact account/key and native delivery/tracking forms, interrupted pagination/revoked auth/schema drift and unsupported history remain limited; every request is classified safe read. No provider contact, create or optional termination/reverse operation; actual account read proof is T0405.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0406-scope or claude/t0406-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0915",
+      "milestone": "M9",
+      "title": "Implement versioned Meta read reporting HTTP driver",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "HIGH",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0301",
+        "T0302",
+        "T0904"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/migration/08-provider-contract-validation.md",
+          "section": "Controlled provider qualification plan",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff"
+        },
+        {
+          "path": "docs/architecture/15-technology-selection.md",
+          "section": "OpsHub — concrete MVP technology selection",
+          "line": 1,
+          "end_line": 19,
+          "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0915.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0915-v1",
+          "boundary": "meta_read_driver",
+          "meaning": "Implement concrete read-only Meta authentication/report request transport, selected API/schema version, page/async job resumption, parameter/timezone/currency envelope and credential renewal behind spend mapper.",
+          "record": "docs/contracts/C-T0915-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/integrations/meta/transport/read/",
+        "tests/tasks/T0915/",
+        "docs/contracts/C-T0915-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:meta_read_driver"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0915-TEST01",
+          "assertion": "Mock wire assertions cover fields/grain/since-until/breakdowns, async partial result, revision and expired token",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0915-TEST02",
+          "assertion": "no ad/campaign/budget endpoint reachable",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0915-TEST03",
+          "assertion": "partial report never marks complete.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0915-AC01",
+          "criterion": "Implement concrete read-only Meta authentication/report request transport, selected API/schema version, page/async job resumption, parameter/timezone/currency envelope and credential renewal behind spend mapper. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0915-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Implement concrete read-only Meta authentication/report request transport, selected API/schema version, page/async job resumption, parameter/timezone/currency envelope and credential renewal behind spend mapper.",
+      "completion_evidence_refs": [],
+      "goal": "Implement versioned Meta read reporting HTTP driver",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Implement concrete read-only Meta authentication/report request transport, selected API/schema version, page/async job resumption, parameter/timezone/currency envelope and credential renewal behind spend mapper.",
+      "explicit_non_scope": "No live account use, guessed product link or attribution policy; actual account/report proof is T0914. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock wire assertions cover fields/grain/since-until/breakdowns, async partial result, revision and expired token; no ad/campaign/budget endpoint reachable; partial report never marks complete. No live account use, guessed product link or attribution policy; actual account/report proof is T0914.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0915-scope or claude/t0915-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0711",
+      "milestone": "M7",
+      "title": "Implement Shopify annotation mutation transport",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "CRITICAL",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0702",
+        "T0706",
+        "T0309"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/architecture/06-external-action-safety.md",
+          "section": "OpsHub — external action and effect safety",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "02e9255cafada5a87a36a915d675bf2fbfa689f40be41140a983ec270f79676b"
+        },
+        {
+          "path": "docs/migration/08-provider-contract-validation.md",
+          "section": "Controlled provider qualification plan",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0711.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0711-v1",
+          "boundary": "annotation_transport",
+          "meaning": "Wire concrete pinned Shopify mutation client for accepted annotation descriptor only; decrypt current scoped worker credential, validate request/response schema and route through single-dispatch coordinator; local endpoint mock only.",
+          "record": "docs/contracts/C-T0711-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/integrations/shopify/annotations/transport/",
+        "tests/tasks/T0711/",
+        "docs/contracts/C-T0711-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:annotation_transport"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0711-TEST01",
+          "assertion": "Mock wire observes exact approved annotation once on timeout/5xx, unrelated fields preserved, wrong-account credential denied, safe positive/unknown result passed to same effect",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0711-TEST02",
+          "assertion": "no implicit HTTP retry.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0711-AC01",
+          "criterion": "Wire concrete pinned Shopify mutation client for accepted annotation descriptor only; decrypt current scoped worker credential, validate request/response schema and route through single-dispatch coordinator; local endpoint mock only. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0711-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Wire concrete pinned Shopify mutation client for accepted annotation descriptor only; decrypt current scoped worker credential, validate request/response schema and route through single-dispatch coordinator; local endpoint mock only.",
+      "completion_evidence_refs": [],
+      "goal": "Implement Shopify annotation mutation transport",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Wire concrete pinned Shopify mutation client for accepted annotation descriptor only; decrypt current scoped worker credential, validate request/response schema and route through single-dispatch coordinator; local endpoint mock only.",
+      "explicit_non_scope": "No actual provider write or annotation-trigger assumption; T0707 qualifies actual scope before enablement. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock wire observes exact approved annotation once on timeout/5xx, unrelated fields preserved, wrong-account credential denied, safe positive/unknown result passed to same effect; no implicit HTTP retry. No actual provider write or annotation-trigger assumption; T0707 qualifies actual scope before enablement.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0711-scope or claude/t0711-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0712",
+      "milestone": "M7",
+      "title": "Implement Bosta booking mutation transport",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "CRITICAL",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0703",
+        "T0706",
+        "T0406"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/architecture/06-external-action-safety.md",
+          "section": "OpsHub — external action and effect safety",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "02e9255cafada5a87a36a915d675bf2fbfa689f40be41140a983ec270f79676b"
+        },
+        {
+          "path": "docs/migration/08-provider-contract-validation.md",
+          "section": "Controlled provider qualification plan",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0712.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0712-v1",
+          "boundary": "booking_transport",
+          "meaning": "Wire concrete pinned Bosta create client for accepted booking descriptor only; scoped read-write worker credential, exact request identity and typed native result; single-dispatch engine sole caller.",
+          "record": "docs/contracts/C-T0712-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/integrations/bosta/booking/transport/",
+        "tests/tasks/T0712/",
+        "docs/contracts/C-T0712-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:booking_transport"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0712-TEST01",
+          "assertion": "Mock wire validates exact approved payload/account and single send after lost response/429/5xx",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0712-TEST02",
+          "assertion": "native delivery/tracking/business reference retained without uniqueness assumption",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0712-TEST03",
+          "assertion": "malformed result unknown-held.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0712-AC01",
+          "criterion": "Wire concrete pinned Bosta create client for accepted booking descriptor only; scoped read-write worker credential, exact request identity and typed native result; single-dispatch engine sole caller. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0712-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Wire concrete pinned Bosta create client for accepted booking descriptor only; scoped read-write worker credential, exact request identity and typed native result; single-dispatch engine sole caller.",
+      "completion_evidence_refs": [],
+      "goal": "Implement Bosta booking mutation transport",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Wire concrete pinned Bosta create client for accepted booking descriptor only; scoped read-write worker credential, exact request identity and typed native result; single-dispatch engine sole caller.",
+      "explicit_non_scope": "No cloud parcel/financial effect or provider cancellation/reverse create; T0708 proves actual booking contract. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock wire validates exact approved payload/account and single send after lost response/429/5xx; native delivery/tracking/business reference retained without uniqueness assumption; malformed result unknown-held. No cloud parcel/financial effect or provider cancellation/reverse create; T0708 proves actual booking contract.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0712-scope or claude/t0712-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0713",
+      "milestone": "M7",
+      "title": "Implement Shopify replacement creation mutation transport",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "CRITICAL",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0704",
+        "T0706",
+        "T0309"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/architecture/06-external-action-safety.md",
+          "section": "OpsHub — external action and effect safety",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "02e9255cafada5a87a36a915d675bf2fbfa689f40be41140a983ec270f79676b"
+        },
+        {
+          "path": "docs/migration/08-provider-contract-validation.md",
+          "section": "Controlled provider qualification plan",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0713.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0713-v1",
+          "boundary": "replacement_transport",
+          "meaning": "Wire pinned Shopify new-Order mutation for approved creation descriptor and create-time correlation; response identity/async errors normalized without redoing business planning; only worker coordinator calls.",
+          "record": "docs/contracts/C-T0713-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/integrations/shopify/replacements/transport/",
+        "tests/tasks/T0713/",
+        "docs/contracts/C-T0713-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:replacement_transport"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0713-TEST01",
+          "assertion": "Mock wire verifies notifications off and exact item/commercial/side-effect flags, one send despite timeout, positive new identity durable before booking and mismatched native result held.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0713-AC01",
+          "criterion": "Wire pinned Shopify new-Order mutation for approved creation descriptor and create-time correlation; response identity/async errors normalized without redoing business planning; only worker coordinator calls. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0713-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Wire pinned Shopify new-Order mutation for approved creation descriptor and create-time correlation; response identity/async errors normalized without redoing business planning; only worker coordinator calls.",
+      "completion_evidence_refs": [],
+      "goal": "Implement Shopify replacement creation mutation transport",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Wire pinned Shopify new-Order mutation for approved creation descriptor and create-time correlation; response identity/async errors normalized without redoing business planning; only worker coordinator calls.",
+      "explicit_non_scope": "No actual create, recreation or silent COD default; actual account/native booking coupling proved in T0709. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock wire verifies notifications off and exact item/commercial/side-effect flags, one send despite timeout, positive new identity durable before booking and mismatched native result held. No actual create, recreation or silent COD default; actual account/native booking coupling proved in T0709.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0713-scope or claude/t0713-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T0714",
+      "milestone": "M7",
+      "title": "Implement Shopify cancellation mutation transport",
+      "status": "NOT_STARTED",
+      "type": "ENGINEERING",
+      "risk": "CRITICAL",
+      "complexity": "M",
+      "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T0705",
+        "T0706",
+        "T0309"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/architecture/06-external-action-safety.md",
+          "section": "OpsHub — external action and effect safety",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "02e9255cafada5a87a36a915d675bf2fbfa689f40be41140a983ec270f79676b"
+        },
+        {
+          "path": "docs/migration/08-provider-contract-validation.md",
+          "section": "Controlled provider qualification plan",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T0714.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "LOCAL_SYNTHETIC",
+        "CI_SYNTHETIC"
+      ],
+      "effect_class": "LOCAL_REVERSIBLE",
+      "produced_contracts": [
+        {
+          "id": "C-T0714-v1",
+          "boundary": "cancellation_transport",
+          "meaning": "Wire pinned Shopify eligible cancellation/async-result protocol with exact reviewed side-effect flags; separate ack/job/final positive/terminal-negative evidence and no SDK write retry.",
+          "record": "docs/contracts/C-T0714-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "apps/worker/modules/integrations/shopify/cancellation/transport/",
+        "tests/tasks/T0714/",
+        "docs/contracts/C-T0714-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:cancellation_transport"
+      ],
+      "parallelism": "PARALLEL WITH RESTRICTIONS",
+      "test_requirements": [
+        {
+          "id": "T0714-TEST01",
+          "assertion": "Mock HTTP captures one approved send and safe async poll",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0714-TEST02",
+          "assertion": "unexpected refund/restock/notification requirement refuses dispatch",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T0714-TEST03",
+          "assertion": "5xx/empty lookup stays unknown and cannot resend.",
+          "environment": "LOCAL_SYNTHETIC",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T0714-AC01",
+          "criterion": "Wire pinned Shopify eligible cancellation/async-result protocol with exact reviewed side-effect flags; separate ack/job/final positive/terminal-negative evidence and no SDK write retry. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T0714-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Wire pinned Shopify eligible cancellation/async-result protocol with exact reviewed side-effect flags; separate ack/job/final positive/terminal-negative evidence and no SDK write retry.",
+      "completion_evidence_refs": [],
+      "goal": "Implement Shopify cancellation mutation transport",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Wire pinned Shopify eligible cancellation/async-result protocol with exact reviewed side-effect flags; separate ack/job/final positive/terminal-negative evidence and no SDK write retry.",
+      "explicit_non_scope": "No actual cancellation/refund or universal terminal-negative assumption; T0710 qualifies actual supported consequences. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Mock HTTP captures one approved send and safe async poll; unexpected refund/restock/notification requirement refuses dispatch; 5xx/empty lookup stays unknown and cannot resend. No actual cancellation/refund or universal terminal-negative assumption; T0710 qualifies actual supported consequences.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t0714-scope or claude/t0714-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T1208",
+      "milestone": "M12",
+      "title": "Deploy complete reviewed staging validation candidate",
+      "status": "NOT_STARTED",
+      "type": "OPERATIONAL_RELEASE",
+      "risk": "HIGH",
+      "complexity": "M",
+      "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T1204",
+        "T0706",
+        "T0711",
+        "T0712",
+        "T0713",
+        "T0714",
+        "T0913",
+        "T1005",
+        "T1107",
+        "T0210"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "AUTHORIZED_STAGING"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/13-deployment-and-environments.md",
+          "section": "OpsHub — deployment, environments and recovery",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "28f5cbdd890d6db7c6c958856fb0ec87ff976df667b4136a295f985a87a4ea78"
+        },
+        {
+          "path": "docs/architecture/12-observability-and-operations.md",
+          "section": "OpsHub — observability and operations",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "7065bedfd6856bfd0ff62dd59eee4f2fbd7288d79312169a2f908e1a1f747e2c"
+        },
+        {
+          "path": "docs/architecture/14-testing-strategy.md",
+          "section": "OpsHub — architectural testing strategy",
+          "line": 1,
+          "end_line": 26,
+          "sha256": "83202e3d0493a2d9df7dcf7382aa421ad4bddf76fd62e4ce14b171b4501abab5"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T1208.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "AUTHORIZED_STAGING"
+      ],
+      "effect_class": "DEPLOYMENT",
+      "produced_contracts": [
+        {
+          "id": "C-T1208-v1",
+          "boundary": "complete_staging_release",
+          "meaning": "Authorized redeploy of exact complete local MVP candidate image/schema/contracts to isolated staging using accepted release mechanism; inventory all web/worker/driver versions and preserve default-off provider/contact mutations.",
+          "record": "docs/contracts/C-T1208-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "ops/releases/staging/complete-candidate/",
+        "tests/tasks/T1208/",
+        "docs/contracts/C-T1208-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:complete_staging_release",
+        "environment-release-lock"
+      ],
+      "parallelism": "SERIAL",
+      "test_requirements": [
+        {
+          "id": "T1208-TEST01",
+          "assertion": "Required module/driver/DTO/protocol version inventory matches reviewed head",
+          "environment": "AUTHORIZED_STAGING",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T1208-TEST02",
+          "assertion": "staged smoke/real-role checks pass for this exact release",
+          "environment": "AUTHORIZED_STAGING",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T1208-TEST03",
+          "assertion": "actual image/schema hash recorded for T1205 and all provider qualifications.",
+          "environment": "AUTHORIZED_STAGING",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T1208-AC01",
+          "criterion": "Authorized redeploy of exact complete local MVP candidate image/schema/contracts to isolated staging using accepted release mechanism; inventory all web/worker/driver versions and preserve default-off provider/contact mutations. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T1208-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Authorized redeploy of exact complete local MVP candidate image/schema/contracts to isolated staging using accepted release mechanism; inventory all web/worker/driver versions and preserve default-off provider/contact mutations.",
+      "completion_evidence_refs": [],
+      "goal": "Deploy complete reviewed staging validation candidate",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Authorized redeploy of exact complete local MVP candidate image/schema/contracts to isolated staging using accepted release mechanism; inventory all web/worker/driver versions and preserve default-off provider/contact mutations.",
+      "explicit_non_scope": "Earlier T1204 read-slice deployment does not prove this candidate is deployed; each changed candidate invalidates affected downstream validation until redeployed/rechecked. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Required module/driver/DTO/protocol version inventory matches reviewed head; staged smoke/real-role checks pass for this exact release; actual image/schema hash recorded for T1205 and all provider qualifications. Earlier T1204 read-slice deployment does not prove this candidate is deployed; each changed candidate invalidates affected downstream validation until redeployed/rechecked.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t1208-scope or claude/t1208-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T1209",
+      "milestone": "M12",
+      "title": "Provision distinct egress-off production environment",
+      "status": "NOT_STARTED",
+      "type": "OPERATIONAL_RELEASE",
+      "risk": "CRITICAL",
+      "complexity": "M",
+      "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T1205",
+        "T1208"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/13-deployment-and-environments.md",
+          "section": "OpsHub — deployment, environments and recovery",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "28f5cbdd890d6db7c6c958856fb0ec87ff976df667b4136a295f985a87a4ea78"
+        },
+        {
+          "path": "docs/architecture/15-technology-selection.md",
+          "section": "OpsHub — concrete MVP technology selection",
+          "line": 1,
+          "end_line": 19,
+          "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081"
+        },
+        {
+          "path": "docs/architecture/16-cost-and-scale-review.md",
+          "section": "OpsHub — cost and complexity review",
+          "line": 1,
+          "end_line": 16,
+          "sha256": "c9aa0c7e5a5d83f6a30560fc860cc5fe77b1a6b6f4761ea8d804bd606c473b59"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T1209.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "AUTHORIZED_PRODUCTION_INFRASTRUCTURE"
+      ],
+      "effect_class": "PROVISIONING",
+      "produced_contracts": [
+        {
+          "id": "C-T1209-v1",
+          "boundary": "production_provisioning",
+          "meaning": "Separately authorized operations provisioning of dedicated paid production Render web/worker/PostgreSQL17, private Amazon S3 independent prefixes/coverage, Auth0/Resend/Sentry contexts, keys/epochs/grants and backups; no staging credential/data reuse.",
+          "record": "docs/contracts/C-T1209-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "ops/environments/production/",
+        "tests/tasks/T1209/",
+        "docs/contracts/C-T1209-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:production_provisioning",
+        "environment-release-lock"
+      ],
+      "parallelism": "SERIAL",
+      "test_requirements": [
+        {
+          "id": "T1209-TEST01",
+          "assertion": "Production/staging project/database/object/IdP/secret identities distinct",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T1209-TEST02",
+          "assertion": "public DB off, least grants/no journal delete and separate current epoch verified",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T1209-TEST03",
+          "assertion": "all contact/provider mutation egress off.",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T1209-AC01",
+          "criterion": "Separately authorized operations provisioning of dedicated paid production Render web/worker/PostgreSQL17, private Amazon S3 independent prefixes/coverage, Auth0/Resend/Sentry contexts, keys/epochs/grants and backups; no staging credential/data reuse. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T1209-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Separately authorized operations provisioning of dedicated paid production Render web/worker/PostgreSQL17, private Amazon S3 independent prefixes/coverage, Auth0/Resend/Sentry contexts, keys/epochs/grants and backups; no staging credential/data reuse.",
+      "completion_evidence_refs": [],
+      "goal": "Provision distinct egress-off production environment",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Separately authorized operations provisioning of dedicated paid production Render web/worker/PostgreSQL17, private Amazon S3 independent prefixes/coverage, Auth0/Resend/Sentry contexts, keys/epochs/grants and backups; no staging credential/data reuse.",
+      "explicit_non_scope": "Not production shadow or cutover; no real customer data activation, account messages or provider writes; purchased-service/region/privacy approval required. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Production/staging project/database/object/IdP/secret identities distinct; public DB off, least grants/no journal delete and separate current epoch verified; all contact/provider mutation egress off. Not production shadow or cutover; no real customer data activation, account messages or provider writes; purchased-service/region/privacy approval required.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t1209-scope or claude/t1209-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    },
+    {
+      "id": "T1210",
+      "milestone": "M12",
+      "title": "Deploy and validate disabled production shadow candidate",
+      "status": "NOT_STARTED",
+      "type": "OPERATIONAL_RELEASE",
+      "risk": "CRITICAL",
+      "complexity": "M",
+      "accountable_role": "AUTHORIZED_OPERATIONS_WITH_OWNER_AND_MERCHANT_SIGNERS",
+      "readiness": "WAITING_AUTHORIZATION",
+      "blockers": [],
+      "dependencies": [
+        "T1209",
+        "T1208",
+        "T0308",
+        "T0405",
+        "T0914",
+        "T1108"
+      ],
+      "decision_gates": [
+        {
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        }
+      ],
+      "spec_refs": [
+        {
+          "path": "docs/architecture/13-deployment-and-environments.md",
+          "section": "OpsHub — deployment, environments and recovery",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "28f5cbdd890d6db7c6c958856fb0ec87ff976df667b4136a295f985a87a4ea78"
+        },
+        {
+          "path": "docs/architecture/03-multi-tenancy-and-identity.md",
+          "section": "OpsHub — multi-tenancy, identity and authorization",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "ecc03a2b8c8fa9833e2733884a62f9ca660e01832f0c41264fdcbd734b80f0fe"
+        },
+        {
+          "path": "docs/architecture/05-integrations.md",
+          "section": "OpsHub — integration architecture",
+          "line": 1,
+          "end_line": 4,
+          "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106"
+        },
+        {
+          "path": "docs/migration/12-shadow-and-parallel-run.md",
+          "section": "Shadow mode, controlled actions and parallel operation",
+          "line": 1,
+          "end_line": 3,
+          "sha256": "e6070127fffbad7661516ae41d71ba90a9f108e3ff8399fca9f3e5c44a6f8e1a"
+        }
+      ],
+      "task_spec": "docs/implementation/tasks/T1210.md",
+      "requirement_ids": [],
+      "validation_contract_ids": [],
+      "permitted_environment": [
+        "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+      ],
+      "effect_class": "DEPLOYMENT",
+      "produced_contracts": [
+        {
+          "id": "C-T1210-v1",
+          "boundary": "production_deployment",
+          "meaning": "Explicit production release permission deploys exact staged/reviewed immutable candidate and reviewed SQL/grants to verified empty/held production target; prove actual production S3/epoch/privacy/keys and current owned pilot connection bindings match qualification records; no shadow sync yet.",
+          "record": "docs/contracts/C-T1210-v1.md",
+          "required_content": "Actual typed boundary/schema, preconditions/postconditions, errors, tenant/transaction assumptions, fixture evidence, exact check commands and compatibility version; implementation review freezes this before a consumer starts."
+        }
+      ],
+      "consumed_contracts": [],
+      "editable_areas": [
+        "ops/releases/production/",
+        "tests/tasks/T1210/",
+        "docs/contracts/C-T1210-v1.md"
+      ],
+      "shared_change_locks": [
+        "boundary:production_deployment",
+        "environment-release-lock"
+      ],
+      "parallelism": "SERIAL",
+      "test_requirements": [
+        {
+          "id": "T1210-TEST01",
+          "assertion": "Image/schema/protocol digest equals accepted staged evidence",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T1210-TEST02",
+          "assertion": "real production grants/storage conditional/no-delete/coverage/access-off probes pass",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T1210-TEST03",
+          "assertion": "default-off action/contact and read synchronization not started",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT",
+          "execution_status": "PLANNED"
+        },
+        {
+          "id": "T1210-TEST04",
+          "assertion": "changed account/version forces requalification.",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT",
+          "execution_status": "PLANNED"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "id": "T1210-AC01",
+          "criterion": "Explicit production release permission deploys exact staged/reviewed immutable candidate and reviewed SQL/grants to verified empty/held production target; prove actual production S3/epoch/privacy/keys and current owned pilot connection bindings match qualification records; no shadow sync yet. Exact named negative/failure assertions pass with independently established expected wire/results."
+        },
+        {
+          "id": "T1210-AC02",
+          "criterion": "Actual version/environment/input/output evidence, frozen boundary and independent review required; local mock evidence cannot qualify an actual account or operational environment."
+        }
+      ],
+      "acceptance_summary": "Explicit production release permission deploys exact staged/reviewed immutable candidate and reviewed SQL/grants to verified empty/held production target; prove actual production S3/epoch/privacy/keys and current owned pilot connection bindings match qualification records; no shadow sync yet.",
+      "completion_evidence_refs": [],
+      "goal": "Deploy and validate disabled production shadow candidate",
+      "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
+      "scope": "Explicit production release permission deploys exact staged/reviewed immutable candidate and reviewed SQL/grants to verified empty/held production target; prove actual production S3/epoch/privacy/keys and current owned pilot connection bindings match qualification records; no shadow sync yet.",
+      "explicit_non_scope": "No staging proof assumed for production permissions; no production migration data publish/provider call/mail/cutover; T1207 separately authorizes actual read shadow. No edits to source/, closed Phases1-5 or unrelated work.",
+      "data_changes": "No new business-schema allocation. Runtime driver/release consumes already accepted typed persistence and protocol contracts; production schema apply occurs only as the exact separately authorized reviewed deployment operation.",
+      "security_tenancy": "Apply independent server capability/context checks and real-role tenant isolation wherever data is scoped. Global User/IdP identities and limited platform administration follow their distinct visibility contract. No PII/secrets in logs, fixtures, prompts or review bundles.",
+      "failure_edge_cases": "Image/schema/protocol digest equals accepted staged evidence; real production grants/storage conditional/no-delete/coverage/access-off probes pass; default-off action/contact and read synchronization not started; changed account/version forces requalification. No staging proof assumed for production permissions; no production migration data publish/provider call/mail/cutover; T1207 separately authorizes actual read shadow.",
+      "ui_journey": "No new UI accepted by this task; any consumed visible state must preserve the approved actor, authority and trust semantics.",
+      "change_recovery_boundary": "Own only the listed boundaries on one isolated task branch. Serialize allocated migration/shared contract changes. Local rollback preserves evidence and current holds; use reviewed forward repair for incompatible data. External business effects require separate remediation and are never undone by application rollback. Stop and log any source contradiction, unapproved effect or unmet current gate.",
+      "definition_of_ready": "Read current AGENTS.md, START-HERE, manifest, this task and its listed exact specs; inspect existing work. Local implementation approval and all effective start gates must be present. Every predecessor must be ACCEPTED on current main and its versioned contract/evidence inspected; test fixture expectations fixed independently before evaluation.",
+      "branch_isolation": "One claimed Task ID on codex/t1210-scope or claude/t1210-scope in isolated worktree from accepted current main; no dual ownership or shared-write overlap.",
+      "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
+      "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
+      "readiness_after_local_approval": "WAITING_DEPENDENCIES"
+    }
+  ],
+  "extra_requirement_owners": {
+    "T0210": [
+      "ARC-RECOVERY",
+      "ARC-EXPORT",
+      "ARC-RESTORED-ACCESS",
+      "ADR-009",
+      "ADR-010"
+    ],
+    "T0309": [
+      "IG01",
+      "IG06",
+      "CON02",
+      "CON03",
+      "PC-S01",
+      "PC-S02",
+      "PC-S03",
+      "PC-S05",
+      "PC-C01",
+      "ADR-005",
+      "ARC-CREDENTIALS"
+    ],
+    "T0406": [
+      "IG03",
+      "IG07",
+      "PC-B01",
+      "PC-B03",
+      "PC-B04",
+      "PC-B05",
+      "PC-B06",
+      "PC-B11",
+      "ADR-005"
+    ],
+    "T0915": [
+      "IG05",
+      "PC-M01",
+      "PC-M02",
+      "PC-M03",
+      "PC-M04",
+      "PC-M05",
+      "PC-M06",
+      "PC-M07",
+      "OD09"
+    ],
+    "T0711": [
+      "IG02",
+      "PC-S08",
+      "PC-S09",
+      "PC-S10",
+      "ADR-006"
+    ],
+    "T0712": [
+      "IG04",
+      "PC-B02",
+      "PC-B09",
+      "PC-B11",
+      "OD08",
+      "ADR-006"
+    ],
+    "T0713": [
+      "IG02",
+      "PC-S07",
+      "PC-S09",
+      "PC-S10",
+      "OD08",
+      "ADR-006"
+    ],
+    "T0714": [
+      "IG02",
+      "PC-S06",
+      "PC-S09",
+      "PC-S10",
+      "ADR-006"
+    ],
+    "T1208": [
+      "ADR-009",
+      "HC06",
+      "RV01"
+    ],
+    "T1209": [
+      "ADR-009",
+      "ARC-RECOVERY",
+      "ARC-RESTORED-ACCESS",
+      "MR01"
+    ],
+    "T1210": [
+      "ADR-009",
+      "SH0",
+      "AC01",
+      "AC02",
+      "HC01",
+      "HC07"
+    ],
+    "T0605": [
+      "EA10",
+      "EA12",
+      "EA16",
+      "RV07"
+    ]
+  }
+}

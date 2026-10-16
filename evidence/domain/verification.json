@@ -1,0 +1,31 @@
+{
+  "review_date": "2026-10-14",
+  "protected_files_checked": 154,
+  "protected_source_files": 38,
+  "protected_reconstruction_documents": 16,
+  "protected_existing_evidence_files": 100,
+  "baseline_changes": [],
+  "deliverables": [
+    "00-canonical-domain-overview.md",
+    "01-entity-catalog.md",
+    "02-identities-and-relationships.md",
+    "03-events-and-projections.md",
+    "04-state-machines.md",
+    "05-domain-invariants.md",
+    "06-canonical-glossary.md",
+    "07-policy-decision-register.md",
+    "08-reconstruction-to-canonical-mapping.md",
+    "09-open-domain-questions.md"
+  ],
+  "entity_kinds": 26,
+  "policy_decisions": 25,
+  "invariants": 27,
+  "mermaid_diagrams": 9,
+  "validation_errors": [],
+  "pass": true,
+  "limits": [
+    "Checks are structural/provenance checks, not proof of business-policy correctness.",
+    "Mermaid fences and linked headings checked; diagrams not renderer-tested.",
+    "No application code, production actions, or Phase 1 modifications."
+  ]
+}

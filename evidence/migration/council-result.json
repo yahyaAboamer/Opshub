@@ -1,0 +1,150 @@
+{
+  "status": "complete",
+  "completed_at_utc": "2026-10-14T22:39:29.734906+00:00",
+  "method": "Five independent answers, five fresh blind rankings plus final amendment audits, chairman evidence-based synthesis",
+  "stage1_completed": 5,
+  "stage2_completed": 5,
+  "model_scope": "Internal Codex models; four available gpt-6-astra first-round members and one inherited-model replacement after model usage limit; blind reviewers use available inherited model",
+  "concurrency_adaptation": "Three child agents maximum; five-member rounds completed in batches",
+  "failed_attempts_not_counted": [
+    {
+      "lens": "First-principles",
+      "reason": "Requested review model usage limit",
+      "resolution": "Fresh inherited-model replacement completed response-4.md"
+    }
+  ],
+  "rankings": [
+    {
+      "reviewer": 1,
+      "order": [
+        "B",
+        "E",
+        "C",
+        "A",
+        "D"
+      ],
+      "evidence": "evidence/migration/council-reviews/ranking-1.md"
+    },
+    {
+      "reviewer": 2,
+      "order": [
+        "B",
+        "E",
+        "A",
+        "C",
+        "D"
+      ],
+      "evidence": "evidence/migration/council-reviews/ranking-2.md"
+    },
+    {
+      "reviewer": 3,
+      "order": [
+        "B",
+        "E",
+        "C",
+        "A",
+        "D"
+      ],
+      "evidence": "evidence/migration/council-reviews/ranking-3.md"
+    },
+    {
+      "reviewer": 4,
+      "order": [
+        "B",
+        "E",
+        "C",
+        "A",
+        "D"
+      ],
+      "evidence": "evidence/migration/council-reviews/ranking-4.md"
+    },
+    {
+      "reviewer": 5,
+      "order": [
+        "B",
+        "E",
+        "A",
+        "C",
+        "D"
+      ],
+      "evidence": "evidence/migration/council-reviews/ranking-5.md"
+    }
+  ],
+  "aggregate": [
+    {
+      "response": "B",
+      "lens": "Red-teamer",
+      "average_rank": "1"
+    },
+    {
+      "response": "E",
+      "lens": "Generalist",
+      "average_rank": "2"
+    },
+    {
+      "response": "C",
+      "lens": "Domain rigorist",
+      "average_rank": "17/5"
+    },
+    {
+      "response": "A",
+      "lens": "Pragmatist",
+      "average_rank": "18/5"
+    },
+    {
+      "response": "D",
+      "lens": "First-principles",
+      "average_rank": "5"
+    }
+  ],
+  "accepted_amendments": [
+    "CAR01",
+    "CAR02",
+    "CAR03",
+    "CAR04",
+    "CAR05",
+    "CAR06",
+    "CAR07",
+    "CAR08",
+    "CAR09",
+    "CAR10"
+  ],
+  "chairman_disposition": "Incorporate justified critiques from all five responses, including lower-ranked monetary/clock/privacy insights; preserve owner/account/execution gates",
+  "remaining_material_design_gaps_in_audited_amendments": [],
+  "remaining_future_gates": "MD01-MD16 and independently reviewed per-scenario realization, account/provider/application/RLS/action/recovery/operational/rollout evidence",
+  "review_lineage_sha256": {
+    "evidence/migration/council-reviews/ranking-1.md": "c43f9b0600ce5e8fbe1f68bca9c2b20c9b3029091a1112a00a1c7a7a591b2bef",
+    "evidence/migration/council-reviews/ranking-2.md": "77d7fa1bccd0bf837dac2efaef9b38425d270473971879c8e39c9c7ee88b09e9",
+    "evidence/migration/council-reviews/ranking-3.md": "df527fabeb5b564260272eba771b5def3abc6dd64672be539bf8f8a7cea0fc71",
+    "evidence/migration/council-reviews/ranking-4.md": "8ca19688491563fdf268a050d446c6248a8cc1e6e5d8acd98a457d1d552269d2",
+    "evidence/migration/council-reviews/ranking-5.md": "e61b0d783cac5fe80dfe80608d41971e18473c55b76f1c049509e68f080346be",
+    "evidence/migration/council-reviews/response-1.md": "8273a7493d238737c4601e8d0c710b7baf95b277ca5afe8f30aea3a2da818513",
+    "evidence/migration/council-reviews/response-2.md": "90305f8d9fd61b66380d15e7ad90022e2128781e4508ede19cbfbe7f1a660a01",
+    "evidence/migration/council-reviews/response-3.md": "2c0215898834a292afc6d976de334b43a2923b314a3963bc8412181f3b0e8874",
+    "evidence/migration/council-reviews/response-4.md": "8d8f9e06a192972c6e09b8327126a36308e28bcc6e7d829d100d466896d76cd9",
+    "evidence/migration/council-reviews/response-5.md": "a9d7a2e769f5c2f7357534f6875d93f1ed2517cd2baf195a758f6f4cb7ec67e8"
+  },
+  "final_document_sha256": {
+    "docs/migration/00-migration-validation-summary.md": "bc72881b290f30d7f2ec80a3e89ed688208ab3b443a3c509c3f4fe14f0beb8d2",
+    "docs/migration/01-source-inventory-and-authority.md": "3910fd1a287fceed0ca43dcbecb87733f03a7552084b0275f95217767d86f4ad",
+    "docs/migration/02-identity-mapping.md": "fc57e52fcb5d0569b6813e1b48a27f5a716b20dfbeda552837234ed0079b6a6f",
+    "docs/migration/03-migration-pipeline.md": "d75472b19ec21d62c5e790245c99c1922813303bd279b039d99e41e85e851d96",
+    "docs/migration/04-data-cleaning-and-dispositions.md": "3e226b105d47991bf7650227b2ab3bf835eab115beac68693a75210aaae93c3a",
+    "docs/migration/05-legacy-regression-oracle.md": "88511208f7a50abcdd3fb9b7bcbb21b2d66f0740144bf7d1cbcc493e263cea11",
+    "docs/migration/06-golden-datasets.md": "3f076c63a7480e1be9ad51163e6577fae48e82659280d26b49ed67850b358d4b",
+    "docs/migration/07-kpi-regression-suite.md": "363d2fde7df33c8f4163fc0689a3faed997df4cfdb3f14fc07e375287ea363d8",
+    "docs/migration/08-provider-contract-validation.md": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff",
+    "docs/migration/09-external-action-safety-validation.md": "27640f4bd9d62353193c2451a033274765615249929fba8b8f111cbd6c1ef4b0",
+    "docs/migration/10-tenant-and-authorization-validation.md": "64ccd24b8d30ebe4e37c6fc7d9f7a8aab1b818533b07034f0dcfa1f1bda99352",
+    "docs/migration/11-recovery-validation.md": "6780d6cc63f01333c272a1a893e96ecde369e5c9b6570df6ba1b1b01794af64b",
+    "docs/migration/12-shadow-and-parallel-run.md": "e6070127fffbad7661516ae41d71ba90a9f108e3ff8399fca9f3e5c44a6f8e1a",
+    "docs/migration/13-cutover-and-rollback.md": "aec980edc52af7ea56d44bd5e1894e99f9f2a594c95b3caceb10388f6d9c7e95",
+    "docs/migration/14-reconciliation-and-signoff.md": "221e7331d9580cb0c65efc02b8567f3b269ffc824586f311bde26c4d103696bc",
+    "docs/migration/15-privacy-and-test-data.md": "89c8b67629138a79a6d779082124b9f73ecf215586131477b32dede9ff270949",
+    "docs/migration/16-open-migration-decisions.md": "82f376040199516d767ddcfda14cd27b4c3f6149a003a75a70e9f322e80836df",
+    "docs/migration/17-migration-validation-plan.md": "9a2da320202c5ab4cca915f2e10186dc55a13af79180d0cdac8943d9db986665"
+  },
+  "golden_contract_sha256": "84392d86a5e7edf27801223333c0f8e319027c0bc2cb45792d99606e067f64e3",
+  "logical_fixture_sha256": "5fcd392e169dde5ff1d4cad1f4030236b2f2b4924cc3d107364c710ee5bdeb9b",
+  "limitations": "Internal AI review has correlated blind spots; no live migration/application/provider/security/restore/performance/cutover validation was executed"
+}

@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-10-14T22:39:35.694497+00:00",
+  "scope": "Static document integrity and arithmetic of synthetic EXPECTATIONS only; no application/provider/migration/restore execution",
+  "document_count": 18,
+  "words": 20342,
+  "local_links_checked": 81,
+  "protected_files": 253,
+  "source_files": 38,
+  "closed_documents": 72,
+  "baseline_changes": [],
+  "golden_dataset_sha256": "84392d86a5e7edf27801223333c0f8e319027c0bc2cb45792d99606e067f64e3",
+  "logical_fixture_sha256": "5fcd392e169dde5ff1d4cad1f4030236b2f2b4924cc3d107364c710ee5bdeb9b",
+  "temporal_scenarios": 9,
+  "golden_scenarios": 43,
+  "baseline_kpis": 7,
+  "owner_decisions": 16,
+  "council_review_status": "complete",
+  "validation_errors": [],
+  "pass": true,
+  "future_execution": "NOT EXECUTED"
+}

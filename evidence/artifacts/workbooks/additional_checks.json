@@ -1,0 +1,167 @@
+{
+  "v2_cached_formula_crosscheck": [
+    {
+      "cell": "Config!C34",
+      "cached": 1517.396551724138,
+      "independent_reconstruction": 1517.396551724138,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C36",
+      "cached": 1517.396551724138,
+      "independent_reconstruction": 1517.396551724138,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C37",
+      "cached": 0.577513966480447,
+      "independent_reconstruction": 0.577513966480447,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C38",
+      "cached": 0.42248603351955305,
+      "independent_reconstruction": 0.42248603351955305,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C40",
+      "cached": 641.0788504141783,
+      "independent_reconstruction": 641.0788504141783,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C166",
+      "cached": 237,
+      "independent_reconstruction": 237,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C167",
+      "cached": 212,
+      "independent_reconstruction": 212,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C168",
+      "cached": 133,
+      "independent_reconstruction": 133,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C169",
+      "cached": 79,
+      "independent_reconstruction": 79,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C170",
+      "cached": 0,
+      "independent_reconstruction": 0,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C171",
+      "cached": 15,
+      "independent_reconstruction": 15,
+      "agree_within_1e-9": true
+    },
+    {
+      "cell": "Config!C172",
+      "cached": 10,
+      "independent_reconstruction": 10,
+      "agree_within_1e-9": true
+    }
+  ],
+  "source_csv_vs_v3_complete_line_sequences": {
+    "common_order_keys": 353,
+    "left_matched_line_rows": 495,
+    "right_matched_line_rows": 495,
+    "orders_with_different_line_row_counts": 0,
+    "orders_with_any_field_difference": 0,
+    "differing_cells_by_column": {},
+    "method": "Exact order reference match; compare all line rows per matched reference in retained within-order sequence across export columns A:CA, excluding helper CB:CC. Decimal text and number representations normalized for field comparison only."
+  },
+  "staged_shopify_vs_current_complete_line_sequences": {
+    "common_order_keys": 476,
+    "left_matched_line_rows": 664,
+    "right_matched_line_rows": 664,
+    "orders_with_different_line_row_counts": 0,
+    "orders_with_any_field_difference": 4,
+    "differing_cells_by_column": {
+      "C": 4,
+      "AX": 2,
+      "CA": 4,
+      "AS": 1,
+      "AU": 2
+    },
+    "method": "Exact order reference match; compare all line rows per matched reference in retained within-order sequence across export columns A:CA, excluding helper CB:CC. Decimal text and number representations normalized for field comparison only."
+  },
+  "declared_dimension_overflows": {
+    "02_Gentry_Delivery_Performance_System.xlsx": [
+      {
+        "sheet": "RAW_Bosta",
+        "declared_dimension": "A1:Y1239",
+        "actual_max_column": "AC",
+        "actual_max_row": 571,
+        "cells_outside_declared_dimension": 2216
+      },
+      {
+        "sheet": "RAW_Costs",
+        "declared_dimension": "A1:AJ1239",
+        "actual_max_column": "AJ",
+        "actual_max_row": 1383,
+        "cells_outside_declared_dimension": 5184
+      },
+      {
+        "sheet": "RAW_Shopify",
+        "declared_dimension": "A1:CC2002",
+        "actual_max_column": "CC",
+        "actual_max_row": 5002,
+        "cells_outside_declared_dimension": 6794
+      }
+    ],
+    "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx": []
+  },
+  "current_capacities": {
+    "raw_shopify_helper_formula_rows": 5000,
+    "raw_shopify_named_source_rows": "3:5002",
+    "actual_line_rows": 2082,
+    "actual_order_header_rows": 1635,
+    "orders_master_formula_slots": 2000,
+    "orders_represented": 1635,
+    "order_overflow_count": 0,
+    "data_master_formula_slots": 2000,
+    "bosta_records": 569,
+    "cost_named_range_rows": "3:2002",
+    "cost_records": 1381,
+    "costs_outside_named_range_count": 0
+  },
+  "topup_verification": {
+    "tracking_ids": 27,
+    "matched_current_bosta_ids": 27,
+    "type_counts": {
+      "RTO": 25,
+      "EXCHANGE_return": 2
+    },
+    "created_dates": {
+      "min": "2026-08-15",
+      "max": "2026-09-03",
+      "present": 27
+    },
+    "existing_intake_matches": 0
+  },
+  "product_parser_current_sample": {
+    "fixed_180_character_window_differs_from_true_line_split_shipments": 0,
+    "source_rows_where_different": [],
+    "any_product_line_over_180_characters_shipments": 0,
+    "observed_non_delivered_states_classified_delivered": 0
+  },
+  "unapproved_or_untested_formula_edges": [
+    "Group I uses SEARCH(deliver,state), so an Out for delivery string would become Delivered; not observed in these Bosta exports.",
+    "Only four fixed-width 180-character description windows are read. Data_flags checks SKU missing only slots 1 and 2, even though value calculation accepts four slots.",
+    "Positive wallet sum required for wallet source. A recorded zero or negative net fee would fall back to dormant rate card instead of being labelled actual wallet.",
+    "Order outcome R prioritizes any Returned to origin leg over any Delivered leg, without restricting leg type or ordering events.",
+    "Confirmation SEARCH tags uses substring matching; Hadeer and automatic confirmation are merged in artifact."
+  ]
+}

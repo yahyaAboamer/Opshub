@@ -1,0 +1,445 @@
+[
+  {
+    "sheet": "RAW_Bosta_PASTE",
+    "header_row": 1,
+    "first_data_row": 2,
+    "headers": [
+      {
+        "cell": "A1",
+        "label": "Tracking Number"
+      },
+      {
+        "cell": "B1",
+        "label": "Type"
+      },
+      {
+        "cell": "C1",
+        "label": "Created At"
+      },
+      {
+        "cell": "D1",
+        "label": "Expected Pickup Date"
+      },
+      {
+        "cell": "E1",
+        "label": "Picked-Up Date"
+      },
+      {
+        "cell": "F1",
+        "label": "Expected Delivery Date"
+      },
+      {
+        "cell": "G1",
+        "label": "Expected Return Date"
+      },
+      {
+        "cell": "H1",
+        "label": "Scheduled At"
+      },
+      {
+        "cell": "I1",
+        "label": "Current Hub"
+      },
+      {
+        "cell": "J1",
+        "label": "Business Reference Number"
+      },
+      {
+        "cell": "K1",
+        "label": "Updated at"
+      },
+      {
+        "cell": "L1",
+        "label": "Delivery State"
+      },
+      {
+        "cell": "M1",
+        "label": "Delivered at"
+      },
+      {
+        "cell": "N1",
+        "label": "Confirmed Delivery At"
+      },
+      {
+        "cell": "O1",
+        "label": "Number Of attempts"
+      },
+      {
+        "cell": "P1",
+        "label": "Consignee Name"
+      },
+      {
+        "cell": "Q1",
+        "label": "Consignee phone"
+      },
+      {
+        "cell": "R1",
+        "label": "DropOff First Line"
+      },
+      {
+        "cell": "S1",
+        "label": "DropOff City"
+      },
+      {
+        "cell": "T1",
+        "label": "Cod Amount"
+      },
+      {
+        "cell": "U1",
+        "label": "Notes"
+      },
+      {
+        "cell": "V1",
+        "label": "Description"
+      },
+      {
+        "cell": "W1",
+        "label": "Old Type"
+      },
+      {
+        "cell": "X1",
+        "label": "Latest Exception Reason"
+      },
+      {
+        "cell": "Y1",
+        "label": "Proof of cost Attachment Date"
+      },
+      {
+        "cell": "Z1",
+        "label": "Forward Attempts Count"
+      },
+      {
+        "cell": "AA1",
+        "label": "Return Attempts Count"
+      },
+      {
+        "cell": "AB1",
+        "label": "Flex Ship Payment status"
+      },
+      {
+        "cell": "AC1",
+        "label": "Flex Ship Value"
+      }
+    ],
+    "row_count_with_stored_values_or_formulas": 569,
+    "columns": {
+      "Tracking Number": {
+        "column": "A",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 569,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Type": {
+        "column": "B",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 4,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Created At": {
+        "column": "C",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 411,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Expected Pickup Date": {
+        "column": "D",
+        "nonempty_values": 26,
+        "input_nonempty_values": 26,
+        "distinct_values": 15,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 20,
+        "last_input_row": 432
+      },
+      "Picked-Up Date": {
+        "column": "E",
+        "nonempty_values": 543,
+        "input_nonempty_values": 543,
+        "distinct_values": 259,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Expected Delivery Date": {
+        "column": "F",
+        "nonempty_values": 333,
+        "input_nonempty_values": 333,
+        "distinct_values": 68,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 19,
+        "last_input_row": 570
+      },
+      "Expected Return Date": {
+        "column": "G",
+        "nonempty_values": 210,
+        "input_nonempty_values": 210,
+        "distinct_values": 64,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 562
+      },
+      "Scheduled At": {
+        "column": "H",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 95,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Current Hub": {
+        "column": "I",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 47,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Business Reference Number": {
+        "column": "J",
+        "nonempty_values": 565,
+        "input_nonempty_values": 565,
+        "distinct_values": 534,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Updated at": {
+        "column": "K",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 425,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Delivery State": {
+        "column": "L",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 4,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Delivered at": {
+        "column": "M",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 388,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Confirmed Delivery At": {
+        "column": "N",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 449,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Number Of attempts": {
+        "column": "O",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 7,
+        "numeric_count": 569,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Consignee Name": {
+        "column": "P",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 483,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Consignee phone": {
+        "column": "Q",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 486,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "DropOff First Line": {
+        "column": "R",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 501,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "DropOff City": {
+        "column": "S",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 24,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Cod Amount": {
+        "column": "T",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 79,
+        "numeric_count": 569,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570,
+        "numeric_summary": {
+          "min": 0,
+          "max": 4050,
+          "sum": 384057.5,
+          "mean": 674.9692442882249
+        }
+      },
+      "Notes": {
+        "column": "U",
+        "nonempty_values": 565,
+        "input_nonempty_values": 565,
+        "distinct_values": 32,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Description": {
+        "column": "V",
+        "nonempty_values": 546,
+        "input_nonempty_values": 546,
+        "distinct_values": 208,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570
+      },
+      "Old Type": {
+        "column": "W",
+        "nonempty_values": 210,
+        "input_nonempty_values": 210,
+        "distinct_values": 2,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 562
+      },
+      "Latest Exception Reason": {
+        "column": "X",
+        "nonempty_values": 245,
+        "input_nonempty_values": 245,
+        "distinct_values": 12,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 3,
+        "last_input_row": 562
+      },
+      "Proof of cost Attachment Date": {
+        "column": "Y",
+        "nonempty_values": 0,
+        "input_nonempty_values": 0,
+        "distinct_values": 0,
+        "numeric_count": 0,
+        "formula_cells": 0
+      },
+      "Forward Attempts Count": {
+        "column": "Z",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 3,
+        "numeric_count": 569,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570,
+        "numeric_summary": {
+          "min": 0,
+          "max": 2,
+          "sum": 668,
+          "mean": 1.1739894551845342
+        }
+      },
+      "Return Attempts Count": {
+        "column": "AA",
+        "nonempty_values": 569,
+        "input_nonempty_values": 569,
+        "distinct_values": 5,
+        "numeric_count": 569,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570,
+        "numeric_summary": {
+          "min": 0,
+          "max": 5,
+          "sum": 317,
+          "mean": 0.5571177504393673
+        }
+      },
+      "Flex Ship Payment status": {
+        "column": "AB",
+        "nonempty_values": 537,
+        "input_nonempty_values": 537,
+        "distinct_values": 2,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570,
+        "safe_value_counts": {
+          "FALSE": 459,
+          "TRUE": 78
+        }
+      },
+      "Flex Ship Value": {
+        "column": "AC",
+        "nonempty_values": 537,
+        "input_nonempty_values": 537,
+        "distinct_values": 2,
+        "numeric_count": 537,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 570,
+        "numeric_summary": {
+          "min": 80,
+          "max": 100,
+          "sum": 51500,
+          "mean": 95.90316573556797
+        }
+      }
+    },
+    "formula_columns": {}
+  }
+]

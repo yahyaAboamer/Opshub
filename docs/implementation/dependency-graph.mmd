@@ -1,0 +1,523 @@
+flowchart TD
+  T0001["T0001: Initialize the versioned workspace boundary"]
+  T0002["T0002: Qualify Nest React Vite and Vitest toolchain"]
+  T0001 --> T0002
+  T0003["T0003: Qualify PostgreSQL Kysely and explicit migration tooling"]
+  T0001 --> T0003
+  T0004["T0004: Create web API worker and environment health slice"]
+  T0002 --> T0004
+  T0003 --> T0004
+  T0005["T0005: Add redacted correlation and diagnostics foundation"]
+  T0004 --> T0005
+  T0006["T0006: Build independent deterministic fixture and fault harness"]
+  T0002 --> T0006
+  T0007["T0007: Qualify pg-boss transaction enlistment and grants"]
+  T0003 --> T0007
+  T0006 --> T0007
+  T0008["T0008: Define recovery envelopes and independent fake storage"]
+  T0003 --> T0008
+  T0006 --> T0008
+  T0009["T0009: Establish progressive local and CI checks"]
+  T0004 --> T0009
+  T0005 --> T0009
+  T0006 --> T0009
+  T0010["T0010: Implement scrubbed Sentry and OpenTelemetry runtime exporters"]
+  T0005 --> T0010
+  T0009 --> T0010
+  T0101["T0101: Persist shared identity and independent participation"]
+  T0003 --> T0101
+  T0004 --> T0101
+  T0102["T0102: Enforce tenant unit of work RLS and scoped grants"]
+  T0101 --> T0102
+  T0103["T0103: Add transactional business and administrative audit"]
+  T0102 --> T0103
+  T0005 --> T0103
+  T0104["T0104: Implement OIDC server-session authentication"]
+  T0101 --> T0104
+  T0102 --> T0104
+  T0103 --> T0104
+  T0105["T0105: Enforce merchant and platform capability guards"]
+  T0102 --> T0105
+  T0103 --> T0105
+  T0104 --> T0105
+  T0106["T0106: Create verified provisioning and commercial primitives"]
+  T0103 --> T0106
+  T0105 --> T0106
+  T0107["T0107: Implement invitation issuance and acceptance"]
+  T0104 --> T0107
+  T0105 --> T0107
+  T0106 --> T0107
+  T0007 --> T0107
+  T0108["T0108: Deliver sign-in context and invitation user journey"]
+  T0104 --> T0108
+  T0105 --> T0108
+  T0106 --> T0108
+  T0107 --> T0108
+  T0110 --> T0108
+  T0109["T0109: Prove identity and tenant foundation independently"]
+  T0108 --> T0109
+  T0110["T0110: Administer merchant memberships without orphaning access"]
+  T0107 --> T0110
+  T0105 --> T0110
+  T0111["T0111: Implement Resend invitation and account-support delivery transport"]
+  T0107 --> T0111
+  T0007 --> T0111
+  T0005 --> T0111
+  T0201["T0201: Establish verified source namespaces and native bindings"]
+  T0109 --> T0201
+  T0202["T0202: Implement observations assertions and explainable selection"]
+  T0201 --> T0202
+  T0103 --> T0202
+  T0203["T0203: Implement normalization and exact dispositions"]
+  T0202 --> T0203
+  T0006 --> T0203
+  T0204["T0204: Persist immutable intake run and inactive checkpoints"]
+  T0203 --> T0204
+  T0007 --> T0204
+  T0205["T0205: Expose correction conflict and provenance review"]
+  T0202 --> T0205
+  T0203 --> T0205
+  T0108 --> T0205
+  T0206["T0206: Add private file and safe transfer boundary"]
+  T0204 --> T0206
+  T0105 --> T0206
+  T0008 --> T0206
+  T0207["T0207: Realize and independently review early golden inputs"]
+  T0006 --> T0207
+  T0203 --> T0207
+  T0208["T0208: Enforce privacy disposition and replay suppression"]
+  T0202 --> T0208
+  T0204 --> T0208
+  T0206 --> T0208
+  T0008 --> T0208
+  T0209["T0209: Retain inherited safety and repair descriptors"]
+  T0201 --> T0209
+  T0204 --> T0209
+  T0208 --> T0209
+  T0008 --> T0209
+  T0210["T0210: Implement private Amazon S3 runtime storage adapters"]
+  T0008 --> T0210
+  T0206 --> T0210
+  T0208 --> T0210
+  T0209 --> T0210
+  T0301["T0301: Define integration ports and credential capabilities"]
+  T0201 --> T0301
+  T0105 --> T0301
+  T0005 --> T0301
+  T0302["T0302: Implement safe sync jobs rates and acquisition closure"]
+  T0301 --> T0302
+  T0204 --> T0302
+  T0007 --> T0302
+  T0303["T0303: Ingest Shopify orders items and confirmation assertions"]
+  T0302 --> T0303
+  T0207 --> T0303
+  T0304["T0304: Ingest catalog and dated product context"]
+  T0303 --> T0304
+  T0305["T0305: Handle authenticated Shopify receipts and revisions"]
+  T0303 --> T0305
+  T0208 --> T0305
+  T0306["T0306: Deliver Orders items catalog and evidence journey"]
+  T0303 --> T0306
+  T0304 --> T0306
+  T0305 --> T0306
+  T0205 --> T0306
+  T0307["T0307: Deliver source readiness and fallback onboarding journey"]
+  T0301 --> T0307
+  T0302 --> T0307
+  T0306 --> T0307
+  T0206 --> T0307
+  T0308["T0308: Qualify actual Shopify read account contract"]
+  T0305 --> T0308
+  T0307 --> T0308
+  T0309 --> T0308
+  T1204 --> T0308
+  T0309["T0309: Implement versioned Shopify read HTTP driver"]
+  T0301 --> T0309
+  T0302 --> T0309
+  T0303 --> T0309
+  T0304 --> T0309
+  T0305 --> T0309
+  T0401["T0401: Ingest Bosta shipment truth and native matching"]
+  T0302 --> T0401
+  T0303 --> T0401
+  T0402["T0402: Corroborate Bosta callbacks and recover read gaps"]
+  T0401 --> T0402
+  T0305 --> T0402
+  T0403["T0403: Deliver shipment detail and delivery attention"]
+  T0401 --> T0403
+  T0402 --> T0403
+  T0306 --> T0403
+  T0404["T0404: Prove logistics grain and read-only isolation"]
+  T0403 --> T0404
+  T0207 --> T0404
+  T0405["T0405: Qualify actual Bosta read and callback contract"]
+  T0404 --> T0405
+  T0406 --> T0405
+  T1204 --> T0405
+  T0406["T0406: Implement versioned Bosta read HTTP driver"]
+  T0301 --> T0406
+  T0302 --> T0406
+  T0401 --> T0406
+  T0402 --> T0406
+  T0501["T0501: Persist stable cases objectives and required work"]
+  T0303 --> T0501
+  T0401 --> T0501
+  T0209 --> T0501
+  T0502["T0502: Implement confirmation participation and evidence"]
+  T0501 --> T0502
+  T0202 --> T0502
+  T0503["T0503: Enforce three-attempt budget and eligibility"]
+  T0501 --> T0503
+  T0006 --> T0503
+  T0504["T0504: Issue protected pre-contact start reservation"]
+  T0503 --> T0504
+  T0105 --> T0504
+  T0008 --> T0504
+  T0209 --> T0504
+  T0505["T0505: Record contact evidence and case completion"]
+  T0504 --> T0505
+  T0502 --> T0505
+  T0506["T0506: Deliver daily attention and contact workflow"]
+  T0505 --> T0506
+  T0205 --> T0506
+  T0403 --> T0506
+  T0507["T0507: Prove contact and case safety under clocks and restore"]
+  T0506 --> T0507
+  T0207 --> T0507
+  T0601["T0601: Persist immutable intents and effect reservations"]
+  T0501 --> T0601
+  T0105 --> T0601
+  T0202 --> T0601
+  T0602["T0602: Review exact Admin approval and live dependencies"]
+  T0601 --> T0602
+  T0103 --> T0602
+  T0603["T0603: Implement single dispatch and protected pre-send"]
+  T0602 --> T0603
+  T0007 --> T0603
+  T0008 --> T0603
+  T0301 --> T0603
+  T0604["T0604: Reconcile results and retain unknown holds"]
+  T0603 --> T0604
+  T0402 --> T0604
+  T0605["T0605: Issue exclusive durable manual fallback handover"]
+  T0604 --> T0605
+  T0206 --> T0605
+  T0606["T0606: Enforce class flags and cross-class conflicts"]
+  T0602 --> T0606
+  T0301 --> T0606
+  T0504 --> T0606
+  T0607["T0607: Deliver action approval result and recovery UI"]
+  T0604 --> T0607
+  T0605 --> T0607
+  T0606 --> T0607
+  T0506 --> T0607
+  T0608["T0608: Prove generic action and handover fault matrix"]
+  T0607 --> T0608
+  T0507 --> T0608
+  T0609["T0609: Recover authority privacy and lost effect scope locally"]
+  T0608 --> T0609
+  T0208 --> T0609
+  T0209 --> T0609
+  T0701["T0701: Approve evidence-based first action selection"]
+  T0707 --> T0701
+  T0708 --> T0701
+  T0709 --> T0701
+  T0710 --> T0701
+  T0702["T0702: Implement required annotation adapter with fake provider"]
+  T0608 --> T0702
+  T0305 --> T0702
+  T0703["T0703: Implement Bosta booking adapter with fake provider"]
+  T0608 --> T0703
+  T0404 --> T0703
+  T0704["T0704: Implement linked Shopify replacement create adapter"]
+  T0608 --> T0704
+  T0305 --> T0704
+  T0705["T0705: Implement eligible Shopify cancellation adapter"]
+  T0608 --> T0705
+  T0305 --> T0705
+  T0706["T0706: Qualify SDK no-retry controls and class mock contracts"]
+  T0309 --> T0706
+  T0406 --> T0706
+  T0702 --> T0706
+  T0703 --> T0706
+  T0704 --> T0706
+  T0705 --> T0706
+  T0707["T0707: Qualify actual required annotation class"]
+  T0308 --> T0707
+  T0706 --> T0707
+  T0711 --> T0707
+  T1205 --> T0707
+  T0708["T0708: Qualify actual Bosta booking class"]
+  T0405 --> T0708
+  T0706 --> T0708
+  T0712 --> T0708
+  T1205 --> T0708
+  T0709["T0709: Qualify actual replacement and native booking coupling"]
+  T0308 --> T0709
+  T0706 --> T0709
+  T0708 --> T0709
+  T0713 --> T0709
+  T1205 --> T0709
+  T0710["T0710: Qualify actual eligible cancellation class"]
+  T0308 --> T0710
+  T0706 --> T0710
+  T0714 --> T0710
+  T1205 --> T0710
+  T0711["T0711: Implement Shopify annotation mutation transport"]
+  T0702 --> T0711
+  T0706 --> T0711
+  T0309 --> T0711
+  T0712["T0712: Implement Bosta booking mutation transport"]
+  T0703 --> T0712
+  T0706 --> T0712
+  T0406 --> T0712
+  T0713["T0713: Implement Shopify replacement creation mutation transport"]
+  T0704 --> T0713
+  T0706 --> T0713
+  T0309 --> T0713
+  T0714["T0714: Implement Shopify cancellation mutation transport"]
+  T0705 --> T0714
+  T0706 --> T0714
+  T0309 --> T0714
+  T0801["T0801: Implement single return case and independent evidence"]
+  T0505 --> T0801
+  T0404 --> T0801
+  T0802["T0802: Implement pickup purpose payment and physical finality"]
+  T0505 --> T0802
+  T0404 --> T0802
+  T0803["T0803: Prepare and decide replacement recovery request"]
+  T0607 --> T0803
+  T0801 --> T0803
+  T0802 --> T0803
+  T0804["T0804: Coordinate independent replacement effect steps"]
+  T0803 --> T0804
+  T0702 --> T0804
+  T0703 --> T0804
+  T0704 --> T0804
+  T0605 --> T0804
+  T0805["T0805: Deliver return pickup and replacement journeys"]
+  T0801 --> T0805
+  T0802 --> T0805
+  T0804 --> T0805
+  T0607 --> T0805
+  T0806["T0806: Deliver focused cleanup and data-quality issue lifecycle"]
+  T0805 --> T0806
+  T0205 --> T0806
+  T0607 --> T0806
+  T0901["T0901: Publish consistent projection and contributor generations"]
+  T0202 --> T0901
+  T0304 --> T0901
+  T0404 --> T0901
+  T0507 --> T0901
+  T0007 --> T0901
+  T0902["T0902: Calculate confirmation delivery and RTO contributors"]
+  T0901 --> T0902
+  T0502 --> T0902
+  T0903["T0903: Calculate pickup reach and action completion contributors"]
+  T0901 --> T0903
+  T0802 --> T0903
+  T0507 --> T0903
+  T0904["T0904: Ingest Meta spend series and revisioned reports"]
+  T0302 --> T0904
+  T0304 --> T0904
+  T0208 --> T0904
+  T0905["T0905: Qualify attributed revenue and once-only reversals"]
+  T0901 --> T0905
+  T0303 --> T0905
+  T0906["T0906: Allocate spend with conserved unallocated balance"]
+  T0904 --> T0906
+  T0905 --> T0906
+  T0907["T0907: Calculate product and SKU sales and outcome populations"]
+  T0902 --> T0907
+  T0903 --> T0907
+  T0905 --> T0907
+  T0801 --> T0907
+  T0908["T0908: Calculate canonical ROAS and compatible comparisons"]
+  T0906 --> T0908
+  T0907 --> T0908
+  T0909["T0909: Deliver operational dashboard and KPI drill-down"]
+  T0902 --> T0909
+  T0903 --> T0909
+  T0506 --> T0909
+  T0910["T0910: Deliver Product SKU ROAS and comparison journey"]
+  T0908 --> T0910
+  T0909 --> T0910
+  T0304 --> T0910
+  T0911["T0911: Generate scoped revision-preserving summary exports"]
+  T0909 --> T0911
+  T0910 --> T0911
+  T0206 --> T0911
+  T0208 --> T0911
+  T0912["T0912: Realize monetary temporal and late-revision golden inputs"]
+  T0207 --> T0912
+  T0905 --> T0912
+  T0906 --> T0912
+  T0006 --> T0912
+  T0913["T0913: Prove operational and analytics golden suite"]
+  T0911 --> T0913
+  T0912 --> T0913
+  T0609 --> T0913
+  T0805 --> T0913
+  T0914["T0914: Qualify actual Meta read and analytical input contract"]
+  T0904 --> T0914
+  T0906 --> T0914
+  T0915 --> T0914
+  T1204 --> T0914
+  T0915["T0915: Implement versioned Meta read reporting HTTP driver"]
+  T0301 --> T0915
+  T0302 --> T0915
+  T0904 --> T0915
+  T1001["T1001: Complete scoped platform merchant and member administration"]
+  T0108 --> T1001
+  T0109 --> T1001
+  T0307 --> T1001
+  T1002["T1002: Publish safe aggregate health and job diagnostics"]
+  T1001 --> T1002
+  T0901 --> T1002
+  T0005 --> T1002
+  T0606 --> T1002
+  T1003["T1003: Implement manual zero-price offering and continuity states"]
+  T0106 --> T1003
+  T1001 --> T1003
+  T0606 --> T1003
+  T1004["T1004: Deliver merchant settings policy and readiness review"]
+  T0307 --> T1004
+  T0205 --> T1004
+  T0910 --> T1004
+  T1003 --> T1004
+  T1005["T1005: Validate platform and service boundary journeys"]
+  T1002 --> T1005
+  T1004 --> T1005
+  T0911 --> T1005
+  T1101["T1101: Plan and acquire authorized source census and custody"]
+  T0308 --> T1101
+  T0405 --> T1101
+  T0914 --> T1101
+  T0206 --> T1101
+  T1102["T1102: Implement fallback group parsers and reviewed crosswalks"]
+  T0203 --> T1102
+  T0204 --> T1102
+  T0304 --> T1102
+  T0505 --> T1102
+  T1103["T1103: Complete inactive staged migration and restart pipeline"]
+  T1102 --> T1103
+  T0209 --> T1103
+  T0901 --> T1103
+  T1104["T1104: Build independent legacy and canonical reconciliation report"]
+  T1103 --> T1104
+  T0913 --> T1104
+  T1105["T1105: Publish exact validated read generation with drift guard"]
+  T1104 --> T1105
+  T1005 --> T1105
+  T0609 --> T1105
+  T1106["T1106: Prove migration repair seed privacy and replay composition"]
+  T1105 --> T1106
+  T0209 --> T1106
+  T0609 --> T1106
+  T1107["T1107: Deliver run dispositions conflict and signoff review journey"]
+  T1104 --> T1107
+  T1105 --> T1107
+  T1106 --> T1107
+  T0205 --> T1107
+  T1108["T1108: Execute controlled private migration rehearsal"]
+  T1101 --> T1108
+  T1107 --> T1108
+  T1205 --> T1108
+  T1201["T1201: Provision isolated controlled staging services"]
+  T0004 --> T1201
+  T0005 --> T1201
+  T0009 --> T1201
+  T1202["T1202: Qualify independent Amazon S3 protection and coverage"]
+  T0008 --> T1202
+  T0208 --> T1202
+  T0209 --> T1202
+  T0210 --> T1202
+  T1201 --> T1202
+  T1203["T1203: Qualify Auth0 sessions invitations and account mail"]
+  T0107 --> T1203
+  T0109 --> T1203
+  T0111 --> T1203
+  T1201 --> T1203
+  T1204["T1204: Deploy compatible disabled staging build"]
+  T0009 --> T1204
+  T0010 --> T1204
+  T0307 --> T1204
+  T0309 --> T1204
+  T0404 --> T1204
+  T0406 --> T1204
+  T0915 --> T1204
+  T1202 --> T1204
+  T1203 --> T1204
+  T1205["T1205: Execute staged recovery security and disabled-effect drills"]
+  T0609 --> T1205
+  T0913 --> T1205
+  T1005 --> T1205
+  T1106 --> T1205
+  T1204 --> T1205
+  T1208 --> T1205
+  T1206["T1206: Compile read-shadow readiness and discrepancy controls"]
+  T0308 --> T1206
+  T0405 --> T1206
+  T0914 --> T1206
+  T1108 --> T1206
+  T1205 --> T1206
+  T1207["T1207: Authorize and execute bounded real read-only shadow"]
+  T1206 --> T1207
+  T1210 --> T1207
+  T1211 --> T1207
+  T1208["T1208: Deploy complete reviewed staging validation candidate"]
+  T1204 --> T1208
+  T0706 --> T1208
+  T0711 --> T1208
+  T0712 --> T1208
+  T0713 --> T1208
+  T0714 --> T1208
+  T0913 --> T1208
+  T1005 --> T1208
+  T1107 --> T1208
+  T0210 --> T1208
+  T1209["T1209: Provision distinct egress-off production environment"]
+  T1205 --> T1209
+  T1208 --> T1209
+  T1210["T1210: Deploy and validate disabled production shadow candidate"]
+  T1209 --> T1210
+  T1208 --> T1210
+  T0308 --> T1210
+  T0405 --> T1210
+  T0914 --> T1210
+  T1108 --> T1210
+  T1211["T1211: Qualify production identity and controlled account invitation"]
+  T1210 --> T1211
+  T1203 --> T1211
+  T0111 --> T1211
+  T1301["T1301: Authorize and observe first selected action class"]
+  T1207 --> T1301
+  T0701 --> T1301
+  T0805 --> T1301
+  T0608 --> T1301
+  T1205 --> T1301
+  T1302["T1302: Authorize additional MVP action classes individually"]
+  T1301 --> T1302
+  T0707 --> T1302
+  T0708 --> T1302
+  T0709 --> T1302
+  T0710 --> T1302
+  T0804 --> T1302
+  T1303["T1303: Authorize safe real contact starts and budget handoff"]
+  T1207 --> T1303
+  T0507 --> T1303
+  T1202 --> T1303
+  T1205 --> T1303
+  T1108 --> T1303
+  T0606 --> T1303
+  T1304["T1304: Rehearse continuous-traffic authority cutover and abort"]
+  T1302 --> T1304
+  T1303 --> T1304
+  T1108 --> T1304
+  T1305["T1305: Assemble final readiness signoff and exclusions"]
+  T1304 --> T1305
+  T1207 --> T1305
+  T1302 --> T1305
+  T1303 --> T1305
+  T1306["T1306: Authorize and perform exact production cutover"]
+  T1305 --> T1306

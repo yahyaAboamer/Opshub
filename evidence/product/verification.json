@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-14",
+  "kind": "Documentation checks only; no application validation or owner approval implied",
+  "passed": true,
+  "product_document_count": 15,
+  "protected_file_count": 170,
+  "protected_changes": [],
+  "links_checked": 102,
+  "broken_links": [],
+  "format_errors": [],
+  "naming_pattern_hits": [],
+  "errors": [],
+  "od08_od09_checks": {
+    "F19_must_have": true,
+    "F20_must_have": true,
+    "F24_must_have": true,
+    "ROAS_is_MVP": true,
+    "product_contracts": true,
+    "named_pilot_providers": true,
+    "integrated_action_and_fallback": true,
+    "commercial_document_unchanged": true
+  },
+  "correction_changed_documents": [
+    "docs/product/00-owner-decisions.md",
+    "docs/product/01-product-vision-and-scope.md",
+    "docs/product/02-personas-and-permissions.md",
+    "docs/product/03-mvp-feature-prioritization.md",
+    "docs/product/04-merchant-workflows.md",
+    "docs/product/05-platform-admin-workflows.md",
+    "docs/product/06-analytics-and-kpis.md",
+    "docs/product/07-configuration-and-policy.md",
+    "docs/product/08-data-ingestion-and-integrations-requirements.md",
+    "docs/product/10-audit-data-quality-and-trust.md",
+    "docs/product/11-mvp-acceptance-criteria.md",
+    "docs/product/12-out-of-scope-and-future.md",
+    "docs/product/13-open-product-decisions.md",
+    "docs/product/14-prd.md"
+  ],
+  "documents": {
+    "00-owner-decisions.md": {
+      "bytes": 10164,
+      "sha256": "63636df7e2b1110adc63ee06a2f90937c783bcc99b30d3d938b545635fcc0b64",
+      "words": 1325
+    },
+    "01-product-vision-and-scope.md": {
+      "bytes": 6976,
+      "sha256": "6be78e1c7c41fd43cd22587cfff40a32f51b24591b75ec71b499025f9c6870e5",
+      "words": 838
+    },
+    "02-personas-and-permissions.md": {
+      "bytes": 7516,
+      "sha256": "e07af4dd56d635ed885a013396807d55016b2a28e24e38230138e471134af4e3",
+      "words": 996
+    },
+    "03-mvp-feature-prioritization.md": {
+      "bytes": 7996,
+      "sha256": "deb595fb31cd637f5795227d793a93d11c516621ca61302b5afb80be3a1f0b76",
+      "words": 1127
+    },
+    "04-merchant-workflows.md": {
+      "bytes": 23790,
+      "sha256": "27d8810a28a66fd9ddc75952f71a8525bf212750ca42acdcd0be181c8e43dcc6",
+      "words": 3000
+    },
+    "05-platform-admin-workflows.md": {
+      "bytes": 6789,
+      "sha256": "daddc59eb4a19da20f72748794f338cb24ecf5a0d1f201760340c580347ee685",
+      "words": 816
+    },
+    "06-analytics-and-kpis.md": {
+      "bytes": 20456,
+      "sha256": "9a2551067d96f9aeaba3275f2af58db9f9ca5593dbec0b481b4eaa7c9fb100ab",
+      "words": 2565
+    },
+    "07-configuration-and-policy.md": {
+      "bytes": 6026,
+      "sha256": "14ab6617cc346237fbd2b9a19f99d04845e6d9784e8ed39437797d25484b3d27",
+      "words": 763
+    },
+    "08-data-ingestion-and-integrations-requirements.md": {
+      "bytes": 14548,
+      "sha256": "779dbaa5ce4651d812f57fd01ed46f4b6cbe8bb5af64069544a653c97ccc99f7",
+      "words": 1785
+    },
+    "09-saas-commercial-requirements.md": {
+      "bytes": 4047,
+      "sha256": "1595dc3c9c97f4107ec3455adccf091f98f99e917d8abc1912d8ede9ca950f0a",
+      "words": 502
+    },
+    "10-audit-data-quality-and-trust.md": {
+      "bytes": 7436,
+      "sha256": "795a4af4b72521fca17299fb40db030aafba2466988b5cae3bdfb40cba3ac7d4",
+      "words": 900
+    },
+    "11-mvp-acceptance-criteria.md": {
+      "bytes": 19551,
+      "sha256": "c11ed77106610fcebe9bd09587cc02bf7c18ef9057dd56801b27808bb7419d78",
+      "words": 2320
+    },
+    "12-out-of-scope-and-future.md": {
+      "bytes": 4361,
+      "sha256": "70f5b117d663ef109cb43045f93657d84a8df97ae2fffa72aca03b4e5d5ed920",
+      "words": 568
+    },
+    "13-open-product-decisions.md": {
+      "bytes": 8926,
+      "sha256": "1dbd441ba383adea0126746688f6e8a8debf5be04580db58688e9d02d6e5a14e",
+      "words": 1069
+    },
+    "14-prd.md": {
+      "bytes": 15559,
+      "sha256": "f16e8543f1d62027f0df9f254bbd6688439411a15e4760432676f11fffd99525",
+      "words": 1708
+    }
+  }
+}

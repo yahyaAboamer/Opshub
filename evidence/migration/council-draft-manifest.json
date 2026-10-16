@@ -1,0 +1,25 @@
+{
+  "captured_at_utc": "2026-10-14T22:10:40.301339+00:00",
+  "data_class": "Documentation and synthetic fixtures only",
+  "files": {
+    "docs/migration/00-migration-validation-summary.md": "6c247caac95421f299406aaf1963360b3699629d9bed633dfb86bab8e0472ddf",
+    "docs/migration/01-source-inventory-and-authority.md": "010fca0c96df27712f383566d8d932a95df24455b130aaff787e3de0eeda6c0e",
+    "docs/migration/02-identity-mapping.md": "61376fa15d989c5f010fc2315e26d3e75f231f7f8efaee46f4aa0ea3e9d18049",
+    "docs/migration/03-migration-pipeline.md": "d01236d4bcd33f14f89ebbefab49bc2604f7fbc7c5d0d390dc9c8f0751cdfb91",
+    "docs/migration/04-data-cleaning-and-dispositions.md": "e6c7f3ef6dc3df2b49796e0a948aaa3f1a8d41a1cc0e7f211b0ab9feebd5a717",
+    "docs/migration/05-legacy-regression-oracle.md": "26d93260f3fc2faf8aa32e52ffacef6f49018f969749788ded50cde68e0b3c35",
+    "docs/migration/06-golden-datasets.md": "a58c3e990c2ee948c08666c826b541060b7d73e5dd23076004229d74b5e22fee",
+    "docs/migration/07-kpi-regression-suite.md": "b1eed45724bd4846d760b98481ed6253d30ff2e81be12fbf1243d602348db244",
+    "docs/migration/08-provider-contract-validation.md": "ca3859b43ae7c46f5bb17512eca3e0dfddb8b8c525662f02b8fb1c16e89f1850",
+    "docs/migration/09-external-action-safety-validation.md": "93fccb91286ec74d044b944f9acc783f61ab2a870d7271b07fd3442d750c56c9",
+    "docs/migration/10-tenant-and-authorization-validation.md": "9eec836f2f41342bbe9ed5c285c52f814f8e468fbd62ea2e8743cb1bf2d44ec9",
+    "docs/migration/11-recovery-validation.md": "ca71787558b7726a7a0d4d13efbeddfcaef7e011f0e3a30bd55a8de1b33699c7",
+    "docs/migration/12-shadow-and-parallel-run.md": "2a90c7b8e1da4039359a54737c8a689583d79ca991af62fb50a4c66b5ce50001",
+    "docs/migration/13-cutover-and-rollback.md": "fd35e5331896abd60ca4925fb1535944e9c0532740b7b523f05e10a7063c4865",
+    "docs/migration/14-reconciliation-and-signoff.md": "f3940eb24848ca25666590648c95e8ee22a4856a6ffaad9b53b9b5be39eff14b",
+    "docs/migration/15-privacy-and-test-data.md": "7239d1cc25b8093587372402ab475a64014a014399c6b3bc6520d9a12e833f1a",
+    "docs/migration/16-open-migration-decisions.md": "fc60ef393d21751ddbb2e8b179df7580fa453cba5ca60b36f0b27ba33566a197",
+    "docs/migration/17-migration-validation-plan.md": "6de1544cdb05b2de04420996c41c80219021e330bb20fb97d7a9284dd9b41ac5",
+    "evidence/migration/golden-contracts.json": "5c565d28b878efdf179c1d497ded98cfcb7121c02d4f329d8038df823ab23f02"
+  }
+}

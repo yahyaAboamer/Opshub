@@ -1,0 +1,51 @@
+{
+  "profiled_at_utc": "2026-10-13T17:10:08.455592+00:00",
+  "observation_id": "T13",
+  "export_href": "/export/products?period=last-month",
+  "sha256": "98e995e3b959b58de5f6037116c45a4c09c6936aace78e4aff17760a1a8c6c95",
+  "row_count": 20,
+  "columns": [
+    "Product",
+    "Period",
+    "From",
+    "To",
+    "Tier",
+    "Gross margin %",
+    "Breakeven ROAS",
+    "Unit cost (EGP)",
+    "Lead time (weeks)",
+    "Units sold",
+    "Gross sales (EGP)",
+    "Discounts (EGP)",
+    "Returns (EGP)",
+    "Ad spend est. (EGP)",
+    "Ad spend: own ads (EGP)",
+    "Ad spend: generic share (EGP)",
+    "Net ROAS",
+    "Own ads (count)",
+    "Own ads",
+    "Stock left (now)",
+    "Days of stock",
+    "Orders (period)",
+    "Orders (all-time)",
+    "Suggested tier",
+    "Ad advice",
+    "Restock advice",
+    "Restock qty",
+    "Order by"
+  ],
+  "period_values": [
+    "Last month (1 Sept \u2013 30 Sept)"
+  ],
+  "from_values": [
+    "2026-09-01"
+  ],
+  "to_values": [
+    "2026-09-30"
+  ],
+  "aggregate_units": 385.0,
+  "aggregate_gross_sales_egp": 297500.0,
+  "raw_file_copied_to_evidence": false,
+  "http_status": null,
+  "limitation": "One nondefault period only; tier/stock/search/sort propagation and HTTP response headers remain unverified."
+}

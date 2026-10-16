@@ -1,0 +1,40 @@
+# OpsHub PRD council — anonymized independent reviews
+
+14 October 2026. Three members, adapted to the three available child slots. All used the inherited Codex model; this is not a cross-vendor council. These responses are condensed from the full independent reviews delivered in the chat and review the first draft; subsequent corrections do not invalidate the original findings. No member edited the product files. Responses are labeled without lens/model identity for fresh peer review.
+
+## Shared question
+
+Is the completed Phase 3 PRD a minimal coherent OpsHub MVP with essential daily merchant and SaaS shell functionality, correct merchant/platform authority, testable acceptance, clear KPI denominators, disciplined Gentry legacy versus OpsHub future naming, and no premature architecture? Challenge missing essential behavior, copying spreadsheet mechanics, unresolved choices presented as approved, and contradictions. OD01 separates order/shipment; OD02 separates payment/physical courier collection; OD03 is case-specific completion; OD04 caps three contact attempts approximately 24 hours apart over 48 hours; OD05 fixes canonical formulas; OD06 caps one outbound/zero-or-one return/pickup per order with new linked replacement; OD07 makes consequential actions Merchant Admin-only and gives platform no automatic merchant business authority.
+
+## Response A
+
+The draft is a coherent, restrained operational MVP. Manual provider execution, focused cases, six operational KPIs and a small commercial shell fit the daily merchant job. I found no reason to add native refunds, accounting, stock planning, messaging or direct connectors.
+
+1. **P1 — Count all ordinary contact attempts toward OD04’s ceiling.** Document00 OD04 approves a maximum of three contact attempts. Document04 shared case rules and11 AC05 instead describe three unsuccessful attempts. This leaves failed→successful→failed potentially eligible for a fourth ordinary attempt. Count every ordinary attempt within the same objective; preserve reach and unfinished action. Add that fixture with explicit Admin exception for further contact. This is a product-rule gap, not scheduling implementation.
+2. **P2 — Make the Gentry comparison gate conditional on legacy ingestion.** Document11 requires every MUST gate before release, while AC12 depends on a later authorized Gentry baseline review. A fresh-input merchant could inherit a historical comparison project. AC12 should apply when a pilot imports Gentry history or undertakes authorized migration; AC04 input accounting and AC07 reconciliation remain mandatory for everyone. An incumbent Gentry replacement pilot still needs AC12.
+3. **Manual feasibility is already a critical gate.** Documents03/13 OP01/OP06/OP13 and AC13 correctly defer proof that inputs, Admin provider access and evidence make the job workable. Before launch use representative booking/cancellation/replacement journeys to establish each external actor, completion evidence and effort envelope. Otherwise a complete manual path could hide double entry/Admin bottlenecks. Do not expand into connector design.
+
+Naming, approved/proposed distinctions, uncertainty and authority are handled well in inspected material. Strongest objection: a first Gentry-replacement pilot may reasonably require AC12 universally, and intended retries may already count all attempts; seek explicit applicability/counting rather than relaxed evidence or larger product.
+
+Review limitation: owner decisions, prioritization, PRD, open register, acceptance and merchant workflows through WF08 were inspected. Disk-full errors prevented remaining supporting reads; findings are confined to those passages.
+
+## Response B
+
+The draft is coherent and disciplined about legacy evidence, authority and deferred technology. Two substantive gaps and two definition/acceptance weaknesses remain.
+
+1. **P1 — Retry semantics weaken the three-attempt ceiling.** Documents04 shared rules/11 AC05 count unsuccessful attempts. A customer reached on attempt one followed by failures could receive four attempts before three failures. Count every actual ordinary contact attempt, including successes. Reach never resets count; unfinished action remains open after third attempt. Further contact needs the recorded Admin exception. Add reached-first→two failed follow-ups.
+2. **P1 — Competing booking intents lack acceptance coverage.** WF04 blocks an existing booking, not two separately approved requests while no shipment is recorded. Both Admins could execute manually; rejecting the second imported outbound preserves local cardinality while hiding duplicate external effects. A second pending/approved booking intent must be blocked or explicitly supersede the first before proceeding. Test two Admins, delayed result recording and unknown first result. This specifies product behavior, not concurrency technology.
+3. **P2 — Action Completion population conflicts.** K06 denominator includes cases with required action, but Included narrows to attempted/reached. Required action can precede first contact; exclusion inflates completion. Include explicit action-required cases regardless of contact, and add an unattempted required-action fixture.
+4. **P2 — Manual authority guarantee needs an honest boundary.** Document08 manual external path and11 AC03 broadly promise zero unauthorized effects, while AUD01 permits unknown external executor. OpsHub can enforce approval/acceptance, not prove an Operator never acted directly in a provider. OP01 needs a demonstrated Admin-controlled external path; AC03 tests unauthorized OpsHub approval/result acceptance and approved attributable external execution evidence, with unverifiable execution labeled. No connector is required.
+
+Strongest objection: draft OP01/OP04/OP06/OP07 already reserve operational choices and broad rules forbid duplicates/unauthorized actions, reducing severity of findings2–4. Nevertheless open gates do not fix contradictory attempt/KPI text, and manual/concurrent scenarios need observable acceptance.
+
+## Response C
+
+The PRD is coherent and restrained, including daily work, manual path, SaaS administration, qualified KPIs and launch decisions. Three semantic corrections are needed.
+
+1. **P1 — Pickup scope differs from owner OD02 wording.** Document00 omits courier from physical collection. WF06 includes Gentry merchant/customer Pickup-channel orders and treats courier reverse collection as logistics assertion. K04 restricts to Pickup orders while OP05 reopens purpose. These physical events can differ and produce different denominators. Restore exact approved wording and consistently identify courier collection event/population; leave evidence/finality mapping open and present customer pickup scope separately as a proposal. Update AC06/AC07 to distinguish payment, courier collection and customer handover. This is owner fidelity, not implementation.
+2. **P1 — Count all contact attempts.** Documents04/11 certify three unsuccessful attempts rather than OD04 three contacts. Successful contact followed by three failures could pass with four. Count all actual ordinary contacts; preserve reach and outstanding action when budget exhausted, with explicit exception for further outreach. Add mixed-success fixture. Exact timing tolerance remains open.
+3. **P2 — Remove contact prerequisite from action-completion population.** K06 attempted/reached inclusion conflicts with required-action denominator and action work identified before contact. Include explicit required-action cases regardless of contact, and add an unattempted case increasing completion denominator but not reach denominator.
+
+Calendar, source finality, privacy, commercial and pilot-volume choices are visibly draft launch gates. Manual execution does not need connector architecture in Phase 3. Strongest objection: approved decisions may control charitable interpretation, especially K06. Pickup positively selects another population and attempts acceptance could certify an owner-rule violation, so small semantic corrections matter.

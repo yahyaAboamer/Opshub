@@ -1,0 +1,190 @@
+{
+  "verified_at": "2026-10-14T17:43:47.773257+00:00",
+  "scope": "documentation integrity and traceability only; not application/provider tests",
+  "architecture_documents": 20,
+  "adrs": 11,
+  "mermaid_fences_structurally_checked": 5,
+  "mermaid_rendering_verified": false,
+  "local_links_checked": 107,
+  "must_capabilities": [
+    "MR01",
+    "MR02",
+    "MR03",
+    "MR04",
+    "MR05",
+    "MR06",
+    "MR07",
+    "MR08",
+    "MR09",
+    "MR10",
+    "MR11",
+    "MR12",
+    "MR13",
+    "MR14",
+    "MR15",
+    "MR16",
+    "MR17",
+    "F18",
+    "F19",
+    "F20",
+    "F21",
+    "F24",
+    "F25"
+  ],
+  "excluded_capabilities": [
+    "F31",
+    "F32",
+    "F33",
+    "F36"
+  ],
+  "baseline_files": 198,
+  "source_files_unchanged": 38,
+  "protected_files_unchanged": 194,
+  "authorized_naming_paths": [
+    "docs/domain/00-canonical-domain-overview.md",
+    "docs/domain/01-entity-catalog.md",
+    "docs/domain/02-identities-and-relationships.md",
+    "AGENTS.md"
+  ],
+  "naming_only_reverse_hash_verified": true,
+  "council_members": 5,
+  "blind_peer_reviewers": 5,
+  "reviewed_draft_archive_files_verified": 31,
+  "words": 22886,
+  "inventory": {
+    "docs/architecture/00-architecture-summary.md": {
+      "sha256": "c10359735af56954112fa16eb2862b74f90689ff59243d0323d3f850b50506c8",
+      "words": 746
+    },
+    "docs/architecture/01-system-context.md": {
+      "sha256": "bdb5caed45ef0845a6d2db2b9330ce23a23db54870c7c20b886436e64136e695",
+      "words": 556
+    },
+    "docs/architecture/02-architecture-style-and-modules.md": {
+      "sha256": "1e7def84ce1f2091d520cfe6127e189c19729db0ed22e7440156730ccaf627df",
+      "words": 1155
+    },
+    "docs/architecture/03-multi-tenancy-and-identity.md": {
+      "sha256": "ecc03a2b8c8fa9833e2733884a62f9ca660e01832f0c41264fdcbd734b80f0fe",
+      "words": 1186
+    },
+    "docs/architecture/04-data-architecture.md": {
+      "sha256": "47ccedaed5039c1a4b38a1200d8ffc536a61be27e941ad6c7690df0c8efe15ed",
+      "words": 1550
+    },
+    "docs/architecture/05-integrations.md": {
+      "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106",
+      "words": 1139
+    },
+    "docs/architecture/06-external-action-safety.md": {
+      "sha256": "02e9255cafada5a87a36a915d675bf2fbfa689f40be41140a983ec270f79676b",
+      "words": 1328
+    },
+    "docs/architecture/07-background-jobs-and-reconciliation.md": {
+      "sha256": "27870d9fb7864a44953dffa464c077e8a35f388824147bd9a534d30fcca69069",
+      "words": 1222
+    },
+    "docs/architecture/08-api-and-application-boundaries.md": {
+      "sha256": "137d45bbbea19e858c3b0912a806f2c52b41d38965e92cd18da14844f0acbaf5",
+      "words": 889
+    },
+    "docs/architecture/09-analytics-architecture.md": {
+      "sha256": "3b22495c6759e71832560f006b84caf3a62d227bcbaa5e15f6443cf48b978e2f",
+      "words": 1320
+    },
+    "docs/architecture/10-security-threat-model.md": {
+      "sha256": "838fee8d445339e01aa53f6eab78837e6bcbb7a7aa6d76304262ef2737715355",
+      "words": 887
+    },
+    "docs/architecture/11-audit-provenance-and-privacy.md": {
+      "sha256": "92b838d6e18be1e8bc069cc8276982ab619739e92d222759a398556660ca573d",
+      "words": 1227
+    },
+    "docs/architecture/12-observability-and-operations.md": {
+      "sha256": "7065bedfd6856bfd0ff62dd59eee4f2fbd7288d79312169a2f908e1a1f747e2c",
+      "words": 612
+    },
+    "docs/architecture/13-deployment-and-environments.md": {
+      "sha256": "28f5cbdd890d6db7c6c958856fb0ec87ff976df667b4136a295f985a87a4ea78",
+      "words": 1323
+    },
+    "docs/architecture/14-testing-strategy.md": {
+      "sha256": "83202e3d0493a2d9df7dcf7382aa421ad4bddf76fd62e4ce14b171b4501abab5",
+      "words": 962
+    },
+    "docs/architecture/15-technology-selection.md": {
+      "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081",
+      "words": 958
+    },
+    "docs/architecture/16-cost-and-scale-review.md": {
+      "sha256": "c9aa0c7e5a5d83f6a30560fc860cc5fe77b1a6b6f4761ea8d804bd606c473b59",
+      "words": 555
+    },
+    "docs/architecture/17-open-architecture-decisions.md": {
+      "sha256": "bb736a4e2134a2b468d94896ca4eb540c40a0b181cf3203b20ae689a3d77f8ae",
+      "words": 573
+    },
+    "docs/architecture/18-provider-capability-review.md": {
+      "sha256": "26a0dc827670337d55a061219b83cd569f4a8399b9b247853eaf5ccb826d03f6",
+      "words": 1516
+    },
+    "docs/architecture/19-architecture-review.md": {
+      "sha256": "6f1dddf01d8496f8081e228b866a3cccbac652971391981992844f490862d716",
+      "words": 1267
+    },
+    "docs/architecture/adr/ADR-001-architecture-style.md": {
+      "sha256": "64f898ed4a132640b9526ed249e5e5af62fb5caeb356ebfde05fbba3f63fadc4",
+      "words": 106
+    },
+    "docs/architecture/adr/ADR-002-tenancy.md": {
+      "sha256": "8d40c47b95a0bf7c6d0a97daf430b56490f4ed07a981510d055d8f153a9875a8",
+      "words": 107
+    },
+    "docs/architecture/adr/ADR-003-persistence.md": {
+      "sha256": "34cb360c43837809cc8124afcd6973440256197033727b9a1b7e72a6fb3f6692",
+      "words": 112
+    },
+    "docs/architecture/adr/ADR-004-authentication-and-authorization.md": {
+      "sha256": "14fed958f64c0fc7ec5d72038280a8c1ae9c6b8bbb3b9d48dbfa537130a9569d",
+      "words": 113
+    },
+    "docs/architecture/adr/ADR-005-integration-pattern.md": {
+      "sha256": "42befaaa3e9dc3dcf9bf9b8afc060ae6d3bb676bed1bfd6f2687094c705f6412",
+      "words": 115
+    },
+    "docs/architecture/adr/ADR-006-external-actions.md": {
+      "sha256": "70cca7de19a3439a23f7e23cc0223f6ab458d1bb71e913e633170685378348b3",
+      "words": 140
+    },
+    "docs/architecture/adr/ADR-007-background-jobs.md": {
+      "sha256": "74c7d0c4614321a5e3d431baefaac2b844bf9da3848a7df59fc2cdf8fc80a767",
+      "words": 157
+    },
+    "docs/architecture/adr/ADR-008-analytics.md": {
+      "sha256": "5601600e75c14f934dfd629bd0c4e211276b153859948a2e3424d4057c56bae7",
+      "words": 104
+    },
+    "docs/architecture/adr/ADR-009-deployment.md": {
+      "sha256": "7ccd1369073cc6483d1fa74e741d2448829b3b1e404aa5ccfedfb6f5c05ad779",
+      "words": 133
+    },
+    "docs/architecture/adr/ADR-010-audit-and-provenance.md": {
+      "sha256": "c8d8e1c6cffda5ed6600061f0bb537773ece10ee89e5e567fba1c7c2daa7acf0",
+      "words": 142
+    },
+    "docs/architecture/adr/ADR-011-application-interface.md": {
+      "sha256": "6f544093bb7593a9494f4550a1e46c83ac1de84e3e0752708f9624acd4972c97",
+      "words": 109
+    },
+    "evidence/architecture/naming-consistency-review.md": {
+      "sha256": "e4ffb8bf2c74f09427629338c5b12b54c255cdb0fc1248e02250988ffb808e97",
+      "words": 287
+    },
+    "evidence/architecture/provider-verification-sources.md": {
+      "sha256": "defb5cf9e52346edf3ca36a7e6a0eff55a14104c69ee73dd85e94a4465c872df",
+      "words": 290
+    }
+  },
+  "errors": [],
+  "result": "PASS"
+}

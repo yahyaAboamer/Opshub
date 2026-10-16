@@ -1,0 +1,112 @@
+# Architecture council — blind peer reviews
+
+Is the OpsHub Phase 4 architecture a safe, faithful, implementable MVP for a small AI-assisted team, preserving OD01-OD09?
+
+## Blind reviewer 1
+
+I checked Responses A–E against the frozen architecture, with the product calling and analytics contracts as supporting context. All five correctly support the monolith/PostgreSQL/worker direction, preserve OD01–OD09 as requirements, and distinguish architectural approval from proved pilot safety. Their common recovery findings are substantiated: chapter 13's surviving IDs/hash do not necessarily reconstruct a lost business reservation, and database rollback can forget later authority or privacy changes.
+
+**Response A:** Accurate and operationally grounded. It explains both forgotten reservations and resurrected revocations/redactions, including why fresh OIDC authentication cannot repair restored local authority. Its recovery envelope, read/export access gate, and explicit restore-before-objective fixture are useful remedies. Provider qualification covers positive matching, negative proof and accountable escalation without weakening unknown-result blocking. Its provenance/scheduling advice largely reinforces existing chapter 02 ownership rules and chapter 09 bounded generation retention; these are implementation constraints rather than demonstrated additional architectural defects. It misses the distinct contact-start and manual-handover recovery gaps.
+
+**Response B:** The most comprehensive recovery review. In addition to access and deletion recovery, it identifies a handover-specific rollback sequence: off-platform execution can lose its local exclusion without a provider-dispatch marker. Journaling handover before release is a concrete, justified extension of the recovery contract. The pre-send crash example accurately exposes the operational cost of conservative unknown states, and the proposed qualification/escalation route respects OD08. Its S3 deletion-marker claim is technically correct. [AWS conditional-write documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/conditional-writes.html). However, chapter 13 already requires version/deletion protection, so that point strengthens enforceability rather than discovering an absent safeguard. Simplification advice is sound but less specific than its recovery reasoning.
+
+**Response C:** Offers the strongest additional business-invariant analysis. Chapter 04 locks at contact append, chapter 08 allocates the ordinal then, and WF03 places external contact before recording. Concurrent Operators can therefore make two normally authorized calls before database contention catches them. A checked pre-call reservation, conservative uncertainty handling and separately recordable violations are useful corrections preserving OD04. This controls authorized workflow starts; it cannot guarantee that humans never call outside OpsHub. Its case/objective cardinality observation also matters because chapter 09 counts cases while chapter 04 stabilizes objectives. Treat denominator inflation as a plausible consequence of an unspecified uniqueness contract, not an observed implementation bug. Both shared recovery findings are accurately covered. It omits B's explicit handover recovery scenario.
+
+**Response D:** Strong on recoverable identity, access reopening and avoiding a generic provenance engine. A recovery epoch plus audited grant revalidation is a practical small-pilot remedy. It does not address independently surviving redaction manifests, leaving an important privacy recovery gap. The scheduling criticism deserves qualification: chapter 07 deliberately separates atomic domain work from queue-library transport, providing crash/replay semantics rather than merely replaceability. Redundant retry histories should be reduced, but removing module-owned state or the outbox needs an invariant-by-invariant justification.
+
+**Response E:** Correct on missing reservation descriptors and forgotten privacy dispositions, but omits the equally consequential resurrection of revoked memberships/sessions. The revenue-attribution fixture is useful: product membership and spend allocation cannot alone establish attributed revenue. Nevertheless, chapter 09 and OP09 already explicitly qualify the numerator and missing attribution, so this is contract elaboration rather than evidence of an incorrect ROAS formula. Its bounded implementation guidance preserves necessary identities and provenance, but adds less concrete failure coverage than the higher-ranked responses.
+
+The ranking rewards substantiated failure sequences and remedies that close distinct contracts while retaining the approved integrated MVP.
+
+FINAL RANKING:
+1. Response C
+2. Response B
+3. Response A
+4. Response D
+5. Response E
+
+## Blind reviewer 2
+
+I checked the anonymized answers against the preserved draft, particularly chapters 04, 06–09, 11, 13 and 17, and WF03’s external-call sequence. All five correctly distinguish architectural approval from tested pilot readiness and preserve OD01–OD09. The monolith and PostgreSQL recommendation is credible. The central distinction is which responses identify additional executable-contract failures, rather than restating unresolved qualification gates.
+
+**Response A:** Strong, balanced recovery analysis. Its lost-objective example correctly shows that surviving UUIDs and hashes cannot reconstruct business reservations. It also catches both restored authority and forgotten redactions, including the essential read/export barrier. Provider investigation ownership and realistic unknown-result qualification are useful remedies that preserve the integrated MVP. The main limitation is coverage: it misses manual handover rollback and pre-call contact concurrency. Its proposed framework limits partly repeat existing permissions to consolidate physical records, bounded generation retention and the explicit rejection of event sourcing. These are worthwhile implementation guardrails, but weaker findings than the recovery defects.
+
+**Response B:** The most complete recovery review. Beyond the common identity and authority/privacy gaps, it identifies an important distinct failure: locally committed manual handover can disappear on restore even though the human already performed the external effect, without any OpsHub dispatch marker. Journaling handover before releasing execution is a concrete remedy. Its crash-before-send scenario accurately explains why safe unknown handling can become an operational dead end; it does not misuse absent search results as permission to retry. The S3 deletion observation is a useful enforcement qualification, although the draft already requires version/deletion protection, so it is not a wholly missing safeguard. B does not inspect contact-budget concurrency or analytical case identity.
+
+**Response C:** Best overall. It includes the two major recovery failures and adds the strongest independent finding: locking while appending a contact after the physical call cannot prevent two Operators from calling the same due case. WF03 explicitly calls before recording. An atomic pre-call eligibility reservation, conservative uncertain-reservation handling and separate recording of violations are practical without adding telephony. The remedy must be described as controlling compliant OpsHub workflow; it cannot physically prevent independent calls. Its case/objective cardinality concern is also credible because stable contact budgets do not alone establish unique KPI cases. That is a missing design contract, not evidence that duplicates already exist. C could improve by including B’s handover recovery hole and explicit operational recovery ownership.
+
+**Response D:** Sound recovery-identity and access analysis, with a particularly useful recovery-epoch and audited grant-revalidation alternative for a small pilot. However, it omits the equally concrete loss of completed redaction manifests. Its queue discussion fairly challenges overlapping claims, leases and retries, but simplification must retain atomic domain/work publication and recoverable enqueue; transport alone is not an automatic replacement. Its provenance concern is sensible and recognizes genuine requirements, although finite concepts and transactional ownership already have substantial support in the draft. D offers fewer distinct failure scenarios than A or B.
+
+**Response E:** Accurate on journal reconstruction, privacy rollback, tenant defenses and preserving safety-critical identities during simplification. It misses resurrected local authority, making its recovery coverage materially narrower. Its revenue-attribution concern is useful refinement, but overstates architectural absence: chapter 09 already requires attributed revenue and approved mapping, contributor evidence and unavailable/provisional states; A07 explicitly gates attribution policy. A specific revenue-selection fixture would improve that contract without establishing a current formula error. Its broad small-team capacity objection remains less concrete than C’s concurrency and B’s handover failures.
+
+FINAL RANKING:
+1. Response C
+2. Response B
+3. Response A
+4. Response D
+5. Response E
+
+## Blind reviewer 3
+
+The architectural direction is credible, but approval must remain conditional. All five responses preserve the closed owner decisions and distinguish architecture review from demonstrated pilot safety. Checking the frozen draft confirms their common recovery objections: the independent marker lacks recoverable business scope, restored local authority cannot reveal lost revocations, and deletion replay cannot recover a manifest that disappeared with database rollback. Fail-closed dispatch limits immediate harm; it does not establish safe reads or a workable recovery path.
+
+**Response C** provides the strongest additional failure analysis. Its contact race is grounded in chapters 04/08 and WF03: calls happen externally before recording, while the specified lock and ordinal allocation occur during append. Two compliant-looking Operators can therefore call before either records. Pre-call eligibility/reservation, conservative uncertain-attempt handling, and recording excess calls as violations form a useful remedy without telephony scope expansion. Its case/objective cardinality question also protects OD05 denominators. That needs clarification, rather than indiscriminately collapsing legitimately distinct cases. “OD01–OD09 are preserved” is too categorical given its own OD04 counterexample; fidelity is conditional on the correction. Recovery descriptors still need privacy review even when they omit customer payloads.
+
+**Response B** gives the most complete recovery assessment. Beyond lost automatic dispatch reservations, it identifies a locally recorded manual handover whose exclusion disappears after restore even though a human may have booked. Independently retaining handover scope before releasing execution closes a distinct gap. Its read/export barrier, revocation/redaction coverage, and broad quarantine when identity cannot be reconstructed are concrete. Its S3 protection discussion reinforces an existing requirement, rather than establishing a separate missing feature: chapter 13 already calls for version/deletion protection. Provider escalation qualification is useful but extends the already explicit A02 gate; it should specify acceptance evidence rather than imply recovery was ignored.
+
+**Response A** is accurate and practical on the two principal recovery contracts. The restore-before-objective-creation/re-ingest oracle is particularly useful because regenerated canonical IDs can evade an incorrectly reconstructed narrow hold. It also correctly requires independently surviving revocations and deletion evidence before reads reopen. Its provider feasibility warning preserves OD08 instead of using difficult recovery to justify manual-primary scope. Some simplification requests duplicate existing safeguards: chapter 09 already bounds retained generations, and the design permits physical consolidation. Its added value is enforcing those constraints and budgeting staffed investigation, not discovering another architectural defect.
+
+**Response D** offers sound lost-reservation and access-resurrection reasoning, with a practical recovery epoch and explicit grant recertification. Recertification must use independently current authority; reviewing restored grants would repeat the failure. It omits the separate lost-redaction-manifest problem. Its typed provenance ownership recommendation is useful. The scheduling criticism is less decisive: transactional outbox/business claims and pg-boss transport serve distinct durability and authorization purposes. Routine-work state may be reduced selectively, but two represented lifecycles alone do not prove redundant schedulers or justify removing atomic work capture.
+
+**Response E** correctly isolates privacy rollback and protects reservations from simplification, but misses rollback of revoked memberships, consumed invitations and sessions. Its revenue-attribution clarification is useful, though narrower than presented: chapter 09 already requires approved attribution mapping, contributor basis/version and unavailable results for missing inputs; OP09/A07 explicitly reserve the method. A separate eligibility oracle strengthens that contract rather than filling a wholly absent policy. Its implementation bounds are sensible and consistent with the proposed projections.
+
+FINAL RANKING:
+1. Response C
+2. Response B
+3. Response A
+4. Response D
+5. Response E
+
+## Blind reviewer 4
+
+I checked the preserved draft, including chapters 03, 04, 06–09, 11, 13, 14 and 17, and the authoritative contact workflow/owner decisions. All five correctly preserve OD01–OD09, distinguish architectural approval from pilot qualification, and support the transactional monolith without promising exactly-once provider effects. Their shared recovery objections are real contract gaps: independently retained opaque IDs cannot reconstruct lost business reservations, and a database rollback can lose later revocations/redactions. Chapter 13's fail-closed language limits immediate harm but does not supply missing recovery evidence.
+
+Response A provides sound, concrete recovery counterexamples and correctly distinguishes renewed OIDC authentication from current local membership. Its pre-objective restore fixture is useful, as are incident ownership and investigation budgeting. The provider-recovery concern deserves release attention, although A02 already requires result investigation and qualified negative evidence; this mostly strengthens acceptance criteria. Calling it P1 is reasonable only as a release condition. The simplification advice largely repeats existing bounded-generation/physical-consolidation provisions. It misses B's independent handover problem and C's contact race, but introduces no harmful shortcuts.
+
+Response B is the strongest overall. It covers access and privacy restoration, surviving subject identity, full retention/coverage, human handover, and operational recovery viability. The handover example adds an important failure path: a safely released manual action can occur after the backup without creating a worker dispatch marker, then lose its local exclusion during restore. Independently recording that release is a useful bounded remedy. Its S3 deletion-marker claim is supported by [AWS conditional-write documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/conditional-writes.html); however, chapter 13 already calls for deletion protection, so enforcement detail is the gap. The answer appropriately retains unknown-result blocking and treats complexity reduction as constrained implementation discipline.
+
+Response C supplies the most valuable distinct operational finding. WF03 contacts externally before recording, while chapters 04/08 serialize contact recording: two permitted users can both physically call before either transaction consumes the allowance. Pre-call eligibility/reservation addresses OD04 without adding telephony, and recording unauthorized/excess evidence avoids concealing reality. That reservation controls the authorized workflow; it cannot guarantee that nobody calls outside OpsHub. The case/objective KPI concern is plausible but less established: return/pickup uniqueness and one confirmation objective already constrain duplication. Request explicit cardinality and contributor fixtures rather than assert actual denominator inflation. Its two recovery findings are accurate, though it misses manual handover recovery.
+
+Response D gives practical access recovery advice, especially a recovery epoch and audited grant revalidation for a small pilot. Its provenance ownership recommendation is useful. The queue critique needs care: chapter 07 states concrete purposes for module-owned transactional work, lost-enqueue sweeps and transport separation. Removing redundant scheduling is sensible, but dropping authoritative domain work solely because reads are retryable could lose committed obligations. D asks for justification rather than deletion, which keeps the remedy defensible. It omits independent redaction survival and provider recovery feasibility.
+
+Response E correctly identifies privacy resurrection and lost reservation identity, and preserves tenant/effect defenses. Its revenue-versus-spend attribution distinction is conceptually sound. The draft already requires approved attribution mappings, versioned contributor evidence and unavailable/provisional results; therefore this is a clarification of numerator selection, not demonstrated permission to count all sales. Its implementation bounds are sensible but mostly existing provisions. Missing restored authority/revocation analysis is the most consequential omission and places it below D.
+
+FINAL RANKING:
+1. Response B
+2. Response C
+3. Response A
+4. Response D
+5. Response E
+
+## Blind reviewer 5
+
+Checks against the archived draft support conditional approval of the architectural direction. All five correctly preserve the approved operational and analytical scope and distinguish architecture approval from demonstrated pilot safety. The two shared recovery findings are substantive: surviving opaque dispatch IDs cannot reconstruct every lost business reservation, and rolled-back local records cannot establish post-backup revocations or completed redactions. Existing fail-closed language provides containment, but does not complete recovery.
+
+**Response A:** Accurate and operationally grounded. Its recovery envelope and restore-before-objective-creation fixture explain precisely why IDs and hashes are insufficient. It also joins restored authority and privacy into one access barrier and usefully emphasizes staffed recovery for essential provider actions. However, A01/A02 already require positive/negative evidence qualification and investigation; the response should frame its third finding as stronger acceptance evidence. It misses contact concurrency and independent recovery of manual handovers. Its provenance simplification advice is sensible but partly reinforces existing physical-consolidation provisions.
+
+**Response B:** The strongest recovery analysis. It covers revoked memberships, sessions, invitations, redactions and connection ownership, then identifies the additional possibility of a lost manual handover without an OpsHub dispatch marker. Independently preserving that exclusion closes a concrete cross-path recovery gap. Its pre-send crash scenario correctly explains the safety-versus-availability cost without allowing blind retry. The draft already requires S3 version/deletion protection, so that criticism should emphasize proving enforcement. Its provider escalation recommendation also strengthens an existing gate. It lacks C's contact and denominator analysis.
+
+**Response C:** Best overall because it adds a distinct OD04 failure mechanism to the shared recovery findings. WF03 explicitly places the external call before recording; chapters 04/08 describe locking and ordinal allocation during recording. Those statements do not define an atomic pre-call eligibility boundary. Two authorized Operators could therefore make calls before one recording is rejected. The proposed reservation, conservative uncertain-attempt handling and ability to record violations are useful remedies without telephony integration. Its case/objective cardinality concern also identifies a plausible OD05 denominator distortion. That last finding is an underspecified identity contract, not evidence that duplicates currently exist. C most effectively connects implementation boundaries to owner promises.
+
+**Response D:** Sound, especially its recovery epoch and audited grant revalidation as practical alternatives to a general security ledger. It recognizes that dispatch suspension alone leaves reads and exports exposed. It omits lost deletion manifests, weakening recovery completeness. Its scheduling criticism is less established: chapter 07 explicitly separates authoritative business work from transport and gives a library-coupling rationale. Consolidation deserves evaluation, but eliminating module work state without checking transactional scheduling and redelivery requirements could remove useful guarantees. Its finite provenance catalog is a reasonable implementation constraint.
+
+**Response E:** Strong on privacy replay, protected recovery descriptors, tenant defenses and preserving safety during simplification. Its attributed-versus-unattributed same-SKU fixture is useful. However, chapter 09 already requires attributed revenue, approved attribution mapping, versioned contributors and unavailable results for missing inputs. The remaining issue is making revenue-selection ownership explicit; the response overstates the absence of an attribution contract. More consequentially, it misses revoked authority/session resurrection, leaving its two-recovery-correction recommendation incomplete.
+
+C ranks first for its additional concrete domain race; B follows for the most comprehensive recovery reasoning. A is thorough but adds less new failure analysis. D and E remain useful, with D's practical authority recovery narrowly outweighing E's mostly incremental attribution clarification.
+
+FINAL RANKING:
+1. Response C
+2. Response B
+3. Response A
+4. Response D
+5. Response E

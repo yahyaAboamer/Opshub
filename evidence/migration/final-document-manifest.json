@@ -1,0 +1,20 @@
+{
+  "docs/migration/00-migration-validation-summary.md": "bc72881b290f30d7f2ec80a3e89ed688208ab3b443a3c509c3f4fe14f0beb8d2",
+  "docs/migration/01-source-inventory-and-authority.md": "3910fd1a287fceed0ca43dcbecb87733f03a7552084b0275f95217767d86f4ad",
+  "docs/migration/02-identity-mapping.md": "fc57e52fcb5d0569b6813e1b48a27f5a716b20dfbeda552837234ed0079b6a6f",
+  "docs/migration/03-migration-pipeline.md": "d75472b19ec21d62c5e790245c99c1922813303bd279b039d99e41e85e851d96",
+  "docs/migration/04-data-cleaning-and-dispositions.md": "3e226b105d47991bf7650227b2ab3bf835eab115beac68693a75210aaae93c3a",
+  "docs/migration/05-legacy-regression-oracle.md": "88511208f7a50abcdd3fb9b7bcbb21b2d66f0740144bf7d1cbcc493e263cea11",
+  "docs/migration/06-golden-datasets.md": "3f076c63a7480e1be9ad51163e6577fae48e82659280d26b49ed67850b358d4b",
+  "docs/migration/07-kpi-regression-suite.md": "363d2fde7df33c8f4163fc0689a3faed997df4cfdb3f14fc07e375287ea363d8",
+  "docs/migration/08-provider-contract-validation.md": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff",
+  "docs/migration/09-external-action-safety-validation.md": "27640f4bd9d62353193c2451a033274765615249929fba8b8f111cbd6c1ef4b0",
+  "docs/migration/10-tenant-and-authorization-validation.md": "64ccd24b8d30ebe4e37c6fc7d9f7a8aab1b818533b07034f0dcfa1f1bda99352",
+  "docs/migration/11-recovery-validation.md": "6780d6cc63f01333c272a1a893e96ecde369e5c9b6570df6ba1b1b01794af64b",
+  "docs/migration/12-shadow-and-parallel-run.md": "e6070127fffbad7661516ae41d71ba90a9f108e3ff8399fca9f3e5c44a6f8e1a",
+  "docs/migration/13-cutover-and-rollback.md": "aec980edc52af7ea56d44bd5e1894e99f9f2a594c95b3caceb10388f6d9c7e95",
+  "docs/migration/14-reconciliation-and-signoff.md": "221e7331d9580cb0c65efc02b8567f3b269ffc824586f311bde26c4d103696bc",
+  "docs/migration/15-privacy-and-test-data.md": "89c8b67629138a79a6d779082124b9f73ecf215586131477b32dede9ff270949",
+  "docs/migration/16-open-migration-decisions.md": "82f376040199516d767ddcfda14cd27b4c3f6149a003a75a70e9f322e80836df",
+  "docs/migration/17-migration-validation-plan.md": "9a2da320202c5ab4cca915f2e10186dc55a13af79180d0cdac8943d9db986665"
+}

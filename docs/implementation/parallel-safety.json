@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "max_coding_agents": 2,
+  "integration_owner_required": true,
+  "pairs": [
+    {
+      "task_ids": [
+        "T0306",
+        "T0401"
+      ],
+      "classification": "PARALLEL WITH RESTRICTIONS",
+      "preconditions": "All dependencies accepted on current main; frozen predecessor interfaces; distinct isolated branches/worktrees and no shared locks/edit paths; neither edits root lockfile/provider port/router or allocated migration of the other; integration owner serializes acceptance.",
+      "merge_rule": "Either independent task may merge first; remaining branch updates from current main and reruns affected contract/tenant/integration checks before acceptance."
+    },
+    {
+      "task_ids": [
+        "T0702",
+        "T0703"
+      ],
+      "classification": "PARALLEL WITH RESTRICTIONS",
+      "preconditions": "All dependencies accepted on current main; frozen predecessor interfaces; distinct isolated branches/worktrees and no shared locks/edit paths; neither edits root lockfile/provider port/router or allocated migration of the other; integration owner serializes acceptance.",
+      "merge_rule": "Either independent task may merge first; remaining branch updates from current main and reruns affected contract/tenant/integration checks before acceptance."
+    },
+    {
+      "task_ids": [
+        "T0909",
+        "T0908"
+      ],
+      "classification": "PARALLEL WITH RESTRICTIONS",
+      "preconditions": "All dependencies accepted on current main; frozen predecessor interfaces; distinct isolated branches/worktrees and no shared locks/edit paths; neither edits root lockfile/provider port/router or allocated migration of the other; integration owner serializes acceptance.",
+      "merge_rule": "Either independent task may merge first; remaining branch updates from current main and reruns affected contract/tenant/integration checks before acceptance."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "file": "03_SOP_Customer_Support_Calls.docx",
+    "supplementary_parts": [],
+    "nested_tables": 0,
+    "textboxes": 0,
+    "total_body_text_runs": 232
+  },
+  {
+    "file": "04_SOP_Operations_Weekly_Routine.docx",
+    "supplementary_parts": [],
+    "nested_tables": 0,
+    "textboxes": 0,
+    "total_body_text_runs": 184
+  },
+  {
+    "file": "05_Executive_Brief_How_To_Read_It.docx",
+    "supplementary_parts": [],
+    "nested_tables": 0,
+    "textboxes": 0,
+    "total_body_text_runs": 152
+  },
+  {
+    "file": "_superseded/03_SOP_Hadeer_Returns_Calls.docx",
+    "supplementary_parts": [
+      {
+        "part": "word/footnotes.xml",
+        "text_run_count": 0
+      },
+      {
+        "part": "word/endnotes.xml",
+        "text_run_count": 0
+      },
+      {
+        "part": "word/comments.xml",
+        "text_run_count": 0
+      }
+    ],
+    "nested_tables": 0,
+    "textboxes": 0,
+    "total_body_text_runs": 187
+  },
+  {
+    "file": "_superseded/04_SOP_Omar_Weekly_Routine.docx",
+    "supplementary_parts": [
+      {
+        "part": "word/footnotes.xml",
+        "text_run_count": 0
+      },
+      {
+        "part": "word/endnotes.xml",
+        "text_run_count": 0
+      },
+      {
+        "part": "word/comments.xml",
+        "text_run_count": 0
+      }
+    ],
+    "nested_tables": 0,
+    "textboxes": 0,
+    "total_body_text_runs": 133
+  },
+  {
+    "file": "_superseded/05_Hassan_How_To_Read_Your_Page.docx",
+    "supplementary_parts": [
+      {
+        "part": "word/footnotes.xml",
+        "text_run_count": 0
+      },
+      {
+        "part": "word/endnotes.xml",
+        "text_run_count": 0
+      },
+      {
+        "part": "word/comments.xml",
+        "text_run_count": 0
+      }
+    ],
+    "nested_tables": 0,
+    "textboxes": 0,
+    "total_body_text_runs": 126
+  },
+  {
+    "file": "reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.docx",
+    "supplementary_parts": [],
+    "nested_tables": 0,
+    "textboxes": 0,
+    "total_body_text_runs": 267
+  },
+  {
+    "file": "skills/gentry-delivery-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+    "pyc": {
+      "magic_hex": "6f0d0d0a",
+      "flags": 0,
+      "timestamp": 1788879817,
+      "source_size": 10766,
+      "header_only_inspection": true,
+      "timestamp_utc": "2026-09-08T15:03:37+00:00"
+    }
+  },
+  {
+    "file": "skills/gentry-weekly-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+    "pyc": {
+      "magic_hex": "6f0d0d0a",
+      "flags": 0,
+      "timestamp": 1788560275,
+      "source_size": 10766,
+      "header_only_inspection": true,
+      "timestamp_utc": "2026-09-04T22:17:55+00:00"
+    }
+  }
+]

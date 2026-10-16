@@ -1,0 +1,575 @@
+[
+  {
+    "file": "skills/gentry-delivery-report/scripts/build_report.py",
+    "parse_ok": true,
+    "functions": [
+      {
+        "name": "chart",
+        "start_line": 18,
+        "end_line": 56
+      },
+      {
+        "name": "main",
+        "start_line": 58,
+        "end_line": 166
+      }
+    ],
+    "imports": [
+      {
+        "line": 9,
+        "modules": [
+          "argparse",
+          "calendar",
+          "json",
+          "os",
+          "sys"
+        ]
+      },
+      {
+        "line": 19,
+        "modules": [
+          "matplotlib"
+        ]
+      },
+      {
+        "line": 20,
+        "modules": [
+          "matplotlib.pyplot",
+          "numpy"
+        ]
+      },
+      {
+        "line": 11,
+        "from": "report_kit",
+        "modules": [
+          "*"
+        ]
+      },
+      {
+        "line": 12,
+        "from": "docx.shared",
+        "modules": [
+          "Emu"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "skills/gentry-delivery-report/scripts/extract.py",
+    "parse_ok": true,
+    "functions": [
+      {
+        "name": "find_workbook",
+        "start_line": 19,
+        "end_line": 27
+      },
+      {
+        "name": "recalc",
+        "start_line": 29,
+        "end_line": 36
+      },
+      {
+        "name": "pbosta",
+        "start_line": 38,
+        "end_line": 39
+      },
+      {
+        "name": "ztest",
+        "start_line": 41,
+        "end_line": 47
+      },
+      {
+        "name": "ci",
+        "start_line": 49,
+        "end_line": 52
+      },
+      {
+        "name": "strip_size",
+        "start_line": 54,
+        "end_line": 56
+      },
+      {
+        "name": "main",
+        "start_line": 58,
+        "end_line": 220
+      },
+      {
+        "name": "mrows",
+        "start_line": 118,
+        "end_line": 118
+      },
+      {
+        "name": "grp",
+        "start_line": 151,
+        "end_line": 154
+      }
+    ],
+    "imports": [
+      {
+        "line": 15,
+        "modules": [
+          "argparse",
+          "collections",
+          "datetime",
+          "json",
+          "math",
+          "os",
+          "re",
+          "shutil",
+          "subprocess",
+          "sys",
+          "tempfile"
+        ]
+      },
+      {
+        "line": 65,
+        "modules": [
+          "openpyxl"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "skills/gentry-delivery-report/scripts/report_kit.py",
+    "parse_ok": true,
+    "functions": [
+      {
+        "name": "newdoc",
+        "start_line": 19,
+        "end_line": 26
+      },
+      {
+        "name": "_run",
+        "start_line": 28,
+        "end_line": 32
+      },
+      {
+        "name": "shade",
+        "start_line": 34,
+        "end_line": 37
+      },
+      {
+        "name": "pad",
+        "start_line": 39,
+        "end_line": 43
+      },
+      {
+        "name": "title",
+        "start_line": 45,
+        "end_line": 49
+      },
+      {
+        "name": "h1",
+        "start_line": 51,
+        "end_line": 53
+      },
+      {
+        "name": "lead",
+        "start_line": 55,
+        "end_line": 56
+      },
+      {
+        "name": "para",
+        "start_line": 58,
+        "end_line": 60
+      },
+      {
+        "name": "callout",
+        "start_line": 62,
+        "end_line": 69
+      },
+      {
+        "name": "kpirow",
+        "start_line": 71,
+        "end_line": 84
+      },
+      {
+        "name": "table",
+        "start_line": 86,
+        "end_line": 101
+      },
+      {
+        "name": "numlist",
+        "start_line": 103,
+        "end_line": 112
+      },
+      {
+        "name": "pct",
+        "start_line": 114,
+        "end_line": 115
+      },
+      {
+        "name": "num",
+        "start_line": 116,
+        "end_line": 117
+      },
+      {
+        "name": "rag",
+        "start_line": 118,
+        "end_line": 123
+      },
+      {
+        "name": "image",
+        "start_line": 128,
+        "end_line": 132
+      },
+      {
+        "name": "carryover",
+        "start_line": 136,
+        "end_line": 153
+      },
+      {
+        "name": "actions",
+        "start_line": 155,
+        "end_line": 171
+      },
+      {
+        "name": "worklist",
+        "start_line": 173,
+        "end_line": 183
+      },
+      {
+        "name": "message_block",
+        "start_line": 185,
+        "end_line": 195
+      },
+      {
+        "name": "options_table",
+        "start_line": 197,
+        "end_line": 214
+      }
+    ],
+    "imports": [
+      {
+        "line": 7,
+        "from": "docx",
+        "modules": [
+          "Document"
+        ]
+      },
+      {
+        "line": 8,
+        "from": "docx.shared",
+        "modules": [
+          "Pt",
+          "Emu",
+          "RGBColor"
+        ]
+      },
+      {
+        "line": 9,
+        "from": "docx.enum.text",
+        "modules": [
+          "WD_ALIGN_PARAGRAPH"
+        ]
+      },
+      {
+        "line": 10,
+        "from": "docx.oxml.ns",
+        "modules": [
+          "qn"
+        ]
+      },
+      {
+        "line": 11,
+        "from": "docx.oxml",
+        "modules": [
+          "OxmlElement"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "skills/gentry-weekly-report/scripts/actions.py",
+    "parse_ok": true,
+    "functions": [
+      {
+        "name": "latest",
+        "start_line": 17,
+        "end_line": 20
+      },
+      {
+        "name": "main",
+        "start_line": 22,
+        "end_line": 41
+      }
+    ],
+    "imports": [
+      {
+        "line": 14,
+        "modules": [
+          "json",
+          "sys",
+          "re"
+        ]
+      },
+      {
+        "line": 15,
+        "from": "pathlib",
+        "modules": [
+          "Path"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "skills/gentry-weekly-report/scripts/extract_metrics.py",
+    "parse_ok": true,
+    "functions": [
+      {
+        "name": "recalc",
+        "start_line": 22,
+        "end_line": 37
+      },
+      {
+        "name": "J",
+        "start_line": 39,
+        "end_line": 42
+      },
+      {
+        "name": "main",
+        "start_line": 44,
+        "end_line": 303
+      },
+      {
+        "name": "g",
+        "start_line": 78,
+        "end_line": 88
+      },
+      {
+        "name": "col",
+        "start_line": 219,
+        "end_line": 222
+      },
+      {
+        "name": "days_since",
+        "start_line": 224,
+        "end_line": 231
+      }
+    ],
+    "imports": [
+      {
+        "line": 18,
+        "modules": [
+          "argparse",
+          "json",
+          "shutil",
+          "subprocess",
+          "sys",
+          "tempfile",
+          "os"
+        ]
+      },
+      {
+        "line": 74,
+        "modules": [
+          "openpyxl"
+        ]
+      },
+      {
+        "line": 19,
+        "from": "pathlib",
+        "modules": [
+          "Path"
+        ]
+      },
+      {
+        "line": 20,
+        "from": "datetime",
+        "modules": [
+          "datetime",
+          "date"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "skills/gentry-weekly-report/scripts/make_chart.py",
+    "parse_ok": true,
+    "functions": [
+      {
+        "name": "main",
+        "start_line": 18,
+        "end_line": 50
+      }
+    ],
+    "imports": [
+      {
+        "line": 10,
+        "modules": [
+          "argparse",
+          "json"
+        ]
+      },
+      {
+        "line": 11,
+        "modules": [
+          "matplotlib"
+        ]
+      },
+      {
+        "line": 13,
+        "modules": [
+          "matplotlib.pyplot"
+        ]
+      },
+      {
+        "line": 14,
+        "from": "matplotlib.ticker",
+        "modules": [
+          "PercentFormatter"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "skills/gentry-weekly-report/scripts/report_kit.py",
+    "parse_ok": true,
+    "functions": [
+      {
+        "name": "newdoc",
+        "start_line": 19,
+        "end_line": 26
+      },
+      {
+        "name": "_run",
+        "start_line": 28,
+        "end_line": 32
+      },
+      {
+        "name": "shade",
+        "start_line": 34,
+        "end_line": 37
+      },
+      {
+        "name": "pad",
+        "start_line": 39,
+        "end_line": 43
+      },
+      {
+        "name": "title",
+        "start_line": 45,
+        "end_line": 49
+      },
+      {
+        "name": "h1",
+        "start_line": 51,
+        "end_line": 53
+      },
+      {
+        "name": "lead",
+        "start_line": 55,
+        "end_line": 56
+      },
+      {
+        "name": "para",
+        "start_line": 58,
+        "end_line": 60
+      },
+      {
+        "name": "callout",
+        "start_line": 62,
+        "end_line": 69
+      },
+      {
+        "name": "kpirow",
+        "start_line": 71,
+        "end_line": 84
+      },
+      {
+        "name": "table",
+        "start_line": 86,
+        "end_line": 101
+      },
+      {
+        "name": "numlist",
+        "start_line": 103,
+        "end_line": 112
+      },
+      {
+        "name": "pct",
+        "start_line": 114,
+        "end_line": 115
+      },
+      {
+        "name": "num",
+        "start_line": 116,
+        "end_line": 117
+      },
+      {
+        "name": "rag",
+        "start_line": 118,
+        "end_line": 123
+      },
+      {
+        "name": "image",
+        "start_line": 128,
+        "end_line": 132
+      },
+      {
+        "name": "carryover",
+        "start_line": 136,
+        "end_line": 153
+      },
+      {
+        "name": "actions",
+        "start_line": 155,
+        "end_line": 171
+      },
+      {
+        "name": "worklist",
+        "start_line": 173,
+        "end_line": 183
+      },
+      {
+        "name": "message_block",
+        "start_line": 185,
+        "end_line": 195
+      },
+      {
+        "name": "options_table",
+        "start_line": 197,
+        "end_line": 214
+      }
+    ],
+    "imports": [
+      {
+        "line": 7,
+        "from": "docx",
+        "modules": [
+          "Document"
+        ]
+      },
+      {
+        "line": 8,
+        "from": "docx.shared",
+        "modules": [
+          "Pt",
+          "Emu",
+          "RGBColor"
+        ]
+      },
+      {
+        "line": 9,
+        "from": "docx.enum.text",
+        "modules": [
+          "WD_ALIGN_PARAGRAPH"
+        ]
+      },
+      {
+        "line": 10,
+        "from": "docx.oxml.ns",
+        "modules": [
+          "qn"
+        ]
+      },
+      {
+        "line": 11,
+        "from": "docx.oxml",
+        "modules": [
+          "OxmlElement"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,170 @@
+{
+  "verified_at_utc": "2026-10-13T17:17:04.876984+00:00",
+  "source_file_count": 38,
+  "source_hashes_unchanged": true,
+  "source_file_set_unchanged": true,
+  "source_hash_results": [
+    {
+      "path": "source/~$02_Gentry_Delivery_Performance_System.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/00_Delivery_Performance_System_Architecture.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/01_Hadeer_Sheet_Upgrade_Pack.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/01.1_Gentry_ReturnType_Dependent_Dropdown.gs",
+      "unchanged": true
+    },
+    {
+      "path": "source/02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/02_Gentry_Delivery_Performance_System.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/03_SOP_Customer_Support_Calls.docx",
+      "unchanged": true
+    },
+    {
+      "path": "source/04_SOP_Operations_Weekly_Routine.docx",
+      "unchanged": true
+    },
+    {
+      "path": "source/05_Executive_Brief_How_To_Read_It.docx",
+      "unchanged": true
+    },
+    {
+      "path": "source/06_v3.0_PreDispatch_Confirmation_Layer_PLAN.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/06.1_v3.0_Kickoff_Prompt.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/2026-08-22_Config_Audit.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/2026-08-28_Shopify_orders_18Jun-17Aug.csv",
+      "unchanged": true
+    },
+    {
+      "path": "source/2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/2026-09-08_RAW_Bosta_STAGED_20May-06Sep.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/2026-09-08_RAW_SKU_ADDITIONS.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "source/HANDOVER_README.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.docx",
+      "unchanged": true
+    },
+    {
+      "path": "source/reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/state.json",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/build_report.py",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/extract.py",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/report_kit.py",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/SKILL.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/evals/evals.json",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/references/report_structure.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/references/writing_rules.md",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/actions.py",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/extract_metrics.py",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/make_chart.py",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/report_kit.py",
+      "unchanged": true
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+      "unchanged": true
+    },
+    {
+      "path": "source/_superseded/03_SOP_Hadeer_Returns_Calls.docx",
+      "unchanged": true
+    },
+    {
+      "path": "source/_superseded/04_SOP_Omar_Weekly_Routine.docx",
+      "unchanged": true
+    },
+    {
+      "path": "source/_superseded/05_Hassan_How_To_Read_Your_Page.docx",
+      "unchanged": true
+    }
+  ],
+  "required_document_count": 16,
+  "missing_documents": [],
+  "broken_local_links": [],
+  "evidence_json_files_checked": 52,
+  "evidence_json_errors": [],
+  "limitations": [
+    "Local links checked for existence, not every Markdown anchor.",
+    "No production workflow executed or backend behavior tested.",
+    "Source hashes confirm byte preservation, not authoritative business correctness."
+  ]
+}

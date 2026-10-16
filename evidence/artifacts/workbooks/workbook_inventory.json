@@ -1,0 +1,571 @@
+[
+  {
+    "source": "01_Hadeer_Sheet_Upgrade_Pack.xlsx",
+    "sha256": "ea91f86c1543b97c4bb6ece45a4117b6a2d1c4efcf87ee072c30dd141f97b2d8",
+    "size_bytes": 18869,
+    "sheet_count": 4,
+    "formula_count": 7,
+    "sheets": [
+      {
+        "name": "Setup guide",
+        "dimension": "B2:D28",
+        "populated_cells": 50,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "Paste into Lists",
+        "dimension": "A1:N26",
+        "populated_cells": 80,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "Migration formulas",
+        "dimension": "B2:D15",
+        "populated_cells": 30,
+        "formula_count": 7,
+        "errors": 0
+      },
+      {
+        "name": "Your weekly paste",
+        "dimension": "B2:D14",
+        "populated_cells": 27,
+        "formula_count": 0,
+        "errors": 0
+      }
+    ]
+  },
+  {
+    "source": "02_Gentry_Delivery_Performance_System.xlsx",
+    "sha256": "45512a432bab5ba5640e468b379d9de801d6bc9596c4f85a9ce163b10f92e2ae",
+    "size_bytes": 4488725,
+    "sheet_count": 22,
+    "formula_count": 167678,
+    "sheets": [
+      {
+        "name": "START",
+        "dimension": "B2:E58",
+        "populated_cells": 160,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "EXEC_Brand",
+        "dimension": "B1:AK55",
+        "populated_cells": 373,
+        "formula_count": 327,
+        "errors": 0
+      },
+      {
+        "name": "OPS_Control",
+        "dimension": "B1:T73",
+        "populated_cells": 274,
+        "formula_count": 118,
+        "errors": 0
+      },
+      {
+        "name": "Weekly",
+        "dimension": "B2:W62",
+        "populated_cells": 1191,
+        "formula_count": 1163,
+        "errors": 0
+      },
+      {
+        "name": "Monthly",
+        "dimension": "B2:W34",
+        "populated_cells": 575,
+        "formula_count": 547,
+        "errors": 0
+      },
+      {
+        "name": "Returns_Channels",
+        "dimension": "B2:N63",
+        "populated_cells": 421,
+        "formula_count": 287,
+        "errors": 0
+      },
+      {
+        "name": "Failure_Analysis",
+        "dimension": "B2:L55",
+        "populated_cells": 406,
+        "formula_count": 306,
+        "errors": 0
+      },
+      {
+        "name": "Product_Size",
+        "dimension": "B2:M88",
+        "populated_cells": 882,
+        "formula_count": 840,
+        "errors": 0
+      },
+      {
+        "name": "Geo_Courier",
+        "dimension": "B2:O59",
+        "populated_cells": 675,
+        "formula_count": 586,
+        "errors": 0
+      },
+      {
+        "name": "Customer_Recovery",
+        "dimension": "B2:K43",
+        "populated_cells": 136,
+        "formula_count": 79,
+        "errors": 0
+      },
+      {
+        "name": "Data_Quality",
+        "dimension": "B2:F26",
+        "populated_cells": 95,
+        "formula_count": 18,
+        "errors": 0
+      },
+      {
+        "name": "Config",
+        "dimension": "B2:H226",
+        "populated_cells": 563,
+        "formula_count": 34,
+        "errors": 0
+      },
+      {
+        "name": "DATA_Master",
+        "dimension": "A1:BC2003",
+        "populated_cells": 110111,
+        "formula_count": 110000,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Bosta",
+        "dimension": "A1:Y1239",
+        "populated_cells": 14020,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Costs",
+        "dimension": "A1:AJ1239",
+        "populated_cells": 49723,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Intake",
+        "dimension": "A1:T1077",
+        "populated_cells": 773,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_SKU",
+        "dimension": "A1:E402",
+        "populated_cells": 306,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "Change_Log",
+        "dimension": "B2:E45",
+        "populated_cells": 98,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Shopify",
+        "dimension": "A1:CC2002",
+        "populated_cells": 96824,
+        "formula_count": 5000,
+        "errors": 0
+      },
+      {
+        "name": "Orders_Master",
+        "dimension": "A1:X2003",
+        "populated_cells": 48026,
+        "formula_count": 48000,
+        "errors": 0
+      },
+      {
+        "name": "Confirmation",
+        "dimension": "B2:K50",
+        "populated_cells": 202,
+        "formula_count": 135,
+        "errors": 0
+      },
+      {
+        "name": "Pickup_Channel",
+        "dimension": "B2:K73",
+        "populated_cells": 298,
+        "formula_count": 238,
+        "errors": 0
+      }
+    ]
+  },
+  {
+    "source": "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+    "sha256": "479efb8b605b33423113cce02097d36c30285b96fedb8f7b12c192f5d9852f00",
+    "size_bytes": 2048045,
+    "sheet_count": 18,
+    "formula_count": 114293,
+    "sheets": [
+      {
+        "name": "START",
+        "dimension": "B2:E58",
+        "populated_cells": 160,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "EXEC_Brand",
+        "dimension": "B1:AL55",
+        "populated_cells": 373,
+        "formula_count": 327,
+        "errors": 189
+      },
+      {
+        "name": "OPS_Control",
+        "dimension": "B1:T73",
+        "populated_cells": 274,
+        "formula_count": 118,
+        "errors": 0
+      },
+      {
+        "name": "Weekly",
+        "dimension": "B2:W62",
+        "populated_cells": 1191,
+        "formula_count": 1163,
+        "errors": 0
+      },
+      {
+        "name": "Monthly",
+        "dimension": "B2:W34",
+        "populated_cells": 575,
+        "formula_count": 547,
+        "errors": 0
+      },
+      {
+        "name": "Returns_Channels",
+        "dimension": "B2:N63",
+        "populated_cells": 421,
+        "formula_count": 287,
+        "errors": 0
+      },
+      {
+        "name": "Failure_Analysis",
+        "dimension": "B2:L55",
+        "populated_cells": 406,
+        "formula_count": 306,
+        "errors": 0
+      },
+      {
+        "name": "Product_Size",
+        "dimension": "B2:M88",
+        "populated_cells": 882,
+        "formula_count": 840,
+        "errors": 0
+      },
+      {
+        "name": "Geo_Courier",
+        "dimension": "B2:O59",
+        "populated_cells": 675,
+        "formula_count": 586,
+        "errors": 0
+      },
+      {
+        "name": "Customer_Recovery",
+        "dimension": "B2:K43",
+        "populated_cells": 136,
+        "formula_count": 79,
+        "errors": 0
+      },
+      {
+        "name": "Data_Quality",
+        "dimension": "B2:F26",
+        "populated_cells": 95,
+        "formula_count": 18,
+        "errors": 0
+      },
+      {
+        "name": "Config",
+        "dimension": "B2:H177",
+        "populated_cells": 465,
+        "formula_count": 22,
+        "errors": 0
+      },
+      {
+        "name": "DATA_Master",
+        "dimension": "A1:BC2003",
+        "populated_cells": 110111,
+        "formula_count": 110000,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Bosta",
+        "dimension": "A1:Y1239",
+        "populated_cells": 5049,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Costs",
+        "dimension": "A1:AJ1239",
+        "populated_cells": 8569,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Intake",
+        "dimension": "A1:T1077",
+        "populated_cells": 773,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_SKU",
+        "dimension": "A1:E402",
+        "populated_cells": 261,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "Change_Log",
+        "dimension": "B2:E45",
+        "populated_cells": 50,
+        "formula_count": 0,
+        "errors": 0
+      }
+    ]
+  },
+  {
+    "source": "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+    "sha256": "6d502a2332f72469ce7da37c1696c8e247eefe22f01e1ab76caaedb5566de949",
+    "size_bytes": 3092813,
+    "sheet_count": 22,
+    "formula_count": 164678,
+    "sheets": [
+      {
+        "name": "START",
+        "dimension": "B2:E58",
+        "populated_cells": 160,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "EXEC_Brand",
+        "dimension": "B1:AK55",
+        "populated_cells": 373,
+        "formula_count": 327,
+        "errors": 0
+      },
+      {
+        "name": "OPS_Control",
+        "dimension": "B1:T73",
+        "populated_cells": 274,
+        "formula_count": 118,
+        "errors": 0
+      },
+      {
+        "name": "Weekly",
+        "dimension": "B2:W62",
+        "populated_cells": 1191,
+        "formula_count": 1163,
+        "errors": 0
+      },
+      {
+        "name": "Monthly",
+        "dimension": "B2:W34",
+        "populated_cells": 575,
+        "formula_count": 547,
+        "errors": 0
+      },
+      {
+        "name": "Returns_Channels",
+        "dimension": "B2:N63",
+        "populated_cells": 421,
+        "formula_count": 287,
+        "errors": 0
+      },
+      {
+        "name": "Failure_Analysis",
+        "dimension": "B2:L55",
+        "populated_cells": 406,
+        "formula_count": 306,
+        "errors": 0
+      },
+      {
+        "name": "Product_Size",
+        "dimension": "B2:M88",
+        "populated_cells": 882,
+        "formula_count": 840,
+        "errors": 0
+      },
+      {
+        "name": "Geo_Courier",
+        "dimension": "B2:O59",
+        "populated_cells": 675,
+        "formula_count": 586,
+        "errors": 0
+      },
+      {
+        "name": "Customer_Recovery",
+        "dimension": "B2:K43",
+        "populated_cells": 136,
+        "formula_count": 79,
+        "errors": 0
+      },
+      {
+        "name": "Data_Quality",
+        "dimension": "B2:F26",
+        "populated_cells": 95,
+        "formula_count": 18,
+        "errors": 0
+      },
+      {
+        "name": "Config",
+        "dimension": "B2:H226",
+        "populated_cells": 563,
+        "formula_count": 34,
+        "errors": 0
+      },
+      {
+        "name": "DATA_Master",
+        "dimension": "A1:BC2003",
+        "populated_cells": 110111,
+        "formula_count": 110000,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Bosta",
+        "dimension": "A1:Y1239",
+        "populated_cells": 5049,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Costs",
+        "dimension": "A1:AJ1239",
+        "populated_cells": 8569,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Intake",
+        "dimension": "A1:T1077",
+        "populated_cells": 773,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_SKU",
+        "dimension": "A1:E402",
+        "populated_cells": 261,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "Change_Log",
+        "dimension": "B2:E45",
+        "populated_cells": 82,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "RAW_Shopify",
+        "dimension": "A1:CC2002",
+        "populated_cells": 22387,
+        "formula_count": 2000,
+        "errors": 0
+      },
+      {
+        "name": "Orders_Master",
+        "dimension": "A1:X2003",
+        "populated_cells": 48026,
+        "formula_count": 48000,
+        "errors": 0
+      },
+      {
+        "name": "Confirmation",
+        "dimension": "B2:K50",
+        "populated_cells": 202,
+        "formula_count": 135,
+        "errors": 0
+      },
+      {
+        "name": "Pickup_Channel",
+        "dimension": "B2:K73",
+        "populated_cells": 298,
+        "formula_count": 238,
+        "errors": 0
+      }
+    ]
+  },
+  {
+    "source": "2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx",
+    "sha256": "1ba59341a7edd715ba00a301647e9e755825e4db64c57941b058dcabf8d3cfed",
+    "size_bytes": 8507,
+    "sheet_count": 2,
+    "formula_count": 0,
+    "sheets": [
+      {
+        "name": "READ_ME",
+        "dimension": "A1:A29",
+        "populated_cells": 29,
+        "formula_count": 0,
+        "errors": 0
+      },
+      {
+        "name": "PASTE_AT_A102",
+        "dimension": "A1:E28",
+        "populated_cells": 140,
+        "formula_count": 0,
+        "errors": 0
+      }
+    ]
+  },
+  {
+    "source": "2026-09-08_RAW_Bosta_STAGED_20May-06Sep.xlsx",
+    "sha256": "fb2638530ffe25beb4cfaf4dec9849d666f2e527d57d515cd7a1e69b8a4375ea",
+    "size_bytes": 120259,
+    "sheet_count": 1,
+    "formula_count": 0,
+    "sheets": [
+      {
+        "name": "RAW_Bosta_PASTE",
+        "dimension": "A1:AC570",
+        "populated_cells": 14019,
+        "formula_count": 0,
+        "errors": 0
+      }
+    ]
+  },
+  {
+    "source": "2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx",
+    "sha256": "5310c47fdd1f4217c01e0f86ba2343eaaae0897abd5e9004e0ea19874538cc31",
+    "size_bytes": 203187,
+    "sheet_count": 1,
+    "formula_count": 0,
+    "sheets": [
+      {
+        "name": "RAW_Shopify_PASTE",
+        "dimension": "A1:CC665",
+        "populated_cells": 28168,
+        "formula_count": 0,
+        "errors": 0
+      }
+    ]
+  },
+  {
+    "source": "2026-09-08_RAW_SKU_ADDITIONS.xlsx",
+    "sha256": "b50c01862e18a57166b86c216f25c728571983c507e09185ba76eb6fdd114c73",
+    "size_bytes": 5754,
+    "sheet_count": 1,
+    "formula_count": 0,
+    "sheets": [
+      {
+        "name": "RAW_SKU_ADDITIONS",
+        "dimension": "A1:F24",
+        "populated_cells": 109,
+        "formula_count": 0,
+        "errors": 0
+      }
+    ]
+  }
+]

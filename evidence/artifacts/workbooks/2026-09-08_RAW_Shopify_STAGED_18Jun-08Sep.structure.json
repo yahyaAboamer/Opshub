@@ -1,0 +1,368 @@
+{
+  "source": "2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx",
+  "sha256": "5310c47fdd1f4217c01e0f86ba2343eaaae0897abd5e9004e0ea19874538cc31",
+  "size_bytes": 203187,
+  "sheets": [
+    {
+      "name": "RAW_Shopify_PASTE",
+      "visibility": "visible",
+      "dimension": "A1:CC665",
+      "populated_cells": 28168,
+      "stored_cells": 28168,
+      "max_populated_row": 665,
+      "headers_row1": [
+        {
+          "cell": "A1",
+          "label": "Name"
+        },
+        {
+          "cell": "B1",
+          "label": "Email"
+        },
+        {
+          "cell": "C1",
+          "label": "Financial Status"
+        },
+        {
+          "cell": "D1",
+          "label": "Paid at"
+        },
+        {
+          "cell": "E1",
+          "label": "Fulfillment Status"
+        },
+        {
+          "cell": "F1",
+          "label": "Fulfilled at"
+        },
+        {
+          "cell": "G1",
+          "label": "Accepts Marketing"
+        },
+        {
+          "cell": "H1",
+          "label": "Currency"
+        },
+        {
+          "cell": "I1",
+          "label": "Subtotal"
+        },
+        {
+          "cell": "J1",
+          "label": "Shipping"
+        },
+        {
+          "cell": "K1",
+          "label": "Taxes"
+        },
+        {
+          "cell": "L1",
+          "label": "Total"
+        },
+        {
+          "cell": "M1",
+          "label": "Discount Code"
+        },
+        {
+          "cell": "N1",
+          "label": "Discount Amount"
+        },
+        {
+          "cell": "O1",
+          "label": "Shipping Method"
+        },
+        {
+          "cell": "P1",
+          "label": "Created at"
+        },
+        {
+          "cell": "Q1",
+          "label": "Lineitem quantity"
+        },
+        {
+          "cell": "R1",
+          "label": "Lineitem name"
+        },
+        {
+          "cell": "S1",
+          "label": "Lineitem price"
+        },
+        {
+          "cell": "T1",
+          "label": "Lineitem compare at price"
+        },
+        {
+          "cell": "U1",
+          "label": "Lineitem sku"
+        },
+        {
+          "cell": "V1",
+          "label": "Lineitem requires shipping"
+        },
+        {
+          "cell": "W1",
+          "label": "Lineitem taxable"
+        },
+        {
+          "cell": "X1",
+          "label": "Lineitem fulfillment status"
+        },
+        {
+          "cell": "Y1",
+          "label": "Billing Name"
+        },
+        {
+          "cell": "Z1",
+          "label": "Billing Street"
+        },
+        {
+          "cell": "AA1",
+          "label": "Billing Address1"
+        },
+        {
+          "cell": "AB1",
+          "label": "Billing Address2"
+        },
+        {
+          "cell": "AC1",
+          "label": "Billing Company"
+        },
+        {
+          "cell": "AD1",
+          "label": "Billing City"
+        },
+        {
+          "cell": "AE1",
+          "label": "Billing Zip"
+        },
+        {
+          "cell": "AF1",
+          "label": "Billing Province"
+        },
+        {
+          "cell": "AG1",
+          "label": "Billing Country"
+        },
+        {
+          "cell": "AH1",
+          "label": "Billing Phone"
+        },
+        {
+          "cell": "AI1",
+          "label": "Shipping Name"
+        },
+        {
+          "cell": "AJ1",
+          "label": "Shipping Street"
+        },
+        {
+          "cell": "AK1",
+          "label": "Shipping Address1"
+        },
+        {
+          "cell": "AL1",
+          "label": "Shipping Address2"
+        },
+        {
+          "cell": "AM1",
+          "label": "Shipping Company"
+        },
+        {
+          "cell": "AN1",
+          "label": "Shipping City"
+        },
+        {
+          "cell": "AO1",
+          "label": "Shipping Zip"
+        },
+        {
+          "cell": "AP1",
+          "label": "Shipping Province"
+        },
+        {
+          "cell": "AQ1",
+          "label": "Shipping Country"
+        },
+        {
+          "cell": "AR1",
+          "label": "Shipping Phone"
+        },
+        {
+          "cell": "AS1",
+          "label": "Notes"
+        },
+        {
+          "cell": "AT1",
+          "label": "Note Attributes"
+        },
+        {
+          "cell": "AU1",
+          "label": "Cancelled at"
+        },
+        {
+          "cell": "AV1",
+          "label": "Payment Method"
+        },
+        {
+          "cell": "AW1",
+          "label": "Payment Reference"
+        },
+        {
+          "cell": "AX1",
+          "label": "Refunded Amount"
+        },
+        {
+          "cell": "AY1",
+          "label": "Vendor"
+        },
+        {
+          "cell": "AZ1",
+          "label": "Outstanding Balance"
+        },
+        {
+          "cell": "BA1",
+          "label": "Employee"
+        },
+        {
+          "cell": "BB1",
+          "label": "Location"
+        },
+        {
+          "cell": "BC1",
+          "label": "Device ID"
+        },
+        {
+          "cell": "BD1",
+          "label": "Id"
+        },
+        {
+          "cell": "BE1",
+          "label": "Tags"
+        },
+        {
+          "cell": "BF1",
+          "label": "Risk Level"
+        },
+        {
+          "cell": "BG1",
+          "label": "Source"
+        },
+        {
+          "cell": "BH1",
+          "label": "Lineitem discount"
+        },
+        {
+          "cell": "BI1",
+          "label": "Tax 1 Name"
+        },
+        {
+          "cell": "BJ1",
+          "label": "Tax 1 Value"
+        },
+        {
+          "cell": "BK1",
+          "label": "Tax 2 Name"
+        },
+        {
+          "cell": "BL1",
+          "label": "Tax 2 Value"
+        },
+        {
+          "cell": "BM1",
+          "label": "Tax 3 Name"
+        },
+        {
+          "cell": "BN1",
+          "label": "Tax 3 Value"
+        },
+        {
+          "cell": "BO1",
+          "label": "Tax 4 Name"
+        },
+        {
+          "cell": "BP1",
+          "label": "Tax 4 Value"
+        },
+        {
+          "cell": "BQ1",
+          "label": "Tax 5 Name"
+        },
+        {
+          "cell": "BR1",
+          "label": "Tax 5 Value"
+        },
+        {
+          "cell": "BS1",
+          "label": "Phone"
+        },
+        {
+          "cell": "BT1",
+          "label": "Receipt Number"
+        },
+        {
+          "cell": "BU1",
+          "label": "Duties"
+        },
+        {
+          "cell": "BV1",
+          "label": "Billing Province Name"
+        },
+        {
+          "cell": "BW1",
+          "label": "Shipping Province Name"
+        },
+        {
+          "cell": "BX1",
+          "label": "Payment ID"
+        },
+        {
+          "cell": "BY1",
+          "label": "Payment Terms Name"
+        },
+        {
+          "cell": "BZ1",
+          "label": "Next Payment Due At"
+        },
+        {
+          "cell": "CA1",
+          "label": "Payment References"
+        },
+        {
+          "cell": "CB1",
+          "label": ""
+        },
+        {
+          "cell": "CC1",
+          "label": "order_seq"
+        }
+      ],
+      "formula_count": 0,
+      "formula_patterns": [],
+      "formula_functions": {},
+      "formula_sheet_dependencies": {},
+      "formula_cache_missing_count": 0,
+      "errors": [],
+      "data_validations": [],
+      "conditional_formats": [],
+      "auto_filter": null,
+      "merged_ranges": [],
+      "hidden_rows": [],
+      "hidden_columns": [],
+      "charts": [],
+      "freeze_panes": [],
+      "sheet_protection_present": false
+    }
+  ],
+  "calculation_properties": {
+    "calcId": "124519",
+    "fullCalcOnLoad": "1"
+  },
+  "defined_names": [],
+  "external_link_files": [],
+  "chart_parts": [],
+  "table_parts": [],
+  "pivot_parts": [],
+  "connection_parts": [],
+  "vba_present": false,
+  "workbook_protection_present": true
+}

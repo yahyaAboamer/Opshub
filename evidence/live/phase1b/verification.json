@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-10-13T17:17:00.008220+00:00",
+  "changed_documents": [
+    "00-system-map.md",
+    "08-api-and-integration-observations.md",
+    "09-roles-and-permissions.md",
+    "10-data-ingestion-and-background-jobs.md",
+    "11-ui-route-map.md",
+    "12-file-to-feature-traceability.md",
+    "13-live-vs-spec-discrepancies.md",
+    "14-open-questions.md",
+    "15-saas-migration-risks.md"
+  ],
+  "document_changes_within_authorized_scope": true,
+  "unchanged_baseline_documents": [
+    "01-source-inventory.md",
+    "02-feature-inventory.md",
+    "03-domain-model.md",
+    "04-workflows-and-state-machines.md",
+    "05-business-rules.md",
+    "06-calculations-and-metrics.md",
+    "07-data-model-observations.md"
+  ],
+  "assets_checked": 13,
+  "asset_errors": [],
+  "exact_snippets_checked": 47,
+  "snippet_errors": [],
+  "local_link_errors": [],
+  "duplicate_section_headings": {},
+  "sanitized_contract_shape_issues": [],
+  "privacy_review_scope": "Structural scan of curated JSON plus manual review of saved fields/locators. Does not certify arbitrary code strings contain no possible secrets.",
+  "network_limitation": "No authenticated request/response capture; no mutation tested."
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "sheet": "READ_ME",
+    "header_row": 1,
+    "first_data_row": 2,
+    "headers": [
+      {
+        "cell": "A1",
+        "label": "Gentry — Hadeer call-queue top-up"
+      }
+    ],
+    "row_count_with_stored_values_or_formulas": 28,
+    "columns": {
+      "Gentry — Hadeer call-queue top-up": {
+        "column": "A",
+        "nonempty_values": 23,
+        "input_nonempty_values": 23,
+        "distinct_values": 23,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 29
+      }
+    },
+    "formula_columns": {}
+  },
+  {
+    "sheet": "PASTE_AT_A102",
+    "header_row": 1,
+    "first_data_row": 2,
+    "headers": [
+      {
+        "cell": "A1",
+        "label": "Date"
+      },
+      {
+        "cell": "B1",
+        "label": "customer name"
+      },
+      {
+        "cell": "C1",
+        "label": "phone number"
+      },
+      {
+        "cell": "D1",
+        "label": "order ID"
+      },
+      {
+        "cell": "E1",
+        "label": "ordered items"
+      }
+    ],
+    "row_count_with_stored_values_or_formulas": 27,
+    "columns": {
+      "Date": {
+        "column": "A",
+        "nonempty_values": 27,
+        "input_nonempty_values": 27,
+        "distinct_values": 16,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 28
+      },
+      "customer name": {
+        "column": "B",
+        "nonempty_values": 27,
+        "input_nonempty_values": 27,
+        "distinct_values": 24,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 28
+      },
+      "phone number": {
+        "column": "C",
+        "nonempty_values": 27,
+        "input_nonempty_values": 27,
+        "distinct_values": 24,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 28
+      },
+      "order ID": {
+        "column": "D",
+        "nonempty_values": 27,
+        "input_nonempty_values": 27,
+        "distinct_values": 27,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 28
+      },
+      "ordered items": {
+        "column": "E",
+        "nonempty_values": 27,
+        "input_nonempty_values": 27,
+        "distinct_values": 19,
+        "numeric_count": 0,
+        "formula_cells": 0,
+        "first_input_row": 2,
+        "last_input_row": 28
+      }
+    },
+    "formula_columns": {}
+  }
+]

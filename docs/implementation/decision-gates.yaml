@@ -1,0 +1,3453 @@
+{
+  "schema_version": "1.0",
+  "gate_stage_values": [
+    "START",
+    "COMPLETION",
+    "SHADOW",
+    "ACTION_ENABLEMENT",
+    "CUTOVER"
+  ],
+  "gates": [
+    {
+      "id": "OP01",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 9,
+        "locator": "| OP01 Narrow pilot qualification | Confirm the Shopify store/Bosta account and applicable Meta ad account, exact supported action/input/result contracts and required unsupported-action exceptions | Integrated core is APPROVED by OD08. Shopify/Bosta are initial evidenced operational providers; Meta supplies applicable spend. Qualify08's IG01–IG08 scope and round-trip evidence; files/off-platform remain fallback, not alternative normal MVP | MR07/MR10/MR12/F19/F20/F24; provider mutation contracts still unverified; no invented providers |"
+      },
+      "responsible_decision_maker": "Owner and current Merchant Admin/account owner with provider-qualified engineer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Confirm the Shopify store/Bosta account and applicable Meta ad account, exact supported action/input/result contracts and required unsupported-action exceptions  |  Integrated core is APPROVED by OD08. Shopify/Bosta are initial evidenced operational providers; Meta supplies applicable spend. Qualify08's IG01–IG08 scope and round-trip evidence; files/off-platform remain fallback, not alternative normal MVP  |  MR07/MR10/MR12/F19/F20/F24; provider mutation contracts still unverified; no invented providers",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP01",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP01",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP01",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP01 Narrow pilot qualification"
+    },
+    {
+      "id": "OP02",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 10,
+        "locator": "| OP02 Launch | Merchant/workspace/source-account unit; first-Admin and recovery verification; assigned platform staff scope | One merchant operational workspace with explicit source ownership; no shared-account/multi-store consolidation; verified merchant authorization, no platform self-grant | PD11/PD20/E26; AC01–AC03/PF02 |"
+      },
+      "responsible_decision_maker": "Owner, verified merchant representative and security/identity reviewer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Merchant/workspace/source-account unit; first-Admin and recovery verification; assigned platform staff scope  |  One merchant operational workspace with explicit source ownership; no shared-account/multi-store consolidation; verified merchant authorization, no platform self-grant  |  PD11/PD20/E26; AC01–AC03/PF02",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP02",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP02",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP02",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "OP02",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "OP02",
+          "stage": "START",
+          "capability": "Verified production initial Admin and source-owner establishment",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        },
+        {
+          "task_id": "T1211",
+          "gate_id": "OP02",
+          "stage": "START",
+          "capability": "Production identity/current access and exact controlled invitation recipient/send envelope only",
+          "environment": "AUTHORIZED_PRODUCTION_ACCOUNT_QUALIFICATION"
+        }
+      ],
+      "source_gate_label": "OP02 Launch"
+    },
+    {
+      "id": "OP03",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 11,
+        "locator": "| OP03 Launch | Confirmation eligibility and dispatch guard, withdrawal/reconfirmation and Admin exceptions | Delivery orders explicitly enter confirmation; no booking with unclear consent/recipient unless reviewed Admin exception with reason. Imported tags remain assertions | PD19/PD08; OD01/OD07 do not decide every dispatch prerequisite |"
+      },
+      "responsible_decision_maker": "Owner and current Merchant Admin",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Confirmation eligibility and dispatch guard, withdrawal/reconfirmation and Admin exceptions  |  Delivery orders explicitly enter confirmation; no booking with unclear consent/recipient unless reviewed Admin exception with reason. Imported tags remain assertions  |  PD19/PD08; OD01/OD07 do not decide every dispatch prerequisite",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP03",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP03",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP03",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP03 Launch"
+    },
+    {
+      "id": "OP04",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 12,
+        "locator": "| OP04 Launch | Calling scheduling tolerance, first-attempt target, invalid contact/refusal outcomes and reopening/urgent attention | Maximum three total ordinary contacts near0/24/48h including successful contacts; no catch-up clustering or reset on reopen. Preserve reach/action work at exhaustion. Higher limit is deferred and needs explicit owner change, not an Admin bypass | PD05/PD06; OD04 ceiling/approximate intervals already approved |"
+      },
+      "responsible_decision_maker": "Owner and merchant contact-operations lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Calling scheduling tolerance, first-attempt target, invalid contact/refusal outcomes and reopening/urgent attention  |  Maximum three total ordinary contacts near0/24/48h including successful contacts; no catch-up clustering or reset on reopen. Preserve reach/action work at exhaustion. Higher limit is deferred and needs explicit owner change, not an Admin bypass  |  PD05/PD06; OD04 ceiling/approximate intervals already approved",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP04",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "OP04",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP04 Launch"
+    },
+    {
+      "id": "OP05",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 13,
+        "locator": "| OP05 Launch | Accepted collection evidence and purpose-specific courier collection/customer handover population/finality mapping, no-show/cancel/refused outcomes and partial episode containment | Preserve merchant/customer Pickup work and independently identify any courier collection; never equate the two physical events or mix KPI populations. Attributed evidence, separate payment/later disposition; unknown/partial remains review | PD03/PD18/D03/D06; OD02 courier-collection independence and OD06 cardinality are approved, not reopened |"
+      },
+      "responsible_decision_maker": "Owner and current Merchant Admin with physical-evidence reviewer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Accepted collection evidence and purpose-specific courier collection/customer handover population/finality mapping, no-show/cancel/refused outcomes and partial episode containment  |  Preserve merchant/customer Pickup work and independently identify any courier collection; never equate the two physical events or mix KPI populations. Attributed evidence, separate payment/later disposition; unknown/partial remains review  |  PD03/PD18/D03/D06; OD02 courier-collection independence and OD06 cardinality are approved, not reopened",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP05",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP05",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP05",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP05 Launch"
+    },
+    {
+      "id": "OP06",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 14,
+        "locator": "| OP06 Launch | Cancellation/replacement eligibility, replacement price/COD/payment and return dependency; failed/unknown result recovery | Exact Admin-reviewed connected intent and per-effect result evidence; safe manual fallback where unavailable; new linked order; no universal same-COD inheritance, blind retry or automatic compensation | PD10/PD17/PD24; Gentry same COD is UI contract only |"
+      },
+      "responsible_decision_maker": "Owner and current Merchant Admin with provider-qualified engineer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Cancellation/replacement eligibility, replacement price/COD/payment and return dependency; failed/unknown result recovery  |  Exact Admin-reviewed connected intent and per-effect result evidence; safe manual fallback where unavailable; new linked order; no universal same-COD inheritance, blind retry or automatic compensation  |  PD10/PD17/PD24; Gentry same COD is UI contract only",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "OP06",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Cancellation/replacement eligibility/commercial/side-effect policy",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP06",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP06",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Cancellation/replacement eligibility/commercial/side-effect policy",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP06",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP06 Launch"
+    },
+    {
+      "id": "OP07",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 15,
+        "locator": "| OP07 Launch | KPI calendar/cohort/date choices and exact final courier/confirmation mapping | Approve document 06's named cohort clocks, merchant-local Monday week, explicit current as-of and source-specific finality. OD05 formulas remain fixed | PD01/PD09/PD21; pending/unknown never disappear |"
+      },
+      "responsible_decision_maker": "Owner and analytics lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. KPI calendar/cohort/date choices and exact final courier/confirmation mapping  |  Approve document 06's named cohort clocks, merchant-local Monday week, explicit current as-of and source-specific finality. OD05 formulas remain fixed  |  PD01/PD09/PD21; pending/unknown never disappear",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP07",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ],
+      "source_gate_label": "OP07 Launch"
+    },
+    {
+      "id": "OP08",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 16,
+        "locator": "| OP08 Launch | Queue ageing/operational staleness thresholds and actual clock bases | Approve document 07's attention-only proposals or substitute explicit values; distinguish booking/placement/coverage clocks | PD03/PD04/PD21; Gentry's 3/7/10-day thresholds concern different scopes |"
+      },
+      "responsible_decision_maker": "Owner and merchant operations lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Queue ageing/operational staleness thresholds and actual clock bases  |  Approve document 07's attention-only proposals or substitute explicit values; distinguish booking/placement/coverage clocks  |  PD03/PD04/PD21; Gentry's 3/7/10-day thresholds concern different scopes",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP08",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ],
+      "source_gate_label": "OP08 Launch"
+    },
+    {
+      "id": "OP09",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 17,
+        "locator": "| OP09 MVP analytics policy | Qualified net/gross attributed revenue, discount/return/refund treatment, direct/generic/unallocated attribution, VAT/currency, product/SKU outcome allocation and minimal analytical season context | Product/SKU, spend/economics and ROAS inclusion is APPROVED by OD09. Approve06's explicit populations/input method or bounded alternative; unknown/incomplete inputs stay provisional/unavailable. Automated replenishment, production and historical fee defaults remain deferred | PD01/PD13/PD14/PD21; F19/F20/K07/P01–P06 are MVP gates; no numerical product target/tier approval implied |"
+      },
+      "responsible_decision_maker": "Owner and analytics lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Qualified net/gross attributed revenue, discount/return/refund treatment, direct/generic/unallocated attribution, VAT/currency, product/SKU outcome allocation and minimal analytical season context  |  Product/SKU, spend/economics and ROAS inclusion is APPROVED by OD09. Approve06's explicit populations/input method or bounded alternative; unknown/incomplete inputs stay provisional/unavailable. Automated replenishment, production and historical fee defaults remain deferred  |  PD01/PD13/PD14/PD21; F19/F20/K07/P01–P06 are MVP gates; no numerical product target/tier approval implied",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP09",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ],
+      "source_gate_label": "OP09 MVP analytics policy"
+    },
+    {
+      "id": "OP10",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 18,
+        "locator": "| OP10 Launch | Working source authority by concept and manual correction/late revision selection | Admin approves a pilot concept-source matrix; retain competing values and correction reason; no universal newest/live/manual-wins | PD08/PD21; affects status, collection, metrics and history |"
+      },
+      "responsible_decision_maker": "Owner and current Merchant Admin/source reviewer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Working source authority by concept and manual correction/late revision selection  |  Admin approves a pilot concept-source matrix; retain competing values and correction reason; no universal newest/live/manual-wins  |  PD08/PD21; affects status, collection, metrics and history",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP10",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP10",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP10",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP10 Launch"
+    },
+    {
+      "id": "OP11",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 19,
+        "locator": "| OP11 Commercial launch | Pilot plan/status authority, activation/overdue/suspension/grace/reactivation, optional trial, entitlements and billing owner | Manual commercial state, one pilot offering, named Admin contact; preserve data; proposed suspended Admin read/export. Prices/trial duration: TBD — COMMERCIAL DECISION | NEW SAAS; availability policy must be selected even if exact public prices remain TBD |"
+      },
+      "responsible_decision_maker": "Owner/commercial authority and billing Merchant Admin",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Pilot plan/status authority, activation/overdue/suspension/grace/reactivation, optional trial, entitlements and billing owner  |  Manual commercial state, one pilot offering, named Admin contact; preserve data; proposed suspended Admin read/export. Prices/trial duration: TBD — COMMERCIAL DECISION  |  NEW SAAS; availability policy must be selected even if exact public prices remain TBD",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP11",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ],
+      "source_gate_label": "OP11 Commercial launch"
+    },
+    {
+      "id": "OP12",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 20,
+        "locator": "| OP12 Launch | Privacy/contact exports, session/access policy, retention, closure/suspension visibility and support diagnostic disclosure | Operator exports contact-free; explicit Admin contact export; redacted platform diagnostics; no destructive retention default. Owner supplies approved retention/access policy | PD22/D20/D24; no compliance/implementation assumptions |"
+      },
+      "responsible_decision_maker": "Owner/legal and security/privacy reviewer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Privacy/contact exports, session/access policy, retention, closure/suspension visibility and support diagnostic disclosure  |  Operator exports contact-free; explicit Admin contact export; redacted platform diagnostics; no destructive retention default. Owner supplies approved retention/access policy  |  PD22/D20/D24; no compliance/implementation assumptions",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP12",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP12",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP12",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "OP12",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP12 Launch"
+    },
+    {
+      "id": "OP13",
+      "category": "PRODUCT_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 21,
+        "locator": "| OP13 Launch | Connected/fallback source/native-link/dedup/result contracts; pilot volumes and measurable freshness/performance/usability envelope | Approve representative connection/result/exception evidence and fallback files; choose time-to-first-use, state freshness, action reconciliation, analytics/export targets and test population | PD12/PD13/PD16/PD20; no arbitrary scale guarantee |"
+      },
+      "responsible_decision_maker": "Owner/operations and provider/analytics leads",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Connected/fallback source/native-link/dedup/result contracts; pilot volumes and measurable freshness/performance/usability envelope  |  Approve representative connection/result/exception evidence and fallback files; choose time-to-first-use, state freshness, action reconciliation, analytics/export targets and test population  |  PD12/PD13/PD16/PD20; no arbitrary scale guarantee",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "OP13",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "OP13",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "OP13",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "OP13 Launch"
+    },
+    {
+      "id": "OP14",
+      "category": "PRODUCT_GATE",
+      "status": "DEFERRED_SCOPE",
+      "source": {
+        "path": "docs/product/13-open-product-decisions.md",
+        "line": 22,
+        "locator": "| OP14 Future scope | Broad integration marketplace, replenishment/production automation, native refunds/finance ledger, richer seasons, extra personas, support override and advanced episodes | Remain deferred/excluded as03/12; core Shopify/Bosta connections and Product/SKU/ROAS are no longer future scope | OD08/OD09 correction does not authorize unrelated expansion |"
+      },
+      "responsible_decision_maker": "Owner for any future scope expansion",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Broad integration marketplace, replenishment/production automation, native refunds/finance ledger, richer seasons, extra personas, support override and advanced episodes  |  Remain deferred/excluded as03/12; core Shopify/Bosta connections and Product/SKU/ROAS are no longer future scope  |  OD08/OD09 correction does not authorize unrelated expansion",
+      "resolution_mode": "DEFERRED_SCOPE_CONTAINMENT",
+      "applications": [
+        {
+          "task_id": "T1305",
+          "gate_id": "OP14",
+          "stage": "COMPLETION",
+          "capability": "Preserve deferred/excluded scope; a future expansion requires new owner authorization outside this roadmap",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "source_gate_label": "OP14 Future scope"
+    },
+    {
+      "id": "A01",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 7,
+        "locator": "| A01 — integrated pilot readiness | Shopify/Bosta/applicable Meta account ownership/app distribution/scopes, IDs/pagination/fields/callback auth, exact create/cancel/link/result support and competing native auto-booking; merchant owner + provider-qualified engineer; OP01/OP02/OP13 | Shopify/Bosta core remains MUST. Capabilities individually disabled until qualified; unsupported operations have exact safe exception, not a permanently manual core. Verify one normal booking authority and reconcile provider-side activity;05/18 |"
+      },
+      "responsible_decision_maker": "Merchant owner/current Admin and provider-qualified engineer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Shopify/Bosta/applicable Meta account ownership/app distribution/scopes, IDs/pagination/fields/callback auth, exact create/cancel/link/result support and competing native auto-booking; merchant owner + provider-qualified engineer; OP01/OP02/OP13  |  Shopify/Bosta core remains MUST. Capabilities individually disabled until qualified; unsupported operations have exact safe exception, not a permanently manual core. Verify one normal booking authority and reconcile provider-side activity;05/18",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "A01",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "A01",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "A01",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "A01 — integrated pilot readiness"
+    },
+    {
+      "id": "A02",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 8,
+        "locator": "| A02 — mutation recovery | Provider request correlation/uniqueness/idempotency retention and reliable positive/terminal-negative lookup/job evidence; provider-qualified engineer + Merchant Admin; OP06/OP13 | Unknown remains blocked; no absent-search proof, timer-based release or stale-worker retry. Qualify old-process termination, ambiguous-create recovery, constructable dispatch/handover/contact descriptors and accountable Admin/provider escalation;06/13 |"
+      },
+      "responsible_decision_maker": "Provider-qualified engineer and current Merchant Admin",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Provider request correlation/uniqueness/idempotency retention and reliable positive/terminal-negative lookup/job evidence; provider-qualified engineer + Merchant Admin; OP06/OP13  |  Unknown remains blocked; no absent-search proof, timer-based release or stale-worker retry. Qualify old-process termination, ambiguous-create recovery, constructable dispatch/handover/contact descriptors and accountable Admin/provider escalation;06/13",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "A02",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "A02",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "A02",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "A02",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ],
+      "source_gate_label": "A02 — mutation recovery"
+    },
+    {
+      "id": "A03",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 9,
+        "locator": "| A03 — operational policy/finality | Confirmation eligibility/dispatch exception, withdrawal, exact calling tolerance, pickup purpose/physical finality, cancellation/replacement pricing/payment/side effects, source-authority matrix; owner/merchant Admin; OP03–OP08/OP10 | Fixed3 contacts/cardinality/independent dimensions unchanged; ambiguous mapping/required input blocks affected action or classifies unknown, no blanket newest/manual wins;04/07/09/11 |"
+      },
+      "responsible_decision_maker": "Owner and current Merchant Admin",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Confirmation eligibility/dispatch exception, withdrawal, exact calling tolerance, pickup purpose/physical finality, cancellation/replacement pricing/payment/side effects, source-authority matrix; owner/merchant Admin; OP03–OP08/OP10  |  Fixed3 contacts/cardinality/independent dimensions unchanged; ambiguous mapping/required input blocks affected action or classifies unknown, no blanket newest/manual wins;04/07/09/11",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "A03",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "A03",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "A03",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "A03",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "source_gate_label": "A03 — operational policy/finality"
+    },
+    {
+      "id": "A04",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 10,
+        "locator": "| A04 — identity/access policy | Initial-Admin/recovery verification, assigned platform scope, session duration/step-up freshness, suspended Operator access and Admin continuity; owner/security reviewer; OP02/OP11/OP12 | Local server sessions/scoped grants recommended; last Admin/self-grant protected. Independent recovery epoch and verified current authority gate restored reads/exports/writes. Propose bounded read reconciliation for already-started effects even during suspension;03/13 |"
+      },
+      "responsible_decision_maker": "Owner and security reviewer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Initial-Admin/recovery verification, assigned platform scope, session duration/step-up freshness, suspended Operator access and Admin continuity; owner/security reviewer; OP02/OP11/OP12  |  Local server sessions/scoped grants recommended; last Admin/self-grant protected. Independent recovery epoch and verified current authority gate restored reads/exports/writes. Propose bounded read reconciliation for already-started effects even during suspension;03/13",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "A04",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "A04",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "A04",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "A04",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "A04",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "A04",
+          "stage": "START",
+          "capability": "Current production initial-Admin/session/recovery verification",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        },
+        {
+          "task_id": "T1211",
+          "gate_id": "A04",
+          "stage": "START",
+          "capability": "Production identity/current access and exact controlled invitation recipient/send envelope only",
+          "environment": "AUTHORIZED_PRODUCTION_ACCOUNT_QUALIFICATION"
+        }
+      ],
+      "source_gate_label": "A04 — identity/access policy"
+    },
+    {
+      "id": "A05",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 11,
+        "locator": "| A05 — privacy/legal | Residency, contact disclosure/export, exact retention/closure/holds/backups and data-rights process; owner/legal; OP12 |11 gives reviewable finite retention proposals; no destructive cleanup before approved policy. Independent privacy-manifest coverage/replay gates restored access; protected identifiers are minimized, not claimed anonymous. No certification asserted; support redacted |"
+      },
+      "responsible_decision_maker": "Owner/legal and privacy reviewer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Residency, contact disclosure/export, exact retention/closure/holds/backups and data-rights process; owner/legal; OP12  | 11 gives reviewable finite retention proposals; no destructive cleanup before approved policy. Independent privacy-manifest coverage/replay gates restored access; protected identifiers are minimized, not claimed anonymous. No certification asserted; support redacted",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1201",
+          "gate_id": "A05",
+          "stage": "START",
+          "capability": "Purchased service region/residency/cost/backup suitability only; broader pilot policy remains separate",
+          "environment": "AUTHORIZED_STAGING_INFRASTRUCTURE"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "A05",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "A05",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "A05",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "A05",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        },
+        {
+          "task_id": "T1209",
+          "gate_id": "A05",
+          "stage": "START",
+          "capability": "Production region/residency/key/retention procurement scope",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE"
+        }
+      ],
+      "source_gate_label": "A05 — privacy/legal"
+    },
+    {
+      "id": "A06",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 12,
+        "locator": "| A06 — operational envelope and purchased services | Merchant/volume/history/export envelope, freshness/result/latency targets, on-call owner, restore RPO/RTO, region/plans/Auth0 MFA costs/Sentry retention; owner/operations; OP08/OP13 | Paid restore-capable DB and single web/worker baseline; no claimed bill/SLA. Measure controlled restore with independent dispatch/handover/contact descriptors, coverage, authority epoch, privacy manifests and secrets before launch;12–16 |"
+      },
+      "responsible_decision_maker": "Owner and operations/recovery lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Merchant/volume/history/export envelope, freshness/result/latency targets, on-call owner, restore RPO/RTO, region/plans/Auth0 MFA costs/Sentry retention; owner/operations; OP08/OP13  |  Paid restore-capable DB and single web/worker baseline; no claimed bill/SLA. Measure controlled restore with independent dispatch/handover/contact descriptors, coverage, authority epoch, privacy manifests and secrets before launch;12–16",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1201",
+          "gate_id": "A06",
+          "stage": "START",
+          "capability": "Purchased service region/residency/cost/backup suitability only; broader pilot policy remains separate",
+          "environment": "AUTHORIZED_STAGING_INFRASTRUCTURE"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "A06",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "A06",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "A06",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "A06",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        },
+        {
+          "task_id": "T1209",
+          "gate_id": "A06",
+          "stage": "START",
+          "capability": "Production purchased-service/backup/operations envelope",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE"
+        }
+      ],
+      "source_gate_label": "A06 — operational envelope and purchased services"
+    },
+    {
+      "id": "A07",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 13,
+        "locator": "| A07 — analytics policy | Net/gross qualification, revenue/reversal recognition/tax/currency, direct/generic/unallocated mapping, SKU/product attribution, cohort/calendar/finality/comparison and report revision lookback; owner/analytics lead; OP07/OP09 | OD05 formulas/OD09 inclusion fixed. Unknown mapping/spend/period gives provisional/unavailable; no Meta ROAS substitution, FX/VAT assumption, zero-sales allocation or summed product denominators;09/18 |"
+      },
+      "responsible_decision_maker": "Owner and analytics lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Net/gross qualification, revenue/reversal recognition/tax/currency, direct/generic/unallocated mapping, SKU/product attribution, cohort/calendar/finality/comparison and report revision lookback; owner/analytics lead; OP07/OP09  |  OD05 formulas/OD09 inclusion fixed. Unknown mapping/spend/period gives provisional/unavailable; no Meta ROAS substitution, FX/VAT assumption, zero-sales allocation or summed product denominators;09/18",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "A07",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ],
+      "source_gate_label": "A07 — analytics policy"
+    },
+    {
+      "id": "A08",
+      "category": "ARCHITECTURE_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/architecture/17-open-architecture-decisions.md",
+        "line": 14,
+        "locator": "| A08 — implementation compatibility | Nest/Vitest decorator/toolchain compatibility; pg-boss same-transaction enqueue/rollback/schema/grants/upgrades; provider SDK write-retry disablement; S3 conditional protected journal semantics; engineer | Confirm in future isolated build/contract tests, pin versions and update ADR if inadequate; no install/prototype here;14/15 |"
+      },
+      "responsible_decision_maker": "Engineering compatibility reviewer; owner approves material architecture deviation",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Nest/Vitest decorator/toolchain compatibility; pg-boss same-transaction enqueue/rollback/schema/grants/upgrades; provider SDK write-retry disablement; S3 conditional protected journal semantics; engineer  |  Confirm in future isolated build/contract tests, pin versions and update ADR if inadequate; no install/prototype here;14/15",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1305",
+          "gate_id": "A08",
+          "stage": "COMPLETION",
+          "capability": "All relevant pinned compatibility and fixture-realization evidence; earlier subgates block consumers before reliance",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "source_gate_label": "Engineering compatibility reviewer; owner approves any material architecture deviation"
+    },
+    {
+      "id": "MD01",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 15,
+        "locator": "| MD01 owner + Merchant Admin | Concept-specific source authority, manual/late correction selection and conflict policy | Approve01's field matrix with real source contracts. No universal latest/native/manual-wins; unresolved affected concept held. OP10/A03 |"
+      },
+      "responsible_decision_maker": "owner + Merchant Admin",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Concept-specific source authority, manual/late correction selection and conflict policy  |  Approve01's field matrix with real source contracts. No universal latest/native/manual-wins; unresolved affected concept held. OP10/A03",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD01",
+          "stage": "START",
+          "capability": "Actual private rehearsal source ownership/horizon/crosswalk/history continuity",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD01",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ]
+    },
+    {
+      "id": "MD02",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 16,
+        "locator": "| MD02 owner + operations | Pilot merchant, activation candidate date, historical lookback/dependency closure and archive/backfill policy | All open obligations at every age; eight full weeks+current partial candidate only after open-age/coverage/volume census. Older-access gap may require export; no blind cutoff. OP01/OP13/A06 |"
+      },
+      "responsible_decision_maker": "owner + operations",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Pilot merchant, activation candidate date, historical lookback/dependency closure and archive/backfill policy  |  All open obligations at every age; eight full weeks+current partial candidate only after open-age/coverage/volume census. Older-access gap may require export; no blind cutoff. OP01/OP13/A06",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD02",
+          "stage": "START",
+          "capability": "Actual private rehearsal source ownership/horizon/crosswalk/history continuity",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD02",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ]
+    },
+    {
+      "id": "MD03",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 17,
+        "locator": "| MD03 Merchant Admin/provider lead | Verified source-account namespaces/ownership, native ID representation and account rebind handling | One merchant/store/Bosta/applicable Meta; native IDs before alias linking; no shared-account allocation. OP01/OP02/A01 |"
+      },
+      "responsible_decision_maker": "Merchant Admin/provider lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Verified source-account namespaces/ownership, native ID representation and account rebind handling  |  One merchant/store/Bosta/applicable Meta; native IDs before alias linking; no shared-account allocation. OP01/OP02/A01",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD03",
+          "stage": "START",
+          "capability": "Actual private rehearsal source ownership/horizon/crosswalk/history continuity",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD03",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ]
+    },
+    {
+      "id": "MD04",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 18,
+        "locator": "| MD04 Merchant Admin + data reviewer | Legacy order/item/product/variant/tracking/replacement crosswalk and incompatible episode handling | Evidence-backed mapping; one accepted outbound/return/pickup under OD06; extra real history retained as holds. PD12/PD13/OP10 |"
+      },
+      "responsible_decision_maker": "Merchant Admin + data reviewer",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Legacy order/item/product/variant/tracking/replacement crosswalk and incompatible episode handling  |  Evidence-backed mapping; one accepted outbound/return/pickup under OD06; extra real history retained as holds. PD12/PD13/OP10",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD04",
+          "stage": "START",
+          "capability": "Actual private rehearsal source ownership/horizon/crosswalk/history continuity",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD04",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ]
+    },
+    {
+      "id": "MD05",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 19,
+        "locator": "| MD05 owner + operations | Event continuity without native call IDs, summary-supported reach/budgets, anomalous chronology and case links | Snapshot replay only until qualified event crosswalk; summary never synthesizes calls. Missing allowance history holds new starts, no reset. PD16/OP04/A03 |"
+      },
+      "responsible_decision_maker": "owner + operations",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Event continuity without native call IDs, summary-supported reach/budgets, anomalous chronology and case links  |  Snapshot replay only until qualified event crosswalk; summary never synthesizes calls. Missing allowance history holds new starts, no reset. PD16/OP04/A03",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD05",
+          "stage": "START",
+          "capability": "Actual private rehearsal source ownership/horizon/crosswalk/history continuity",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD05",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "MD05",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ]
+    },
+    {
+      "id": "MD06",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 20,
+        "locator": "| MD06 owner/analytics | KPI clocks/calendar/entry/finality/collection purpose and accepted evidence | Approve K01–K06 clocks and purpose mapping or explicit equivalent; OD05 formulas unchanged. Unknown entry/physical/finality visible. OP03/OP05/OP07/A03/A07 |"
+      },
+      "responsible_decision_maker": "owner/analytics",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. KPI clocks/calendar/entry/finality/collection purpose and accepted evidence  |  Approve K01–K06 clocks and purpose mapping or explicit equivalent; OD05 formulas unchanged. Unknown entry/physical/finality visible. OP03/OP05/OP07/A03/A07",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD06",
+          "stage": "COMPLETION",
+          "capability": "Final private rehearsal definitions/privacy report",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD06",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ]
+    },
+    {
+      "id": "MD07",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 21,
+        "locator": "| MD07 owner/analytics | Revenue eligibility/net/gross/reversal/tax/currency, Meta series/window/direct/generic allocation/rounding, SKU and dated season context | Approve explicit methods/conservation. Product spend is not SKU spend; revenue attribution independent. OP09/A07 |"
+      },
+      "responsible_decision_maker": "owner/analytics",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Revenue eligibility/net/gross/reversal/tax/currency, Meta series/window/direct/generic allocation/rounding, SKU and dated season context  |  Approve explicit methods/conservation. Product spend is not SKU spend; revenue attribution independent. OP09/A07",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD07",
+          "stage": "COMPLETION",
+          "capability": "Final private rehearsal definitions/privacy report",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD07",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ]
+    },
+    {
+      "id": "MD08",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 22,
+        "locator": "| MD08 owner/operations | Consent/dispatch/cancellation/replacement pricing/payment/side effects, contact timing tolerance and safe fallback evidence | Keep maximum3 and independent physical/payment truth. Define existing-contact handoff/invalid contacts/reopen. No known-effect compensation by default. OP03–OP06/A02/A03 |"
+      },
+      "responsible_decision_maker": "owner/operations",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Consent/dispatch/cancellation/replacement pricing/payment/side effects, contact timing tolerance and safe fallback evidence  |  Keep maximum3 and independent physical/payment truth. Define existing-contact handoff/invalid contacts/reopen. No known-effect compensation by default. OP03–OP06/A02/A03",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "MD08",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "MD08",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "MD08",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ]
+    },
+    {
+      "id": "MD09",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 23,
+        "locator": "| MD09 owner/security | Current authorization/initial Admin/recovery verification, suspended access, sensitive export/session policy | Fresh verified grants; platform no merchant self-grant; access denied after restore until authority/privacy gates. OP02/OP11/OP12/A04 |"
+      },
+      "responsible_decision_maker": "owner/security",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Current authorization/initial Admin/recovery verification, suspended access, sensitive export/session policy  |  Fresh verified grants; platform no merchant self-grant; access denied after restore until authority/privacy gates. OP02/OP11/OP12/A04",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "MD09",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "MD09",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "MD09",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "MD09",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "MD09",
+          "stage": "START",
+          "capability": "Production current authority established independently before access",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        },
+        {
+          "task_id": "T1211",
+          "gate_id": "MD09",
+          "stage": "START",
+          "capability": "Production identity/current access and exact controlled invitation recipient/send envelope only",
+          "environment": "AUTHORIZED_PRODUCTION_ACCOUNT_QUALIFICATION"
+        }
+      ]
+    },
+    {
+      "id": "MD10",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 24,
+        "locator": "| MD10 owner + Merchant Admin/provider lead | Exact enabled action/input/result capabilities, ambiguous-result recovery, old-sender containment and native automatic booking authority | Qualify perclass; suggested annotation→booking→replacement→eligible cancellation order may change by evidence. Unknown stays blocked. OP01/OP06/A01/A02 |"
+      },
+      "responsible_decision_maker": "owner + Merchant Admin/provider lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Exact enabled action/input/result capabilities, ambiguous-result recovery, old-sender containment and native automatic booking authority  |  Qualify perclass; suggested annotation→booking→replacement→eligible cancellation order may change by evidence. Unknown stays blocked. OP01/OP06/A01/A02",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "MD10",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "MD10",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "MD10",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ]
+    },
+    {
+      "id": "MD11",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 25,
+        "locator": "| MD11 owner/operations | Shadow duration/observation mix, parallel period/cadence and authority ledger | Evidence-based exit, relevant calendar/update/outage/revision scenarios; one authority per class. No arbitrary accuracy percentage/days. OP13/A06 |"
+      },
+      "responsible_decision_maker": "owner/operations",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Shadow duration/observation mix, parallel period/cadence and authority ledger  |  Evidence-based exit, relevant calendar/update/outage/revision scenarios; one authority per class. No arbitrary accuracy percentage/days. OP13/A06",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "MD11",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "MD11",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ]
+    },
+    {
+      "id": "MD12",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 26,
+        "locator": "| MD12 owner/recovery lead | Backup horizons/RPO/RTO/journal retention+coverage/recovery signer/escalation | Measured isolated drills, independently retained authority/privacy/effect/contact knowledge; gaps quarantine. A02/A04/A05/A06 |"
+      },
+      "responsible_decision_maker": "owner/recovery lead",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Backup horizons/RPO/RTO/journal retention+coverage/recovery signer/escalation  |  Measured isolated drills, independently retained authority/privacy/effect/contact knowledge; gaps quarantine. A02/A04/A05/A06",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1205",
+          "gate_id": "MD12",
+          "stage": "COMPLETION",
+          "capability": "Recovery coverage and chosen measured RPO/RTO/operating target verdict",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "MD12",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "MD12",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "MD12",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "MD12",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ]
+    },
+    {
+      "id": "MD13",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 27,
+        "locator": "| MD13 owner/operations | Actual volume/history/export envelope, source freshness/action-result/latency/queue-age targets, response owner and pilot limits | Choose thresholds from observed distributions/business deadline/provider contracts; record target/sample/rationale. No fabricated provider SLA. OP08/OP13/A06 |"
+      },
+      "responsible_decision_maker": "owner/operations",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Actual volume/history/export envelope, source freshness/action-result/latency/queue-age targets, response owner and pilot limits  |  Choose thresholds from observed distributions/business deadline/provider contracts; record target/sample/rationale. No fabricated provider SLA. OP08/OP13/A06",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1205",
+          "gate_id": "MD13",
+          "stage": "COMPLETION",
+          "capability": "Recovery coverage and chosen measured RPO/RTO/operating target verdict",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1206",
+          "gate_id": "MD13",
+          "stage": "COMPLETION",
+          "capability": "Measured pilot volume/latency/freshness/export targets and accountable response owner",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD13",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "MD13",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ]
+    },
+    {
+      "id": "MD14",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 28,
+        "locator": "| MD14 owner/legal | PII handling/retention/residency/test-recipient use/export/closure/holds/privacy requests and disposal | Synthetic by default; finite retention proposals require approval; minimal recovery coverage survives restorable backups. OP12/A05 |"
+      },
+      "responsible_decision_maker": "owner/legal",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. PII handling/retention/residency/test-recipient use/export/closure/holds/privacy requests and disposal  |  Synthetic by default; finite retention proposals require approval; minimal recovery coverage survives restorable backups. OP12/A05",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "MD14",
+          "stage": "COMPLETION",
+          "capability": "Final private rehearsal definitions/privacy report",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "MD14",
+          "stage": "SHADOW",
+          "capability": "Applicable actual pilot read/queue/analytics/access/source policy; authority approval is not factual proof",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "MD14",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "MD14",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "MD14",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "MD14",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ]
+    },
+    {
+      "id": "MD15",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 29,
+        "locator": "| MD15 owner + Merchant Admin | Specific migration activation/cutover signers, ready versus held exclusions and rollback authority | Sign exact versioned report/generation/current grants; unresolved critical continuity blocks launch. Platform only scoped recovery/admin role. OP02/OP10/A03/A04 |"
+      },
+      "responsible_decision_maker": "owner + Merchant Admin",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Specific migration activation/cutover signers, ready versus held exclusions and rollback authority  |  Sign exact versioned report/generation/current grants; unresolved critical continuity blocks launch. Platform only scoped recovery/admin role. OP02/OP10/A03/A04",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "MD15",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "MD15",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Relevant per-class action/source/authority/recovery envelope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "MD15",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact history/timing/current authority/privacy/exclusive issuance scope",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "MD15",
+          "stage": "CUTOVER",
+          "capability": "Exact approved generation/delta/deadline/authority/privacy/recovery envelope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ]
+    },
+    {
+      "id": "MD16",
+      "category": "MIGRATION_GATE",
+      "status": "PENDING",
+      "source": {
+        "path": "docs/migration/16-open-migration-decisions.md",
+        "line": 30,
+        "locator": "| MD16 engineering reviewer in Phase6 | Toolchain/job-transaction/storage-journal/protocol compatibility and fixture realization | Qualification before relying on selected Phase4 tools; no dependency install/prototype/backlog now. A08 |"
+      },
+      "responsible_decision_maker": "Engineering compatibility reviewer; owner approves any material architecture deviation",
+      "acceptance_evidence": "Versioned signed decision/evidence with approver's actual authority, date, rule, source/account/environment/capability scope, effective revision, limits and retained prior history. Toolchain/job-transaction/storage-journal/protocol compatibility and fixture realization  |  Qualification before relying on selected Phase4 tools; no dependency install/prototype/backlog now. A08",
+      "resolution_mode": "OWNER_OR_EVIDENCE_REVIEW",
+      "applications": [
+        {
+          "task_id": "T1305",
+          "gate_id": "MD16",
+          "stage": "COMPLETION",
+          "capability": "All relevant pinned compatibility and fixture-realization evidence; earlier subgates block consumers before reliance",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ]
+    },
+    {
+      "id": "G-P6",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Human owner",
+      "acceptance_evidence": "Explicit Phase6 plan approval and local task/batch implementation authorization; Phase1-5 approval and this planning request are insufficient.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T0001",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0002",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0003",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0004",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0005",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0006",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0007",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0008",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0009",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0101",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0102",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0103",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0104",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0105",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0106",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0107",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0108",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0109",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0110",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0201",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0202",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0203",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0204",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0205",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0206",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0207",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0208",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0209",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0301",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0302",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0303",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0304",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0305",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0306",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0307",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0308",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        },
+        {
+          "task_id": "T0401",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0402",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0403",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0404",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0405",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        },
+        {
+          "task_id": "T0501",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0502",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0503",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0504",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0505",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0506",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0507",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0601",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0602",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0603",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0604",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0605",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0606",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0607",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0608",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0609",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0701",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "OWNER_REVIEW"
+        },
+        {
+          "task_id": "T0702",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0703",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0704",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0705",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0706",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0707",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0708",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0709",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0710",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0801",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0802",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0803",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0804",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0805",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0806",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0901",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0902",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0903",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0904",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0905",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0906",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0907",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0908",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0909",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0910",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0911",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0912",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0913",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0914",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        },
+        {
+          "task_id": "T1001",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1002",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1003",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1004",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1005",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1101",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        },
+        {
+          "task_id": "T1102",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1103",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1104",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1105",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1106",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1107",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1108",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1201",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_STAGING_INFRASTRUCTURE"
+        },
+        {
+          "task_id": "T1202",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T1203",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T1204",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_STAGING"
+        },
+        {
+          "task_id": "T1205",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1206",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1207",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1304",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1305",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Implementation permission; current Phase6 authorizes planning only",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        },
+        {
+          "task_id": "T0210",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0309",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0406",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0915",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0711",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0712",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0713",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0714",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1208",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "AUTHORIZED_STAGING"
+        },
+        {
+          "task_id": "T1209",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local or specifically authorized operational implementation after plan approval",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        },
+        {
+          "task_id": "T0010",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local implementation after Phase6 approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0111",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Local implementation after Phase6 approval",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T1211",
+          "gate_id": "G-P6",
+          "stage": "START",
+          "capability": "Production identity/current access and exact controlled invitation recipient/send envelope only",
+          "environment": "AUTHORIZED_PRODUCTION_ACCOUNT_QUALIFICATION"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-CONTROLLED-READ",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and verified source-account owner",
+      "acceptance_evidence": "Explicit account/environment/merchant/read scope/PII custody envelope; no provider mutations, configuration changes or messages.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T0308",
+          "gate_id": "AUTH-CONTROLLED-READ",
+          "stage": "START",
+          "capability": "Controlled account reads/private acquisition only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        },
+        {
+          "task_id": "T0405",
+          "gate_id": "AUTH-CONTROLLED-READ",
+          "stage": "START",
+          "capability": "Controlled account reads/private acquisition only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        },
+        {
+          "task_id": "T0914",
+          "gate_id": "AUTH-CONTROLLED-READ",
+          "stage": "START",
+          "capability": "Controlled account reads/private acquisition only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        },
+        {
+          "task_id": "T1101",
+          "gate_id": "AUTH-CONTROLLED-READ",
+          "stage": "START",
+          "capability": "Controlled account reads/private acquisition only",
+          "environment": "AUTHORIZED_CONTROLLED_READ"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-CONTROLLED-EFFECT",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and current verified Merchant Admin/test-account owner",
+      "acceptance_evidence": "Exact synthetic identities, effect kinds/count/side effects, recipient/physical/financial limits, independently protected markers, current authority, old-sender/native-automation containment, recovery and stop plan. No production customer effects.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T0707",
+          "gate_id": "AUTH-CONTROLLED-EFFECT",
+          "stage": "START",
+          "capability": "Exactly approved controlled provider effect class",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0708",
+          "gate_id": "AUTH-CONTROLLED-EFFECT",
+          "stage": "START",
+          "capability": "Exactly approved controlled provider effect class",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0709",
+          "gate_id": "AUTH-CONTROLLED-EFFECT",
+          "stage": "START",
+          "capability": "Exactly approved controlled provider effect class",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0710",
+          "gate_id": "AUTH-CONTROLLED-EFFECT",
+          "stage": "START",
+          "capability": "Exactly approved controlled provider effect class",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-STAGING-INFRA",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and authorized infrastructure operator",
+      "acceptance_evidence": "Exact purchased services/region/project/secrets/roles/budget approval before provisioning; no production switch.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1201",
+          "gate_id": "AUTH-STAGING-INFRA",
+          "stage": "START",
+          "capability": "Purchased isolated staging provisioning",
+          "environment": "AUTHORIZED_STAGING_INFRASTRUCTURE"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-STAGING-DEPLOY",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and authorized release operator",
+      "acceptance_evidence": "Explicit reviewed staging image/schema/target and default-denied egress; isolated target verified.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1204",
+          "gate_id": "AUTH-STAGING-DEPLOY",
+          "stage": "START",
+          "capability": "Staging deployment only",
+          "environment": "AUTHORIZED_STAGING"
+        },
+        {
+          "task_id": "T1208",
+          "gate_id": "AUTH-STAGING-DEPLOY",
+          "stage": "START",
+          "capability": "Exact complete reviewed staging candidate and expansion schema",
+          "environment": "AUTHORIZED_STAGING"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-RESTORE-VALIDATION",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner, recovery lead and data owner where applicable",
+      "acceptance_evidence": "Explicit new-isolated-database restore/validation or private rehearsal scope, minimized data, old-runtime containment, no production replacement.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1108",
+          "gate_id": "AUTH-RESTORE-VALIDATION",
+          "stage": "START",
+          "capability": "Isolated recovery/private rehearsal only",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1205",
+          "gate_id": "AUTH-RESTORE-VALIDATION",
+          "stage": "START",
+          "capability": "Isolated recovery/private rehearsal only",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1304",
+          "gate_id": "AUTH-RESTORE-VALIDATION",
+          "stage": "START",
+          "capability": "Isolated recovery/private rehearsal only",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1206",
+          "gate_id": "AUTH-RESTORE-VALIDATION",
+          "stage": "START",
+          "capability": "Controlled staging readiness evidence review and checks only; no real production shadow",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-ACCOUNT-MAIL",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and controlled recipient/account operator",
+      "acceptance_evidence": "Approved Auth0/Resend controlled recipient, exact invitation/support email and bounded send count; no customer outreach.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1203",
+          "gate_id": "AUTH-ACCOUNT-MAIL",
+          "stage": "START",
+          "capability": "Controlled identity/account email",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T1211",
+          "gate_id": "AUTH-ACCOUNT-MAIL",
+          "stage": "START",
+          "capability": "Production identity/current access and exact controlled invitation recipient/send envelope only",
+          "environment": "AUTHORIZED_PRODUCTION_ACCOUNT_QUALIFICATION"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-S3-TEST",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and authorized storage/recovery operator",
+      "acceptance_evidence": "Controlled private object/key/prefix test authorization, protected-record no-delete rules and versioned evidence; no production retained-record deletion.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1202",
+          "gate_id": "AUTH-S3-TEST",
+          "stage": "START",
+          "capability": "Controlled protected-object compatibility tests",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-SHADOW",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and Merchant Admin",
+      "acceptance_evidence": "Exact real read-only pilot source scope/observation envelope and incumbent sole mutation/contact authority; all OpsHub consequential egress disabled.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "AUTH-SHADOW",
+          "stage": "SHADOW",
+          "capability": "Real read-only shadow",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-FIRST-ACTION",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and current Merchant Admin",
+      "acceptance_evidence": "Separate one-class/current eligible scope/side effects/limits/native results/monitor/disable approval; after shadow exit, not implied by qualification.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "AUTH-FIRST-ACTION",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "One selected action class",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-MORE-ACTIONS",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and current Merchant Admin per class",
+      "acceptance_evidence": "Individual signed scope/qualification/limit for each additional class; one approval cannot silently expand class, merchant, account or effect.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1302",
+          "gate_id": "AUTH-MORE-ACTIONS",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Each later supported MVP class individually",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-CONTACT",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner, current Merchant Admin and trained contact operator",
+      "acceptance_evidence": "Real external contact workflow explicit permission; source-history/budget reconciliation, exact timing/no-call policy, inherited holds and no concurrent incumbent contact authority.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1303",
+          "gate_id": "AUTH-CONTACT",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Real contact start authorization",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-CUTOVER",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner, current Merchant Admin and limited recovery/release signers",
+      "acceptance_evidence": "Exact generation/conflict-group/account/version/deadline/delta/abort/rollback envelope; explicit production cutover permission distinct from implementation acceptance.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1306",
+          "gate_id": "AUTH-CUTOVER",
+          "stage": "CUTOVER",
+          "capability": "Exact production cutover",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ]
+    },
+    {
+      "id": "G-CONTACT-AUTHORITY",
+      "category": "OPERATIONAL_PROOF",
+      "status": "PENDING",
+      "responsible_decision_maker": "Merchant Admin and incumbent contact process owner",
+      "acceptance_evidence": "Before real contact issuance: verified stopped/held incumbent starts, inherited actual/uncertain allowances, current actor and durable marker/coverage; owner cannot waive a missing budget.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1303",
+          "gate_id": "G-CONTACT-AUTHORITY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "External contact start and historical budget handoff",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ]
+    },
+    {
+      "id": "G-ACTION-AUTHORITY",
+      "category": "OPERATIONAL_PROOF",
+      "status": "PENDING",
+      "responsible_decision_maker": "Merchant Admin and provider/native/incumbent operators",
+      "acceptance_evidence": "Before each class enables: verified conflict-group hold/drain/settled old senders, current exclusive authority and native automation controls; a ledger declaration alone is insufficient.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "required_task_ids": [],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "G-ACTION-AUTHORITY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Per-class conflict-group native/incumbent authority",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "G-ACTION-AUTHORITY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Per-class conflict-group native/incumbent authority",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "G-ACTION-AUTHORITY",
+          "stage": "CUTOVER",
+          "capability": "Exact authority transfer including contacts and incompatible classes",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ]
+    },
+    {
+      "id": "A08-NEST",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Pinned Node24/Nest Express/Vite/TypeScript/Vitest decorator/typecheck and raw-body compatibility evidence.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0002"
+      ],
+      "applications": [
+        {
+          "task_id": "T0004",
+          "gate_id": "A08-NEST",
+          "stage": "START",
+          "capability": "Pinned framework/test compatibility",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0006",
+          "gate_id": "A08-NEST",
+          "stage": "START",
+          "capability": "Pinned framework/test compatibility",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "A08-DATABASE",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Real PostgreSQL17/Kysely/pg migration/role/target-database/transaction evidence.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0003"
+      ],
+      "applications": [
+        {
+          "task_id": "T0007",
+          "gate_id": "A08-DATABASE",
+          "stage": "START",
+          "capability": "Real DB/migration behavior",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0008",
+          "gate_id": "A08-DATABASE",
+          "stage": "START",
+          "capability": "Real disposable DB rollback/migration compatibility before recovery-envelope harness reliance",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0101",
+          "gate_id": "A08-DATABASE",
+          "stage": "START",
+          "capability": "Real DB/migration behavior",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "A08-QUEUE",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Same-connection atomic queue commit/rollback plus least grants/schema/upgrades proof; no second outbox.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0007"
+      ],
+      "applications": [
+        {
+          "task_id": "T0107",
+          "gate_id": "A08-QUEUE",
+          "stage": "START",
+          "capability": "Atomic domain state/audit/queue publication",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0204",
+          "gate_id": "A08-QUEUE",
+          "stage": "START",
+          "capability": "Atomic domain state/audit/queue publication",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0302",
+          "gate_id": "A08-QUEUE",
+          "stage": "START",
+          "capability": "Atomic domain state/audit/queue publication",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0602",
+          "gate_id": "A08-QUEUE",
+          "stage": "START",
+          "capability": "Atomic domain state/audit/queue publication",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0901",
+          "gate_id": "A08-QUEUE",
+          "stage": "START",
+          "capability": "Atomic domain state/audit/queue publication",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0911",
+          "gate_id": "A08-QUEUE",
+          "stage": "START",
+          "capability": "Atomic domain state/audit/queue publication",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "A08-RECOVERY-PROTOCOL",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Locally versioned fake independent record protocol/conditional append/coverage and quarantine; no cloud qualification claim.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0008"
+      ],
+      "applications": [
+        {
+          "task_id": "T0208",
+          "gate_id": "A08-RECOVERY-PROTOCOL",
+          "stage": "START",
+          "capability": "Independent fake descriptor semantics only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0209",
+          "gate_id": "A08-RECOVERY-PROTOCOL",
+          "stage": "START",
+          "capability": "Independent fake descriptor semantics only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0504",
+          "gate_id": "A08-RECOVERY-PROTOCOL",
+          "stage": "START",
+          "capability": "Independent fake descriptor semantics only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0603",
+          "gate_id": "A08-RECOVERY-PROTOCOL",
+          "stage": "START",
+          "capability": "Independent fake descriptor semantics only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0605",
+          "gate_id": "A08-RECOVERY-PROTOCOL",
+          "stage": "START",
+          "capability": "Independent fake descriptor semantics only",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0210",
+          "gate_id": "A08-RECOVERY-PROTOCOL",
+          "stage": "START",
+          "capability": "Accepted descriptor and private file protocols before concrete S3 driver",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "A08-SDK",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Pinned exact SDK/HTTP controls prove no automatic write retries and operation-specific handling before real adapters rely on them.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0706"
+      ],
+      "applications": [
+        {
+          "task_id": "T0707",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "No-retry SDK behavior before actual mutation adapters",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0708",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "No-retry SDK behavior before actual mutation adapters",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0709",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "No-retry SDK behavior before actual mutation adapters",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0710",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "No-retry SDK behavior before actual mutation adapters",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0711",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "Qualified pinned mutation client/no retry",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0712",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "Qualified pinned mutation client/no retry",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0713",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "Qualified pinned mutation client/no retry",
+          "environment": "LOCAL_SYNTHETIC"
+        },
+        {
+          "task_id": "T0714",
+          "gate_id": "A08-SDK",
+          "stage": "START",
+          "capability": "Qualified pinned mutation client/no retry",
+          "environment": "LOCAL_SYNTHETIC"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "A08-S3",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Actual private Amazon S3 conditional immutable records/version/delete protection, complete independent coverage, keys and restore-horizon retention.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T1202"
+      ],
+      "applications": [
+        {
+          "task_id": "T0707",
+          "gate_id": "A08-S3",
+          "stage": "START",
+          "capability": "Actual independent recovery storage before real effects",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0708",
+          "gate_id": "A08-S3",
+          "stage": "START",
+          "capability": "Actual independent recovery storage before real effects",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0709",
+          "gate_id": "A08-S3",
+          "stage": "START",
+          "capability": "Actual independent recovery storage before real effects",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T0710",
+          "gate_id": "A08-S3",
+          "stage": "START",
+          "capability": "Actual independent recovery storage before real effects",
+          "environment": "AUTHORIZED_CONTROLLED_NONPRODUCTION"
+        },
+        {
+          "task_id": "T1205",
+          "gate_id": "A08-S3",
+          "stage": "START",
+          "capability": "Actual independent recovery storage before real effects",
+          "environment": "AUTHORIZED_ISOLATED_STAGING"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "A08-S3",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Protected real dispatch/handover/contact storage",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "A08-S3",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Protected real dispatch/handover/contact storage",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "A08-S3",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Protected real dispatch/handover/contact storage",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "Q-SHOPIFY-READ",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Actual owned Shopify account/read/history/scopes/native IDs/closure/receipt qualification.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0308"
+      ],
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "Q-SHOPIFY-READ",
+          "stage": "SHADOW",
+          "capability": "Read-shadow source/semantic/access qualification",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "Q-SHOPIFY-READ",
+          "stage": "COMPLETION",
+          "capability": "Actual production pilot connection account/version equals qualified scope",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "Q-BOSTA-READ",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Actual Bosta account/history/purpose/callback and read closure qualification.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0405"
+      ],
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "Q-BOSTA-READ",
+          "stage": "SHADOW",
+          "capability": "Read-shadow source/semantic/access qualification",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "Q-BOSTA-READ",
+          "stage": "COMPLETION",
+          "capability": "Actual production Bosta binding equals qualified scope",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "Q-META-READ",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Applicable Meta read input ownership/window/currency/parameters/coverage qualification or explicit policy-approved not-applicable input; missing required spend remains unavailable.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0914"
+      ],
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "Q-META-READ",
+          "stage": "SHADOW",
+          "capability": "Read-shadow source/semantic/access qualification",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "Q-META-READ",
+          "stage": "COMPLETION",
+          "capability": "Applicable production Meta binding/qualification or exact approved unavailable state",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "Q-ANNOTATION",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Required supported annotation capability side effects, preserving updates, result and unknown recovery.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0707"
+      ],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "Q-ANNOTATION",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "Q-ANNOTATION",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "QUALIFIED_SUPPORTED_SCOPE_OR_EXPLICIT_UNAVAILABLE_EXCEPTION"
+    },
+    {
+      "id": "Q-BOOKING",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Core Bosta booking positive/unknown recovery and exclusive normal booking authority.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0708"
+      ],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "Q-BOOKING",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "Q-BOOKING",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "QUALIFIED_SUPPORTED_CORE"
+    },
+    {
+      "id": "Q-REPLACEMENT",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Core Shopify replacement creation and coupled booking/annotation partial result/automation proof.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0709"
+      ],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "Q-REPLACEMENT",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "Q-REPLACEMENT",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "QUALIFIED_SUPPORTED_CORE"
+    },
+    {
+      "id": "Q-CANCELLATION",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Eligible supported cancellation exact irreversible side effects/async/unknown recovery; unsupported scope unavailable.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0710"
+      ],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "Q-CANCELLATION",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "Q-CANCELLATION",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "QUALIFIED_SUPPORTED_SCOPE_OR_EXPLICIT_UNAVAILABLE_EXCEPTION"
+    },
+    {
+      "id": "G-LOCAL-SAFETY",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Generic/contact/action/recovery real-DB barrier tests, exact requests/effects/holds and no blind repeat.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0608",
+        "T0609",
+        "T0507"
+      ],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "G-LOCAL-SAFETY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "G-LOCAL-SAFETY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "G-LOCAL-SAFETY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Contact safety/current authority/history/restore proof",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "G-ALL-GOLDEN",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Independently reviewed provider-shaped realizations and actual assertions for GD01-43/KR01-21; no logical-index-only PASS.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T0913",
+        "T1106"
+      ],
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "G-ALL-GOLDEN",
+          "stage": "SHADOW",
+          "capability": "Read-shadow source/semantic/access qualification",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "G-ALL-GOLDEN",
+          "stage": "CUTOVER",
+          "capability": "Current exact ready scope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "G-STAGED-RECOVERY",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Actual staged restore/RLS/current-authority/privacy/S3/seed/repair/old-worker proofs; separate access/egress gates.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T1205"
+      ],
+      "applications": [
+        {
+          "task_id": "T1207",
+          "gate_id": "G-STAGED-RECOVERY",
+          "stage": "SHADOW",
+          "capability": "Read-shadow source/semantic/access qualification",
+          "environment": "AUTHORIZED_PRODUCTION_SHADOW"
+        },
+        {
+          "task_id": "T1301",
+          "gate_id": "G-STAGED-RECOVERY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "G-STAGED-RECOVERY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "G-STAGED-RECOVERY",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Real contact recovery proof",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1306",
+          "gate_id": "G-STAGED-RECOVERY",
+          "stage": "CUTOVER",
+          "capability": "Current exact ready scope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "G-SHADOW-EXIT",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Authorized real shadow observation mix/targets/coverage/native/queue/KPI exact or explained comparisons and zero mutation/contact egress.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T1207"
+      ],
+      "applications": [
+        {
+          "task_id": "T1301",
+          "gate_id": "G-SHADOW-EXIT",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1302",
+          "gate_id": "G-SHADOW-EXIT",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Applicable supported class only; unsupported optional class unavailable, required core cannot be waived",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        },
+        {
+          "task_id": "T1303",
+          "gate_id": "G-SHADOW-EXIT",
+          "stage": "ACTION_ENABLEMENT",
+          "capability": "Separate real contact transition after read shadow",
+          "environment": "INDIVIDUALLY_AUTHORIZED_PILOT"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "G-CUTOVER-REHEARSAL",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "CT01/CT-T01-12 continuous traffic/deadline/delta/abort/conflict-group/rollback proof.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T1304"
+      ],
+      "applications": [
+        {
+          "task_id": "T1306",
+          "gate_id": "G-CUTOVER-REHEARSAL",
+          "stage": "CUTOVER",
+          "capability": "Current exact ready scope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "G-EXACT-SIGNOFF",
+      "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
+      "status": "PENDING",
+      "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
+      "acceptance_evidence": "Current RE01 ready versus held scope signed with no waived HC failure or unexecuted required test.",
+      "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
+      "required_task_ids": [
+        "T1305"
+      ],
+      "applications": [
+        {
+          "task_id": "T1306",
+          "gate_id": "G-EXACT-SIGNOFF",
+          "stage": "CUTOVER",
+          "capability": "Current exact ready scope",
+          "environment": "EXACT_AUTHORIZED_CUTOVER"
+        }
+      ],
+      "evidence_rule": "Required task acceptance is necessary, not sufficient. Reviewer must inspect actual evidence and record the required capability/PASS verdict. An accepted qualification dossier with UNAVAILABLE/BLOCKED capability does not pass a required core gate.",
+      "required_verdict": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "id": "AUTH-PRODUCTION-INFRA",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner and authorized production infrastructure/recovery operator",
+      "acceptance_evidence": "Separate exact production purchased services/region/keys/grants/storage/backup approval; no production sync/effects/cutover implied.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "applications": [
+        {
+          "task_id": "T1209",
+          "gate_id": "AUTH-PRODUCTION-INFRA",
+          "stage": "START",
+          "capability": "Dedicated purchased production resources, egress off",
+          "environment": "AUTHORIZED_PRODUCTION_INFRASTRUCTURE"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-PRODUCTION-DEPLOY",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner, current verified Merchant Admin and authorized production release operator",
+      "acceptance_evidence": "Exact staged candidate/image/schema/target/current source ownership and access-off deployment permission. No real read synchronization/provider/customer effect or mail implied.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "applications": [
+        {
+          "task_id": "T1210",
+          "gate_id": "AUTH-PRODUCTION-DEPLOY",
+          "stage": "START",
+          "capability": "Exact disabled production shadow candidate deployment",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        }
+      ]
+    },
+    {
+      "id": "AUTH-TELEMETRY",
+      "category": "AUTHORIZATION",
+      "status": "PENDING",
+      "responsible_decision_maker": "Owner/security/privacy reviewer and environment operator",
+      "acceptance_evidence": "Exact environment/destination and pre-serialization allowlist/scrubbing/retention/residency/sample approval before real Sentry/OTEL transmission; local mock sink needs no external-send approval.",
+      "resolution_mode": "EXPLICIT_AUTHORIZATION",
+      "applications": [
+        {
+          "task_id": "T1204",
+          "gate_id": "AUTH-TELEMETRY",
+          "stage": "START",
+          "capability": "Staging redacted telemetry destination",
+          "environment": "AUTHORIZED_STAGING"
+        },
+        {
+          "task_id": "T1208",
+          "gate_id": "AUTH-TELEMETRY",
+          "stage": "START",
+          "capability": "Complete staging candidate telemetry",
+          "environment": "AUTHORIZED_STAGING"
+        },
+        {
+          "task_id": "T1210",
+          "gate_id": "AUTH-TELEMETRY",
+          "stage": "START",
+          "capability": "Production redacted telemetry destination",
+          "environment": "AUTHORIZED_PRODUCTION_DEPLOYMENT"
+        }
+      ]
+    }
+  ]
+}

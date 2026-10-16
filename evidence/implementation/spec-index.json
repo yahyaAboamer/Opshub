@@ -1,0 +1,2861 @@
+{
+  "A00": {
+    "path": "docs/architecture/00-architecture-summary.md",
+    "sha256": "c10359735af56954112fa16eb2862b74f90689ff59243d0323d3f850b50506c8",
+    "sections": [
+      {
+        "heading": "# OpsHub — Phase 4 technical architecture",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Recommendation",
+        "line": 5,
+        "end_line": 10
+      },
+      {
+        "heading": "## Authoritative inputs and evidence classes",
+        "line": 11,
+        "end_line": 16
+      },
+      {
+        "heading": "## Nonnegotiable technical properties",
+        "line": 17,
+        "end_line": 25
+      },
+      {
+        "heading": "## Review map",
+        "line": 26,
+        "end_line": 48
+      },
+      {
+        "heading": "## Biggest risks and review boundary",
+        "line": 49,
+        "end_line": 53
+      }
+    ]
+  },
+  "A01": {
+    "path": "docs/architecture/01-system-context.md",
+    "sha256": "bdb5caed45ef0845a6d2db2b9330ce23a23db54870c7c20b886436e64136e695",
+    "sections": [
+      {
+        "heading": "# OpsHub — system context and trust boundaries",
+        "line": 1,
+        "end_line": 48
+      },
+      {
+        "heading": "## Boundary contracts",
+        "line": 49,
+        "end_line": 63
+      },
+      {
+        "heading": "## Main interactions",
+        "line": 64,
+        "end_line": 68
+      }
+    ]
+  },
+  "A02": {
+    "path": "docs/architecture/02-architecture-style-and-modules.md",
+    "sha256": "1e7def84ce1f2091d520cfe6127e189c19729db0ed22e7440156730ccaf627df",
+    "sections": [
+      {
+        "heading": "# OpsHub — architecture style and modules",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Alternatives",
+        "line": 5,
+        "end_line": 17
+      },
+      {
+        "heading": "## Module contracts",
+        "line": 18,
+        "end_line": 37
+      },
+      {
+        "heading": "## Every MUST-HAVE has a home",
+        "line": 38,
+        "end_line": 65
+      },
+      {
+        "heading": "## Deliberate exclusions",
+        "line": 66,
+        "end_line": 68
+      }
+    ]
+  },
+  "A03": {
+    "path": "docs/architecture/03-multi-tenancy-and-identity.md",
+    "sha256": "ecc03a2b8c8fa9833e2733884a62f9ca660e01832f0c41264fdcbd734b80f0fe",
+    "sections": [
+      {
+        "heading": "# OpsHub — multi-tenancy, identity and authorization",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Tenant strategy alternatives",
+        "line": 5,
+        "end_line": 14
+      },
+      {
+        "heading": "## Ownership and context propagation",
+        "line": 15,
+        "end_line": 32
+      },
+      {
+        "heading": "## Shared identities, separate authority",
+        "line": 33,
+        "end_line": 46
+      },
+      {
+        "heading": "## Authentication, sessions and invitations",
+        "line": 47,
+        "end_line": 56
+      },
+      {
+        "heading": "## Service state and emergency continuity",
+        "line": 57,
+        "end_line": 61
+      }
+    ]
+  },
+  "A04": {
+    "path": "docs/architecture/04-data-architecture.md",
+    "sha256": "47ccedaed5039c1a4b38a1200d8ffc536a61be27e941ad6c7690df0c8efe15ed",
+    "sections": [
+      {
+        "heading": "# OpsHub — persistence and invariants",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Common record contracts",
+        "line": 5,
+        "end_line": 37
+      },
+      {
+        "heading": "## Canonical entity coverage and scope",
+        "line": 38,
+        "end_line": 41
+      },
+      {
+        "heading": "## Important invariants",
+        "line": 42,
+        "end_line": 57
+      },
+      {
+        "heading": "## Relationship sketch",
+        "line": 58,
+        "end_line": 81
+      },
+      {
+        "heading": "## Transactions and storage layout",
+        "line": 82,
+        "end_line": 88
+      }
+    ]
+  },
+  "A05": {
+    "path": "docs/architecture/05-integrations.md",
+    "sha256": "3c341d973f9eeee03ed8d91ecfed45bff212b9b53d3f845b8ea8cf4b80e61106",
+    "sections": [
+      {
+        "heading": "# OpsHub — integration architecture",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Separate three lanes",
+        "line": 5,
+        "end_line": 14
+      },
+      {
+        "heading": "## Provider mechanisms",
+        "line": 15,
+        "end_line": 25
+      },
+      {
+        "heading": "## Connection, ownership and credential boundaries",
+        "line": 26,
+        "end_line": 33
+      },
+      {
+        "heading": "## Inbox, checkpoint and replay",
+        "line": 34,
+        "end_line": 41
+      },
+      {
+        "heading": "## Rates, retries and outages",
+        "line": 42,
+        "end_line": 49
+      },
+      {
+        "heading": "## Integration qualification before pilot",
+        "line": 50,
+        "end_line": 54
+      }
+    ]
+  },
+  "A06": {
+    "path": "docs/architecture/06-external-action-safety.md",
+    "sha256": "02e9255cafada5a87a36a915d675bf2fbfa689f40be41140a983ec270f79676b",
+    "sections": [
+      {
+        "heading": "# OpsHub — external action and effect safety",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Identity and authorization",
+        "line": 5,
+        "end_line": 10
+      },
+      {
+        "heading": "## Action versus effect state",
+        "line": 11,
+        "end_line": 33
+      },
+      {
+        "heading": "## Execution protocol and concurrent Admins",
+        "line": 34,
+        "end_line": 45
+      },
+      {
+        "heading": "## Retry classification",
+        "line": 46,
+        "end_line": 59
+      },
+      {
+        "heading": "## Replacement partial success",
+        "line": 60,
+        "end_line": 78
+      },
+      {
+        "heading": "## Safe fallback and return to connected truth",
+        "line": 79,
+        "end_line": 85
+      }
+    ]
+  },
+  "A07": {
+    "path": "docs/architecture/07-background-jobs-and-reconciliation.md",
+    "sha256": "27870d9fb7864a44953dffa464c077e8a35f388824147bd9a534d30fcca69069",
+    "sections": [
+      {
+        "heading": "# OpsHub — jobs, reconciliation and attention",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Delivery and transactional semantics",
+        "line": 5,
+        "end_line": 14
+      },
+      {
+        "heading": "## Work catalog",
+        "line": 15,
+        "end_line": 32
+      },
+      {
+        "heading": "## Operational attention: persisted versus derived",
+        "line": 33,
+        "end_line": 58
+      }
+    ]
+  },
+  "A08": {
+    "path": "docs/architecture/08-api-and-application-boundaries.md",
+    "sha256": "137d45bbbea19e858c3b0912a806f2c52b41d38965e92cd18da14844f0acbaf5",
+    "sections": [
+      {
+        "heading": "# OpsHub — API and consistency boundaries",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Interface alternatives",
+        "line": 5,
+        "end_line": 15
+      },
+      {
+        "heading": "## Request contract",
+        "line": 16,
+        "end_line": 25
+      },
+      {
+        "heading": "## Exports",
+        "line": 26,
+        "end_line": 31
+      },
+      {
+        "heading": "## Concurrency matrix",
+        "line": 32,
+        "end_line": 48
+      }
+    ]
+  },
+  "A09": {
+    "path": "docs/architecture/09-analytics-architecture.md",
+    "sha256": "3b22495c6759e71832560f006b84caf3a62d227bcbaa5e15f6443cf48b978e2f",
+    "sections": [
+      {
+        "heading": "# OpsHub — analytics, contributors and revisions",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Alternatives and publication",
+        "line": 5,
+        "end_line": 16
+      },
+      {
+        "heading": "## Operational KPI calculations",
+        "line": 17,
+        "end_line": 31
+      },
+      {
+        "heading": "## Product/SKU analytical grain",
+        "line": 32,
+        "end_line": 41
+      },
+      {
+        "heading": "## Canonical ROAS",
+        "line": 42,
+        "end_line": 53
+      },
+      {
+        "heading": "## Display and reproducibility contract",
+        "line": 54,
+        "end_line": 58
+      }
+    ]
+  },
+  "A10": {
+    "path": "docs/architecture/10-security-threat-model.md",
+    "sha256": "838fee8d445339e01aa53f6eab78837e6bcbb7a7aa6d76304262ef2737715355",
+    "sections": [
+      {
+        "heading": "# OpsHub — MVP threat model",
+        "line": 1,
+        "end_line": 28
+      },
+      {
+        "heading": "## Enforcement priorities",
+        "line": 29,
+        "end_line": 35
+      }
+    ]
+  },
+  "A11": {
+    "path": "docs/architecture/11-audit-provenance-and-privacy.md",
+    "sha256": "92b838d6e18be1e8bc069cc8276982ab619739e92d222759a398556660ca573d",
+    "sections": [
+      {
+        "heading": "# OpsHub — provenance, audit and privacy",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## How a belief is explained",
+        "line": 5,
+        "end_line": 26
+      },
+      {
+        "heading": "## Consequential audit",
+        "line": 27,
+        "end_line": 34
+      },
+      {
+        "heading": "## Customer data and access",
+        "line": 35,
+        "end_line": 40
+      },
+      {
+        "heading": "## Practical retention boundaries — proposals requiring OP12 approval",
+        "line": 41,
+        "end_line": 59
+      },
+      {
+        "heading": "## Provider data requests and redaction",
+        "line": 60,
+        "end_line": 66
+      }
+    ]
+  },
+  "A12": {
+    "path": "docs/architecture/12-observability-and-operations.md",
+    "sha256": "7065bedfd6856bfd0ff62dd59eee4f2fbd7288d79312169a2f908e1a1f747e2c",
+    "sections": [
+      {
+        "heading": "# OpsHub — observability and operations",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Signals",
+        "line": 5,
+        "end_line": 19
+      },
+      {
+        "heading": "## Alerting and visibility",
+        "line": 20,
+        "end_line": 25
+      },
+      {
+        "heading": "## Recovery playbook contracts",
+        "line": 26,
+        "end_line": 39
+      }
+    ]
+  },
+  "A13": {
+    "path": "docs/architecture/13-deployment-and-environments.md",
+    "sha256": "28f5cbdd890d6db7c6c958856fb0ec87ff976df667b4136a295f985a87a4ea78",
+    "sections": [
+      {
+        "heading": "# OpsHub — deployment, environments and recovery",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Environment isolation",
+        "line": 5,
+        "end_line": 18
+      },
+      {
+        "heading": "## Release and schema changes",
+        "line": 19,
+        "end_line": 24
+      },
+      {
+        "heading": "## Backup and restore",
+        "line": 25,
+        "end_line": 30
+      },
+      {
+        "heading": "## Protecting external effects across backup rollback",
+        "line": 31,
+        "end_line": 42
+      },
+      {
+        "heading": "## Restored authority and privacy access gate",
+        "line": 43,
+        "end_line": 49
+      }
+    ]
+  },
+  "A14": {
+    "path": "docs/architecture/14-testing-strategy.md",
+    "sha256": "83202e3d0493a2d9df7dcf7382aa421ad4bddf76fd62e4ce14b171b4501abab5",
+    "sections": [
+      {
+        "heading": "# OpsHub — architectural testing strategy",
+        "line": 1,
+        "end_line": 26
+      },
+      {
+        "heading": "## Council-driven adversarial fixtures",
+        "line": 27,
+        "end_line": 38
+      },
+      {
+        "heading": "## Gentry regression oracle boundary",
+        "line": 39,
+        "end_line": 45
+      }
+    ]
+  },
+  "A15": {
+    "path": "docs/architecture/15-technology-selection.md",
+    "sha256": "68edbebca26a14f8485c78acddb803d46c3c0d3c66c731dd9a6f29478dbb9081",
+    "sections": [
+      {
+        "heading": "# OpsHub — concrete MVP technology selection",
+        "line": 1,
+        "end_line": 19
+      },
+      {
+        "heading": "## Why this combination",
+        "line": 20,
+        "end_line": 25
+      },
+      {
+        "heading": "## Remaining stack gates",
+        "line": 26,
+        "end_line": 28
+      }
+    ]
+  },
+  "A16": {
+    "path": "docs/architecture/16-cost-and-scale-review.md",
+    "sha256": "c9aa0c7e5a5d83f6a30560fc860cc5fe77b1a6b6f4761ea8d804bd606c473b59",
+    "sections": [
+      {
+        "heading": "# OpsHub — cost and complexity review",
+        "line": 1,
+        "end_line": 16
+      },
+      {
+        "heading": "## Measured change triggers",
+        "line": 17,
+        "end_line": 31
+      }
+    ]
+  },
+  "A17": {
+    "path": "docs/architecture/17-open-architecture-decisions.md",
+    "sha256": "bb736a4e2134a2b468d94896ca4eb540c40a0b181cf3203b20ae689a3d77f8ae",
+    "sections": [
+      {
+        "heading": "# OpsHub — unresolved architecture and launch gates",
+        "line": 1,
+        "end_line": 15
+      },
+      {
+        "heading": "## Architecture approval versus release",
+        "line": 16,
+        "end_line": 20
+      }
+    ]
+  },
+  "A18": {
+    "path": "docs/architecture/18-provider-capability-review.md",
+    "sha256": "26a0dc827670337d55a061219b83cd569f4a8399b9b247853eaf5ccb826d03f6",
+    "sections": [
+      {
+        "heading": "# OpsHub — current provider capability review",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Status vocabulary",
+        "line": 5,
+        "end_line": 11
+      },
+      {
+        "heading": "## Shopify",
+        "line": 12,
+        "end_line": 28
+      },
+      {
+        "heading": "## Bosta",
+        "line": 29,
+        "end_line": 45
+      },
+      {
+        "heading": "## Meta advertising inputs",
+        "line": 46,
+        "end_line": 60
+      },
+      {
+        "heading": "## Qualification result",
+        "line": 61,
+        "end_line": 63
+      }
+    ]
+  },
+  "A19": {
+    "path": "docs/architecture/19-architecture-review.md",
+    "sha256": "6f1dddf01d8496f8081e228b866a3cccbac652971391981992844f490862d716",
+    "sections": [
+      {
+        "heading": "# OpsHub — architecture review and quality gate",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Review method and evidence",
+        "line": 5,
+        "end_line": 22
+      },
+      {
+        "heading": "## Major critiques and disposition",
+        "line": 23,
+        "end_line": 38
+      },
+      {
+        "heading": "## Final documentation quality gate",
+        "line": 39,
+        "end_line": 53
+      },
+      {
+        "heading": "## Residual risks and human review boundary",
+        "line": 54,
+        "end_line": 60
+      }
+    ]
+  },
+  "P00": {
+    "path": "docs/product/00-owner-decisions.md",
+    "sha256": "63636df7e2b1110adc63ee06a2f90937c783bcc99b30d3d938b545635fcc0b64",
+    "sections": [
+      {
+        "heading": "# OpsHub — approved MVP owner decisions",
+        "line": 1,
+        "end_line": 8
+      },
+      {
+        "heading": "## OD01 — Order versus shipment truth",
+        "line": 9,
+        "end_line": 12
+      },
+      {
+        "heading": "## OD02 — Pickup payment versus physical collection",
+        "line": 13,
+        "end_line": 16
+      },
+      {
+        "heading": "## OD03 — Meaning of resolved",
+        "line": 17,
+        "end_line": 20
+      },
+      {
+        "heading": "## OD04 — Default calling policy",
+        "line": 21,
+        "end_line": 28
+      },
+      {
+        "heading": "## OD05 — MVP KPI semantics",
+        "line": 29,
+        "end_line": 42
+      },
+      {
+        "heading": "## OD06 — Order episode cardinality",
+        "line": 43,
+        "end_line": 48
+      },
+      {
+        "heading": "## OD07 — Consequential merchant actions",
+        "line": 49,
+        "end_line": 54
+      },
+      {
+        "heading": "## OD08 — Integrated core operational MVP",
+        "line": 55,
+        "end_line": 62
+      },
+      {
+        "heading": "## OD09 — Product performance and ROAS are MVP capabilities",
+        "line": 63,
+        "end_line": 70
+      },
+      {
+        "heading": "## Effect on the closed domain decision register",
+        "line": 71,
+        "end_line": 87
+      }
+    ]
+  },
+  "P01": {
+    "path": "docs/product/01-product-vision-and-scope.md",
+    "sha256": "6be78e1c7c41fd43cd22587cfff40a32f51b24591b75ec71b499025f9c6870e5",
+    "sections": [
+      {
+        "heading": "# OpsHub — product vision and scope",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Product and problem",
+        "line": 5,
+        "end_line": 10
+      },
+      {
+        "heading": "## Two surfaces",
+        "line": 11,
+        "end_line": 17
+      },
+      {
+        "heading": "## Smallest coherent MVP",
+        "line": 18,
+        "end_line": 25
+      },
+      {
+        "heading": "## Preserved versus normalized",
+        "line": 26,
+        "end_line": 38
+      },
+      {
+        "heading": "## Assumptions and limits",
+        "line": 39,
+        "end_line": 44
+      },
+      {
+        "heading": "## Success and review boundary",
+        "line": 45,
+        "end_line": 49
+      }
+    ]
+  },
+  "P02": {
+    "path": "docs/product/02-personas-and-permissions.md",
+    "sha256": "e07af4dd56d635ed885a013396807d55016b2a28e24e38230138e471134af4e3",
+    "sections": [
+      {
+        "heading": "# OpsHub — personas and permissions",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Personas",
+        "line": 5,
+        "end_line": 14
+      },
+      {
+        "heading": "## Product permission matrix",
+        "line": 15,
+        "end_line": 41
+      },
+      {
+        "heading": "## Required behavior",
+        "line": 42,
+        "end_line": 60
+      }
+    ]
+  },
+  "P03": {
+    "path": "docs/product/03-mvp-feature-prioritization.md",
+    "sha256": "deb595fb31cd637f5795227d793a93d11c516621ca61302b5afb80be3a1f0b76",
+    "sections": [
+      {
+        "heading": "# OpsHub — MVP feature prioritization",
+        "line": 1,
+        "end_line": 46
+      }
+    ]
+  },
+  "P04": {
+    "path": "docs/product/04-merchant-workflows.md",
+    "sha256": "27d8810a28a66fd9ddc75952f71a8525bf212750ca42acdcd0be181c8e43dcc6",
+    "sections": [
+      {
+        "heading": "# OpsHub — merchant workflows",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Shared daily experience and case rules",
+        "line": 5,
+        "end_line": 28
+      },
+      {
+        "heading": "## WF01 — Onboard and reach first useful work",
+        "line": 29,
+        "end_line": 37
+      },
+      {
+        "heading": "## WF02 — Ingest or refresh operational data",
+        "line": 38,
+        "end_line": 46
+      },
+      {
+        "heading": "## WF03 — Confirm an order and contact the customer",
+        "line": 47,
+        "end_line": 55
+      },
+      {
+        "heading": "## WF04 — Book and monitor an outbound shipment",
+        "line": 56,
+        "end_line": 64
+      },
+      {
+        "heading": "## WF05 — Follow up a return",
+        "line": 65,
+        "end_line": 73
+      },
+      {
+        "heading": "## WF06 — Manage a pickup",
+        "line": 74,
+        "end_line": 82
+      },
+      {
+        "heading": "## WF07 — Work cleanup and correct data",
+        "line": 83,
+        "end_line": 91
+      },
+      {
+        "heading": "## WF08 — Approve and complete a replacement/reship",
+        "line": 92,
+        "end_line": 100
+      },
+      {
+        "heading": "## WF09 — Review outcomes and export a scoped summary",
+        "line": 101,
+        "end_line": 109
+      },
+      {
+        "heading": "## WF10 — Manage merchant users and policies",
+        "line": 110,
+        "end_line": 118
+      },
+      {
+        "heading": "## WF11 — Inspect Product/SKU performance and ROAS",
+        "line": 119,
+        "end_line": 127
+      },
+      {
+        "heading": "## Primary daily journey",
+        "line": 128,
+        "end_line": 130
+      }
+    ]
+  },
+  "P05": {
+    "path": "docs/product/05-platform-admin-workflows.md",
+    "sha256": "daddc59eb4a19da20f72748794f338cb24ecf5a0d1f201760340c580347ee685",
+    "sections": [
+      {
+        "heading": "# OpsHub — platform administration workflows",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Platform view",
+        "line": 5,
+        "end_line": 8
+      },
+      {
+        "heading": "## PF01 — Provision and activate a merchant",
+        "line": 9,
+        "end_line": 16
+      },
+      {
+        "heading": "## PF02 — Administer memberships and recover access",
+        "line": 17,
+        "end_line": 24
+      },
+      {
+        "heading": "## PF03 — Monitor merchant operational readiness and source health",
+        "line": 25,
+        "end_line": 32
+      },
+      {
+        "heading": "## PF04 — Manage service/commercial availability",
+        "line": 33,
+        "end_line": 40
+      },
+      {
+        "heading": "## PF05 — Investigate support and platform administrative history",
+        "line": 41,
+        "end_line": 49
+      }
+    ]
+  },
+  "P06": {
+    "path": "docs/product/06-analytics-and-kpis.md",
+    "sha256": "9a2551067d96f9aeaba3275f2af58db9f9ca5593dbec0b481b4eaa7c9fb100ab",
+    "sections": [
+      {
+        "heading": "# OpsHub — analytics and KPI contracts",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Display contract for every KPI",
+        "line": 5,
+        "end_line": 16
+      },
+      {
+        "heading": "## Required MVP surfaces",
+        "line": 17,
+        "end_line": 28
+      },
+      {
+        "heading": "## K01 — Confirmation Rate (MUST)",
+        "line": 29,
+        "end_line": 39
+      },
+      {
+        "heading": "## K02 — Delivery Success Rate (MUST)",
+        "line": 40,
+        "end_line": 50
+      },
+      {
+        "heading": "## K03 — RTO Rate (MUST)",
+        "line": 51,
+        "end_line": 59
+      },
+      {
+        "heading": "## K04 — Pickup Completion Rate (MUST)",
+        "line": 60,
+        "end_line": 70
+      },
+      {
+        "heading": "## K05 — Call Reach Rate (MUST)",
+        "line": 71,
+        "end_line": 81
+      },
+      {
+        "heading": "## K06 — Call Action Completion Rate (MUST)",
+        "line": 82,
+        "end_line": 92
+      },
+      {
+        "heading": "## K07 — ROAS (MUST HAVE — MVP)",
+        "line": 93,
+        "end_line": 103
+      },
+      {
+        "heading": "## Product/SKU performance contracts — MUST HAVE",
+        "line": 104,
+        "end_line": 118
+      },
+      {
+        "heading": "## Supporting counts and legacy comparison",
+        "line": 119,
+        "end_line": 123
+      }
+    ]
+  },
+  "P07": {
+    "path": "docs/product/07-configuration-and-policy.md",
+    "sha256": "14ab6617cc346237fbd2b9a19f99d04845e6d9784e8ed39437797d25484b3d27",
+    "sections": [
+      {
+        "heading": "# OpsHub — merchant configuration and policy",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Configuration boundary",
+        "line": 5,
+        "end_line": 26
+      },
+      {
+        "heading": "## Change behavior",
+        "line": 27,
+        "end_line": 39
+      }
+    ]
+  },
+  "P08": {
+    "path": "docs/product/08-data-ingestion-and-integrations-requirements.md",
+    "sha256": "779dbaa5ce4651d812f57fd01ed46f4b6cbe8bb5af64069544a653c97ccc99f7",
+    "sections": [
+      {
+        "heading": "# OpsHub — data ingestion and integration requirements",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Named pilot connections and evidence limits",
+        "line": 5,
+        "end_line": 23
+      },
+      {
+        "heading": "## Connection readiness and freshness",
+        "line": 24,
+        "end_line": 31
+      },
+      {
+        "heading": "## Input lifecycle",
+        "line": 32,
+        "end_line": 53
+      },
+      {
+        "heading": "## Integrated consequential action boundary",
+        "line": 54,
+        "end_line": 61
+      },
+      {
+        "heading": "## Required manual fallback",
+        "line": 62,
+        "end_line": 71
+      },
+      {
+        "heading": "## Export and historical comparison",
+        "line": 72,
+        "end_line": 80
+      }
+    ]
+  },
+  "P09": {
+    "path": "docs/product/09-saas-commercial-requirements.md",
+    "sha256": "1595dc3c9c97f4107ec3455adccf091f98f99e917d8abc1912d8ede9ca950f0a",
+    "sections": [
+      {
+        "heading": "# OpsHub — minimum SaaS commercial requirements",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Minimum offering",
+        "line": 5,
+        "end_line": 16
+      },
+      {
+        "heading": "## Suspension and data preservation",
+        "line": 17,
+        "end_line": 26
+      },
+      {
+        "heading": "## Entitlements and billing deliberately limited",
+        "line": 27,
+        "end_line": 33
+      }
+    ]
+  },
+  "P10": {
+    "path": "docs/product/10-audit-data-quality-and-trust.md",
+    "sha256": "795a4af4b72521fca17299fb40db030aafba2466988b5cae3bdfb40cba3ac7d4",
+    "sections": [
+      {
+        "heading": "# OpsHub — audit, data quality and trust",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Evidence labels and user-visible trust states",
+        "line": 5,
+        "end_line": 23
+      },
+      {
+        "heading": "## Required history",
+        "line": 24,
+        "end_line": 37
+      },
+      {
+        "heading": "## Quality and report use",
+        "line": 38,
+        "end_line": 54
+      }
+    ]
+  },
+  "P11": {
+    "path": "docs/product/11-mvp-acceptance-criteria.md",
+    "sha256": "c11ed77106610fcebe9bd09587cc02bf7c18ef9057dd56801b27808bb7419d78",
+    "sections": [
+      {
+        "heading": "# OpsHub — MVP acceptance and release criteria",
+        "line": 1,
+        "end_line": 6
+      },
+      {
+        "heading": "## AC01 — Merchant can be onboarded",
+        "line": 7,
+        "end_line": 12
+      },
+      {
+        "heading": "## AC02 — Merchant isolation and membership work",
+        "line": 13,
+        "end_line": 18
+      },
+      {
+        "heading": "## AC03 — Consequential authority is effective",
+        "line": 19,
+        "end_line": 24
+      },
+      {
+        "heading": "## AC04 — Merchant data enters safely and repeatably",
+        "line": 25,
+        "end_line": 30
+      },
+      {
+        "heading": "## AC05 — Due contact work follows OD04",
+        "line": 31,
+        "end_line": 36
+      },
+      {
+        "heading": "## AC06 — Truth and action completion are separate",
+        "line": 37,
+        "end_line": 42
+      },
+      {
+        "heading": "## AC07 — Canonical KPI arithmetic is reproducible",
+        "line": 43,
+        "end_line": 59
+      },
+      {
+        "heading": "## AC08 — Data-quality and freshness gaps are visible",
+        "line": 60,
+        "end_line": 65
+      },
+      {
+        "heading": "## AC09 — Important history is attributable and preserved",
+        "line": 66,
+        "end_line": 73
+      },
+      {
+        "heading": "## AC10 — Exports and privacy match the product scope",
+        "line": 74,
+        "end_line": 79
+      },
+      {
+        "heading": "## AC11 — Platform and commercial continuity",
+        "line": 80,
+        "end_line": 85
+      },
+      {
+        "heading": "## AC12 — Legacy comparison readiness",
+        "line": 86,
+        "end_line": 91
+      },
+      {
+        "heading": "## AC13 — Operational usability and bounded scope",
+        "line": 92,
+        "end_line": 97
+      },
+      {
+        "heading": "## AC14 — Integrated pilot round trip and fallback",
+        "line": 98,
+        "end_line": 105
+      },
+      {
+        "heading": "## AC15 — Product/SKU performance and trustworthy ROAS",
+        "line": 106,
+        "end_line": 117
+      },
+      {
+        "heading": "## Human review and launch gates",
+        "line": 118,
+        "end_line": 122
+      }
+    ]
+  },
+  "P12": {
+    "path": "docs/product/12-out-of-scope-and-future.md",
+    "sha256": "70f5b117d663ef109cb43045f93657d84a8df97ae2fffa72aca03b4e5d5ed920",
+    "sections": [
+      {
+        "heading": "# OpsHub — out of scope and future",
+        "line": 1,
+        "end_line": 21
+      },
+      {
+        "heading": "## Unsupported inputs must remain visible",
+        "line": 22,
+        "end_line": 27
+      },
+      {
+        "heading": "## End of Phase 3",
+        "line": 28,
+        "end_line": 30
+      }
+    ]
+  },
+  "P13": {
+    "path": "docs/product/13-open-product-decisions.md",
+    "sha256": "1dbd441ba383adea0126746688f6e8a8debf5be04580db58688e9d02d6e5a14e",
+    "sections": [
+      {
+        "heading": "# OpsHub — open product decisions and evidence limits",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Owner product choices",
+        "line": 5,
+        "end_line": 25
+      },
+      {
+        "heading": "## Evidence gaps a product decision cannot cure",
+        "line": 26,
+        "end_line": 36
+      },
+      {
+        "heading": "## Review confidence and next review",
+        "line": 37,
+        "end_line": 41
+      }
+    ]
+  },
+  "P14": {
+    "path": "docs/product/14-prd.md",
+    "sha256": "f16e8543f1d62027f0df9f254bbd6688439411a15e4760432676f11fffd99525",
+    "sections": [
+      {
+        "heading": "# OpsHub — Product Requirements Document",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Product summary",
+        "line": 5,
+        "end_line": 10
+      },
+      {
+        "heading": "## Approved foundations",
+        "line": 11,
+        "end_line": 18
+      },
+      {
+        "heading": "## Users and surfaces",
+        "line": 19,
+        "end_line": 24
+      },
+      {
+        "heading": "## MUST-HAVE MVP",
+        "line": 25,
+        "end_line": 41
+      },
+      {
+        "heading": "## Primary merchant journey",
+        "line": 42,
+        "end_line": 47
+      },
+      {
+        "heading": "## Platform administration",
+        "line": 48,
+        "end_line": 51
+      },
+      {
+        "heading": "## Analytics and source trust",
+        "line": 52,
+        "end_line": 61
+      },
+      {
+        "heading": "## Configuration and commercial requirements",
+        "line": 62,
+        "end_line": 67
+      },
+      {
+        "heading": "## Deferred and excluded",
+        "line": 68,
+        "end_line": 73
+      },
+      {
+        "heading": "## Acceptance and success",
+        "line": 74,
+        "end_line": 79
+      },
+      {
+        "heading": "## Remaining review decisions and confidence",
+        "line": 80,
+        "end_line": 85
+      },
+      {
+        "heading": "## Supporting document index",
+        "line": 86,
+        "end_line": 105
+      }
+    ]
+  },
+  "V00": {
+    "path": "docs/migration/00-migration-validation-summary.md",
+    "sha256": "bc72881b290f30d7f2ec80a3e89ed688208ab3b443a3c509c3f4fe14f0beb8d2",
+    "sections": [
+      {
+        "heading": "# Phase 5 — OpsHub migration and validation summary",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Proposed strategy",
+        "line": 5,
+        "end_line": 10
+      },
+      {
+        "heading": "## Historical scope recommendation",
+        "line": 11,
+        "end_line": 16
+      },
+      {
+        "heading": "## Validation and rollout",
+        "line": 17,
+        "end_line": 26
+      },
+      {
+        "heading": "## Correctness gates",
+        "line": 27,
+        "end_line": 30
+      },
+      {
+        "heading": "## Package navigation",
+        "line": 31,
+        "end_line": 45
+      },
+      {
+        "heading": "## Evidence and confidence",
+        "line": 46,
+        "end_line": 52
+      }
+    ]
+  },
+  "V01": {
+    "path": "docs/migration/01-source-inventory-and-authority.md",
+    "sha256": "3910fd1a287fceed0ca43dcbecb87733f03a7552084b0275f95217767d86f4ad",
+    "sections": [
+      {
+        "heading": "# Source inventory, authority and pilot history",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Contributing source register",
+        "line": 5,
+        "end_line": 31
+      },
+      {
+        "heading": "## Complete original-artifact coverage",
+        "line": 32,
+        "end_line": 47
+      },
+      {
+        "heading": "## Concept-specific source authority proposal — MD01",
+        "line": 48,
+        "end_line": 64
+      },
+      {
+        "heading": "## Historical boundary analysis — MD02",
+        "line": 65,
+        "end_line": 73
+      }
+    ]
+  },
+  "V02": {
+    "path": "docs/migration/02-identity-mapping.md",
+    "sha256": "fc57e52fcb5d0569b6813e1b48a27f5a716b20dfbeda552837234ed0079b6a6f",
+    "sections": [
+      {
+        "heading": "# Identity mapping contract",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## IM05 — Reservation continuity during identity repair",
+        "line": 4,
+        "end_line": 12
+      },
+      {
+        "heading": "## Mapping record and confidence",
+        "line": 13,
+        "end_line": 18
+      },
+      {
+        "heading": "## Entity mappings",
+        "line": 19,
+        "end_line": 43
+      },
+      {
+        "heading": "## Collision and replay rules",
+        "line": 44,
+        "end_line": 51
+      },
+      {
+        "heading": "## Historical grain and authority constraints",
+        "line": 52,
+        "end_line": 57
+      },
+      {
+        "heading": "## Required identity tests",
+        "line": 58,
+        "end_line": 60
+      }
+    ]
+  },
+  "V03": {
+    "path": "docs/migration/03-migration-pipeline.md",
+    "sha256": "d75472b19ec21d62c5e790245c99c1922813303bd279b039d99e41e85e851d96",
+    "sections": [
+      {
+        "heading": "# Logical migration pipeline and Migration Run",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## MP-ACQ01 — Acquisition closure is separate from intake conservation",
+        "line": 4,
+        "end_line": 11
+      },
+      {
+        "heading": "## MP-SEED01 — Inherited migration safety manifest",
+        "line": 12,
+        "end_line": 17
+      },
+      {
+        "heading": "## MP-PRIV01 — Privacy suppression on every replay",
+        "line": 18,
+        "end_line": 24
+      },
+      {
+        "heading": "## Stage contract",
+        "line": 25,
+        "end_line": 55
+      },
+      {
+        "heading": "## Migration Run identity — MRUN01",
+        "line": 56,
+        "end_line": 63
+      },
+      {
+        "heading": "## Restartability and idempotency",
+        "line": 64,
+        "end_line": 71
+      },
+      {
+        "heading": "## Inbound does not replay history",
+        "line": 72,
+        "end_line": 75
+      },
+      {
+        "heading": "## Failure, rollback and re-import",
+        "line": 76,
+        "end_line": 82
+      }
+    ]
+  },
+  "V04": {
+    "path": "docs/migration/04-data-cleaning-and-dispositions.md",
+    "sha256": "3e226b105d47991bf7650227b2ab3bf835eab115beac68693a75210aaae93c3a",
+    "sections": [
+      {
+        "heading": "# Normalization, data cleaning and row dispositions",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## Current privacy and interpretation quality",
+        "line": 4,
+        "end_line": 10
+      },
+      {
+        "heading": "## Rules",
+        "line": 11,
+        "end_line": 31
+      },
+      {
+        "heading": "## Mutually exclusive primary dispositions",
+        "line": 32,
+        "end_line": 50
+      },
+      {
+        "heading": "## Historical corrections",
+        "line": 51,
+        "end_line": 56
+      },
+      {
+        "heading": "## Qualification versus rejection",
+        "line": 57,
+        "end_line": 61
+      }
+    ]
+  },
+  "V05": {
+    "path": "docs/migration/05-legacy-regression-oracle.md",
+    "sha256": "88511208f7a50abcdd3fb9b7bcbb21b2d66f0740144bf7d1cbcc493e263cea11",
+    "sections": [
+      {
+        "heading": "# Legacy Gentry regression oracle",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## OR-INDEP01 — Avoid circular expected results",
+        "line": 4,
+        "end_line": 10
+      },
+      {
+        "heading": "## Comparison envelope",
+        "line": 11,
+        "end_line": 16
+      },
+      {
+        "heading": "## Catalog",
+        "line": 17,
+        "end_line": 41
+      },
+      {
+        "heading": "## Difference adjudication",
+        "line": 42,
+        "end_line": 49
+      },
+      {
+        "heading": "## Oracle capture and privacy",
+        "line": 50,
+        "end_line": 54
+      }
+    ]
+  },
+  "V06": {
+    "path": "docs/migration/06-golden-datasets.md",
+    "sha256": "3f076c63a7480e1be9ad51163e6577fae48e82659280d26b49ed67850b358d4b",
+    "sections": [
+      {
+        "heading": "# Versioned golden datasets",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## Reviewed logical input supplement and coverage limit",
+        "line": 4,
+        "end_line": 22
+      },
+      {
+        "heading": "## Envelope and reproducibility",
+        "line": 23,
+        "end_line": 28
+      },
+      {
+        "heading": "## Baseline facts",
+        "line": 29,
+        "end_line": 40
+      },
+      {
+        "heading": "## Scenario catalog",
+        "line": 41,
+        "end_line": 85
+      },
+      {
+        "heading": "## Version changes and expected outputs",
+        "line": 86,
+        "end_line": 88
+      }
+    ]
+  },
+  "V07": {
+    "path": "docs/migration/07-kpi-regression-suite.md",
+    "sha256": "363d2fde7df33c8f4163fc0689a3faed997df4cfdb3f14fc07e375287ea363d8",
+    "sections": [
+      {
+        "heading": "# Deterministic KPI and Product/SKU regression suite",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## KR18–KR21 — Explicit clocks, prior contributors and quality",
+        "line": 4,
+        "end_line": 16
+      },
+      {
+        "heading": "## Result assertion envelope",
+        "line": 17,
+        "end_line": 22
+      },
+      {
+        "heading": "## Baseline expected members",
+        "line": 23,
+        "end_line": 36
+      },
+      {
+        "heading": "## Product/SKU fixtures",
+        "line": 37,
+        "end_line": 51
+      },
+      {
+        "heading": "## Required perturbation assertions",
+        "line": 52,
+        "end_line": 64
+      },
+      {
+        "heading": "## Future execution evidence",
+        "line": 65,
+        "end_line": 69
+      }
+    ]
+  },
+  "V08": {
+    "path": "docs/migration/08-provider-contract-validation.md",
+    "sha256": "5aa5f42f49605c1a4a87776cd4c37a445484a20022530585c75cdbd31e8937ff",
+    "sections": [
+      {
+        "heading": "# Controlled provider qualification plan",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## PC-C01 — Provider acquisition closure qualification",
+        "line": 4,
+        "end_line": 10
+      },
+      {
+        "heading": "## Qualification envelope and authorization",
+        "line": 11,
+        "end_line": 16
+      },
+      {
+        "heading": "## Shopify qualification",
+        "line": 17,
+        "end_line": 34
+      },
+      {
+        "heading": "## Bosta qualification",
+        "line": 35,
+        "end_line": 52
+      },
+      {
+        "heading": "## Meta qualification",
+        "line": 53,
+        "end_line": 66
+      },
+      {
+        "heading": "## Pass and capability gating",
+        "line": 67,
+        "end_line": 71
+      }
+    ]
+  },
+  "V09": {
+    "path": "docs/migration/09-external-action-safety-validation.md",
+    "sha256": "27640f4bd9d62353193c2451a033274765615249929fba8b8f111cbd6c1ef4b0",
+    "sections": [
+      {
+        "heading": "# Adversarial external-action safety validation",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## EA23–EA26 — Cross-boundary safety",
+        "line": 4,
+        "end_line": 14
+      },
+      {
+        "heading": "## Harness and assertions",
+        "line": 15,
+        "end_line": 20
+      },
+      {
+        "heading": "## Adversarial matrix",
+        "line": 21,
+        "end_line": 47
+      },
+      {
+        "heading": "## Recovery evidence and release",
+        "line": 48,
+        "end_line": 54
+      }
+    ]
+  },
+  "V10": {
+    "path": "docs/migration/10-tenant-and-authorization-validation.md",
+    "sha256": "64ccd24b8d30ebe4e37c6fc7d9f7a8aab1b818533b07034f0dcfa1f1bda99352",
+    "sections": [
+      {
+        "heading": "# Tenant isolation and authorization proof matrix",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## TI21/AU13 — Repair, seed and suppression boundaries",
+        "line": 4,
+        "end_line": 10
+      },
+      {
+        "heading": "## Two independent layers",
+        "line": 11,
+        "end_line": 16
+      },
+      {
+        "heading": "## Isolation matrix",
+        "line": 17,
+        "end_line": 41
+      },
+      {
+        "heading": "## Authorization matrix",
+        "line": 42,
+        "end_line": 60
+      },
+      {
+        "heading": "## Pass evidence",
+        "line": 61,
+        "end_line": 65
+      }
+    ]
+  },
+  "V11": {
+    "path": "docs/migration/11-recovery-validation.md",
+    "sha256": "6780d6cc63f01333c272a1a893e96ecde369e5c9b6570df6ba1b1b01794af64b",
+    "sections": [
+      {
+        "heading": "# Restore and recovery validation contracts",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## RV19–RV21 — Migration-specific recovery composition",
+        "line": 4,
+        "end_line": 14
+      },
+      {
+        "heading": "## Experiment protocol",
+        "line": 15,
+        "end_line": 20
+      },
+      {
+        "heading": "## Recovery test matrix",
+        "line": 21,
+        "end_line": 43
+      },
+      {
+        "heading": "## Separate access and egress gates",
+        "line": 44,
+        "end_line": 53
+      },
+      {
+        "heading": "## Evidence and targets",
+        "line": 54,
+        "end_line": 58
+      }
+    ]
+  },
+  "V12": {
+    "path": "docs/migration/12-shadow-and-parallel-run.md",
+    "sha256": "e6070127fffbad7661516ae41d71ba90a9f108e3ff8399fca9f3e5c44a6f8e1a",
+    "sections": [
+      {
+        "heading": "# Shadow mode, controlled actions and parallel operation",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## Cross-class authority conflicts",
+        "line": 4,
+        "end_line": 20
+      },
+      {
+        "heading": "## Shadow capability contract",
+        "line": 21,
+        "end_line": 26
+      },
+      {
+        "heading": "## Shadow record and daily comparison",
+        "line": 27,
+        "end_line": 32
+      },
+      {
+        "heading": "## Exit criteria — MD11/MD13 approval",
+        "line": 33,
+        "end_line": 44
+      },
+      {
+        "heading": "## Controlled action pilot ordering",
+        "line": 45,
+        "end_line": 58
+      },
+      {
+        "heading": "## Parallel run authority",
+        "line": 59,
+        "end_line": 70
+      }
+    ]
+  },
+  "V13": {
+    "path": "docs/migration/13-cutover-and-rollback.md",
+    "sha256": "aec980edc52af7ea56d44bd5e1894e99f9f2a594c95b3caceb10388f6d9c7e95",
+    "sections": [
+      {
+        "heading": "# Cutover, rollback and re-import design",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## Cutover approval envelope and inherited restrictions",
+        "line": 4,
+        "end_line": 14
+      },
+      {
+        "heading": "## Preconditions",
+        "line": 15,
+        "end_line": 18
+      },
+      {
+        "heading": "## Ordered checkpoint sequence — CT01",
+        "line": 19,
+        "end_line": 34
+      },
+      {
+        "heading": "## Abort and disable conditions",
+        "line": 35,
+        "end_line": 40
+      },
+      {
+        "heading": "## Rollback types",
+        "line": 41,
+        "end_line": 52
+      },
+      {
+        "heading": "## Corrected mapping and re-import",
+        "line": 53,
+        "end_line": 58
+      },
+      {
+        "heading": "## Cutover experiment proof",
+        "line": 59,
+        "end_line": 63
+      }
+    ]
+  },
+  "V14": {
+    "path": "docs/migration/14-reconciliation-and-signoff.md",
+    "sha256": "221e7331d9580cb0c65efc02b8567f3b269ffc824586f311bde26c4d103696bc",
+    "sections": [
+      {
+        "heading": "# Migration reconciliation report and sign-off",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## Additional sign-off evidence",
+        "line": 4,
+        "end_line": 10
+      },
+      {
+        "heading": "## Report contract — RE01",
+        "line": 11,
+        "end_line": 27
+      },
+      {
+        "heading": "## Count reconciliation example (synthetic only)",
+        "line": 28,
+        "end_line": 33
+      },
+      {
+        "heading": "## Gate classes",
+        "line": 34,
+        "end_line": 50
+      },
+      {
+        "heading": "## Sign-off ownership and invalidation",
+        "line": 51,
+        "end_line": 57
+      }
+    ]
+  },
+  "V15": {
+    "path": "docs/migration/15-privacy-and-test-data.md",
+    "sha256": "89c8b67629138a79a6d779082124b9f73ecf215586131477b32dede9ff270949",
+    "sections": [
+      {
+        "heading": "# Privacy during migration and validation",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## PV11–PV13 — Re-import cannot resurrect protected content",
+        "line": 4,
+        "end_line": 14
+      },
+      {
+        "heading": "## Data classes and handling",
+        "line": 15,
+        "end_line": 31
+      },
+      {
+        "heading": "## Synthetic/redaction contract",
+        "line": 32,
+        "end_line": 39
+      },
+      {
+        "heading": "## Privacy test plan — PV01–PV10",
+        "line": 40,
+        "end_line": 43
+      },
+      {
+        "heading": "## Cleanup and retention decisions",
+        "line": 44,
+        "end_line": 48
+      }
+    ]
+  },
+  "V16": {
+    "path": "docs/migration/16-open-migration-decisions.md",
+    "sha256": "82f376040199516d767ddcfda14cd27b4c3f6149a003a75a70e9f322e80836df",
+    "sections": [
+      {
+        "heading": "# Remaining migration and validation decisions",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## Council clarification of remaining choices",
+        "line": 4,
+        "end_line": 31
+      },
+      {
+        "heading": "## Decision recording contract",
+        "line": 32,
+        "end_line": 37
+      },
+      {
+        "heading": "## Gate mapping",
+        "line": 38,
+        "end_line": 42
+      }
+    ]
+  },
+  "V17": {
+    "path": "docs/migration/17-migration-validation-plan.md",
+    "sha256": "9a2da320202c5ab4cca915f2e10186dc55a13af79180d0cdac8943d9db986665",
+    "sections": [
+      {
+        "heading": "# Phase 5 validation contract handoff",
+        "line": 1,
+        "end_line": 3
+      },
+      {
+        "heading": "## Council-amended proof gates",
+        "line": 4,
+        "end_line": 12
+      },
+      {
+        "heading": "## Contract families and acceptance evidence",
+        "line": 13,
+        "end_line": 26
+      },
+      {
+        "heading": "## Future validation order and gates",
+        "line": 27,
+        "end_line": 42
+      },
+      {
+        "heading": "## Implementation-ready assertion format",
+        "line": 43,
+        "end_line": 48
+      },
+      {
+        "heading": "## Requirement-to-contract traceability",
+        "line": 49,
+        "end_line": 65
+      },
+      {
+        "heading": "## Current verification boundary and next review",
+        "line": 66,
+        "end_line": 70
+      }
+    ]
+  },
+  "D00": {
+    "path": "docs/domain/00-canonical-domain-overview.md",
+    "sha256": "a080c33899f16dcf7686dcc54449f39668206f0158ba422aecab1ecae41d2508",
+    "sections": [
+      {
+        "heading": "# Phase 2 — Canonical domain model",
+        "line": 1,
+        "end_line": 6
+      },
+      {
+        "heading": "## Purpose and reading order",
+        "line": 7,
+        "end_line": 22
+      },
+      {
+        "heading": "## Evidence and semantic labels",
+        "line": 23,
+        "end_line": 41
+      },
+      {
+        "heading": "## Canonical scope",
+        "line": 42,
+        "end_line": 54
+      },
+      {
+        "heading": "## Central normalization decisions",
+        "line": 55,
+        "end_line": 71
+      },
+      {
+        "heading": "## Platform administration and deferred product boundary",
+        "line": 72,
+        "end_line": 79
+      },
+      {
+        "heading": "## Conceptual map",
+        "line": 80,
+        "end_line": 114
+      },
+      {
+        "heading": "## Non-negotiable preservation",
+        "line": 115,
+        "end_line": 120
+      },
+      {
+        "heading": "## Review and stop boundary",
+        "line": 121,
+        "end_line": 125
+      }
+    ]
+  },
+  "D01": {
+    "path": "docs/domain/01-entity-catalog.md",
+    "sha256": "31a4e821d04b399abf98144a4f65b52f300a6b4b9fdc01d3c0f1ac2b46c8a323",
+    "sections": [
+      {
+        "heading": "# Canonical entity catalog",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Shared entity contract",
+        "line": 5,
+        "end_line": 12
+      },
+      {
+        "heading": "## E01 — Merchant / Workspace",
+        "line": 13,
+        "end_line": 24
+      },
+      {
+        "heading": "## E02 — User / Operator",
+        "line": 25,
+        "end_line": 36
+      },
+      {
+        "heading": "## E03 — Merchant Membership",
+        "line": 37,
+        "end_line": 48
+      },
+      {
+        "heading": "## E04 — Source Context",
+        "line": 49,
+        "end_line": 60
+      },
+      {
+        "heading": "## E05 — Customer",
+        "line": 61,
+        "end_line": 72
+      },
+      {
+        "heading": "## E06 — Order",
+        "line": 73,
+        "end_line": 84
+      },
+      {
+        "heading": "## E07 — Order Item",
+        "line": 85,
+        "end_line": 96
+      },
+      {
+        "heading": "## E08 — Shipment Leg",
+        "line": 97,
+        "end_line": 108
+      },
+      {
+        "heading": "## E09 — Delivery Attempt",
+        "line": 109,
+        "end_line": 120
+      },
+      {
+        "heading": "## E10 — Contact Event",
+        "line": 121,
+        "end_line": 132
+      },
+      {
+        "heading": "## E11 — Confirmation Evidence",
+        "line": 133,
+        "end_line": 144
+      },
+      {
+        "heading": "## E12 — Return Case",
+        "line": 145,
+        "end_line": 156
+      },
+      {
+        "heading": "## E13 — Pickup Case",
+        "line": 157,
+        "end_line": 168
+      },
+      {
+        "heading": "## E14 — Reship Request",
+        "line": 169,
+        "end_line": 180
+      },
+      {
+        "heading": "## E15 — External Business Action",
+        "line": 181,
+        "end_line": 192
+      },
+      {
+        "heading": "## E16 — Product",
+        "line": 193,
+        "end_line": 204
+      },
+      {
+        "heading": "## E17 — Variant / SKU",
+        "line": 205,
+        "end_line": 216
+      },
+      {
+        "heading": "## E18 — Product-Period Snapshot",
+        "line": 217,
+        "end_line": 228
+      },
+      {
+        "heading": "## E19 — Inventory Observation",
+        "line": 229,
+        "end_line": 240
+      },
+      {
+        "heading": "## E20 — Season",
+        "line": 241,
+        "end_line": 252
+      },
+      {
+        "heading": "## E21 — Advertisement",
+        "line": 253,
+        "end_line": 264
+      },
+      {
+        "heading": "## E22 — Advertising Spend Observation",
+        "line": 265,
+        "end_line": 276
+      },
+      {
+        "heading": "## E23 — Spend Allocation",
+        "line": 277,
+        "end_line": 288
+      },
+      {
+        "heading": "## E24 — Cost / Fee Record",
+        "line": 289,
+        "end_line": 300
+      },
+      {
+        "heading": "## E25 — Operational Task",
+        "line": 301,
+        "end_line": 312
+      },
+      {
+        "heading": "## E26 — Platform Operator Assignment",
+        "line": 313,
+        "end_line": 324
+      },
+      {
+        "heading": "## Objects that are not additional entities",
+        "line": 325,
+        "end_line": 348
+      }
+    ]
+  },
+  "D02": {
+    "path": "docs/domain/02-identities-and-relationships.md",
+    "sha256": "50287a2e46426742cb1d2abd569afe798105742b462be73ebca37e4b453914a6",
+    "sections": [
+      {
+        "heading": "# Identities and relationships",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Independent participation contexts — NEW SAAS",
+        "line": 5,
+        "end_line": 15
+      },
+      {
+        "heading": "## Identity rules",
+        "line": 16,
+        "end_line": 37
+      },
+      {
+        "heading": "## Cardinality register",
+        "line": 38,
+        "end_line": 70
+      },
+      {
+        "heading": "## Proposed clear-grain relationships",
+        "line": 71,
+        "end_line": 89
+      },
+      {
+        "heading": "## Party and actor attribution",
+        "line": 90,
+        "end_line": 95
+      },
+      {
+        "heading": "## Identity-sensitive cases to leave unassigned",
+        "line": 96,
+        "end_line": 98
+      }
+    ]
+  },
+  "D03": {
+    "path": "docs/domain/03-events-and-projections.md",
+    "sha256": "e81663e6e2ecacd81adfe14f4bea0b82c9dd76d75435430f847b525666dbf0bd",
+    "sections": [
+      {
+        "heading": "# Events, assertions, actions and projections",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Persistent does not mean factual occurrence",
+        "line": 5,
+        "end_line": 33
+      },
+      {
+        "heading": "## Minimum provenance semantics",
+        "line": 34,
+        "end_line": 46
+      },
+      {
+        "heading": "## Projection contracts",
+        "line": 47,
+        "end_line": 66
+      },
+      {
+        "heading": "## Chronology",
+        "line": 67,
+        "end_line": 72
+      },
+      {
+        "heading": "## Monetary provenance",
+        "line": 73,
+        "end_line": 80
+      },
+      {
+        "heading": "## External-action consequences",
+        "line": 81,
+        "end_line": 95
+      }
+    ]
+  },
+  "D04": {
+    "path": "docs/domain/04-state-machines.md",
+    "sha256": "bce895fe6ead45c91ac66b82cc2c14f3f21d64187b1653105c3f2e19a87bb9c6",
+    "sections": [
+      {
+        "heading": "# Conceptual state machines and evidence limits",
+        "line": 1,
+        "end_line": 6
+      },
+      {
+        "heading": "## Order",
+        "line": 7,
+        "end_line": 24
+      },
+      {
+        "heading": "## Shipment",
+        "line": 25,
+        "end_line": 30
+      },
+      {
+        "heading": "## Return",
+        "line": 31,
+        "end_line": 36
+      },
+      {
+        "heading": "## Pickup",
+        "line": 37,
+        "end_line": 50
+      },
+      {
+        "heading": "## Contact/call workflow",
+        "line": 51,
+        "end_line": 67
+      },
+      {
+        "heading": "## Confirmation",
+        "line": 68,
+        "end_line": 84
+      },
+      {
+        "heading": "## Reship / replacement",
+        "line": 85,
+        "end_line": 99
+      },
+      {
+        "heading": "## Product lifecycle and season assignment",
+        "line": 100,
+        "end_line": 114
+      },
+      {
+        "heading": "## Product snapshot / recommendation lifecycle",
+        "line": 115,
+        "end_line": 120
+      },
+      {
+        "heading": "## Report eligibility and human review",
+        "line": 121,
+        "end_line": 133
+      },
+      {
+        "heading": "## Unsupported edge register",
+        "line": 134,
+        "end_line": 136
+      }
+    ]
+  },
+  "D05": {
+    "path": "docs/domain/05-domain-invariants.md",
+    "sha256": "feead836f9fc863cc5b51ef32703ef197492610b401cdb2e976599f152ee92b6",
+    "sections": [
+      {
+        "heading": "# Domain invariants",
+        "line": 1,
+        "end_line": 34
+      },
+      {
+        "heading": "## Deliberately rejected invariants",
+        "line": 35,
+        "end_line": 50
+      }
+    ]
+  },
+  "D06": {
+    "path": "docs/domain/06-canonical-glossary.md",
+    "sha256": "c2b6e91067b2a618e3640e89edc7f275e9a97221bd79ba1c8410d217b61d94a1",
+    "sections": [
+      {
+        "heading": "# Canonical glossary",
+        "line": 1,
+        "end_line": 83
+      }
+    ]
+  },
+  "D07": {
+    "path": "docs/domain/07-policy-decision-register.md",
+    "sha256": "369c7a0938bbd1da47ba74c94cfe64fd349d36577ed5dec7d06caaa3fab3d653",
+    "sections": [
+      {
+        "heading": "# Business-policy decision register",
+        "line": 1,
+        "end_line": 34
+      },
+      {
+        "heading": "## Deferred SaaS product-boundary decisions",
+        "line": 35,
+        "end_line": 42
+      },
+      {
+        "heading": "## Decision record required for closure",
+        "line": 43,
+        "end_line": 47
+      }
+    ]
+  },
+  "D08": {
+    "path": "docs/domain/08-reconstruction-to-canonical-mapping.md",
+    "sha256": "d642226eb23d20de37592e7b9540e5c08d57a14fd98d2c2f7c68b2e44cae3c5b",
+    "sections": [
+      {
+        "heading": "# Reconstruction → canonical traceability",
+        "line": 1,
+        "end_line": 42
+      },
+      {
+        "heading": "## Disagreement preservation examples",
+        "line": 43,
+        "end_line": 54
+      }
+    ]
+  },
+  "D09": {
+    "path": "docs/domain/09-open-domain-questions.md",
+    "sha256": "e5bf68898919e34d272579f5929a5326ff4568cc1d9524d26fba8f24faf380a5",
+    "sections": [
+      {
+        "heading": "# Open domain questions, confidence and owner review",
+        "line": 1,
+        "end_line": 6
+      },
+      {
+        "heading": "## Five highest-risk unresolved questions",
+        "line": 7,
+        "end_line": 14
+      },
+      {
+        "heading": "## Identity/grain blockers versus containable policy",
+        "line": 15,
+        "end_line": 27
+      },
+      {
+        "heading": "## Evidence questions beyond owner preference",
+        "line": 28,
+        "end_line": 43
+      },
+      {
+        "heading": "## Confidence assessment",
+        "line": 44,
+        "end_line": 58
+      },
+      {
+        "heading": "## Deferred platform and commercial boundary",
+        "line": 59,
+        "end_line": 66
+      },
+      {
+        "heading": "## Review request and completion boundary",
+        "line": 67,
+        "end_line": 71
+      }
+    ]
+  },
+  "R00": {
+    "path": "docs/reconstruction/00-system-map.md",
+    "sha256": "078f0e89cda85ac182616923cd3f562bbdb9af9f79dedcca5bf2ff28e035e9d8",
+    "sections": [
+      {
+        "heading": "# Gentry reconstruction — review entry point",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Reading and evidence standard",
+        "line": 5,
+        "end_line": 23
+      },
+      {
+        "heading": "## Observed system",
+        "line": 24,
+        "end_line": 46
+      },
+      {
+        "heading": "## Coverage",
+        "line": 47,
+        "end_line": 59
+      },
+      {
+        "heading": "## Highest-confidence findings",
+        "line": 60,
+        "end_line": 68
+      },
+      {
+        "heading": "## Important contradictions and gaps",
+        "line": 69,
+        "end_line": 80
+      },
+      {
+        "heading": "## Confidence and review gate",
+        "line": 81,
+        "end_line": 85
+      }
+    ]
+  },
+  "R01": {
+    "path": "docs/reconstruction/01-source-inventory.md",
+    "sha256": "2561b463fb3f30c70c371b033955aabe484f7b3310ea60be2c374b758b404b73",
+    "sections": [
+      {
+        "heading": "# Source inventory and authority",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Authority rules",
+        "line": 5,
+        "end_line": 12
+      },
+      {
+        "heading": "## Complete file register",
+        "line": 13,
+        "end_line": 57
+      },
+      {
+        "heading": "## Main workbook sheet map",
+        "line": 58,
+        "end_line": 70
+      },
+      {
+        "heading": "## Dataset provenance and caveats",
+        "line": 71,
+        "end_line": 75
+      }
+    ]
+  },
+  "R02": {
+    "path": "docs/reconstruction/02-feature-inventory.md",
+    "sha256": "61dd6a80f5e4e63a6083c6b2d840a729abf12b17093cf04a8ec8a41aa03d62ca",
+    "sections": [
+      {
+        "heading": "# Feature inventory",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Current Order Performance",
+        "line": 5,
+        "end_line": 22
+      },
+      {
+        "heading": "## Current Product Performance",
+        "line": 23,
+        "end_line": 37
+      },
+      {
+        "heading": "## Historical artifact-only feature families",
+        "line": 38,
+        "end_line": 50
+      }
+    ]
+  },
+  "R03": {
+    "path": "docs/reconstruction/03-domain-model.md",
+    "sha256": "3cf44dfb1bb17085da15004b42b5977528599f0ad88c64f2da658f3522641d50",
+    "sections": [
+      {
+        "heading": "# Domain model reconstructed from evidence",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Entities, grains and identities",
+        "line": 5,
+        "end_line": 27
+      },
+      {
+        "heading": "## Relationship diagram",
+        "line": 28,
+        "end_line": 42
+      },
+      {
+        "heading": "## Separate dimensions that must remain separate",
+        "line": 43,
+        "end_line": 50
+      },
+      {
+        "heading": "## Canonicality assessment",
+        "line": 51,
+        "end_line": 53
+      }
+    ]
+  },
+  "R04": {
+    "path": "docs/reconstruction/04-workflows-and-state-machines.md",
+    "sha256": "9dc3fa487c699b996653511404565def3fb98960cc83da7b73f13ecbf5749eb2",
+    "sections": [
+      {
+        "heading": "# Workflows and state machines",
+        "line": 1,
+        "end_line": 6
+      },
+      {
+        "heading": "## Pre-dispatch confirmation — historical intended workflow",
+        "line": 7,
+        "end_line": 19
+      },
+      {
+        "heading": "## Order, dispatch and courier outcomes — current observed projections",
+        "line": 20,
+        "end_line": 36
+      },
+      {
+        "heading": "## Return contact — historical and current",
+        "line": 37,
+        "end_line": 56
+      },
+      {
+        "heading": "## Pickup shelf",
+        "line": 57,
+        "end_line": 62
+      },
+      {
+        "heading": "## Reship request and approval",
+        "line": 63,
+        "end_line": 71
+      },
+      {
+        "heading": "## Cleanup",
+        "line": 72,
+        "end_line": 75
+      },
+      {
+        "heading": "## Product tier, season and snapshot changes",
+        "line": 76,
+        "end_line": 82
+      },
+      {
+        "heading": "## Report eligibility and review lifecycle — source intent",
+        "line": 83,
+        "end_line": 87
+      }
+    ]
+  },
+  "R05": {
+    "path": "docs/reconstruction/05-business-rules.md",
+    "sha256": "35c23afef46bba7e5cdc7eb8bdec9913122465383a51994aba67dc04a3e893d7",
+    "sections": [
+      {
+        "heading": "# Business rules register",
+        "line": 1,
+        "end_line": 31
+      },
+      {
+        "heading": "## Target authority",
+        "line": 32,
+        "end_line": 37
+      },
+      {
+        "heading": "## Human instructions versus executable rules",
+        "line": 38,
+        "end_line": 40
+      }
+    ]
+  },
+  "R06": {
+    "path": "docs/reconstruction/06-calculations-and-metrics.md",
+    "sha256": "ca27fcc840ad2c877082dd04f5ffba391332a1765d548dc79f5955f1d698ab3a",
+    "sections": [
+      {
+        "heading": "# Calculations and metric definitions",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Current Order Performance",
+        "line": 5,
+        "end_line": 25
+      },
+      {
+        "heading": "## Current Product Performance",
+        "line": 26,
+        "end_line": 44
+      },
+      {
+        "heading": "## Historical workbook — formulas translated",
+        "line": 45,
+        "end_line": 72
+      },
+      {
+        "heading": "## Historical report pipeline divergences",
+        "line": 73,
+        "end_line": 77
+      }
+    ]
+  },
+  "R07": {
+    "path": "docs/reconstruction/07-data-model-observations.md",
+    "sha256": "df11e11f8491d3b41f071411028d121db8eb47d85ff5aafe87cc5b32f31fb00f",
+    "sections": [
+      {
+        "heading": "# Data model observations",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Supplied raw schemas and grain",
+        "line": 5,
+        "end_line": 20
+      },
+      {
+        "heading": "## Capacities and parsing",
+        "line": 21,
+        "end_line": 26
+      },
+      {
+        "heading": "## Live CSV contracts",
+        "line": 27,
+        "end_line": 42
+      },
+      {
+        "heading": "## Source-to-live reconciliation",
+        "line": 43,
+        "end_line": 53
+      },
+      {
+        "heading": "## Data-quality implications",
+        "line": 54,
+        "end_line": 62
+      }
+    ]
+  },
+  "R08": {
+    "path": "docs/reconstruction/08-api-and-integration-observations.md",
+    "sha256": "37f55cb048711cad203a060b3a5f36b9511a2b1bada1403be533722090177aec",
+    "sections": [
+      {
+        "heading": "# API and integration observations",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Inspection boundary",
+        "line": 5,
+        "end_line": 10
+      },
+      {
+        "heading": "## Observed read interfaces",
+        "line": 11,
+        "end_line": 31
+      },
+      {
+        "heading": "## Observed write interfaces — not executed",
+        "line": 32,
+        "end_line": 47
+      },
+      {
+        "heading": "## Phase 1B transport and action evidence",
+        "line": 48,
+        "end_line": 64
+      },
+      {
+        "heading": "## Historical script interfaces",
+        "line": 65,
+        "end_line": 72
+      }
+    ]
+  },
+  "R09": {
+    "path": "docs/reconstruction/09-roles-and-permissions.md",
+    "sha256": "26db4a6cd162e8aa88ce45b6510d20c2094aef3849a7e297d1f41011477b8ba5",
+    "sections": [
+      {
+        "heading": "# Roles, responsibilities and permissions",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Historical intended responsibility",
+        "line": 5,
+        "end_line": 16
+      },
+      {
+        "heading": "## Current session access observed",
+        "line": 17,
+        "end_line": 33
+      },
+      {
+        "heading": "## Phase 1B authentication and permission structure",
+        "line": 34,
+        "end_line": 51
+      },
+      {
+        "heading": "## Auditability observations",
+        "line": 52,
+        "end_line": 59
+      },
+      {
+        "heading": "## Required further verification",
+        "line": 60,
+        "end_line": 62
+      }
+    ]
+  },
+  "R10": {
+    "path": "docs/reconstruction/10-data-ingestion-and-background-jobs.md",
+    "sha256": "1688e114a64262f8f173fd40167f1879a448095e1f3d4e42a236c936fcc336e3",
+    "sections": [
+      {
+        "heading": "# Data ingestion and background operations",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Historical manual ingestion chain",
+        "line": 5,
+        "end_line": 19
+      },
+      {
+        "heading": "## What was actually incorporated in supplied files",
+        "line": 20,
+        "end_line": 33
+      },
+      {
+        "heading": "## Historical report automation",
+        "line": 34,
+        "end_line": 47
+      },
+      {
+        "heading": "## Current visible refresh behavior",
+        "line": 48,
+        "end_line": 57
+      },
+      {
+        "heading": "## Current CSV call import contract — unexecuted",
+        "line": 58,
+        "end_line": 63
+      },
+      {
+        "heading": "## Failure and reconciliation concerns",
+        "line": 64,
+        "end_line": 68
+      }
+    ]
+  },
+  "R11": {
+    "path": "docs/reconstruction/11-ui-route-map.md",
+    "sha256": "8b5adfdc2e792e0e0aa08f887d2fa48edb1f6f920066338e3cc49e0effda27ab",
+    "sections": [
+      {
+        "heading": "# UI route and navigation map",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Navigation",
+        "line": 5,
+        "end_line": 33
+      },
+      {
+        "heading": "## Filter and display behavior",
+        "line": 34,
+        "end_line": 41
+      },
+      {
+        "heading": "## Phase 1B delivered-feature discovery",
+        "line": 42,
+        "end_line": 56
+      },
+      {
+        "heading": "## Empty/error/hidden navigation pass",
+        "line": 57,
+        "end_line": 67
+      }
+    ]
+  },
+  "R12": {
+    "path": "docs/reconstruction/12-file-to-feature-traceability.md",
+    "sha256": "62ae6c7a9b7e8319dee18207d6f086de1d935bbd52b788dd27f673a583771699",
+    "sections": [
+      {
+        "heading": "# File-to-feature traceability",
+        "line": 1,
+        "end_line": 44
+      },
+      {
+        "heading": "## Phase 1B technical evidence outside the original source package",
+        "line": 45,
+        "end_line": 57
+      }
+    ]
+  },
+  "R13": {
+    "path": "docs/reconstruction/13-live-vs-spec-discrepancies.md",
+    "sha256": "e2d327ce874ac1c405804f02954bc51c11493448229a3ffb4c99426c2babcd4b",
+    "sections": [
+      {
+        "heading": "# Discrepancies and reconciliation",
+        "line": 1,
+        "end_line": 32
+      },
+      {
+        "heading": "## Reconciled distinctions, not demonstrated defects",
+        "line": 33,
+        "end_line": 45
+      }
+    ]
+  },
+  "R14": {
+    "path": "docs/reconstruction/14-open-questions.md",
+    "sha256": "c9c090288a8b90a8953046a09f37720e69877707dfeb37f85df7e91e81065abf",
+    "sections": [
+      {
+        "heading": "# Open questions and next evidence",
+        "line": 1,
+        "end_line": 4
+      },
+      {
+        "heading": "## Owner and Operations decisions",
+        "line": 5,
+        "end_line": 19
+      },
+      {
+        "heading": "## Phase 1B closure and remaining technical gap",
+        "line": 20,
+        "end_line": 36
+      },
+      {
+        "heading": "## Additional read-only investigation",
+        "line": 37,
+        "end_line": 49
+      },
+      {
+        "heading": "## Controlled experiments left for authorization",
+        "line": 50,
+        "end_line": 62
+      }
+    ]
+  },
+  "R15": {
+    "path": "docs/reconstruction/15-saas-migration-risks.md",
+    "sha256": "1a5fa5b49edb5e5a578601a0f102f6685e19c10236f1db352f57ae052c23e2b7",
+    "sections": [
+      {
+        "heading": "# Future migration risks identified by reconstruction",
+        "line": 1,
+        "end_line": 32
+      }
+    ]
+  }
+}

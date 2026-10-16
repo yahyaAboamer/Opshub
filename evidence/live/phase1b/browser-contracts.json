@@ -1,0 +1,505 @@
+{
+  "scope": "Sanitized DOM/Flight/UI observations, not authenticated HTTP request/response capture",
+  "capture_time_note": "T01-T05 did not retain precise capture timestamps; order is preserved. Sync markers are displayed Cairo labels, not capture timestamps.",
+  "privacy": "No customer field values, dynamic record IDs, bound arguments, credentials, cookies or raw Flight trees retained. Public action IDs are function references, not credentials.",
+  "observations": [
+    {
+      "id": "T01",
+      "path": "/orders/cleanup",
+      "trigger": "Inspect original authenticated document",
+      "delivered_module": "56850 Logo/SideNav/TabNav and 94013 ThemeToggle",
+      "app_chunk": "15qydxckj0uxx.js",
+      "flight_marker": "self.__next_f.push",
+      "logout_reference": "00d865e0511ca1bdcae01923ccd887a6c7b6b92e37",
+      "sync_reference": "0099c58e389e1ea2b233c085aa5029c2b4e647a1c3",
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T02",
+      "path": "/orders",
+      "trigger": "Visible Order Performance navigation",
+      "method_evidence": "GET filter form; navigation method not captured",
+      "query_control_names": [
+        "period",
+        "from",
+        "to",
+        "channel",
+        "confirmedBy",
+        "outcome",
+        "city",
+        "q",
+        "repeat"
+      ],
+      "app_chunk": "1986ffcy11vyr.js",
+      "flight_inline_import_rows_after_client_navigation": 0,
+      "sync_marker": "2026-10-13 19:15 Cairo; 0 new, 6 updated",
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T03",
+      "path": "/orders?period=last-month&from=&to=&channel=&confirmedBy=&outcome=&city=&q=",
+      "trigger": "Select Last month then Apply on native GET form",
+      "method_evidence": "GET form method; no request trace",
+      "query_parameter_names": [
+        "period",
+        "from",
+        "to",
+        "channel",
+        "confirmedBy",
+        "outcome",
+        "city",
+        "q"
+      ],
+      "payload_shape": "none expected for native GET",
+      "response_shape": "Rendered Order Performance UI and inline Flight import rows",
+      "sync_marker": "2026-10-13 19:47 Cairo; 0 new, 5 updated",
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T04",
+      "path": "/orders/{recordId}",
+      "trigger": "Navigate to existing record link",
+      "method_evidence": "Navigation method not captured",
+      "response_shape": "Rendered record, order/call/reship POST forms and inline Flight references",
+      "forms": [
+        {
+          "label": "Save",
+          "method": "post",
+          "action_attribute": "",
+          "action_field_pattern": "$ACTION_REF_3 / $ACTION_3:*",
+          "fields": [
+            "channel",
+            "customerName",
+            "customerPhone",
+            "fulfillmentStatus",
+            "cancelledAt",
+            "confirmedBy",
+            "tags",
+            "bostaSynced",
+            "bostaType",
+            "bostaDeliveryState"
+          ],
+          "server_reference": "6077f8cd4a3a403054c5762369de64a6a2f701a1d1",
+          "bound_present": true
+        },
+        {
+          "label": "Save call",
+          "method": "post",
+          "action_attribute": "",
+          "action_field_pattern": "$ACTION_REF_4 / $ACTION_4:*",
+          "fields": [
+            "callStatus",
+            "reasonCategory",
+            "resolution",
+            "refundIssued",
+            "recoverable",
+            "calledBy",
+            "notes"
+          ],
+          "server_reference": "60e75825357fc55459ab9d0109f6cd5d54173eb2de",
+          "bound_present": true
+        },
+        {
+          "label": "Request reship",
+          "method": "post",
+          "action_attribute": "",
+          "action_field_pattern": "$ACTION_REF_5 / $ACTION_5:*",
+          "fields": [
+            "receiverName",
+            "phone",
+            "city",
+            "firstLine",
+            "secondLine",
+            "note",
+            "items"
+          ],
+          "required": [
+            "receiverName",
+            "phone",
+            "city",
+            "firstLine",
+            "items"
+          ],
+          "server_reference": "604efdb47f9a439868c48ee98735f0663376361d3b",
+          "bound_present": true
+        }
+      ],
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "forms_submitted": false,
+      "bound_values_retained": false
+    },
+    {
+      "id": "T05",
+      "path": "/orders/calls",
+      "trigger": "Open Calls",
+      "response_shape": "Rendered metrics, GET filters/lookup, upload form, 32 quick-action pairs",
+      "forms": [
+        {
+          "label": "Show",
+          "method": "get",
+          "fields": [
+            "period"
+          ]
+        },
+        {
+          "label": "Go to Lookup",
+          "method": "get",
+          "action_attribute": "/orders/lookup",
+          "fields": [
+            "q"
+          ]
+        },
+        {
+          "label": "Import calls",
+          "method": "post",
+          "action_attribute": "",
+          "fields": [
+            "file"
+          ],
+          "action_field_patterns": [
+            "$ACTION_REF_*",
+            "$ACTION_*:*",
+            "$ACTION_KEY"
+          ],
+          "required": []
+        },
+        {
+          "label": "Called done / No answer",
+          "method": "post",
+          "count_each": 32,
+          "fields": [],
+          "server_reference": "70e2ace4747fb7a1f777530fe2f0b9c4242afb539b",
+          "bound_present": true
+        }
+      ],
+      "module": {
+        "id": 4773,
+        "name": "CallSheetUpload",
+        "chunk": "1kudf3dkhdpbd.js"
+      },
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "forms_submitted": false,
+      "bound_values_retained": false
+    },
+    {
+      "id": "T06",
+      "path": "/products",
+      "observed_at_utc": "2026-10-13T16:57:04.797Z",
+      "trigger": "Open Product Performance",
+      "method_evidence": "GET filter form; no navigation request trace",
+      "query_control_names": [
+        "from",
+        "to",
+        "tier",
+        "roas",
+        "stock",
+        "q",
+        "sort"
+      ],
+      "module": {
+        "id": 16340,
+        "name": "DateRangePicker",
+        "chunk": "14x5k9f0fswg1.js"
+      },
+      "date_attributes": {
+        "min": "2026-06-01",
+        "max": "2026-10-13"
+      },
+      "sync_marker": "2026-10-13 19:15 Cairo; 0 new, 20 updated",
+      "rebuild_marker": "2026-10-13 18:39 Cairo",
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T07",
+      "path": "/products?period=last-month&tier=&roas=&stock=&q=&sort=",
+      "observed_at_utc": "2026-10-13T16:57:22.752Z",
+      "trigger": "Click Last month preset",
+      "method_evidence": "Native enclosing GET form plus static requestSubmit; no request trace",
+      "query_parameter_names": [
+        "period",
+        "tier",
+        "roas",
+        "stock",
+        "q",
+        "sort"
+      ],
+      "response_shape": "Rendered September date selection and product cards",
+      "sync_marker": "2026-10-13 19:56 Cairo; 0 new, 20 updated",
+      "rebuild_marker": "2026-10-13 18:39 Cairo",
+      "export_href": "/export/products?period=last-month",
+      "report_href": "/reports/products?period=last-month",
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T08",
+      "path": "/products/{recordId}",
+      "observed_at_utc": "2026-10-13T16:57:29.939Z",
+      "trigger": "Open an existing product link",
+      "response_shape": "Rendered product and two POST forms",
+      "forms": [
+        {
+          "label": "Save",
+          "method": "post",
+          "action_attribute": "",
+          "fields": [
+            "name",
+            "tier",
+            "grossMarginPct",
+            "leadTimeWeeks",
+            "unitCost",
+            "seasonId",
+            "adKeywords"
+          ],
+          "validation": {
+            "grossMarginPct": {
+              "min": "0",
+              "max": "1"
+            }
+          }
+        },
+        {
+          "label": "Save snapshot",
+          "method": "post",
+          "action_attribute": "",
+          "fields": [
+            "weekStart",
+            "unitsSold",
+            "grossSales",
+            "discounts",
+            "refunds",
+            "endingStock",
+            "adSpend",
+            "cumulativeOrderCount"
+          ],
+          "required": [
+            "weekStart",
+            "unitsSold",
+            "grossSales",
+            "endingStock",
+            "adSpend"
+          ]
+        }
+      ],
+      "bound_server_references": [
+        "60aa4fe61835ec8da955b94805046baf2898e4dc1b",
+        "60860b997290d55d5ed87e563a8ec545e8feb3944f"
+      ],
+      "reference_to_specific_form_mapping": "Not resolved by bounded sanitized extraction",
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "forms_submitted": false,
+      "bound_values_retained": false
+    },
+    {
+      "id": "T09",
+      "path": "/products/seasons",
+      "observed_at_utc": "2026-10-13T16:57:51.965Z",
+      "trigger": "Open Seasons",
+      "response_shape": "Rendered season lists and unsubmitted POST forms",
+      "forms": [
+        {
+          "label": "Save season",
+          "method": "post",
+          "fields": [
+            "name",
+            "startDate",
+            "endDate"
+          ],
+          "required": [
+            "name",
+            "startDate",
+            "endDate"
+          ],
+          "bound_present": true,
+          "server_reference": "609e1aeac17bb0343a895afec5756de5c720feb164"
+        },
+        {
+          "label": "Delete season",
+          "method": "post",
+          "fields": [],
+          "bound_present": true,
+          "server_reference": "40233347097e60f56c578aca763951656b0038ebd4",
+          "mapping_confidence": "Form-group correspondence; button child not resolved in Flight extractor"
+        },
+        {
+          "label": "Add season",
+          "method": "post",
+          "fields": [
+            "name",
+            "startDate",
+            "endDate"
+          ],
+          "required": [
+            "name",
+            "startDate",
+            "endDate"
+          ],
+          "bound_present": false,
+          "server_reference": "405e415dc9cd0ab95ebd1ddb45defee9ce3e3da313"
+        }
+      ],
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "forms_submitted": false,
+      "bound_values_retained": false
+    },
+    {
+      "id": "T10",
+      "path": "/reports/products?period=last-month",
+      "observed_at_utc": "2026-10-13T16:57:59.737Z",
+      "trigger": "Open observed product-brief href",
+      "method_evidence": "GET period form; no navigation request trace",
+      "response_shape": "Printable HTML report, editable grey areas and Save as PDF button",
+      "query_parameter_names": [
+        "period"
+      ],
+      "module": {
+        "id": 44026,
+        "name": "PrintButton",
+        "chunk": "356upgw1p449j.js"
+      },
+      "rebuild_marker": "2026-10-13 19:57 Cairo",
+      "print_triggered": false,
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T11",
+      "path": "/orders/cleanup",
+      "observed_at_utc": "2026-10-13T16:58:16.429Z",
+      "trigger": "Revisit Cleanup",
+      "method_evidence": "GET month form; no navigation request trace",
+      "query_control_names": [
+        "month"
+      ],
+      "response_shape": "Rendered queues, external Shopify links, GET filter and unsubmitted sync/logout forms",
+      "app_chunk": "1986ffcy11vyr.js",
+      "sync_reference": "00ad22afbaf528edbf16bc5ededba1c1ee66353317",
+      "logout_reference": "0033ae53642ad4b22a17301eb90fcec0698e693981",
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T12",
+      "path": "/orders/calls",
+      "observed_at_utc": "2026-10-13T17:00:13.699Z",
+      "trigger": "One fresh Calls navigation after old public asset returned 404",
+      "module": {
+        "id": 4773,
+        "name": "CallSheetUpload",
+        "chunk": "1t_el1w5uiobt.js"
+      },
+      "form": {
+        "method": "post",
+        "action_attribute": "",
+        "fields": [
+          "file"
+        ],
+        "hidden_field_names": [
+          "$ACTION_REF_68",
+          "$ACTION_68:0",
+          "$ACTION_68:1",
+          "$ACTION_KEY"
+        ]
+      },
+      "client_export_name": "uploadCallSheet",
+      "client_server_reference": "603a2551faaf2a276b438c3b70de362ad8e990c011",
+      "source_for_client_export_name_and_id": "static-analysis.md APP10/S42, not runtime request",
+      "submitted": false,
+      "http_status": null,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    },
+    {
+      "id": "T13",
+      "path": "/export/products?period=last-month",
+      "observed_at_utc": "2026-10-13T17:03:39.417Z",
+      "trigger": "Download from visible filtered product CSV link",
+      "method_evidence": "GET link intent; actual request method not captured",
+      "query_parameter_names": [
+        "period"
+      ],
+      "response_shape": "Downloaded CSV, 28 columns and 20 rows",
+      "http_status": null,
+      "headers_captured": false,
+      "raw_customer_payload_retained": false,
+      "network_trace_captured": false,
+      "observation_date": "2026-10-13",
+      "bound_values_retained": false
+    }
+  ],
+  "navigation_permission_metadata": [
+    {
+      "path": "/orders",
+      "permission": "orders.view"
+    },
+    {
+      "path": "/orders/lookup",
+      "permission": null
+    },
+    {
+      "path": "/orders/cleanup",
+      "permission": "orders.view"
+    },
+    {
+      "path": "/orders/calls",
+      "permission": "orders.calls"
+    },
+    {
+      "path": "/orders/reships",
+      "permission": "orders.reship"
+    },
+    {
+      "path": "/orders/new",
+      "permission": "orders.edit"
+    },
+    {
+      "path": "/products",
+      "permission": null
+    },
+    {
+      "path": "/products/new-tier",
+      "permission": null
+    },
+    {
+      "path": "/products/seasons",
+      "permission": null
+    },
+    {
+      "path": "/products/new",
+      "permission": null
+    },
+    {
+      "path": "/products/settings",
+      "permission": null
+    }
+  ],
+  "permission_evidence": "Delivered Flight props on T04/T05/T06/T11; client nav renders supplied items without permission predicate. Server guard unknown. Null does not establish public access.",
+  "restored_original_tab_path": "/orders/cleanup"
+}

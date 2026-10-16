@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-10-14T22:31:12.429630+00:00",
+  "scope": "Custody/hash only; no new live acquisition, row normalization or migration",
+  "items": [
+    {
+      "source": "Gentry orders",
+      "capture_file": "D:/Downloads/orders-2026-10-13.csv",
+      "exists": true,
+      "sha256": "fb9dc509c38e1efff95b8c197f4fbd7c94d46663cd4c0fe488dc810668ac3c23",
+      "prior_profile": "evidence/live/order-export-profile.json",
+      "profile_sha256": "fb9dc509c38e1efff95b8c197f4fbd7c94d46663cd4c0fe488dc810668ac3c23",
+      "matches_prior_profile": true
+    },
+    {
+      "source": "Gentry contacts",
+      "capture_file": "D:/Downloads/call-log-2026-10-13.csv",
+      "exists": true,
+      "sha256": "2ed04bd506c781b69f2af5b85ea978bb34a747426d1e1c129b0b10afda27493e",
+      "prior_profile": "evidence/live/call-export-profile.json",
+      "profile_sha256": "2ed04bd506c781b69f2af5b85ea978bb34a747426d1e1c129b0b10afda27493e",
+      "matches_prior_profile": true
+    },
+    {
+      "source": "Gentry products",
+      "capture_file": "D:/Downloads/products-2026-10-05_to_2026-10-11-2026-10-13.csv",
+      "exists": true,
+      "sha256": "8fd44ae88b9195fe99799afdfc718bb2485e38326db89624ebd7e9bc1984da6f",
+      "prior_profile": "evidence/live/product-export-profile.json",
+      "profile_sha256": "8fd44ae88b9195fe99799afdfc718bb2485e38326db89624ebd7e9bc1984da6f",
+      "matches_prior_profile": true
+    }
+  ]
+}

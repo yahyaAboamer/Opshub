@@ -1,0 +1,30 @@
+{
+  "id": "T1211",
+  "milestone": "M12",
+  "title": "Qualify production identity and controlled account invitation",
+  "dependencies": [
+    "T1210",
+    "T1203",
+    "T0111"
+  ],
+  "scope": "Qualify the distinct production Auth0/Resend context through the accepted deployed runtime: exact issuer/client/callback/MFA/session/logout/current-grant behavior and one explicitly authorized controlled invitation/account message. Bind production mail domain/recipient, build/driver/protocol and current initial-Admin verification evidence before read shadow.",
+  "tests": [
+    "Actual production hosted login/callback/session/logout binds issuer/subject and current membership; wrong nonce/issuer/recipient and revoked grant deny without disclosure.",
+    "One controlled invitation traverses the accepted Resend driver and recipient; delivery alone creates no membership, acceptance requires verified intended identity and valid single-use token; reused/expired/revoked token denied with no extra send.",
+    "Production issuer/client/callback/mail-domain/recipient and runtime hashes are distinct/current and reviewed; all source sync, customer contact and provider mutation egress remains disabled."
+  ],
+  "non_scope": "No source synchronization, customer outreach, provider business effects, restore/cutover or configuration repair. A failed production setting is a held qualification requiring separately reviewed environment change. Only the exact approved controlled invitation/account test may send or change test membership.",
+  "requirements": [
+    "MR01",
+    "MR02",
+    "AC01",
+    "ARC-SESSION",
+    "ADR-004"
+  ],
+  "gates": [
+    "AUTH-ACCOUNT-MAIL",
+    "OP02",
+    "A04",
+    "MD09"
+  ]
+}

@@ -1,0 +1,1067 @@
+{
+  "dataset_id": "OpsHub-GD",
+  "version": 2,
+  "data_class": "SYNTHETIC_ONLY",
+  "execution_status": "SPECIFICATION_NOT_APPLICATION_TEST",
+  "time": {
+    "timezone": "Africa/Cairo",
+    "start_local": "2026-08-17",
+    "end_exclusive_local": "2026-08-24",
+    "as_of": "2026-08-24T12:00:00Z"
+  },
+  "policies": {
+    "source_authority": "TEST-POLICY-v1",
+    "cohorts": "TEST-POLICY-v1",
+    "finality": "TEST-POLICY-v1",
+    "revenue_eligibility": "TEST-POLICY-v1",
+    "spend_allocation": "TEST-POLICY-v1",
+    "production_approval": false
+  },
+  "merchants": [
+    {
+      "id": "MA",
+      "source_accounts": {
+        "shopify": "SYN-SHOP-A",
+        "bosta": "SYN-BOSTA-A",
+        "meta": "SYN-META-A"
+      }
+    },
+    {
+      "id": "MB",
+      "source_accounts": {
+        "shopify": "SYN-SHOP-B",
+        "bosta": "SYN-BOSTA-B",
+        "meta": "SYN-META-B"
+      },
+      "reused_aliases": [
+        "SYN-ORDER-1",
+        "SYN-SKU",
+        "PHONE_SENTINEL"
+      ]
+    }
+  ],
+  "facts": {
+    "confirmation": [
+      {
+        "id": "CF01",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "affirmative"
+      },
+      {
+        "id": "CF02",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "affirmative"
+      },
+      {
+        "id": "CF03",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "affirmative"
+      },
+      {
+        "id": "CF04",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "affirmative"
+      },
+      {
+        "id": "CF05",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "affirmative"
+      },
+      {
+        "id": "CF06",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "affirmative"
+      },
+      {
+        "id": "CF07",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "pending"
+      },
+      {
+        "id": "CF08",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "pending"
+      },
+      {
+        "id": "CF09",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "declined"
+      },
+      {
+        "id": "CF10",
+        "merchant": "MA",
+        "entered": true,
+        "entry_date": "2026-08-18",
+        "state": "exhausted"
+      },
+      {
+        "id": "CF11",
+        "merchant": "MA",
+        "entered": false,
+        "entry_date": null,
+        "state": "not_entered"
+      },
+      {
+        "id": "CF12",
+        "merchant": "MA",
+        "entered": false,
+        "entry_date": null,
+        "state": "not_entered"
+      }
+    ],
+    "shipments": [
+      {
+        "id": "S01",
+        "merchant": "MA",
+        "order_id": "OA",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "delivered",
+        "attempt_events": [
+          "DA01",
+          "DA02"
+        ],
+        "reported_attempt_count": 2
+      },
+      {
+        "id": "S02",
+        "merchant": "MA",
+        "order_id": "OB",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "rto",
+        "attempt_events": [],
+        "reported_attempt_count": null
+      },
+      {
+        "id": "S03",
+        "merchant": "MA",
+        "order_id": "OC",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "delivered",
+        "attempt_events": [],
+        "reported_attempt_count": null
+      },
+      {
+        "id": "S04",
+        "merchant": "MA",
+        "order_id": "OD",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "delivered",
+        "attempt_events": [],
+        "reported_attempt_count": null
+      },
+      {
+        "id": "S05",
+        "merchant": "MA",
+        "order_id": "OE",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "final_other",
+        "attempt_events": [],
+        "reported_attempt_count": null
+      },
+      {
+        "id": "S06",
+        "merchant": "MA",
+        "order_id": "OF",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "pending",
+        "attempt_events": [],
+        "reported_attempt_count": null
+      },
+      {
+        "id": "S07",
+        "merchant": "MA",
+        "order_id": "OG",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "pending",
+        "attempt_events": [],
+        "reported_attempt_count": null
+      },
+      {
+        "id": "S08",
+        "merchant": "MA",
+        "order_id": "OH",
+        "purpose": "outbound",
+        "created_at": "2026-08-18T09:00:00+03:00",
+        "outcome": "unknown",
+        "attempt_events": [],
+        "reported_attempt_count": null
+      }
+    ],
+    "pickups": [
+      {
+        "id": "P01",
+        "merchant": "MA",
+        "purpose": "customer_handover",
+        "entry_date": "2026-08-18",
+        "payment": "paid",
+        "physical_outcome": "collected"
+      },
+      {
+        "id": "P02",
+        "merchant": "MA",
+        "purpose": "customer_handover",
+        "entry_date": "2026-08-18",
+        "payment": "unpaid",
+        "physical_outcome": "collected"
+      },
+      {
+        "id": "P03",
+        "merchant": "MA",
+        "purpose": "customer_handover",
+        "entry_date": "2026-08-18",
+        "payment": "paid",
+        "physical_outcome": "final_cancelled_uncollected"
+      },
+      {
+        "id": "P04",
+        "merchant": "MA",
+        "purpose": "customer_handover",
+        "entry_date": "2026-08-18",
+        "payment": "unpaid",
+        "physical_outcome": "final_no_show_uncollected"
+      },
+      {
+        "id": "P05",
+        "merchant": "MA",
+        "purpose": "customer_handover",
+        "entry_date": "2026-08-18",
+        "payment": "paid",
+        "physical_outcome": "pending"
+      },
+      {
+        "id": "P06",
+        "merchant": "MA",
+        "purpose": "customer_handover",
+        "entry_date": "2026-08-18",
+        "payment": "unpaid",
+        "physical_outcome": "pending"
+      },
+      {
+        "id": "P07",
+        "merchant": "MA",
+        "purpose": "customer_handover",
+        "entry_date": "2026-08-18",
+        "payment": "paid",
+        "physical_outcome": "unknown"
+      }
+    ],
+    "contacts": [
+      {
+        "merchant": "MA",
+        "first_attempt_date": "2026-08-18",
+        "first_action_date": "2026-08-18",
+        "id": "C01",
+        "attempts": 2,
+        "reached": true,
+        "action_required": true,
+        "action_complete": true
+      },
+      {
+        "merchant": "MA",
+        "first_attempt_date": "2026-08-18",
+        "first_action_date": "2026-08-18",
+        "id": "C02",
+        "attempts": 1,
+        "reached": true,
+        "action_required": true,
+        "action_complete": false,
+        "hold": "approval_waiting"
+      },
+      {
+        "merchant": "MA",
+        "first_attempt_date": "2026-08-18",
+        "first_action_date": "2026-08-18",
+        "id": "C03",
+        "attempts": 1,
+        "reached": true,
+        "action_required": true,
+        "action_complete": false,
+        "hold": "external_outcome_unknown"
+      },
+      {
+        "merchant": "MA",
+        "first_attempt_date": "2026-08-18",
+        "first_action_date": "2026-08-18",
+        "id": "C04",
+        "attempts": 3,
+        "reached": false,
+        "action_required": true,
+        "action_complete": false,
+        "hold": "attempts_exhausted",
+        "attempt_times": [
+          "2026-08-18T09:00:00+03:00",
+          "2026-08-19T09:00:00+03:00",
+          "2026-08-20T09:00:00+03:00"
+        ]
+      },
+      {
+        "merchant": "MA",
+        "first_attempt_date": "2026-08-18",
+        "first_action_date": null,
+        "id": "C05",
+        "attempts": 1,
+        "reached": false,
+        "action_required": false,
+        "action_complete": false
+      },
+      {
+        "merchant": "MA",
+        "first_attempt_date": null,
+        "first_action_date": "2026-08-18",
+        "id": "C06",
+        "attempts": 0,
+        "reached": false,
+        "action_required": true,
+        "action_complete": false
+      },
+      {
+        "merchant": "MA",
+        "first_attempt_date": null,
+        "first_action_date": null,
+        "id": "C07",
+        "attempts": null,
+        "reached": null,
+        "action_required": null,
+        "action_complete": null,
+        "summary_count": 3,
+        "hold": "unqualified_summary"
+      }
+    ],
+    "courier_collection": [
+      {
+        "id": "CP01",
+        "purpose": "courier_collection",
+        "physical_outcome": "collected",
+        "payment": "unpaid"
+      },
+      {
+        "id": "CP02",
+        "purpose": "courier_collection",
+        "physical_outcome": "pending",
+        "payment": "paid"
+      }
+    ],
+    "items": [
+      {
+        "id": "OA-A1",
+        "order": "OA",
+        "shipment": "S01",
+        "product": "A",
+        "variant": "A1",
+        "quantity": "1",
+        "gross": "8000",
+        "discount": "2000",
+        "reversal": "2000",
+        "reversal_id": "REV01",
+        "net": "4000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OA-A1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OA-A1"
+      },
+      {
+        "id": "OA-A2",
+        "order": "OA",
+        "shipment": "S01",
+        "product": "A",
+        "variant": "A2",
+        "quantity": "2",
+        "gross": "8000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "8000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OA-A2",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OA-A2"
+      },
+      {
+        "id": "OB-A1",
+        "order": "OB",
+        "shipment": "S02",
+        "product": "A",
+        "variant": "A1",
+        "quantity": "3",
+        "gross": "8000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "8000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OB-A1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OB-A1"
+      },
+      {
+        "id": "OA-B1",
+        "order": "OA",
+        "shipment": "S01",
+        "product": "B",
+        "variant": "B1",
+        "quantity": "1",
+        "gross": "6000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "6000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OA-B1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OA-B1"
+      },
+      {
+        "id": "OC-B1",
+        "order": "OC",
+        "shipment": "S03",
+        "product": "B",
+        "variant": "B1",
+        "quantity": "2",
+        "gross": "3000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "3000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OC-B1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OC-B1"
+      },
+      {
+        "id": "OD-C1",
+        "order": "OD",
+        "shipment": "S04",
+        "product": "C",
+        "variant": "C1",
+        "quantity": "1",
+        "gross": "1000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "1000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OD-C1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OD-C1"
+      },
+      {
+        "id": "OE-C1",
+        "order": "OE",
+        "shipment": "S05",
+        "product": "C",
+        "variant": "C1",
+        "quantity": "1",
+        "gross": "0",
+        "discount": "0",
+        "reversal": "0",
+        "net": "0",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OE-C1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OE-C1"
+      },
+      {
+        "id": "OF-C1",
+        "order": "OF",
+        "shipment": "S06",
+        "product": "C",
+        "variant": "C1",
+        "quantity": "1",
+        "gross": "1000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "1000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OF-C1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OF-C1"
+      },
+      {
+        "id": "OG-C1",
+        "order": "OG",
+        "shipment": "S07",
+        "product": "C",
+        "variant": "C1",
+        "quantity": "1",
+        "gross": "1000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "1000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OG-C1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OG-C1"
+      },
+      {
+        "id": "OH-C1",
+        "order": "OH",
+        "shipment": "S08",
+        "product": "C",
+        "variant": "C1",
+        "quantity": "1",
+        "gross": "1000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "1000",
+        "merchant": "MA",
+        "source_account": "SYN-SHOP-A",
+        "native_line_id": "NATIVE-OH-C1",
+        "placed_at": "2026-08-18T09:00:00+03:00",
+        "currency": "EGP",
+        "locator": "synthetic://shop-a/item/OH-C1"
+      }
+    ],
+    "money_currency": "EGP",
+    "spend": [
+      {
+        "id": "SP01",
+        "revision": 1,
+        "amount": "3000",
+        "type": "direct",
+        "product": "A",
+        "allocated": "3000",
+        "unallocated": "0",
+        "merchant": "MA",
+        "source_account": "SYN-META-A",
+        "native_object": "SYN-AD-SP01",
+        "reporting_level": "ad",
+        "period_start_local": "2026-08-17",
+        "period_end_exclusive_local": "2026-08-24",
+        "timezone": "Africa/Cairo",
+        "currency": "EGP",
+        "tax_basis": "fixture_declared_no_uplift",
+        "parameters": "time_increment=all_days; fixed fixture breakdown none",
+        "observed_at": "2026-08-24T09:00:00+03:00",
+        "locator": "synthetic://meta-a/SP01"
+      },
+      {
+        "id": "SP02",
+        "revision": 1,
+        "amount": "2500",
+        "type": "generic",
+        "product": "A",
+        "allocated": "2000",
+        "unallocated": "500",
+        "merchant": "MA",
+        "source_account": "SYN-META-A",
+        "native_object": "SYN-AD-SP02",
+        "reporting_level": "ad",
+        "period_start_local": "2026-08-17",
+        "period_end_exclusive_local": "2026-08-24",
+        "timezone": "Africa/Cairo",
+        "currency": "EGP",
+        "tax_basis": "fixture_declared_no_uplift",
+        "parameters": "time_increment=all_days; fixed fixture breakdown none",
+        "observed_at": "2026-08-24T09:00:00+03:00",
+        "locator": "synthetic://meta-a/SP02"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "KR01",
+      "merchant": "MA",
+      "numerator_members": [
+        "CF01",
+        "CF02",
+        "CF03",
+        "CF04",
+        "CF05",
+        "CF06"
+      ],
+      "denominator_members": [
+        "CF01",
+        "CF02",
+        "CF03",
+        "CF04",
+        "CF05",
+        "CF06",
+        "CF07",
+        "CF08",
+        "CF09",
+        "CF10"
+      ],
+      "numerator_count": 6,
+      "denominator_count": 10,
+      "expected_ratio": "6/10",
+      "pending_members": [
+        "CF07",
+        "CF08"
+      ],
+      "unknown_members": [],
+      "excluded_members": [
+        "CF11",
+        "CF12"
+      ],
+      "definition_version": "OD05-TEST-POLICY-v1",
+      "source_coverage": "complete_known_population",
+      "expected_state": "complete"
+    },
+    {
+      "id": "KR02",
+      "merchant": "MA",
+      "numerator_members": [
+        "S01",
+        "S03",
+        "S04"
+      ],
+      "denominator_members": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "numerator_count": 3,
+      "denominator_count": 5,
+      "expected_ratio": "3/5",
+      "pending_members": [
+        "S06",
+        "S07"
+      ],
+      "unknown_members": [
+        "S08"
+      ],
+      "excluded_members": [],
+      "definition_version": "OD05-TEST-POLICY-v1",
+      "source_coverage": "complete_known_population",
+      "expected_state": "provisional",
+      "qualification_reason": "S08 unmapped finality could change final denominator"
+    },
+    {
+      "id": "KR03",
+      "merchant": "MA",
+      "numerator_members": [
+        "S02"
+      ],
+      "denominator_members": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "numerator_count": 1,
+      "denominator_count": 5,
+      "expected_ratio": "1/5",
+      "pending_members": [
+        "S06",
+        "S07"
+      ],
+      "unknown_members": [
+        "S08"
+      ],
+      "excluded_members": [],
+      "definition_version": "OD05-TEST-POLICY-v1",
+      "source_coverage": "complete_known_population",
+      "expected_state": "provisional",
+      "qualification_reason": "S08 unmapped finality could change final denominator"
+    },
+    {
+      "id": "KR04",
+      "merchant": "MA",
+      "numerator_members": [
+        "P01",
+        "P02"
+      ],
+      "denominator_members": [
+        "P01",
+        "P02",
+        "P03",
+        "P04"
+      ],
+      "numerator_count": 2,
+      "denominator_count": 4,
+      "expected_ratio": "2/4",
+      "pending_members": [
+        "P05",
+        "P06"
+      ],
+      "unknown_members": [
+        "P07"
+      ],
+      "excluded_members": [],
+      "definition_version": "OD05-TEST-POLICY-v1",
+      "source_coverage": "complete_known_population",
+      "expected_state": "provisional",
+      "qualification_reason": "P07 unknown physical finality could change final denominator"
+    },
+    {
+      "id": "KR05",
+      "merchant": "MA",
+      "numerator_members": [
+        "C01",
+        "C02",
+        "C03"
+      ],
+      "denominator_members": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "numerator_count": 3,
+      "denominator_count": 5,
+      "expected_ratio": "3/5",
+      "pending_members": [],
+      "unknown_members": [],
+      "excluded_members": [
+        "C06",
+        "C07"
+      ],
+      "definition_version": "OD05-TEST-POLICY-v1",
+      "source_coverage": "complete_known_population",
+      "expected_state": "provisional",
+      "qualification_reason": "C07 unqualified summary/case/date cannot support full contact cohort"
+    },
+    {
+      "id": "KR06",
+      "merchant": "MA",
+      "numerator_members": [
+        "C01"
+      ],
+      "denominator_members": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C06"
+      ],
+      "numerator_count": 1,
+      "denominator_count": 5,
+      "expected_ratio": "1/5",
+      "pending_members": [],
+      "unknown_members": [],
+      "excluded_members": [
+        "C05",
+        "C07"
+      ],
+      "definition_version": "OD05-TEST-POLICY-v1",
+      "source_coverage": "complete_known_population",
+      "expected_state": "provisional",
+      "qualification_reason": "C07 unqualified summary/case/date cannot support full contact cohort"
+    }
+  ],
+  "roas": {
+    "id": "KR07",
+    "currency": "EGP",
+    "numerator_contributors": {
+      "OA-A1": "4000",
+      "OA-A2": "8000",
+      "OB-A1": "8000"
+    },
+    "denominator_contributors": {
+      "SP01": "3000",
+      "SP02-A": "2000"
+    },
+    "expected_numerator": "20000",
+    "expected_denominator": "5000",
+    "expected_ratio": "4",
+    "unallocated": "500",
+    "sku_ratio_state": "unavailable"
+  },
+  "products": {
+    "A": {
+      "orders": [
+        "OA",
+        "OB"
+      ],
+      "items": [
+        "OA-A1",
+        "OA-A2",
+        "OB-A1"
+      ],
+      "units": "6",
+      "net": "20000",
+      "delivered": [
+        "S01"
+      ],
+      "rto": [
+        "S02"
+      ],
+      "final": [
+        "S01",
+        "S02"
+      ]
+    },
+    "B": {
+      "orders": [
+        "OA",
+        "OC"
+      ],
+      "items": [
+        "OA-B1",
+        "OC-B1"
+      ],
+      "units": "3",
+      "net": "9000",
+      "delivered": [
+        "S01",
+        "S03"
+      ],
+      "rto": [],
+      "final": [
+        "S01",
+        "S03"
+      ]
+    },
+    "C": {
+      "orders": [
+        "OD",
+        "OE",
+        "OF",
+        "OG",
+        "OH"
+      ],
+      "items": [
+        "OD-C1",
+        "OE-C1",
+        "OF-C1",
+        "OG-C1",
+        "OH-C1"
+      ],
+      "units": "5",
+      "net": "4000",
+      "delivered": [
+        "S04"
+      ],
+      "rto": [],
+      "final": [
+        "S04",
+        "S05"
+      ],
+      "pending": [
+        "S06",
+        "S07"
+      ],
+      "unknown": [
+        "S08"
+      ],
+      "expected_state": "provisional"
+    }
+  },
+  "variants": {
+    "A1": {
+      "orders": [
+        "OA",
+        "OB"
+      ],
+      "items": [
+        "OA-A1",
+        "OB-A1"
+      ],
+      "units": "4",
+      "net": "12000"
+    },
+    "A2": {
+      "orders": [
+        "OA"
+      ],
+      "items": [
+        "OA-A2"
+      ],
+      "units": "2",
+      "net": "8000"
+    }
+  },
+  "isolated_deltas": [
+    {
+      "scenario": "GD16",
+      "definition": "KR02",
+      "numerator_members": [
+        "S03",
+        "S04"
+      ],
+      "denominator_members": [
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "expected_ratio": "2/4",
+      "unknown_members": [
+        "S01",
+        "S08"
+      ]
+    },
+    {
+      "scenario": "GD16",
+      "definition": "KR03",
+      "numerator_members": [
+        "S02"
+      ],
+      "denominator_members": [
+        "S02",
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "expected_ratio": "1/4"
+    },
+    {
+      "scenario": "GD17",
+      "definition": "KR02",
+      "numerator_members": [
+        "S01",
+        "S03",
+        "S04"
+      ],
+      "denominator_members": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S08"
+      ],
+      "expected_ratio": "3/6"
+    },
+    {
+      "scenario": "GD17",
+      "definition": "KR03",
+      "numerator_members": [
+        "S02"
+      ],
+      "denominator_members": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S08"
+      ],
+      "expected_ratio": "1/6"
+    },
+    {
+      "scenario": "GD33",
+      "definition": "KR01",
+      "numerator_members": [
+        "CF02",
+        "CF03",
+        "CF04",
+        "CF05",
+        "CF06"
+      ],
+      "denominator_members": [
+        "CF01",
+        "CF02",
+        "CF03",
+        "CF04",
+        "CF05",
+        "CF06",
+        "CF07",
+        "CF08",
+        "CF09",
+        "CF10"
+      ],
+      "expected_ratio": "5/10"
+    }
+  ],
+  "spend_revision": {
+    "scenario": "GD30",
+    "selected_revision": 2,
+    "source_total": "5600",
+    "allocated_A": "5080",
+    "unallocated": "520",
+    "expected_roas": "500/127"
+  },
+  "partial_attribution": {
+    "scenario": "GD31",
+    "eligible": "20000",
+    "attributed": "15000",
+    "unattributed": "5000",
+    "spend": "5000",
+    "expected_roas": "3"
+  },
+  "scenario_catalog": "docs/migration/06-golden-datasets.md#scenario-catalog",
+  "required_scenarios": [
+    "GD01",
+    "GD02",
+    "GD03",
+    "GD04",
+    "GD05",
+    "GD06",
+    "GD07",
+    "GD08",
+    "GD09",
+    "GD10",
+    "GD11",
+    "GD12",
+    "GD13",
+    "GD14",
+    "GD15",
+    "GD16",
+    "GD17",
+    "GD18",
+    "GD19",
+    "GD20",
+    "GD21",
+    "GD22",
+    "GD23",
+    "GD24",
+    "GD25",
+    "GD26",
+    "GD27",
+    "GD28",
+    "GD29",
+    "GD30",
+    "GD31",
+    "GD32",
+    "GD33",
+    "GD34",
+    "GD35",
+    "GD36",
+    "GD37",
+    "GD38",
+    "GD39",
+    "GD40",
+    "GD41",
+    "GD42",
+    "GD43"
+  ],
+  "logical_supplement": "evidence/migration/golden-logical-fixtures.json",
+  "fixture_completeness": "EXPECTED_VALUE_INDEX_PLUS_LOGICAL_SUPPLEMENT; complete provider-shaped per-scenario realization requires independent V2 review",
+  "policy_rules_reference": "evidence/migration/golden-logical-fixtures.json#test_policy_rules",
+  "spending_revision_contributors_reference": "evidence/migration/golden-logical-fixtures.json#spend_revision",
+  "prior_period_reference": "evidence/migration/golden-logical-fixtures.json#prior_period",
+  "partial_attribution_contributors_reference": "evidence/migration/golden-logical-fixtures.json#partial_attribution"
+}

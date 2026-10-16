@@ -1,0 +1,28 @@
+{
+  "review": "evidence/implementation/independent-review.md",
+  "reviewed_draft_plan_digest": "2d6bac43ae8578d1ec99304b05c2c4c9b3af394d2df647f56093f6542a994945",
+  "amended_revision": "P6-r2",
+  "new_task_ids": [
+    "T0010",
+    "T0111",
+    "T0210",
+    "T0309",
+    "T0406",
+    "T0711",
+    "T0712",
+    "T0713",
+    "T0714",
+    "T0915",
+    "T1208",
+    "T1209",
+    "T1210"
+  ],
+  "disposition": "IR01-IR07 and both bounded qualification addenda CLOSED by independent amendment check; final static PASS; human Phase6 approval pending",
+  "final_plan_digest": "e33f0c023cce4bbb9edac3c1b53e1c542b6e00ae3ac585f04d401584d019abf9",
+  "final_task_count": 127,
+  "additional_task_ids": [
+    "T1211"
+  ],
+  "independent_check": "evidence/implementation/independent-amendment-check.md",
+  "verification": "evidence/implementation/verification.json"
+}

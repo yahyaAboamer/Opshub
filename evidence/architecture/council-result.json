@@ -1,0 +1,82 @@
+{
+  "method": "five independent lenses; five fresh blind peer reviewers; inherited available model; not cross-vendor",
+  "earlier_dispatch": "interrupted by usage limit; no member answers persisted before resumed run",
+  "question": "Is the OpsHub Phase 4 architecture a safe, faithful, implementable MVP for a small AI-assisted team, preserving OD01-OD09?",
+  "draft_manifest": "council-reviewed-draft-manifest.json",
+  "frozen_draft": "council-reviewed-draft.zip",
+  "stage1_members": 5,
+  "stage2_fresh_reviewers": 5,
+  "rankings": [
+    {
+      "reviewer": 1,
+      "ranking": [
+        "C",
+        "B",
+        "A",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "reviewer": 2,
+      "ranking": [
+        "C",
+        "B",
+        "A",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "reviewer": 3,
+      "ranking": [
+        "C",
+        "B",
+        "A",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "reviewer": 4,
+      "ranking": [
+        "B",
+        "C",
+        "A",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "reviewer": 5,
+      "ranking": [
+        "C",
+        "B",
+        "A",
+        "D",
+        "E"
+      ]
+    }
+  ],
+  "average_position": {
+    "A": 3.0,
+    "B": 1.8,
+    "C": 1.2,
+    "D": 4.0,
+    "E": 5.0
+  },
+  "overall_order": [
+    "C",
+    "B",
+    "A",
+    "D",
+    "E"
+  ],
+  "private_lens_map": {
+    "A": "Pragmatist",
+    "B": "Red-teamer",
+    "C": "Domain rigorist",
+    "D": "First principles",
+    "E": "Generalist"
+  }
+}

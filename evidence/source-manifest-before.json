@@ -1,0 +1,192 @@
+[
+  {
+    "Path": "source/~$02_Gentry_Delivery_Performance_System.xlsx",
+    "Bytes": 165,
+    "SHA256": "1E0F49777E9CD82A24F3A5E1841C1FC7BC3CA98ECA8D8139A373D1E8D91D5207"
+  },
+  {
+    "Path": "source/00_Delivery_Performance_System_Architecture.md",
+    "Bytes": 32189,
+    "SHA256": "AD2C483D64E885182C61D4EA153F44B9F0BB4CF5F59E85A26038F2ACBA049E84"
+  },
+  {
+    "Path": "source/01_Hadeer_Sheet_Upgrade_Pack.xlsx",
+    "Bytes": 18869,
+    "SHA256": "EA91F86C1543B97C4BB6ECE45A4117B6A2D1C4EFCF87EE072C30DD141F97B2D8"
+  },
+  {
+    "Path": "source/01.1_Gentry_ReturnType_Dependent_Dropdown.gs",
+    "Bytes": 4574,
+    "SHA256": "2D87D62D9F3A809131631AD8ED9403188962E493308655209E3F3B566D9130F5"
+  },
+  {
+    "Path": "source/02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+    "Bytes": 2048045,
+    "SHA256": "479EFB8B605B33423113CCE02097D36C30285B96FEDB8F7B12C192F5D9852F00"
+  },
+  {
+    "Path": "source/02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+    "Bytes": 3092813,
+    "SHA256": "6D502A2332F72469CE7DA37C1696C8E247EEFE22F01E1AB76CAAEDB5566DE949"
+  },
+  {
+    "Path": "source/02_Gentry_Delivery_Performance_System.xlsx",
+    "Bytes": 4488725,
+    "SHA256": "45512A432BAB5BA5640E468B379D9DE801D6BC9596C4F85A9CE163B10F92E2AE"
+  },
+  {
+    "Path": "source/03_SOP_Customer_Support_Calls.docx",
+    "Bytes": 43945,
+    "SHA256": "9D1367CE7CC6D8A8FE5D97F27EF8187D687DE47A689685518A293D0D0B0F6FDB"
+  },
+  {
+    "Path": "source/04_SOP_Operations_Weekly_Routine.docx",
+    "Bytes": 43690,
+    "SHA256": "3F82EC1785DEFD1D2B9817E4BC1DFF8E45FD034ACA7C17A93DFA22F107352F72"
+  },
+  {
+    "Path": "source/05_Executive_Brief_How_To_Read_It.docx",
+    "Bytes": 42285,
+    "SHA256": "13C77217391856ECBD7DE93F6D21CE3C51BF3B5BFF742EC2FCBA7BC2835F4D1E"
+  },
+  {
+    "Path": "source/06_v3.0_PreDispatch_Confirmation_Layer_PLAN.md",
+    "Bytes": 5965,
+    "SHA256": "BFEEFE3B09AC57A0B88E356756616C828852072BEA865BB83405E506EA956439"
+  },
+  {
+    "Path": "source/06.1_v3.0_Kickoff_Prompt.md",
+    "Bytes": 2749,
+    "SHA256": "50EA92151DB7988F29385851361A398F1DD45F936C55A41D4424436C9BB2D170"
+  },
+  {
+    "Path": "source/2026-08-22_Config_Audit.md",
+    "Bytes": 9954,
+    "SHA256": "48E87E5A05CE8A1B979A40BF59F01E3AE0CA8E25680DAA6B0351E81FD70E599B"
+  },
+  {
+    "Path": "source/2026-08-28_Shopify_orders_18Jun-17Aug.csv",
+    "Bytes": 341234,
+    "SHA256": "8FFA643D235477518F96D2FDC4EC639CF2A0B001D726E9086365ED0D5E20DBB0"
+  },
+  {
+    "Path": "source/2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx",
+    "Bytes": 8507,
+    "SHA256": "1BA59341A7EDD715BA00A301647E9E755825E4DB64C57941B058DCABF8D3CFED"
+  },
+  {
+    "Path": "source/2026-09-08_RAW_Bosta_STAGED_20May-06Sep.xlsx",
+    "Bytes": 120259,
+    "SHA256": "FB2638530FFE25BEB4CFAF4DEC9849D666F2E527D57D515CD7A1E69B8A4375EA"
+  },
+  {
+    "Path": "source/2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx",
+    "Bytes": 203187,
+    "SHA256": "5310C47FDD1F4217C01E0F86BA2343EAAAE0897ABD5E9004E0EA19874538CC31"
+  },
+  {
+    "Path": "source/2026-09-08_RAW_SKU_ADDITIONS.xlsx",
+    "Bytes": 5754,
+    "SHA256": "B50C01862E18A57166B86C216F25C728571983C507E09185BA76EB6FDD114C73"
+  },
+  {
+    "Path": "source/HANDOVER_README.md",
+    "Bytes": 13042,
+    "SHA256": "2F44792165603463ACD25E61160904F0D5C62187C9F631267B69AEB322FC9CB1"
+  },
+  {
+    "Path": "source/reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.docx",
+    "Bytes": 151334,
+    "SHA256": "8B7126428233FBFB59247D9D5265162F476AA09AD73FECFBFFE6600ADFF8010B"
+  },
+  {
+    "Path": "source/reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.pdf",
+    "Bytes": 253836,
+    "SHA256": "4B8E8D9361D637DDF5E7476077643265FE8168DF53C29A32F4237B97429434F7"
+  },
+  {
+    "Path": "source/skills/gentry-delivery-report/state.json",
+    "Bytes": 754,
+    "SHA256": "BBA60450CCBDBA9A343553BB10B86F7D3E7B551EC9956D4406277435EF07F45A"
+  },
+  {
+    "Path": "source/skills/gentry-delivery-report/scripts/build_report.py",
+    "Bytes": 10300,
+    "SHA256": "1797F59BB5FDCA5E4C68FE381BBED4A5B783B8970693AD9090681E04809AB333"
+  },
+  {
+    "Path": "source/skills/gentry-delivery-report/scripts/extract.py",
+    "Bytes": 10893,
+    "SHA256": "6674C3A0A2030A9486CCC1720FCE1310003DBCA89B82788A13A1CF76C06F5EC2"
+  },
+  {
+    "Path": "source/skills/gentry-delivery-report/scripts/report_kit.py",
+    "Bytes": 10766,
+    "SHA256": "5246FC773F7F5F602B517DE57529309E6C208CCAE429E8AA51C34BFC9E6B73B3"
+  },
+  {
+    "Path": "source/skills/gentry-delivery-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+    "Bytes": 11850,
+    "SHA256": "EC15778C296239D3039FB51B6D285309E05E48673CC3E7A83CEE6E6D27E5C934"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/SKILL.md",
+    "Bytes": 7634,
+    "SHA256": "8F2257EF211A2FF8D37FEF48C70B35CA72CD3E6CE3A198FB03BF3D1F1E31F15F"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/evals/evals.json",
+    "Bytes": 827,
+    "SHA256": "5CFA4F05E3E1F50F0F965804D132C0B4B811C9AF24B4071750A922F15776EDBF"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/references/report_structure.md",
+    "Bytes": 6189,
+    "SHA256": "151E09408A8B5771D5707FFEC6BE9AAA2B03304C8EF69482E3AF9D2F196D30B6"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/references/writing_rules.md",
+    "Bytes": 6035,
+    "SHA256": "17EE34A7301C80B47E071E440D9DC62F59BEFCD9E080495F643BE4333986CC5D"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/scripts/actions.py",
+    "Bytes": 1883,
+    "SHA256": "DB478155CFEA6C7194E1D5D444D9F6FD1BBEB0DB957F8BF8D6B0EE3E3B94569B"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/scripts/extract_metrics.py",
+    "Bytes": 15402,
+    "SHA256": "EAF5B9CC0CC16DF705B4DE787CEF2FB96968F8A55470CA8341E750C23FC30E24"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/scripts/make_chart.py",
+    "Bytes": 2274,
+    "SHA256": "F49A5AED8319735143403C615747E53AB4188102FFA7C7AAC9B1833808F32E9A"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/scripts/report_kit.py",
+    "Bytes": 10766,
+    "SHA256": "5246FC773F7F5F602B517DE57529309E6C208CCAE429E8AA51C34BFC9E6B73B3"
+  },
+  {
+    "Path": "source/skills/gentry-weekly-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+    "Bytes": 11845,
+    "SHA256": "7B53215DB7866A06E3AD7715C6A3DB0327233CE92AD65DA098EC4A5D67EA4BF2"
+  },
+  {
+    "Path": "source/_superseded/03_SOP_Hadeer_Returns_Calls.docx",
+    "Bytes": 15420,
+    "SHA256": "B393DEB02C29847B80F3AB05D73F663FE6BC33BAF7DA01467BFE74BC988A2FFE"
+  },
+  {
+    "Path": "source/_superseded/04_SOP_Omar_Weekly_Routine.docx",
+    "Bytes": 14839,
+    "SHA256": "85C74B9DF528D2B33EE0B2FBF165468043976B554E9DCB9D82B290D36EEF7424"
+  },
+  {
+    "Path": "source/_superseded/05_Hassan_How_To_Read_Your_Page.docx",
+    "Bytes": 14372,
+    "SHA256": "A5D08C9D6EF1B5B446D108B7A94338A511498FD9417B2E658058E09D8E913EF9"
+  }
+]

@@ -1,0 +1,21 @@
+# Phase 4 — provider verification source record
+
+14 October 2026. Public official-document review only. No account connection, credentials, customer payload, provider mutation, security bypass or production experiment. The capability/limitation matrix is [18](../../docs/architecture/18-provider-capability-review.md). This record preserves access limits instead of treating inaccessible documentation as proof of absence.
+
+## Shopify sources inspected
+
+Accessible current Shopify documentation: [access tokens](https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens), [Order](https://shopify.dev/docs/api/admin-graphql/latest/objects/Order), [ProductVariant](https://shopify.dev/docs/api/admin-graphql/latest/objects/ProductVariant), [orderCreate](https://shopify.dev/docs/api/admin-graphql/latest/mutations/orderCreate), [orderCancel](https://shopify.dev/docs/api/admin-graphql/latest/mutations/orderCancel), [tagsAdd](https://shopify.dev/docs/api/admin-graphql/latest/mutations/tagsAdd), [metafieldsSet](https://shopify.dev/docs/api/admin-graphql/latest/mutations/metafieldsSet), [webhooks](https://shopify.dev/docs/apps/build/webhooks), [delivery verification](https://shopify.dev/docs/apps/build/webhooks/verify-deliveries), [GraphQL rate limits](https://shopify.dev/docs/apps/build/apis/graphql-admin/rate-limits), [capability-specific idempotency](https://shopify.dev/docs/apps/build/apis/graphql-admin/implementing-idempotency). Mutation pages selected latest2026-10 at inspection. No generated GraphQL operation is delivered or executed.
+
+Shopify's [privacy-law compliance requirements](https://shopify.dev/docs/apps/build/compliance/privacy-law-compliance) were also inspected for mandatory privacy topics applicable to App Store distribution and verified request handling; these do not establish an OpsHub compliance certification.
+
+## Bosta sources inspected
+
+Accessible official [API key guide](https://docs.bosta.co/docs/how-to/get-your-api-key/), [shipment creation](https://docs.bosta.co/docs/how-to/create-your-first-delivery/), [business pickup](https://docs.bosta.co/docs/how-to/create-your-first-pickup/), [status callback](https://docs.bosta.co/docs/how-to/get-delivery-status-via-webhook/), [provider SDK documentation](https://github.com/bostaapp/bosta-nodejs/blob/master/README.md). The [main API reference](https://docs.bosta.co/api/) rendered loading/unavailable description through browser retrieval. A separate read-only PowerShell fetch failed TLS authentication and did not yield further schema evidence. No certificate checking was disabled; no guessed authenticated endpoints were probed.
+
+Numerical standard-delivery rate quota, shipment-create uniqueness/idempotency, exhaustive absence lookup, individually identified attempt chronology and signed callback-body/replay contract were not established. Bosta Fulfillment documentation concerns a different API and was not substituted for this contract.
+
+## Meta sources inspected
+
+[Developer Insights](https://developers.facebook.com/docs/marketing-api/insights) returned HTTP429; [authorization](https://developers.facebook.com/docs/marketing-api/overview/authorization/) and [rate limits](https://developers.facebook.com/docs/marketing-api/overview/rate-limiting/) were inaccessible through the available tool. Readable alternatives were [Meta's official API workspace](https://www.postman.com/meta/facebook-marketing-api/overview), [period spend request](https://www.postman.com/meta/facebook-marketing-api/request/gdbk43j/getreportforinsight2), provider-owned [AdsInsights definitions](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adsinsights.py) and [AdAccount report methods](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adaccount.py). Raw SDK files were inspected through their official repository raw URLs as well.
+
+SDK/collection contracts establish named fields/report parameters, not usable pilot permissions, exact rate policy, report delay/finality SLA, supported account breakdowns or universal Shopify-SKU attribution. No third-party integration guide was used to promote these gaps to confirmed capability. Live account/API-version qualification remains mandatory.

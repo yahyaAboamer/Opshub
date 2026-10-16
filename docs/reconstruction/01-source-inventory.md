@@ -1,0 +1,75 @@
+# Source inventory and authority
+
+All 38 files under `source/` were treated as original evidence and read only. SHA-256 identities are in [baseline manifest](../../evidence/source-manifest-before.json); detailed provenance is in the [text manifest](../../evidence/artifacts/text/nonworkbook-manifest.json) and [workbook inventory](../../evidence/artifacts/workbooks/workbook_inventory.json). File size alone does not confer authority.
+
+## Authority rules
+
+**VERIFIED artifact declarations:** HANDOVER_README (4 Sep, v3) calls the main workbook the system and architecture the specification, defers weekly operating rhythm to current Operations SOP, and marks plan/kickoff and named-person SOPs historical. Current filename carries expanded data through8 Sep; its START still says v2/19Aug, so a displayed version label is stale. The8 Sep report is later supporting analysis, not an authoritative override of operational policy.
+
+The architecture's base v2 material and §13 v3 corrections must be read together. Config audit proposals explicitly had not been written when authored. Three confirmation/pickup targets remain flagged `[CONFIRM]`. A source report skill is evidence about historical report authoring; it was not invoked as instructions for this investigation.
+
+DOCX core metadata has generic2013 template dates; visible version/date labels establish chronology more reliably. Backups are preserved historical comparison points. No supplied file is the current web app's source repository, database schema or integration configuration.
+
+## Complete file register
+
+All paths below are relative to `source/`.
+
+| File | Role / authority / relationship |
+|---|---|
+| `00_Delivery_Performance_System_Architecture.md` | Intended workbook schema/rules, v3 28Aug; base/addendum discrepancies retained. |
+| `HANDOVER_README.md` | 4 Sep handoff, authority map, source/metric cautions; stale relative to8 Sep refresh. |
+| `01_Hadeer_Sheet_Upgrade_Pack.xlsx` | Four-sheet setup/migration/template pack, supporting Google Sheets change, not call dataset. |
+| `01.1_Gentry_ReturnType_Dependent_Dropdown.gs` | Container-bound return-type→cause validation source; deployment unverified. |
+| `02_Gentry_Delivery_Performance_System.xlsx` | Current supplied historical workbook, 22sheets, 167,678 formulas; source windows differ. |
+| `02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx` |22-sheet comparison snapshot, 353 order headers; all shared with live. |
+| `02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx` |18-sheet preconfirmation comparison; 189 cached #N/A are chart suppression, not automatically broken KPIs. |
+| `~$02_Gentry_Delivery_Performance_System.xlsx` |165-byte Office lock artifact, no business authority. |
+| `03_SOP_Customer_Support_Calls.docx` | Current supplied Support v2 28Aug; confirmation and return duties. |
+| `04_SOP_Operations_Weekly_Routine.docx` | Current supplied Operations v3 28Aug; weekly rhythm overrides spec rhythm. |
+| `05_Executive_Brief_How_To_Read_It.docx` | Current supplied Owner v2 28Aug; decisions/interpretation. |
+| `06_v3.0_PreDispatch_Confirmation_Layer_PLAN.md` |22Aug plan explicitly not built; later §13 supersedes assumptions. |
+| `06.1_v3.0_Kickoff_Prompt.md` | Historical execution prompt, not present authorization. |
+| `2026-08-22_Config_Audit.md` | Point-in-time audit/proposed internal thresholds; approval not implicit. |
+| `2026-08-28_Shopify_orders_18Jun-17Aug.csv` | Shopify line-item export, historical source underlying353-order backup. |
+| `2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx` |27 shipment-tracking rows prepared for intake; zero overlap with current 75 intake keys, so ingestion not demonstrated. |
+| `2026-09-08_RAW_Bosta_STAGED_20May-06Sep.xlsx` |569 shipment rows, exactly matching current RAW_Bosta. |
+| `2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx` | Staged Shopify refresh; reconciliation distinguishes overlap/additional history. |
+| `2026-09-08_RAW_SKU_ADDITIONS.xlsx` |22 proposed variants; 9 included in current master, 13 absent. Not proof all were meant to be imported. |
+| `reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.docx` | Generated/authored8 Sep review; quantitative/narrative inputs absent. |
+| `reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.pdf` | Four-page rendition, all pages visually checked; same material content as DOCX. |
+| `skills/gentry-delivery-report/state.json` | Historical report history/next period; automatic-update comment contradicts builder. |
+| `skills/gentry-delivery-report/scripts/extract.py` | Monthly raw-data metric generator; static behavior differs from workbook/spec. |
+| `skills/gentry-delivery-report/scripts/build_report.py` | DOCX/chart assembly from metrics+authored narrative; no state update/send/scheduler. |
+| `skills/gentry-delivery-report/scripts/report_kit.py` | Formatting helper; byte-identical to weekly copy. |
+| `skills/gentry-delivery-report/scripts/__pycache__/report_kit.cpython-310.pyc` | Generated bytecode metadata; not loaded or treated as source authority. |
+| `skills/gentry-weekly-report/SKILL.md` | Historical agent/human workflow for gated briefs; supporting authoring procedure. |
+| `skills/gentry-weekly-report/evals/evals.json` | Two example expectations, no actual test results. |
+| `skills/gentry-weekly-report/references/report_structure.md` | Brief/action-sidecar structure, supporting template. |
+| `skills/gentry-weekly-report/references/writing_rules.md` | Attribution/privacy/target caveats, supporting authoring rules. |
+| `skills/gentry-weekly-report/scripts/actions.py` | JSON action-sidecar persistence; no supplied sidecars/history. |
+| `skills/gentry-weekly-report/scripts/extract_metrics.py` | Fixed-cell KPI/worklist extraction; recalculates copy; privacy/static gaps. |
+| `skills/gentry-weekly-report/scripts/make_chart.py` | Optional last-item drop and trend formatting; no actual partial-week detector. |
+| `skills/gentry-weekly-report/scripts/report_kit.py` | Formatting helper, identical to monthly copy. |
+| `skills/gentry-weekly-report/scripts/__pycache__/report_kit.cpython-310.pyc` | Generated cache; different binary bytes do not establish different business logic. |
+| `_superseded/03_SOP_Hadeer_Returns_Calls.docx` |19Aug returns-only Support SOP, historical taxonomy/queue policy. |
+| `_superseded/04_SOP_Omar_Weekly_Routine.docx` |19Aug four-source routine/top-up mapping, historical. |
+| `_superseded/05_Hassan_How_To_Read_Your_Page.docx` |19Aug courier-only Owner guide, historical. |
+
+## Main workbook sheet map
+
+| Layer | Sheets / meaning |
+|---|---|
+| Human entry and provenance | START, Config, Change_Log |
+| Raw evidence | RAW_Bosta, RAW_Costs, RAW_Intake, RAW_SKU, RAW_Shopify |
+| Different grains | DATA_Master (shipment/leg), Orders_Master (order) |
+| Quality / operational | Data_Quality, OPS_Control, Customer_Recovery |
+| Analysis | Weekly, Monthly, Returns_Channels, Failure_Analysis, Product_Size, Geo_Courier |
+| Executive / v3 addition | EXEC_Brand, Confirmation, Pickup_Channel |
+
+Current DATA_Master has 2,000 formula slots ×55 columns; Orders_Master2,000 ×24. These are capacities, not record counts. RAW_Shopify sequence names extend through row5002 in current, versus 2002 in v3 backup. Stale XML dimensions do not reliably describe occupied rows; cell inspection found RAW_Costs through1383.
+
+## Dataset provenance and caveats
+
+Current raw populations: 2,082 Shopify line rows/1,635 headers (1 Apr–8 Sep); 569 Bosta legs (20 May–6 Sep); 1,381 unique wallet tracking rows (30 Apr–7 Sep); 75 intake rows; 60 SKU variants/19 products. This is a historical, mismatched-window package, not a coherent live as-of snapshot. Current and v3 formula values have no caches. Independent reproduced classifications establish formula implications, not engine-verified workbook outputs.
+
+See [data model](07-data-model-observations.md), [ingestion](10-data-ingestion-and-background-jobs.md), [file-feature traceability](12-file-to-feature-traceability.md) and [workbook evidence](../../evidence/artifacts/workbooks/reconciliation.json).

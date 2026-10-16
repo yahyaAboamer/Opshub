@@ -1,0 +1,294 @@
+{
+  "READ_ME": [
+    {
+      "row": 1,
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Gentry — Hadeer call-queue top-up",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "A2",
+          "value": "Generated 2026-09-08 from the Bosta export (20 May – 6 Sep 2026).",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "cell": "A3",
+          "value": "",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "cells": [
+        {
+          "cell": "A4",
+          "value": "WHAT THIS IS",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "A5",
+          "value": "27 return-channel shipments created AFTER 12 Aug 2026 that are not yet in the sheet.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "A6",
+          "value": "25 RTO (failed delivery, returned to origin) + 2 exchange return legs.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "A7",
+          "value": "Date span 15 Aug – 3 Sep 2026. Every row has a name, phone, tracking number and items.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "cell": "A8",
+          "value": "",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "A9",
+          "value": "HOW TO PASTE — do the format step FIRST or the phone breaks",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "cell": "A10",
+          "value": "1. In the sheet, select C102:C128 and set Format > Number > Plain text.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "cell": "A11",
+          "value": "2. Come back here, select A2:E28 on the PASTE_AT_A102 tab, copy.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "A12",
+          "value": "3. In the sheet, click A102 and Paste.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "A13",
+          "value": "4. Leave columns F to T blank — those are Hadeer's to fill on the call.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "cell": "A14",
+          "value": "",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "cell": "A15",
+          "value": "WHY STEP 1 MATTERS",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "cell": "A16",
+          "value": "Google Sheets reads a leading + as the start of a formula. Without the plain-text",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "cell": "A17",
+          "value": "format the phone becomes the number [phone example redacted] and loses the +, which is what",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "cell": "A18",
+          "value": "happened on the single test row written via the API.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "cell": "A19",
+          "value": "",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "cell": "A20",
+          "value": "ONE ROW TO DELETE",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "cells": [
+        {
+          "cell": "A21",
+          "value": "Row 1009 holds a stray test row (customer identification redacted). Delete it — that same",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "cells": [
+        {
+          "cell": "A22",
+          "value": "shipment is row 2 of this file, so it is included here and should only exist once.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "cell": "A23",
+          "value": "",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "cell": "A24",
+          "value": "NOT INCLUDED — and worth a decision",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "cells": [
+        {
+          "cell": "A25",
+          "value": "129 return shipments created on or before 12 Aug are absent from the sheet, 110 of",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "cell": "A26",
+          "value": "them from June. They were never queued because the earlier Bosta exports the previous",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "cells": [
+        {
+          "cell": "A27",
+          "value": "batches were built from were incomplete. They are the main reason reason-capture sits",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "cells": [
+        {
+          "cell": "A28",
+          "value": "at 35.6%. At three months old, recovery value is low — but the root causes are still",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "cells": [
+        {
+          "cell": "A29",
+          "value": "missing from every June failure analysis. Say the word and I will generate that file too.",
+          "formula": null
+        }
+      ]
+    }
+  ]
+}

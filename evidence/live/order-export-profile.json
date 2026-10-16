@@ -1,0 +1,105 @@
+{
+  "evidence_id": "L20-order-export",
+  "observed_date": "2026-10-13",
+  "route": "/export/orders?period=all",
+  "sha256": "fb9dc509c38e1efff95b8c197f4fbd7c94d46663cd4c0fe488dc810668ac3c23",
+  "headers": [
+    "Order",
+    "Date",
+    "Customer",
+    "Phone",
+    "Channel",
+    "Confirmed by",
+    "Outcome",
+    "Status",
+    "City",
+    "Bosta state",
+    "Attempts",
+    "Items",
+    "Value (EGP)",
+    "Returns by this phone",
+    "Last call"
+  ],
+  "row_count": 1339,
+  "unique_order_names": 1339,
+  "date_min": "2026-05-07",
+  "date_max": "2026-10-13",
+  "categories": {
+    "Channel": {
+      "Delivery": 1215,
+      "Pickup": 124
+    },
+    "Confirmed by": {
+      "Not confirmed": 537,
+      "Hadeer": 670,
+      "Whapi (auto)": 41,
+      "Omar": 91
+    },
+    "Outcome": {
+      "Not shipped yet": 29,
+      "Pickup - not yet collected": 11,
+      "Cancelled before dispatch": 85,
+      "In transit": 18,
+      "Delivered & kept": 640,
+      "": 29,
+      "Never received (RTO)": 339,
+      "Exchange return": 35,
+      "Picked up": 43,
+      "Cancelled": 69,
+      "Received then refused": 41
+    },
+    "Status": {
+      "Pending": 37,
+      "Cancelled": 480,
+      "Completed": 822
+    },
+    "Bosta state": {
+      "": 266,
+      "Processing": 29,
+      "Delivered": 1019,
+      "Created": 21,
+      "Terminated": 4
+    },
+    "Attempts": {
+      "": 266,
+      "1": 603,
+      "0": 28,
+      "2": 286,
+      "3": 133,
+      "4": 19,
+      "5": 2,
+      "6": 1,
+      "7": 1
+    },
+    "Last call": {
+      "": 1115,
+      "ResolvedByCall": 147,
+      "NoAnswer": 73,
+      "EscalatedToOmar": 4
+    }
+  },
+  "order_value_egp": "1893401.0",
+  "outcomes_by_channel": {
+    "Pickup": {
+      "Pickup - not yet collected": 11,
+      "Picked up": 43,
+      "Cancelled": 69,
+      "Received then refused": 1
+    },
+    "Delivery": {
+      "Not shipped yet": 29,
+      "Cancelled before dispatch": 85,
+      "In transit": 18,
+      "Delivered & kept": 640,
+      "": 29,
+      "Never received (RTO)": 339,
+      "Exchange return": 35,
+      "Received then refused": 40
+    }
+  },
+  "limitations": [
+    "Current mutable production snapshot; original CSV stays in the user's downloads, outside evidence.",
+    "No customer, contact, item, or order identifiers are retained here.",
+    "CSV Last call categories may be labels, not a complete event ledger."
+  ]
+}

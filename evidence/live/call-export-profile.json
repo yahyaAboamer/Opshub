@@ -1,0 +1,66 @@
+{
+  "evidence_id": "L24-call-export",
+  "route": "/export/calls",
+  "date": "2026-10-13",
+  "sha256": "2ed04bd506c781b69f2af5b85ea978bb34a747426d1e1c129b0b10afda27493e",
+  "headers": [
+    "Called at",
+    "Order",
+    "Customer",
+    "Phone",
+    "Call status",
+    "Reason",
+    "Resolution",
+    "Refund issued",
+    "Recoverable",
+    "Called by",
+    "Notes"
+  ],
+  "row_count": 239,
+  "unique_order_names": 224,
+  "call_date_min": "2026-06-11",
+  "call_date_max": "2026-10-08",
+  "status_counts": {
+    "ResolvedByCall": 158,
+    "NoAnswer": 77,
+    "EscalatedToOmar": 4
+  },
+  "reason_counts": {
+    "Changed mind": 28,
+    "": 88,
+    "Courier never called": 12,
+    "Customer refused to give reason": 30,
+    "Quality - fabric or material": 2,
+    "Not available at delivery": 19,
+    "Fit - too large": 8,
+    "Wrong address captured": 1,
+    "Ordered by mistake or duplicate": 1,
+    "Fit - length or proportion": 3,
+    "Fit - too small": 4,
+    "Fit - size not specified": 36,
+    "Wrong item shipped": 2,
+    "Travelling or out of city": 2,
+    "Quality - not specified": 3
+  },
+  "resolution_counts": {
+    "Re-shipped": 17,
+    "": 93,
+    "Refunded": 26,
+    "Closed - no resolution": 3,
+    "Rescheduled delivery": 1,
+    "Not recoverable": 83,
+    "Reshipped": 4,
+    "Exchange completed": 2,
+    "Pending": 10
+  },
+  "calls_predating_order_date": 7,
+  "predating_call_statuses": {
+    "ResolvedByCall": 6,
+    "NoAnswer": 1
+  },
+  "limitations": [
+    "Date comparison uses exported ISO date components; no time-zone or event provenance validation.",
+    "No customer, staff, phone, notes, or order identifiers retained.",
+    "Export is event-grain and does not accept the displayed dashboard period in its observed href."
+  ]
+}

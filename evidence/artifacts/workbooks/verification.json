@@ -1,0 +1,79 @@
+{
+  "source_files_read_only_verification": [
+    {
+      "source": "01_Hadeer_Sheet_Upgrade_Pack.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 0,
+      "table_parts": 0,
+      "sheets_with_charts": []
+    },
+    {
+      "source": "02_Gentry_Delivery_Performance_System.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 3,
+      "table_parts": 0,
+      "sheets_with_charts": [
+        "EXEC_Brand"
+      ]
+    },
+    {
+      "source": "02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 3,
+      "table_parts": 0,
+      "sheets_with_charts": [
+        "EXEC_Brand"
+      ]
+    },
+    {
+      "source": "02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 3,
+      "table_parts": 0,
+      "sheets_with_charts": [
+        "EXEC_Brand"
+      ]
+    },
+    {
+      "source": "2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 0,
+      "table_parts": 0,
+      "sheets_with_charts": []
+    },
+    {
+      "source": "2026-09-08_RAW_Bosta_STAGED_20May-06Sep.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 0,
+      "table_parts": 0,
+      "sheets_with_charts": []
+    },
+    {
+      "source": "2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 0,
+      "table_parts": 0,
+      "sheets_with_charts": []
+    },
+    {
+      "source": "2026-09-08_RAW_SKU_ADDITIONS.xlsx",
+      "sha256_unchanged_since_initial_read": true,
+      "zip_integrity_error": null,
+      "chart_parts": 0,
+      "table_parts": 0,
+      "sheets_with_charts": []
+    }
+  ],
+  "source_input_pii_token_scan": {
+    "tokens_checked": 9887,
+    "matched_evidence_files": [],
+    "limit": "Exact source values of length at least eight. Generic identical human names can cause false positives; this is not a privacy guarantee for arbitrary natural-language identifiers."
+  }
+}

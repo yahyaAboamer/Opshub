@@ -1,0 +1,653 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpsHub bounded task manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "plan_revision",
+    "plan_status",
+    "approval_status",
+    "date",
+    "input_baseline",
+    "canonical_status_note",
+    "gate_register",
+    "coverage_file",
+    "integration_baseline",
+    "plan_digest",
+    "topological_order",
+    "first_runway",
+    "milestones",
+    "tasks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "plan_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plan_status": {
+      "type": "string"
+    },
+    "approval_status": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "input_baseline": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "inventory_digest"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "inventory_digest": {
+          "$ref": "#/$defs/hash"
+        }
+      }
+    },
+    "canonical_status_note": {
+      "type": "string"
+    },
+    "gate_register": {
+      "type": "string"
+    },
+    "coverage_file": {
+      "type": "string"
+    },
+    "integration_baseline": {
+      "type": "object",
+      "required": [
+        "current_git_commit",
+        "current_git_state",
+        "future_accepted_branch",
+        "plan_digest_method"
+      ],
+      "properties": {
+        "current_git_commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "current_git_state": {
+          "type": "string"
+        },
+        "future_accepted_branch": {
+          "const": "main"
+        },
+        "plan_digest_method": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "plan_digest": {
+      "$ref": "#/$defs/hash"
+    },
+    "topological_order": {
+      "$ref": "#/$defs/ids"
+    },
+    "first_runway": {
+      "$ref": "#/$defs/ids"
+    },
+    "milestones": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "task_ids",
+          "outcome_level"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "pattern": "^M\\d+$",
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "task_ids": {
+            "$ref": "#/$defs/ids"
+          },
+          "outcome_level": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/task"
+      }
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "strings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^T\\d{4}$"
+      }
+    },
+    "gateRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gate_id",
+        "stage",
+        "capability",
+        "environment"
+      ],
+      "properties": {
+        "gate_id": {
+          "type": "string"
+        },
+        "stage": {
+          "enum": [
+            "START",
+            "COMPLETION",
+            "SHADOW",
+            "ACTION_ENABLEMENT",
+            "CUTOVER"
+          ]
+        },
+        "capability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "section",
+        "line",
+        "end_line",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "end_line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash"
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accountable_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_spec": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "explicit_non_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data_changes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "security_tenancy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failure_edge_cases": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ui_journey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "change_recovery_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "definition_of_ready": {
+          "type": "string",
+          "minLength": 1
+        },
+        "branch_isolation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "merge_order": {
+          "type": "string",
+          "minLength": 1
+        },
+        "complexity_rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^T\\d{4}$"
+        },
+        "milestone": {
+          "type": "string",
+          "pattern": "^M\\d+$"
+        },
+        "status": {
+          "enum": [
+            "NOT_STARTED",
+            "IN_PROGRESS",
+            "IN_REVIEW",
+            "ACCEPTED",
+            "BLOCKED",
+            "SUPERSEDED"
+          ]
+        },
+        "type": {
+          "enum": [
+            "ENGINEERING",
+            "QUALIFICATION",
+            "VALIDATION",
+            "DOCUMENTATION",
+            "OWNER_DECISION",
+            "OPERATIONAL_RELEASE"
+          ]
+        },
+        "risk": {
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ]
+        },
+        "complexity": {
+          "enum": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        "readiness_after_local_approval": {
+          "enum": [
+            "READY",
+            "WAITING_DEPENDENCIES",
+            "WAITING_DECISION",
+            "WAITING_ENVIRONMENT",
+            "WAITING_AUTHORIZATION"
+          ]
+        },
+        "readiness": {
+          "enum": [
+            "READY",
+            "WAITING_DEPENDENCIES",
+            "WAITING_DECISION",
+            "WAITING_ENVIRONMENT",
+            "WAITING_AUTHORIZATION"
+          ]
+        },
+        "requirement_ids": {
+          "$ref": "#/$defs/strings"
+        },
+        "validation_contract_ids": {
+          "$ref": "#/$defs/strings"
+        },
+        "editable_areas": {
+          "$ref": "#/$defs/strings"
+        },
+        "shared_change_locks": {
+          "$ref": "#/$defs/strings"
+        },
+        "completion_evidence_refs": {
+          "$ref": "#/$defs/strings"
+        },
+        "permitted_environment": {
+          "$ref": "#/$defs/strings"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/ids"
+        },
+        "parallelism": {
+          "enum": [
+            "SAFE TO PARALLELIZE",
+            "PARALLEL WITH RESTRICTIONS",
+            "SERIAL"
+          ]
+        },
+        "effect_class": {
+          "enum": [
+            "LOCAL_REVERSIBLE",
+            "PRIVATE_READ_ONLY",
+            "BOUNDED_PROVIDER_EFFECT",
+            "CONTROLLED_VALIDATION",
+            "PROVISIONING",
+            "CONTROLLED_STORAGE_MUTATION",
+            "CONTROLLED_ACCOUNT_MAIL",
+            "DEPLOYMENT",
+            "CONSEQUENTIAL_ACTION_ENABLEMENT",
+            "CONTACT_START_ENABLEMENT",
+            "PRODUCTION_CUTOVER",
+            "OWNER_APPROVAL_ONLY"
+          ]
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "id",
+              "detail"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "AUTHORIZATION",
+                  "DEPENDENCY",
+                  "DECISION",
+                  "ENVIRONMENT"
+                ]
+              },
+              "id": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "decision_gates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/gateRef"
+          }
+        },
+        "spec_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/spec"
+          }
+        },
+        "produced_contracts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "boundary",
+              "meaning",
+              "record",
+              "required_content"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "boundary": {
+                "type": "string",
+                "minLength": 1
+              },
+              "meaning": {
+                "type": "string",
+                "minLength": 1
+              },
+              "record": {
+                "type": "string",
+                "minLength": 1
+              },
+              "required_content": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "consumed_contracts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "task_id",
+              "contract_id",
+              "consumes"
+            ],
+            "properties": {
+              "task_id": {
+                "type": "string",
+                "pattern": "^T\\d{4}$"
+              },
+              "contract_id": {
+                "type": "string"
+              },
+              "consumes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "test_requirements": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "assertion",
+              "environment",
+              "execution_status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "assertion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "environment": {
+                "type": "string"
+              },
+              "execution_status": {
+                "enum": [
+                  "PLANNED",
+                  "PASS",
+                  "FAIL",
+                  "NOT_CHECKED"
+                ]
+              }
+            }
+          }
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "criterion"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "criterion": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "engineering_justification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution_claim": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "owner",
+            "branch",
+            "worktree",
+            "base_main_revision",
+            "locks"
+          ],
+          "properties": {
+            "owner": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "branch": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "worktree": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "base_main_revision": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "locks": {
+              "$ref": "#/$defs/strings"
+            }
+          }
+        }
+      },
+      "required": [
+        "title",
+        "accountable_role",
+        "task_spec",
+        "acceptance_summary",
+        "goal",
+        "why",
+        "scope",
+        "explicit_non_scope",
+        "data_changes",
+        "security_tenancy",
+        "failure_edge_cases",
+        "ui_journey",
+        "change_recovery_boundary",
+        "definition_of_ready",
+        "branch_isolation",
+        "merge_order",
+        "complexity_rationale",
+        "id",
+        "milestone",
+        "status",
+        "type",
+        "risk",
+        "complexity",
+        "readiness_after_local_approval",
+        "readiness",
+        "requirement_ids",
+        "validation_contract_ids",
+        "editable_areas",
+        "shared_change_locks",
+        "completion_evidence_refs",
+        "permitted_environment",
+        "dependencies",
+        "parallelism",
+        "effect_class",
+        "blockers",
+        "decision_gates",
+        "spec_refs",
+        "produced_contracts",
+        "consumed_contracts",
+        "test_requirements",
+        "acceptance_criteria",
+        "execution_claim"
+      ]
+    }
+  }
+}

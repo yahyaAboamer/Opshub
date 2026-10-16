@@ -1,0 +1,5408 @@
+{
+  "START": [
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "B2",
+          "value": "GENTRY  -  Delivery Performance Management System",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "cell": "B3",
+          "value": "Version 2.0  |  built on the live Bosta export schema  |  19 Aug 2026  |  Owner: [customer identity redacted], Operations",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "B5",
+          "value": "THE WEEKLY ROUTINE  -  about 25 minutes",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "B6",
+          "value": "Step",
+          "formula": null
+        },
+        {
+          "cell": "C6",
+          "value": "What you do",
+          "formula": null
+        },
+        {
+          "cell": "D6",
+          "value": "Detail",
+          "formula": null
+        },
+        {
+          "cell": "E6",
+          "value": "Time",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "B7",
+          "value": "1",
+          "formula": null
+        },
+        {
+          "cell": "C7",
+          "value": "Export from Bosta",
+          "formula": null
+        },
+        {
+          "cell": "D7",
+          "value": "ALL orders for the period - delivered, returned, exchanges. Not just returns.",
+          "formula": null
+        },
+        {
+          "cell": "E7",
+          "value": "2 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "cell": "B8",
+          "value": "2",
+          "formula": null
+        },
+        {
+          "cell": "C8",
+          "value": "Paste into RAW_Bosta",
+          "formula": null
+        },
+        {
+          "cell": "D8",
+          "value": "Select all in Bosta's file, copy, paste-special VALUES into A3. The columns already match the export exactly, so no mapping is needed.",
+          "formula": null
+        },
+        {
+          "cell": "E8",
+          "value": "1 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "B9",
+          "value": "3",
+          "formula": null
+        },
+        {
+          "cell": "C9",
+          "value": "Export the Bosta wallet",
+          "formula": null
+        },
+        {
+          "cell": "D9",
+          "value": "The transactions / wallet export carries the fee actually charged per shipment. Paste tracking number and amount into RAW_Costs.",
+          "formula": null
+        },
+        {
+          "cell": "E9",
+          "value": "2 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "cell": "B10",
+          "value": "4",
+          "formula": null
+        },
+        {
+          "cell": "C10",
+          "value": "Export Hadeer's call log",
+          "formula": null
+        },
+        {
+          "cell": "D10",
+          "value": "File > Download > .xlsx from the Returns Call Log Google Sheet, paste into RAW_Intake.",
+          "formula": null
+        },
+        {
+          "cell": "E10",
+          "value": "2 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "cell": "B11",
+          "value": "5",
+          "formula": null
+        },
+        {
+          "cell": "C11",
+          "value": "Check RAW_SKU",
+          "formula": null
+        },
+        {
+          "cell": "D11",
+          "value": "Add a row for any new product variant. Data_Quality tells you if one is missing.",
+          "formula": null
+        },
+        {
+          "cell": "E11",
+          "value": "1 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "B12",
+          "value": "6",
+          "formula": null
+        },
+        {
+          "cell": "C12",
+          "value": "Press Ctrl+Alt+F9",
+          "formula": null
+        },
+        {
+          "cell": "D12",
+          "value": "Full recalculation. Always full, never partial - a partial recalc leaves stale numbers on the dashboards.",
+          "formula": null
+        },
+        {
+          "cell": "E12",
+          "value": "1 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "B13",
+          "value": "7",
+          "formula": null
+        },
+        {
+          "cell": "C13",
+          "value": "Read Data_Quality first",
+          "formula": null
+        },
+        {
+          "cell": "D13",
+          "value": "If the verdict says BLOCKED, fix that before you look at anything else.",
+          "formula": null
+        },
+        {
+          "cell": "E13",
+          "value": "5 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "cell": "B14",
+          "value": "8",
+          "formula": null
+        },
+        {
+          "cell": "C14",
+          "value": "Read OPS_Control",
+          "formula": null
+        },
+        {
+          "cell": "D14",
+          "value": "Latest week vs. last week vs. target. The Action Queue at the bottom is your task list.",
+          "formula": null
+        },
+        {
+          "cell": "E14",
+          "value": "8 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "cell": "B15",
+          "value": "9",
+          "formula": null
+        },
+        {
+          "cell": "C15",
+          "value": "Send EXEC_Brand to Hassan",
+          "formula": null
+        },
+        {
+          "cell": "D15",
+          "value": "Print to PDF, one page, plus a two-line note with your single recommendation.",
+          "formula": null
+        },
+        {
+          "cell": "E15",
+          "value": "3 min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "cell": "B17",
+          "value": "WHO USES WHAT",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "cell": "C18",
+          "value": "Role",
+          "formula": null
+        },
+        {
+          "cell": "D18",
+          "value": "Their surface",
+          "formula": null
+        },
+        {
+          "cell": "E18",
+          "value": "Cadence",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "cell": "B19",
+          "value": "H",
+          "formula": null
+        },
+        {
+          "cell": "C19",
+          "value": "Hadeer - Customer Support",
+          "formula": null
+        },
+        {
+          "cell": "D19",
+          "value": "The Returns Call Log, a separate Google Sheet. She never opens this workbook.",
+          "formula": null
+        },
+        {
+          "cell": "E19",
+          "value": "Daily",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "cell": "B20",
+          "value": "O",
+          "formula": null
+        },
+        {
+          "cell": "C20",
+          "value": "Omar - Operations Manager",
+          "formula": null
+        },
+        {
+          "cell": "D20",
+          "value": "This whole workbook. OPS_Control is the entry point, Data_Quality is the gate.",
+          "formula": null
+        },
+        {
+          "cell": "E20",
+          "value": "Weekly",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "cells": [
+        {
+          "cell": "B21",
+          "value": "Ha",
+          "formula": null
+        },
+        {
+          "cell": "C21",
+          "value": "Hassan - Brand Owner",
+          "formula": null
+        },
+        {
+          "cell": "D21",
+          "value": "EXEC_Brand only, delivered as a PDF. He never opens the workbook.",
+          "formula": null
+        },
+        {
+          "cell": "E21",
+          "value": "Weekly + monthly",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "cell": "B23",
+          "value": "THE SHEETS",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "cell": "B24",
+          "value": "Layer",
+          "formula": null
+        },
+        {
+          "cell": "C24",
+          "value": "Sheet",
+          "formula": null
+        },
+        {
+          "cell": "D24",
+          "value": "What it does",
+          "formula": null
+        },
+        {
+          "cell": "E24",
+          "value": "Edit?",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "cells": [
+        {
+          "cell": "B25",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C25",
+          "value": "EXEC_Brand",
+          "formula": null
+        },
+        {
+          "cell": "D25",
+          "value": "Hassan's one page. If a number needs explaining out loud, it does not belong here.",
+          "formula": null
+        },
+        {
+          "cell": "E25",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "cell": "B26",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C26",
+          "value": "OPS_Control",
+          "formula": null
+        },
+        {
+          "cell": "D26",
+          "value": "Omar's cockpit. Week vs. week, traffic lights, generated action queue.",
+          "formula": null
+        },
+        {
+          "cell": "E26",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "cells": [
+        {
+          "cell": "B27",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C27",
+          "value": "Weekly",
+          "formula": null
+        },
+        {
+          "cell": "D27",
+          "value": "One row per week, extends itself. Operational response lives here.",
+          "formula": null
+        },
+        {
+          "cell": "E27",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "cells": [
+        {
+          "cell": "B28",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C28",
+          "value": "Monthly",
+          "formula": null
+        },
+        {
+          "cell": "D28",
+          "value": "One row per month. Trend and board-level narrative.",
+          "formula": null
+        },
+        {
+          "cell": "E28",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "cells": [
+        {
+          "cell": "B29",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C29",
+          "value": "Returns_Channels",
+          "formula": null
+        },
+        {
+          "cell": "D29",
+          "value": "The three ways stock comes back, kept separate, plus the compounding freight cost.",
+          "formula": null
+        },
+        {
+          "cell": "E29",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "cells": [
+        {
+          "cell": "B30",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C30",
+          "value": "Failure_Analysis",
+          "formula": null
+        },
+        {
+          "cell": "D30",
+          "value": "What Bosta claimed, who really owns it, and how often the two disagree.",
+          "formula": null
+        },
+        {
+          "cell": "E30",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "cells": [
+        {
+          "cell": "B31",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C31",
+          "value": "Product_Size",
+          "formula": null
+        },
+        {
+          "cell": "D31",
+          "value": "Units returned by variant and by size. The size-curve breakage signal.",
+          "formula": null
+        },
+        {
+          "cell": "E31",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "cells": [
+        {
+          "cell": "B32",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C32",
+          "value": "Geo_Courier",
+          "formula": null
+        },
+        {
+          "cell": "D32",
+          "value": "Zone, city and courier performance.",
+          "formula": null
+        },
+        {
+          "cell": "E32",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "cells": [
+        {
+          "cell": "B33",
+          "value": "VIEW",
+          "formula": null
+        },
+        {
+          "cell": "C33",
+          "value": "Customer_Recovery",
+          "formula": null
+        },
+        {
+          "cell": "D33",
+          "value": "Can we reach them, and once reached can we save it. Plus repeat returners.",
+          "formula": null
+        },
+        {
+          "cell": "E33",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "cells": [
+        {
+          "cell": "B34",
+          "value": "AUDIT",
+          "formula": null
+        },
+        {
+          "cell": "C34",
+          "value": "Data_Quality",
+          "formula": null
+        },
+        {
+          "cell": "D34",
+          "value": "Seventeen checks and one verdict. Read before anything else.",
+          "formula": null
+        },
+        {
+          "cell": "E34",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "cells": [
+        {
+          "cell": "B35",
+          "value": "CONTROL",
+          "formula": null
+        },
+        {
+          "cell": "C35",
+          "value": "Config",
+          "formula": null
+        },
+        {
+          "cell": "D35",
+          "value": "Every assumption: rate card, taxonomy, thresholds, city map, channels, targets.",
+          "formula": null
+        },
+        {
+          "cell": "E35",
+          "value": "YES",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "cells": [
+        {
+          "cell": "B36",
+          "value": "TRANSFORM",
+          "formula": null
+        },
+        {
+          "cell": "C36",
+          "value": "DATA_Master",
+          "formula": null
+        },
+        {
+          "cell": "D36",
+          "value": "One row per shipment. Pure formulas. Joins all four raw sources and applies Config.",
+          "formula": null
+        },
+        {
+          "cell": "E36",
+          "value": "No",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "cells": [
+        {
+          "cell": "B37",
+          "value": "RAW",
+          "formula": null
+        },
+        {
+          "cell": "C37",
+          "value": "RAW_Bosta",
+          "formula": null
+        },
+        {
+          "cell": "D37",
+          "value": "Paste zone. Column-for-column identical to the Bosta order export.",
+          "formula": null
+        },
+        {
+          "cell": "E37",
+          "value": "PASTE",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "cells": [
+        {
+          "cell": "B38",
+          "value": "RAW",
+          "formula": null
+        },
+        {
+          "cell": "C38",
+          "value": "RAW_Costs",
+          "formula": null
+        },
+        {
+          "cell": "D38",
+          "value": "Paste zone. Bosta wallet / transactions export. Multiple fee lines per shipment are summed.",
+          "formula": null
+        },
+        {
+          "cell": "E38",
+          "value": "PASTE",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "cells": [
+        {
+          "cell": "B39",
+          "value": "RAW",
+          "formula": null
+        },
+        {
+          "cell": "C39",
+          "value": "RAW_Intake",
+          "formula": null
+        },
+        {
+          "cell": "D39",
+          "value": "Paste zone. Export of Hadeer's Returns Call Log.",
+          "formula": null
+        },
+        {
+          "cell": "E39",
+          "value": "PASTE",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "cells": [
+        {
+          "cell": "B40",
+          "value": "RAW",
+          "formula": null
+        },
+        {
+          "cell": "C40",
+          "value": "RAW_SKU",
+          "formula": null
+        },
+        {
+          "cell": "D40",
+          "value": "Reference list of product variants with price and cost. Maintained, not pasted.",
+          "formula": null
+        },
+        {
+          "cell": "E40",
+          "value": "YES",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "cells": [
+        {
+          "cell": "B41",
+          "value": "LOG",
+          "formula": null
+        },
+        {
+          "cell": "C41",
+          "value": "Change_Log",
+          "formula": null
+        },
+        {
+          "cell": "D41",
+          "value": "Every structural change, dated. The handover document for Claude Code and the ERP.",
+          "formula": null
+        },
+        {
+          "cell": "E41",
+          "value": "YES",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "cells": [
+        {
+          "cell": "B43",
+          "value": "RULES THAT KEEP THIS WORKING",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "cells": [
+        {
+          "cell": "B44",
+          "value": "1",
+          "formula": null
+        },
+        {
+          "cell": "C44",
+          "value": "Never type a number into a formula. Every assumption belongs in Config and nowhere else.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "cells": [
+        {
+          "cell": "B45",
+          "value": "2",
+          "formula": null
+        },
+        {
+          "cell": "C45",
+          "value": "Never edit a RAW sheet by hand. Paste over it. The audit trail is the point.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "cells": [
+        {
+          "cell": "B46",
+          "value": "3",
+          "formula": null
+        },
+        {
+          "cell": "C46",
+          "value": "Never delete a row from DATA_Master. It is formula-driven and aligned row-for-row with RAW_Bosta.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "cells": [
+        {
+          "cell": "B47",
+          "value": "4",
+          "formula": null
+        },
+        {
+          "cell": "C47",
+          "value": "Tracking number is text, always. If it arrives as a number, paste-special as text or every join silently breaks.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "cells": [
+        {
+          "cell": "B48",
+          "value": "5",
+          "formula": null
+        },
+        {
+          "cell": "C48",
+          "value": "An RTO and a customer return are different things. Never add them into one 'returns' number for Hassan without saying which is which.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "cells": [
+        {
+          "cell": "B49",
+          "value": "6",
+          "formula": null
+        },
+        {
+          "cell": "C49",
+          "value": "If a metric shows n/a, that is correct behaviour, not a bug. It means an input is missing. Never replace it with an estimate.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "cells": [
+        {
+          "cell": "B50",
+          "value": "7",
+          "formula": null
+        },
+        {
+          "cell": "C50",
+          "value": "The workbook holds 2,000 shipments per refresh. Past row 2003 in DATA_Master, select the last row and drag the formulas down.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "cells": [
+        {
+          "cell": "B51",
+          "value": "8",
+          "formula": null
+        },
+        {
+          "cell": "C51",
+          "value": "Add a root cause in Config section 7 AND in Hadeer's Lists tab, or the two drift apart.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "cells": [
+        {
+          "cell": "B52",
+          "value": "9",
+          "formula": null
+        },
+        {
+          "cell": "C52",
+          "value": "Log every structural change in Change_Log.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "cells": [
+        {
+          "cell": "B54",
+          "value": "WHAT IS STILL MISSING",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "cells": [
+        {
+          "cell": "B55",
+          "value": "!",
+          "formula": null
+        },
+        {
+          "cell": "C55",
+          "value": "Bosta wallet / transactions export - blocks every EGP cost figure.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "cells": [
+        {
+          "cell": "B56",
+          "value": "!",
+          "formula": null
+        },
+        {
+          "cell": "C56",
+          "value": "price_egp per variant in RAW_SKU - order values currently fall back to the measured AOV of ~1,517 EGP.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "cells": [
+        {
+          "cell": "B57",
+          "value": "!",
+          "formula": null
+        },
+        {
+          "cell": "C57",
+          "value": "cogs_egp per variant in RAW_SKU - blocks every margin figure.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "cells": [
+        {
+          "cell": "B58",
+          "value": "!",
+          "formula": null
+        },
+        {
+          "cell": "C58",
+          "value": "Cost scenario modifiers in Config section 3 - prepaid vs COD vs ghosted consignee.",
+          "formula": null
+        }
+      ]
+    }
+  ],
+  "Config": [
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "B2",
+          "value": "Config - the only place assumptions live",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "cell": "B3",
+          "value": "Yellow cells are yours. Grey cells compute themselves. No number anywhere else in this workbook is typed by hand.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "B5",
+          "value": "1  ANALYSIS PERIOD  -  computed",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "B6",
+          "value": "Period start",
+          "formula": null
+        },
+        {
+          "cell": "C6",
+          "value": null,
+          "formula": "=IF(COUNT(dm_created)=0,\"\",MIN(dm_created))"
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "B7",
+          "value": "Period end",
+          "formula": null
+        },
+        {
+          "cell": "C7",
+          "value": null,
+          "formula": "=IF(COUNT(dm_created)=0,\"\",MAX(dm_created))"
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "cell": "B8",
+          "value": "Weeks covered",
+          "formula": null
+        },
+        {
+          "cell": "C8",
+          "value": null,
+          "formula": "=IF(COUNT(dm_week)=0,\"\",(MAX(dm_week)-MIN(dm_week))/7+1)"
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "B9",
+          "value": "Week starts on",
+          "formula": null
+        },
+        {
+          "cell": "C9",
+          "value": "Saturday",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "cell": "B10",
+          "value": "Refreshed",
+          "formula": null
+        },
+        {
+          "cell": "C10",
+          "value": null,
+          "formula": "=TODAY()"
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "B12",
+          "value": "2  BOSTA RATE CARD  -  [OUT OF USE] Real per-shipment fees load from RAW_Costs. Do not fill. Retained as ERP-migration fallback only.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "B13",
+          "value": "Zone",
+          "formula": null
+        },
+        {
+          "cell": "C13",
+          "value": "Delivery fee\nEGP",
+          "formula": null
+        },
+        {
+          "cell": "D13",
+          "value": "RTO return fee\nEGP",
+          "formula": null
+        },
+        {
+          "cell": "E13",
+          "value": "Extra attempt\nfee EGP",
+          "formula": null
+        },
+        {
+          "cell": "F13",
+          "value": "COD fee\n%",
+          "formula": null
+        },
+        {
+          "cell": "G13",
+          "value": "Return pickup\nfee EGP",
+          "formula": null
+        },
+        {
+          "cell": "H13",
+          "value": "Governorates in this zone",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "cell": "B14",
+          "value": "Cairo & Giza",
+          "formula": null
+        },
+        {
+          "cell": "C14",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D14",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "E14",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "F14",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "G14",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "H14",
+          "value": "Cairo, Giza, El Kalioubia",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "cell": "B15",
+          "value": "Alexandria",
+          "formula": null
+        },
+        {
+          "cell": "C15",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D15",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "E15",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "F15",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "G15",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "H15",
+          "value": "Alexandria",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "cell": "B16",
+          "value": "Delta",
+          "formula": null
+        },
+        {
+          "cell": "C16",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D16",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "E16",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "F16",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "G16",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "H16",
+          "value": "Gharbia, Dakahlia, Behira, Kafr Alsheikh, [customer identity redacted], Menoufia, Sharqia",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "cell": "B17",
+          "value": "Canal & Sinai",
+          "formula": null
+        },
+        {
+          "cell": "C17",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D17",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "E17",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "F17",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "G17",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "H17",
+          "value": "Ismailia, Port Said, Suez, North Sinai, South Sinai",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "cell": "B18",
+          "value": "Upper Egypt",
+          "formula": null
+        },
+        {
+          "cell": "C18",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D18",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "E18",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "F18",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "G18",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "H18",
+          "value": "Fayoum, Bani Suif, Menya, Assiut, Sohag, Qena, Luxor, Aswan",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "cell": "B19",
+          "value": "Red Sea & Remote",
+          "formula": null
+        },
+        {
+          "cell": "C19",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D19",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "E19",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "F19",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "G19",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "H19",
+          "value": "Red Sea, Matrouh, New Valley",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "cell": "B20",
+          "value": "Unmapped",
+          "formula": null
+        },
+        {
+          "cell": "C20",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D20",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "E20",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "F20",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "G20",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "H20",
+          "value": "Anything the map below does not recognise - fix the map, never guess",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "cells": [
+        {
+          "cell": "B21",
+          "value": "These are a modelling fallback. The accurate path is the Bosta wallet / transactions export pasted into RAW_Costs, which carries the fee actually charged per shipment. When RAW_Costs has a fee for an order, it wins.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "cell": "B24",
+          "value": "3  COST SCENARIO MODIFIERS  -  [OUT OF USE] Superseded by actual wallet fees in RAW_Costs. Do not fill.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "cells": [
+        {
+          "cell": "B25",
+          "value": "Scenario",
+          "formula": null
+        },
+        {
+          "cell": "C25",
+          "value": "Extra cost\nEGP",
+          "formula": null
+        },
+        {
+          "cell": "D25",
+          "value": "Applies when",
+          "formula": null
+        },
+        {
+          "cell": "H25",
+          "value": "Why it differs",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "cell": "B26",
+          "value": "Customer prepaid online",
+          "formula": null
+        },
+        {
+          "cell": "C26",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D26",
+          "value": "is_prepaid = Yes",
+          "formula": null
+        },
+        {
+          "cell": "H26",
+          "value": "Shipping already collected. Cash lost differs from revenue lost.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "cells": [
+        {
+          "cell": "B27",
+          "value": "COD - refused at the door",
+          "formula": null
+        },
+        {
+          "cell": "C27",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D27",
+          "value": "Type = RTO and prepaid = No",
+          "formula": null
+        },
+        {
+          "cell": "H27",
+          "value": "Both legs burned, nothing collected.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "cells": [
+        {
+          "cell": "B28",
+          "value": "COD - consignee never answered",
+          "formula": null
+        },
+        {
+          "cell": "C28",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D28",
+          "value": "exception = Business is not answering.",
+          "formula": null
+        },
+        {
+          "cell": "H28",
+          "value": "Highest attempt count. The expensive failure mode.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "cells": [
+        {
+          "cell": "B29",
+          "value": "Exchange leg failed",
+          "formula": null
+        },
+        {
+          "cell": "C29",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D29",
+          "value": "Type = EXCHANGE_return",
+          "formula": null
+        },
+        {
+          "cell": "H29",
+          "value": "Two legs already paid before this failure.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "cells": [
+        {
+          "cell": "B30",
+          "value": "Customer return pickup",
+          "formula": null
+        },
+        {
+          "cell": "C30",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D30",
+          "value": "Type = CUSTOMER_RETURN_PICKUP",
+          "formula": null
+        },
+        {
+          "cell": "H30",
+          "value": "Delivery succeeded and was paid for. This is a second, additional leg.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "cells": [
+        {
+          "cell": "B31",
+          "value": "Damaged / write-off",
+          "formula": null
+        },
+        {
+          "cell": "C31",
+          "value": "[MISSING]",
+          "formula": null
+        },
+        {
+          "cell": "D31",
+          "value": "root cause = Item damaged in transit",
+          "formula": null
+        },
+        {
+          "cell": "H31",
+          "value": "Stock loss on top of freight. Claimable from Bosta.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "cells": [
+        {
+          "cell": "B33",
+          "value": "4  PRODUCT ECONOMICS",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "cells": [
+        {
+          "cell": "B34",
+          "value": "Measured AOV - delivered COD orders",
+          "formula": null
+        },
+        {
+          "cell": "C34",
+          "value": null,
+          "formula": "=IFERROR(AVERAGEIFS(dm_value,dm_group,\"Delivered\",dm_cod,\">0\"),\"\")"
+        },
+        {
+          "cell": "D34",
+          "value": "Computed live from delivered orders that actually collected cash. Refreshes every paste.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "cells": [
+        {
+          "cell": "B35",
+          "value": "Measured AOV - all delivered",
+          "formula": null
+        },
+        {
+          "cell": "C35",
+          "value": null,
+          "formula": "=IFERROR(AVERAGEIFS(dm_value,dm_group,\"Delivered\"),\"\")"
+        },
+        {
+          "cell": "D35",
+          "value": "Includes prepaid orders valued from the SKU list.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "cells": [
+        {
+          "cell": "B36",
+          "value": "AOV used for returned orders",
+          "formula": null
+        },
+        {
+          "cell": "C36",
+          "value": null,
+          "formula": "=IF(ISNUMBER(cfg_aov_cod),cfg_aov_cod,\"\")"
+        },
+        {
+          "cell": "D36",
+          "value": "[INFERENCE - AOV proxy] Bosta zeroes COD on returns, so a returned order with no SKU match is valued at this. Anything derived from it is tagged on the sheets.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "cells": [
+        {
+          "cell": "B37",
+          "value": "Blended COGS %",
+          "formula": null
+        },
+        {
+          "cell": "C37",
+          "value": null,
+          "formula": "=IF(AND(ISNUMBER(SUM(sku_price)),SUM(sku_price)>0,SUM(sku_cogs)>0),SUMPRODUCT(sku_cogs)/SUMPRODUCT(sku_price),\"[MISSING]\")"
+        },
+        {
+          "cell": "D37",
+          "value": "Derived from RAW_SKU. Fill cost per SKU there, not here.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "cells": [
+        {
+          "cell": "B38",
+          "value": "Gross margin %",
+          "formula": null
+        },
+        {
+          "cell": "C38",
+          "value": null,
+          "formula": "=IF(ISNUMBER(cfg_cogs_pct),1-cfg_cogs_pct,\"[MISSING]\")"
+        },
+        {
+          "cell": "D38",
+          "value": "Derived. Do not type over this.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "cells": [
+        {
+          "cell": "B39",
+          "value": "Payment gateway fee % (Paymob)",
+          "formula": null
+        },
+        {
+          "cell": "C39",
+          "value": 0.017,
+          "formula": null
+        },
+        {
+          "cell": "D39",
+          "value": "Charged on prepaid orders only. Paymob, confirmed 19 Aug 2026.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "cells": [
+        {
+          "cell": "B40",
+          "value": "Value of one saved return",
+          "formula": null
+        },
+        {
+          "cell": "C40",
+          "value": null,
+          "formula": "=IF(AND(ISNUMBER(cfg_aov_used),ISNUMBER(cfg_gm)),cfg_aov_used*cfg_gm,\"[MISSING]\")"
+        },
+        {
+          "cell": "D40",
+          "value": "Margin recovered each time a return becomes a keep or an exchange.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "cells": [
+        {
+          "cell": "B42",
+          "value": "5  TRAFFIC LIGHT THRESHOLDS  -  Omar's targets, not benchmarks",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "cells": [
+        {
+          "cell": "B43",
+          "value": "Metric",
+          "formula": null
+        },
+        {
+          "cell": "C43",
+          "value": "Green at",
+          "formula": null
+        },
+        {
+          "cell": "D43",
+          "value": "Amber at",
+          "formula": null
+        },
+        {
+          "cell": "E43",
+          "value": "Worse than\nthis is red",
+          "formula": null
+        },
+        {
+          "cell": "H43",
+          "value": "Why this number",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "cells": [
+        {
+          "cell": "B44",
+          "value": "RTO rate",
+          "formula": null
+        },
+        {
+          "cell": "C44",
+          "value": 0.1,
+          "formula": null
+        },
+        {
+          "cell": "D44",
+          "value": 0.15,
+          "formula": null
+        },
+        {
+          "cell": "E44",
+          "value": 0.15,
+          "formula": null
+        },
+        {
+          "cell": "H44",
+          "value": "Currently running far above this. See OPS_Control.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "cells": [
+        {
+          "cell": "B45",
+          "value": "Customer return rate",
+          "formula": null
+        },
+        {
+          "cell": "C45",
+          "value": 0.05,
+          "formula": null
+        },
+        {
+          "cell": "D45",
+          "value": 0.08,
+          "formula": null
+        },
+        {
+          "cell": "E45",
+          "value": 0.08,
+          "formula": null
+        },
+        {
+          "cell": "H45",
+          "value": "Delivered then sent back. A pure product-acceptance signal.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "cells": [
+        {
+          "cell": "B46",
+          "value": "Avg delivery attempts",
+          "formula": null
+        },
+        {
+          "cell": "C46",
+          "value": 2,
+          "formula": null
+        },
+        {
+          "cell": "D46",
+          "value": 2.5,
+          "formula": null
+        },
+        {
+          "cell": "E46",
+          "value": 2.5,
+          "formula": null
+        },
+        {
+          "cell": "H46",
+          "value": "Every attempt past the second is cost with no revenue attached.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "cells": [
+        {
+          "cell": "B47",
+          "value": "Reason capture rate",
+          "formula": null
+        },
+        {
+          "cell": "C47",
+          "value": 0.9,
+          "formula": null
+        },
+        {
+          "cell": "D47",
+          "value": 0.75,
+          "formula": null
+        },
+        {
+          "cell": "E47",
+          "value": 0.75,
+          "formula": null
+        },
+        {
+          "cell": "H47",
+          "value": "Below this the root-cause analysis stops being trustworthy.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "cells": [
+        {
+          "cell": "B48",
+          "value": "Call reach rate",
+          "formula": null
+        },
+        {
+          "cell": "C48",
+          "value": 0.7,
+          "formula": null
+        },
+        {
+          "cell": "D48",
+          "value": 0.55,
+          "formula": null
+        },
+        {
+          "cell": "E48",
+          "value": 0.55,
+          "formula": null
+        },
+        {
+          "cell": "H48",
+          "value": "How often Hadeer actually speaks to the customer.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "cells": [
+        {
+          "cell": "B49",
+          "value": "Return recovery rate",
+          "formula": null
+        },
+        {
+          "cell": "C49",
+          "value": 0.25,
+          "formula": null
+        },
+        {
+          "cell": "D49",
+          "value": 0.15,
+          "formula": null
+        },
+        {
+          "cell": "E49",
+          "value": 0.15,
+          "formula": null
+        },
+        {
+          "cell": "H49",
+          "value": "Share of returns turned into an exchange, reship or keep.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "cells": [
+        {
+          "cell": "B50",
+          "value": "Avg cycle days",
+          "formula": null
+        },
+        {
+          "cell": "C50",
+          "value": 6,
+          "formula": null
+        },
+        {
+          "cell": "D50",
+          "value": 8,
+          "formula": null
+        },
+        {
+          "cell": "E50",
+          "value": 8,
+          "formula": null
+        },
+        {
+          "cell": "H50",
+          "value": "Stock trapped in the courier network is stock you cannot sell.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "cells": [
+        {
+          "cell": "B51",
+          "value": "Queue age days",
+          "formula": null
+        },
+        {
+          "cell": "C51",
+          "value": 2,
+          "formula": null
+        },
+        {
+          "cell": "D51",
+          "value": 3,
+          "formula": null
+        },
+        {
+          "cell": "E51",
+          "value": 3,
+          "formula": null
+        },
+        {
+          "cell": "H51",
+          "value": "Reach rates collapse after 48 hours.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "cells": [
+        {
+          "cell": "B52",
+          "value": "Unmapped cities",
+          "formula": null
+        },
+        {
+          "cell": "C52",
+          "value": 0,
+          "formula": null
+        },
+        {
+          "cell": "D52",
+          "value": 0,
+          "formula": null
+        },
+        {
+          "cell": "E52",
+          "value": 0,
+          "formula": null
+        },
+        {
+          "cell": "H52",
+          "value": "Any value above zero means costs hit the wrong zone.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "cells": [
+        {
+          "cell": "B53",
+          "value": "SKUs with no price",
+          "formula": null
+        },
+        {
+          "cell": "C53",
+          "value": 0,
+          "formula": null
+        },
+        {
+          "cell": "D53",
+          "value": 0,
+          "formula": null
+        },
+        {
+          "cell": "E53",
+          "value": 0,
+          "formula": null
+        },
+        {
+          "cell": "H53",
+          "value": "Any value above zero means order values are understated.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "cells": [
+        {
+          "cell": "B54",
+          "value": "No external benchmark has been sourced for Egyptian apparel COD delivery. These are internal targets. Revise once you have three clean months.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "cells": [
+        {
+          "cell": "B57",
+          "value": "6  CITY  ->  ZONE MAP  -  spelled exactly as Bosta writes it",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "cells": [
+        {
+          "cell": "B58",
+          "value": "City / Governorate",
+          "formula": null
+        },
+        {
+          "cell": "C58",
+          "value": "Zone",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "cells": [
+        {
+          "cell": "B59",
+          "value": "Cairo",
+          "formula": null
+        },
+        {
+          "cell": "C59",
+          "value": "Cairo & Giza",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "cells": [
+        {
+          "cell": "B60",
+          "value": "Giza",
+          "formula": null
+        },
+        {
+          "cell": "C60",
+          "value": "Cairo & Giza",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "cells": [
+        {
+          "cell": "B61",
+          "value": "El Kalioubia",
+          "formula": null
+        },
+        {
+          "cell": "C61",
+          "value": "Cairo & Giza",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "cells": [
+        {
+          "cell": "B62",
+          "value": "Qalyubia",
+          "formula": null
+        },
+        {
+          "cell": "C62",
+          "value": "Cairo & Giza",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 63,
+      "cells": [
+        {
+          "cell": "B63",
+          "value": "Alexandria",
+          "formula": null
+        },
+        {
+          "cell": "C63",
+          "value": "Alexandria",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "cells": [
+        {
+          "cell": "B64",
+          "value": "Gharbia",
+          "formula": null
+        },
+        {
+          "cell": "C64",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 65,
+      "cells": [
+        {
+          "cell": "B65",
+          "value": "Dakahlia",
+          "formula": null
+        },
+        {
+          "cell": "C65",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 66,
+      "cells": [
+        {
+          "cell": "B66",
+          "value": "Behira",
+          "formula": null
+        },
+        {
+          "cell": "C66",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 67,
+      "cells": [
+        {
+          "cell": "B67",
+          "value": "Kafr Alsheikh",
+          "formula": null
+        },
+        {
+          "cell": "C67",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 68,
+      "cells": [
+        {
+          "cell": "B68",
+          "value": "[customer identity redacted]",
+          "formula": null
+        },
+        {
+          "cell": "C68",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 69,
+      "cells": [
+        {
+          "cell": "B69",
+          "value": "Menoufia",
+          "formula": null
+        },
+        {
+          "cell": "C69",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 70,
+      "cells": [
+        {
+          "cell": "B70",
+          "value": "Sharqia",
+          "formula": null
+        },
+        {
+          "cell": "C70",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 71,
+      "cells": [
+        {
+          "cell": "B71",
+          "value": "Sharkia",
+          "formula": null
+        },
+        {
+          "cell": "C71",
+          "value": "Delta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 72,
+      "cells": [
+        {
+          "cell": "B72",
+          "value": "Ismailia",
+          "formula": null
+        },
+        {
+          "cell": "C72",
+          "value": "Canal & Sinai",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 73,
+      "cells": [
+        {
+          "cell": "B73",
+          "value": "Port Said",
+          "formula": null
+        },
+        {
+          "cell": "C73",
+          "value": "Canal & Sinai",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 74,
+      "cells": [
+        {
+          "cell": "B74",
+          "value": "Suez",
+          "formula": null
+        },
+        {
+          "cell": "C74",
+          "value": "Canal & Sinai",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 75,
+      "cells": [
+        {
+          "cell": "B75",
+          "value": "North Sinai",
+          "formula": null
+        },
+        {
+          "cell": "C75",
+          "value": "Canal & Sinai",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 76,
+      "cells": [
+        {
+          "cell": "B76",
+          "value": "South Sinai",
+          "formula": null
+        },
+        {
+          "cell": "C76",
+          "value": "Canal & Sinai",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 77,
+      "cells": [
+        {
+          "cell": "B77",
+          "value": "Fayoum",
+          "formula": null
+        },
+        {
+          "cell": "C77",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 78,
+      "cells": [
+        {
+          "cell": "B78",
+          "value": "Bani Suif",
+          "formula": null
+        },
+        {
+          "cell": "C78",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 79,
+      "cells": [
+        {
+          "cell": "B79",
+          "value": "Beni Suef",
+          "formula": null
+        },
+        {
+          "cell": "C79",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 80,
+      "cells": [
+        {
+          "cell": "B80",
+          "value": "Menya",
+          "formula": null
+        },
+        {
+          "cell": "C80",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 81,
+      "cells": [
+        {
+          "cell": "B81",
+          "value": "Minya",
+          "formula": null
+        },
+        {
+          "cell": "C81",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 82,
+      "cells": [
+        {
+          "cell": "B82",
+          "value": "Assiut",
+          "formula": null
+        },
+        {
+          "cell": "C82",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 83,
+      "cells": [
+        {
+          "cell": "B83",
+          "value": "Sohag",
+          "formula": null
+        },
+        {
+          "cell": "C83",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "cells": [
+        {
+          "cell": "B84",
+          "value": "Qena",
+          "formula": null
+        },
+        {
+          "cell": "C84",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 85,
+      "cells": [
+        {
+          "cell": "B85",
+          "value": "Luxor",
+          "formula": null
+        },
+        {
+          "cell": "C85",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 86,
+      "cells": [
+        {
+          "cell": "B86",
+          "value": "Aswan",
+          "formula": null
+        },
+        {
+          "cell": "C86",
+          "value": "Upper Egypt",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 87,
+      "cells": [
+        {
+          "cell": "B87",
+          "value": "Red Sea",
+          "formula": null
+        },
+        {
+          "cell": "C87",
+          "value": "Red Sea & Remote",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 88,
+      "cells": [
+        {
+          "cell": "B88",
+          "value": "Matrouh",
+          "formula": null
+        },
+        {
+          "cell": "C88",
+          "value": "Red Sea & Remote",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "cells": [
+        {
+          "cell": "B89",
+          "value": "New Valley",
+          "formula": null
+        },
+        {
+          "cell": "C89",
+          "value": "Red Sea & Remote",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "cells": [
+        {
+          "cell": "B91",
+          "value": "7  ROOT CAUSE TAXONOMY  -  governed list, Omar only",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "cells": [
+        {
+          "cell": "B92",
+          "value": "Root cause",
+          "formula": null
+        },
+        {
+          "cell": "C92",
+          "value": "Owner",
+          "formula": null
+        },
+        {
+          "cell": "D92",
+          "value": "Status",
+          "formula": null
+        },
+        {
+          "cell": "E92",
+          "value": "Fixable by",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 93,
+      "cells": [
+        {
+          "cell": "B93",
+          "value": "Fit - too small",
+          "formula": null
+        },
+        {
+          "cell": "C93",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D93",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E93",
+          "value": "Size chart, model photos, fit guide",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "cells": [
+        {
+          "cell": "B94",
+          "value": "Fit - too large",
+          "formula": null
+        },
+        {
+          "cell": "C94",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D94",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E94",
+          "value": "Size chart, model photos, fit guide",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "cells": [
+        {
+          "cell": "B95",
+          "value": "Fit - length or proportion",
+          "formula": null
+        },
+        {
+          "cell": "C95",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D95",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E95",
+          "value": "Size chart, model photos, fit guide",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 96,
+      "cells": [
+        {
+          "cell": "B96",
+          "value": "Quality - fabric or material",
+          "formula": null
+        },
+        {
+          "cell": "C96",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D96",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E96",
+          "value": "Supplier / incoming QC",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 97,
+      "cells": [
+        {
+          "cell": "B97",
+          "value": "Quality - changed after wash",
+          "formula": null
+        },
+        {
+          "cell": "C97",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D97",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E97",
+          "value": "Supplier / care labelling",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 98,
+      "cells": [
+        {
+          "cell": "B98",
+          "value": "Colour differs from website",
+          "formula": null
+        },
+        {
+          "cell": "C98",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D98",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E98",
+          "value": "Photography / colour calibration",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 99,
+      "cells": [
+        {
+          "cell": "B99",
+          "value": "Item damaged in transit",
+          "formula": null
+        },
+        {
+          "cell": "C99",
+          "value": "Courier",
+          "formula": null
+        },
+        {
+          "cell": "D99",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E99",
+          "value": "Packaging spec + carrier claim",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "cells": [
+        {
+          "cell": "B100",
+          "value": "Wrong item shipped",
+          "formula": null
+        },
+        {
+          "cell": "C100",
+          "value": "Ops",
+          "formula": null
+        },
+        {
+          "cell": "D100",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E100",
+          "value": "Pick-and-pack process",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 101,
+      "cells": [
+        {
+          "cell": "B101",
+          "value": "Wrong size shipped",
+          "formula": null
+        },
+        {
+          "cell": "C101",
+          "value": "Ops",
+          "formula": null
+        },
+        {
+          "cell": "D101",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E101",
+          "value": "Pick-and-pack process",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 102,
+      "cells": [
+        {
+          "cell": "B102",
+          "value": "Courier never called",
+          "formula": null
+        },
+        {
+          "cell": "C102",
+          "value": "Courier",
+          "formula": null
+        },
+        {
+          "cell": "D102",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E102",
+          "value": "Escalate to Bosta account manager",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 103,
+      "cells": [
+        {
+          "cell": "B103",
+          "value": "Courier late - customer gone",
+          "formula": null
+        },
+        {
+          "cell": "C103",
+          "value": "Courier",
+          "formula": null
+        },
+        {
+          "cell": "D103",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E103",
+          "value": "Escalate to Bosta account manager",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 104,
+      "cells": [
+        {
+          "cell": "B104",
+          "value": "Wrong address captured",
+          "formula": null
+        },
+        {
+          "cell": "C104",
+          "value": "Ops",
+          "formula": null
+        },
+        {
+          "cell": "D104",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E104",
+          "value": "Checkout address validation",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 105,
+      "cells": [
+        {
+          "cell": "B105",
+          "value": "Area not covered",
+          "formula": null
+        },
+        {
+          "cell": "C105",
+          "value": "Courier",
+          "formula": null
+        },
+        {
+          "cell": "D105",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E105",
+          "value": "Zone policy at checkout",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 106,
+      "cells": [
+        {
+          "cell": "B106",
+          "value": "Changed mind",
+          "formula": null
+        },
+        {
+          "cell": "C106",
+          "value": "Customer",
+          "formula": null
+        },
+        {
+          "cell": "D106",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E106",
+          "value": "Not fixable - cost of doing business",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "cells": [
+        {
+          "cell": "B107",
+          "value": "Found it cheaper elsewhere",
+          "formula": null
+        },
+        {
+          "cell": "C107",
+          "value": "Customer",
+          "formula": null
+        },
+        {
+          "cell": "D107",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E107",
+          "value": "Pricing / positioning review",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 108,
+      "cells": [
+        {
+          "cell": "B108",
+          "value": "Ordered by mistake or duplicate",
+          "formula": null
+        },
+        {
+          "cell": "C108",
+          "value": "Customer",
+          "formula": null
+        },
+        {
+          "cell": "D108",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E108",
+          "value": "Checkout confirmation step",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 109,
+      "cells": [
+        {
+          "cell": "B109",
+          "value": "Could not pay COD",
+          "formula": null
+        },
+        {
+          "cell": "C109",
+          "value": "Customer",
+          "formula": null
+        },
+        {
+          "cell": "D109",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E109",
+          "value": "COD screening / deposit policy",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 110,
+      "cells": [
+        {
+          "cell": "B110",
+          "value": "Not available at delivery",
+          "formula": null
+        },
+        {
+          "cell": "C110",
+          "value": "Customer",
+          "formula": null
+        },
+        {
+          "cell": "D110",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E110",
+          "value": "Delivery scheduling",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 111,
+      "cells": [
+        {
+          "cell": "B111",
+          "value": "Travelling or out of city",
+          "formula": null
+        },
+        {
+          "cell": "C111",
+          "value": "Customer",
+          "formula": null
+        },
+        {
+          "cell": "D111",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E111",
+          "value": "Delivery scheduling",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 112,
+      "cells": [
+        {
+          "cell": "B112",
+          "value": "Order never confirmed by us",
+          "formula": null
+        },
+        {
+          "cell": "C112",
+          "value": "Ops",
+          "formula": null
+        },
+        {
+          "cell": "D112",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E112",
+          "value": "Order confirmation SLA",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "cells": [
+        {
+          "cell": "B113",
+          "value": "Dispatch delayed by us",
+          "formula": null
+        },
+        {
+          "cell": "C113",
+          "value": "Ops",
+          "formula": null
+        },
+        {
+          "cell": "D113",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E113",
+          "value": "Fulfilment SLA",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "cells": [
+        {
+          "cell": "B114",
+          "value": "Customer unreachable",
+          "formula": null
+        },
+        {
+          "cell": "C114",
+          "value": "Unknown",
+          "formula": null
+        },
+        {
+          "cell": "D114",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E114",
+          "value": "Improve call reach rate",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "cells": [
+        {
+          "cell": "B115",
+          "value": "Customer refused to give reason",
+          "formula": null
+        },
+        {
+          "cell": "C115",
+          "value": "Unknown",
+          "formula": null
+        },
+        {
+          "cell": "D115",
+          "value": "Active",
+          "formula": null
+        },
+        {
+          "cell": "E115",
+          "value": "Nothing",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 116,
+      "cells": [
+        {
+          "cell": "B116",
+          "value": "LEGACY - fit, size unspecified",
+          "formula": null
+        },
+        {
+          "cell": "C116",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D116",
+          "value": "Legacy",
+          "formula": null
+        },
+        {
+          "cell": "E116",
+          "value": "Migrated from old sheet - do not use for new",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 117,
+      "cells": [
+        {
+          "cell": "B117",
+          "value": "LEGACY - quality unspecified",
+          "formula": null
+        },
+        {
+          "cell": "C117",
+          "value": "Product",
+          "formula": null
+        },
+        {
+          "cell": "D117",
+          "value": "Legacy",
+          "formula": null
+        },
+        {
+          "cell": "E117",
+          "value": "Migrated from old sheet - do not use for new",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 118,
+      "cells": [
+        {
+          "cell": "B118",
+          "value": "Mirrored into Hadeer's call log. Change one, change both, and log it in Change_Log.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 121,
+      "cells": [
+        {
+          "cell": "B121",
+          "value": "8  HOW FAR TO TRUST EACH BOSTA EXCEPTION REASON",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 122,
+      "cells": [
+        {
+          "cell": "B122",
+          "value": "Bosta exception reason (exact string)",
+          "formula": null
+        },
+        {
+          "cell": "C122",
+          "value": "Trust",
+          "formula": null
+        },
+        {
+          "cell": "H122",
+          "value": "What the code actually hides",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "cells": [
+        {
+          "cell": "B123",
+          "value": "Cancellation - the customer refuses to receive the shipment.",
+          "formula": null
+        },
+        {
+          "cell": "C123",
+          "value": "Low",
+          "formula": null
+        },
+        {
+          "cell": "H123",
+          "value": "Collapses fit, price, mind-change and a missed courier call into one code. Verified cases here were mostly product issues.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 124,
+      "cells": [
+        {
+          "cell": "B124",
+          "value": "Cancellation - product issue",
+          "formula": null
+        },
+        {
+          "cell": "C124",
+          "value": "Medium",
+          "formula": null
+        },
+        {
+          "cell": "H124",
+          "value": "Points at the product but gives no detail. Hadeer's call supplies the detail.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 125,
+      "cells": [
+        {
+          "cell": "B125",
+          "value": "Business is not answering.",
+          "formula": null
+        },
+        {
+          "cell": "C125",
+          "value": "None",
+          "formula": null
+        },
+        {
+          "cell": "H125",
+          "value": "A courier-side excuse, not a diagnosis. Treat every one of these as unexplained until called.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "cells": [
+        {
+          "cell": "B126",
+          "value": "Postponed - the customer requested postponement for another day.",
+          "formula": null
+        },
+        {
+          "cell": "C126",
+          "value": "Medium",
+          "formula": null
+        },
+        {
+          "cell": "H126",
+          "value": "Usually genuine. Watch the ones that postpone twice.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 127,
+      "cells": [
+        {
+          "cell": "B127",
+          "value": "Postponed - the Business requested postponement for another day.",
+          "formula": null
+        },
+        {
+          "cell": "C127",
+          "value": "Low",
+          "formula": null
+        },
+        {
+          "cell": "H127",
+          "value": "Ours. Should be rare - investigate every instance.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 128,
+      "cells": [
+        {
+          "cell": "B128",
+          "value": "Postponed - Business requested postponement for another day.",
+          "formula": null
+        },
+        {
+          "cell": "C128",
+          "value": "Low",
+          "formula": null
+        },
+        {
+          "cell": "H128",
+          "value": "Same as above - Bosta writes this string two different ways.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 129,
+      "cells": [
+        {
+          "cell": "B129",
+          "value": "Retry delivery - the customer is not in the address.",
+          "formula": null
+        },
+        {
+          "cell": "C129",
+          "value": "Medium",
+          "formula": null
+        },
+        {
+          "cell": "H129",
+          "value": "Often genuine, but can mask a call the courier never made.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 130,
+      "cells": [
+        {
+          "cell": "B130",
+          "value": "Retry Pickup - the customer is not in the address.",
+          "formula": null
+        },
+        {
+          "cell": "C130",
+          "value": "Medium",
+          "formula": null
+        },
+        {
+          "cell": "H130",
+          "value": "Applies to return pickups, not outbound delivery.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 131,
+      "cells": [
+        {
+          "cell": "B131",
+          "value": "Waiting for data modification - address not clear",
+          "formula": null
+        },
+        {
+          "cell": "C131",
+          "value": "Medium",
+          "formula": null
+        },
+        {
+          "cell": "H131",
+          "value": "An address-capture failure at checkout. Ours to fix.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 132,
+      "cells": [
+        {
+          "cell": "B132",
+          "value": "N/A",
+          "formula": null
+        },
+        {
+          "cell": "C132",
+          "value": "None",
+          "formula": null
+        },
+        {
+          "cell": "H132",
+          "value": "No exception recorded. Normal on delivered shipments.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 134,
+      "cells": [
+        {
+          "cell": "B134",
+          "value": "9  RETURN CHANNELS  -  three different problems, never merged",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 135,
+      "cells": [
+        {
+          "cell": "B135",
+          "value": "Bosta Type",
+          "formula": null
+        },
+        {
+          "cell": "C135",
+          "value": "Channel",
+          "formula": null
+        },
+        {
+          "cell": "D135",
+          "value": "In the denominator?",
+          "formula": null
+        },
+        {
+          "cell": "H135",
+          "value": "What it actually is",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 136,
+      "cells": [
+        {
+          "cell": "B136",
+          "value": "SEND",
+          "formula": null
+        },
+        {
+          "cell": "C136",
+          "value": "Outbound",
+          "formula": null
+        },
+        {
+          "cell": "D136",
+          "value": "Counts in the denominator",
+          "formula": null
+        },
+        {
+          "cell": "H136",
+          "value": "A normal outbound delivery attempt.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 137,
+      "cells": [
+        {
+          "cell": "B137",
+          "value": "RTO",
+          "formula": null
+        },
+        {
+          "cell": "C137",
+          "value": "Outbound",
+          "formula": null
+        },
+        {
+          "cell": "D137",
+          "value": "Counts in the denominator",
+          "formula": null
+        },
+        {
+          "cell": "H137",
+          "value": "Went out, failed, came back. This is a FAILED DELIVERY.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 138,
+      "cells": [
+        {
+          "cell": "B138",
+          "value": "CUSTOMER_RETURN_PICKUP",
+          "formula": null
+        },
+        {
+          "cell": "C138",
+          "value": "Customer return",
+          "formula": null
+        },
+        {
+          "cell": "D138",
+          "value": "Excluded from the denominator",
+          "formula": null
+        },
+        {
+          "cell": "H138",
+          "value": "Delivered successfully, then the customer sent it back. A PRODUCT REJECTION, not a delivery failure.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 139,
+      "cells": [
+        {
+          "cell": "B139",
+          "value": "EXCHANGE_return",
+          "formula": null
+        },
+        {
+          "cell": "C139",
+          "value": "Exchange return",
+          "formula": null
+        },
+        {
+          "cell": "D139",
+          "value": "Excluded from the denominator",
+          "formula": null
+        },
+        {
+          "cell": "H139",
+          "value": "The returning leg of an exchange. Two legs already paid before this one.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 141,
+      "cells": [
+        {
+          "cell": "B141",
+          "value": "10  SIZE LADDER  -  ordering for the size-curve grid",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 142,
+      "cells": [
+        {
+          "cell": "B142",
+          "value": "XS",
+          "formula": null
+        },
+        {
+          "cell": "C142",
+          "value": 1,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 143,
+      "cells": [
+        {
+          "cell": "B143",
+          "value": "Small",
+          "formula": null
+        },
+        {
+          "cell": "C143",
+          "value": 2,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 144,
+      "cells": [
+        {
+          "cell": "B144",
+          "value": "Medium",
+          "formula": null
+        },
+        {
+          "cell": "C144",
+          "value": 3,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 145,
+      "cells": [
+        {
+          "cell": "B145",
+          "value": "Large",
+          "formula": null
+        },
+        {
+          "cell": "C145",
+          "value": 4,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 146,
+      "cells": [
+        {
+          "cell": "B146",
+          "value": "XL",
+          "formula": null
+        },
+        {
+          "cell": "C146",
+          "value": 5,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 147,
+      "cells": [
+        {
+          "cell": "B147",
+          "value": "XXL",
+          "formula": null
+        },
+        {
+          "cell": "C147",
+          "value": 6,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 148,
+      "cells": [
+        {
+          "cell": "B148",
+          "value": "28",
+          "formula": null
+        },
+        {
+          "cell": "C148",
+          "value": 7,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 149,
+      "cells": [
+        {
+          "cell": "B149",
+          "value": "30",
+          "formula": null
+        },
+        {
+          "cell": "C149",
+          "value": 8,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 150,
+      "cells": [
+        {
+          "cell": "B150",
+          "value": "32",
+          "formula": null
+        },
+        {
+          "cell": "C150",
+          "value": 9,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 151,
+      "cells": [
+        {
+          "cell": "B151",
+          "value": "34",
+          "formula": null
+        },
+        {
+          "cell": "C151",
+          "value": 10,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 152,
+      "cells": [
+        {
+          "cell": "B152",
+          "value": "36",
+          "formula": null
+        },
+        {
+          "cell": "C152",
+          "value": 11,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 153,
+      "cells": [
+        {
+          "cell": "B153",
+          "value": "38",
+          "formula": null
+        },
+        {
+          "cell": "C153",
+          "value": 12,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 154,
+      "cells": [
+        {
+          "cell": "B154",
+          "value": "40",
+          "formula": null
+        },
+        {
+          "cell": "C154",
+          "value": 13,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 155,
+      "cells": [
+        {
+          "cell": "B155",
+          "value": "42",
+          "formula": null
+        },
+        {
+          "cell": "C155",
+          "value": 14,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 156,
+      "cells": [
+        {
+          "cell": "B156",
+          "value": "44",
+          "formula": null
+        },
+        {
+          "cell": "C156",
+          "value": 15,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 157,
+      "cells": [
+        {
+          "cell": "B157",
+          "value": "(unstated)",
+          "formula": null
+        },
+        {
+          "cell": "C157",
+          "value": 16,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 159,
+      "cells": [
+        {
+          "cell": "B159",
+          "value": "11  COURIERS",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 160,
+      "cells": [
+        {
+          "cell": "B160",
+          "value": "Bosta",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 165,
+      "cells": [
+        {
+          "cell": "B165",
+          "value": "12  SYSTEM STATUS  -  computed",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 166,
+      "cells": [
+        {
+          "cell": "B166",
+          "value": "Shipments loaded",
+          "formula": null
+        },
+        {
+          "cell": "C166",
+          "value": null,
+          "formula": "=SUMPRODUCT(--(dm_id<>\"\"))"
+        }
+      ]
+    },
+    {
+      "row": 167,
+      "cells": [
+        {
+          "cell": "B167",
+          "value": "Outbound orders (SEND + RTO)",
+          "formula": null
+        },
+        {
+          "cell": "C167",
+          "value": null,
+          "formula": "=COUNTIF(dm_channel,\"Outbound\")"
+        }
+      ]
+    },
+    {
+      "row": 168,
+      "cells": [
+        {
+          "cell": "B168",
+          "value": "  delivered",
+          "formula": null
+        },
+        {
+          "cell": "C168",
+          "value": null,
+          "formula": "=COUNTIF(dm_group,\"Delivered\")"
+        }
+      ]
+    },
+    {
+      "row": 169,
+      "cells": [
+        {
+          "cell": "B169",
+          "value": "  returned to origin",
+          "formula": null
+        },
+        {
+          "cell": "C169",
+          "value": null,
+          "formula": "=COUNTIF(dm_group,\"Returned\")"
+        }
+      ]
+    },
+    {
+      "row": 170,
+      "cells": [
+        {
+          "cell": "B170",
+          "value": "  in transit / other",
+          "formula": null
+        },
+        {
+          "cell": "C170",
+          "value": null,
+          "formula": "=COUNTIF(dm_channel,\"Outbound\")-COUNTIF(dm_group,\"Delivered\")-COUNTIF(dm_group,\"Returned\")"
+        }
+      ]
+    },
+    {
+      "row": 171,
+      "cells": [
+        {
+          "cell": "B171",
+          "value": "Customer returns (post-delivery)",
+          "formula": null
+        },
+        {
+          "cell": "C171",
+          "value": null,
+          "formula": "=COUNTIF(dm_group,\"Customer return\")"
+        }
+      ]
+    },
+    {
+      "row": 172,
+      "cells": [
+        {
+          "cell": "B172",
+          "value": "Exchange returns",
+          "formula": null
+        },
+        {
+          "cell": "C172",
+          "value": null,
+          "formula": "=COUNTIF(dm_group,\"Exchange return\")"
+        }
+      ]
+    },
+    {
+      "row": 173,
+      "cells": [
+        {
+          "cell": "B173",
+          "value": "Courier fees loaded?",
+          "formula": null
+        },
+        {
+          "cell": "C173",
+          "value": null,
+          "formula": "=IF(SUMPRODUCT(--(cost_id<>\"\"))>0,\"YES - actual fees in use\",\"NO - falling back to the Config rate card\")"
+        }
+      ]
+    },
+    {
+      "row": 174,
+      "cells": [
+        {
+          "cell": "B174",
+          "value": "Rate card complete?",
+          "formula": null
+        },
+        {
+          "cell": "C174",
+          "value": null,
+          "formula": "=IF(SUMPRODUCT(--ISNUMBER(cfg_zone_deliv))+SUMPRODUCT(--ISNUMBER(cfg_zone_rto))+SUMPRODUCT(--ISNUMBER(cfg_zone_extra))=ROWS(cfg_zone)*3,\"YES\",\"NO - modelled costs suppressed\")"
+        }
+      ]
+    },
+    {
+      "row": 175,
+      "cells": [
+        {
+          "cell": "B175",
+          "value": "Any courier cost available?",
+          "formula": null
+        },
+        {
+          "cell": "C175",
+          "value": null,
+          "formula": "=IF(OR(SUMPRODUCT(--(cost_id<>\"\"))>0,SUMPRODUCT(--ISNUMBER(cfg_zone_deliv))+SUMPRODUCT(--ISNUMBER(cfg_zone_rto))+SUMPRODUCT(--ISNUMBER(cfg_zone_extra))=ROWS(cfg_zone)*3),\"YES - EGP cost metrics live\",\"NO - EGP cost metrics suppressed\")"
+        }
+      ]
+    },
+    {
+      "row": 176,
+      "cells": [
+        {
+          "cell": "B176",
+          "value": "SKU prices complete?",
+          "formula": null
+        },
+        {
+          "cell": "C176",
+          "value": null,
+          "formula": "=IF(SUMPRODUCT(--(sku_key<>\"\"))=0,\"NO - SKU list empty\",IF(SUMPRODUCT((sku_key<>\"\")*(NOT(ISNUMBER(sku_price))))>0,\"NO - \"&TEXT(SUMPRODUCT((sku_key<>\"\")*(NOT(ISNUMBER(sku_price)))),\"0\")&\" SKUs have no price\",\"YES\"))"
+        }
+      ]
+    },
+    {
+      "row": 177,
+      "cells": [
+        {
+          "cell": "B177",
+          "value": "SKU costs complete?",
+          "formula": null
+        },
+        {
+          "cell": "C177",
+          "value": null,
+          "formula": "=IF(SUMPRODUCT(--(sku_key<>\"\"))=0,\"NO - SKU list empty\",IF(SUMPRODUCT((sku_key<>\"\")*(NOT(ISNUMBER(sku_cogs))))>0,\"NO - margin metrics suppressed\",\"YES\"))"
+        }
+      ]
+    },
+    {
+      "row": 180,
+      "cells": [
+        {
+          "cell": "B180",
+          "value": "13  CONFIRMATION LAYER (v3.0)  -  the literal Shopify tag strings.  Read off the live export 28 Aug 2026, never guessed.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 181,
+      "cells": [
+        {
+          "cell": "B181",
+          "value": "What it means",
+          "formula": null
+        },
+        {
+          "cell": "C181",
+          "value": "Exact tag string in Shopify",
+          "formula": null
+        },
+        {
+          "cell": "D181",
+          "value": "Seen in the 18 Jun - 17 Aug export",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 182,
+      "cells": [
+        {
+          "cell": "B182",
+          "value": "Confirmed (Hadeer or auto)",
+          "formula": null
+        },
+        {
+          "cell": "C182",
+          "value": "Confirmed",
+          "formula": null
+        },
+        {
+          "cell": "D182",
+          "value": "214 orders",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 183,
+      "cells": [
+        {
+          "cell": "B183",
+          "value": "Confirmed by Omar",
+          "formula": null
+        },
+        {
+          "cell": "C183",
+          "value": "confirmed omar",
+          "formula": null
+        },
+        {
+          "cell": "D183",
+          "value": "23 orders.  Counts as a MISS for Hadeer - see the rule below.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 184,
+      "cells": [
+        {
+          "cell": "B184",
+          "value": "Cancelled tag",
+          "formula": null
+        },
+        {
+          "cell": "C184",
+          "value": "Cancelled",
+          "formula": null
+        },
+        {
+          "cell": "D184",
+          "value": "19 orders.  Not used for logic - Shopify \"Cancelled at\" is authoritative.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 185,
+      "cells": [
+        {
+          "cell": "B185",
+          "value": "Whappi - customer never reached",
+          "formula": null
+        },
+        {
+          "cell": "C185",
+          "value": "Whatsapp Disconnected",
+          "formula": null
+        },
+        {
+          "cell": "D185",
+          "value": "37 orders",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 186,
+      "cells": [
+        {
+          "cell": "B186",
+          "value": "Whappi - message template failed",
+          "formula": null
+        },
+        {
+          "cell": "C186",
+          "value": "WHAPI-Template-Error",
+          "formula": null
+        },
+        {
+          "cell": "D186",
+          "value": "26 orders",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 187,
+      "cells": [
+        {
+          "cell": "B187",
+          "value": "Whappi - message undeliverable",
+          "formula": null
+        },
+        {
+          "cell": "C187",
+          "value": "Message Undeliverable",
+          "formula": null
+        },
+        {
+          "cell": "D187",
+          "value": "10 orders",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 188,
+      "cells": [
+        {
+          "cell": "B188",
+          "value": "Bosta handoff succeeded",
+          "formula": null
+        },
+        {
+          "cell": "C188",
+          "value": "bosta_synced",
+          "formula": null
+        },
+        {
+          "cell": "D188",
+          "value": "299 orders.  Informational only.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 189,
+      "cells": [
+        {
+          "cell": "B189",
+          "value": "Bosta handoff failed",
+          "formula": null
+        },
+        {
+          "cell": "C189",
+          "value": "bosta_sync_failed",
+          "formula": null
+        },
+        {
+          "cell": "D189",
+          "value": "17 orders, 12 of them office pickups where failing to sync is CORRECT.  Do not alert on this tag.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 190,
+      "cells": [
+        {
+          "cell": "B190",
+          "value": "Call-attempt tags 1/3, 2/3 and 3/3 (24 orders) are read into Orders_Master!O as confirm_attempts.  CONFIRMED by Omar 28 Aug 2026: these are confirmation-call attempts, the same convention as the 2/2 entries in the old call log.  Treat the column as reliable.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 191,
+      "cells": [
+        {
+          "cell": "B191",
+          "value": "KPI RULES agreed 28 Aug 2026:  denominator = ALL orders placed.  Whappi outcomes are reported as their own segment, never credited to or deducted from Hadeer.  An order tagged \"confirmed omar\" sits OUTSIDE Hadeer's numerator and INSIDE her denominator - it is a miss, because she did not get to it.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 193,
+      "cells": [
+        {
+          "cell": "B193",
+          "value": "14  FULFILMENT CHANNELS  -  Bosta is not the whole business.  Never merged, same rule as the three return channels.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 194,
+      "cells": [
+        {
+          "cell": "B194",
+          "value": "Channel",
+          "formula": null
+        },
+        {
+          "cell": "C194",
+          "value": "How it is identified",
+          "formula": null
+        },
+        {
+          "cell": "D194",
+          "value": "In which denominator",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 195,
+      "cells": [
+        {
+          "cell": "B195",
+          "value": "Office pickup - Shopify shipping method",
+          "formula": null
+        },
+        {
+          "cell": "C195",
+          "value": "90 Office",
+          "formula": null
+        },
+        {
+          "cell": "D195",
+          "value": "Its own. Customer collects in person; no courier leg exists.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 196,
+      "cells": [
+        {
+          "cell": "B196",
+          "value": "Bosta courier",
+          "formula": null
+        },
+        {
+          "cell": "C196",
+          "value": "(order ref found in RAW_Bosta)",
+          "formula": null
+        },
+        {
+          "cell": "D196",
+          "value": "Delivery KPIs. This is what v1.0 and v2.0 measured.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 197,
+      "cells": [
+        {
+          "cell": "B197",
+          "value": "Not fulfilled",
+          "formula": null
+        },
+        {
+          "cell": "C197",
+          "value": "(neither of the above)",
+          "formula": null
+        },
+        {
+          "cell": "D197",
+          "value": "Pre-dispatch funnel only.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 198,
+      "cells": [
+        {
+          "cell": "B198",
+          "value": "FOURTH CHANNEL, INFERRED - \"Pickup - unrecorded\".  An order that is paid, not cancelled, carries no Bosta shipment and was not booked as \"90 Office\" was almost certainly collected from the store and nobody changed its status.  Confirmed by Omar on order #7344, 28 Aug 2026.  These are held SEPARATE from measured pickups and are never folded into the no-show rate - the outcome is inferred from payment, not recorded.  The fix belongs at source: set the shipping method to \"90 Office\" when a customer collects.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 200,
+      "cells": [
+        {
+          "cell": "B200",
+          "value": "15  PICKUP AGEING  -  Omar's policy, set 28 Aug 2026.  Not a sourced benchmark.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 201,
+      "cells": [
+        {
+          "cell": "B201",
+          "value": "Rule",
+          "formula": null
+        },
+        {
+          "cell": "C201",
+          "value": "Days",
+          "formula": null
+        },
+        {
+          "cell": "D201",
+          "value": "Why",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 202,
+      "cells": [
+        {
+          "cell": "B202",
+          "value": "Flag an unclaimed pickup after",
+          "formula": null
+        },
+        {
+          "cell": "C202",
+          "value": 3,
+          "formula": null
+        },
+        {
+          "cell": "D202",
+          "value": "Amber. Customer has had three days to walk in.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 203,
+      "cells": [
+        {
+          "cell": "B203",
+          "value": "Kill an unclaimed pickup after",
+          "formula": null
+        },
+        {
+          "cell": "C203",
+          "value": 7,
+          "formula": null
+        },
+        {
+          "cell": "D203",
+          "value": "Red. Cancel and release the stock.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 204,
+      "cells": [
+        {
+          "cell": "B204",
+          "value": "As-of date for ageing",
+          "formula": null
+        },
+        {
+          "cell": "C204",
+          "value": null,
+          "formula": "=IF(COUNT(om_placed)=0,\"\",MAX(om_placed))"
+        },
+        {
+          "cell": "D204",
+          "value": "The most recent order in the export. Ageing is measured to the data, not to today, so a stale paste cannot silently inflate the ages.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 205,
+      "cells": [
+        {
+          "cell": "B205",
+          "value": "Settling window (days)",
+          "formula": null
+        },
+        {
+          "cell": "C205",
+          "value": 2,
+          "formula": null
+        },
+        {
+          "cell": "D205",
+          "value": "An order placed in the last N days of the export may simply not have reached Bosta yet. Inside this window it is never inferred to be a store pickup.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 206,
+      "cells": [
+        {
+          "cell": "B206",
+          "value": "Baseline before this rule existed: four pickup orders were cancelled in one manual sweep on 1 Aug 2026 at 21:31, aged 32 to 43 days.  Four more were sitting 35 to 48 days old and still open at the 17 Aug cut.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 207,
+      "cells": [
+        {
+          "cell": "B207",
+          "value": "16  ORDER FUNNEL STATUS  -  computed",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 208,
+      "cells": [
+        {
+          "cell": "B208",
+          "value": "Shopify orders loaded",
+          "formula": null
+        },
+        {
+          "cell": "C208",
+          "value": null,
+          "formula": "=SUMPRODUCT(--(om_ref<>\"\"))"
+        }
+      ]
+    },
+    {
+      "row": 209,
+      "cells": [
+        {
+          "cell": "B209",
+          "value": "  dispatched via Bosta",
+          "formula": null
+        },
+        {
+          "cell": "C209",
+          "value": null,
+          "formula": "=COUNTIF(om_channel,\"Bosta\")"
+        }
+      ]
+    },
+    {
+      "row": 210,
+      "cells": [
+        {
+          "cell": "B210",
+          "value": "  office pickup - recorded",
+          "formula": null
+        },
+        {
+          "cell": "C210",
+          "value": null,
+          "formula": "=COUNTIF(om_channel,\"Office pickup\")"
+        }
+      ]
+    },
+    {
+      "row": 211,
+      "cells": [
+        {
+          "cell": "B211",
+          "value": "  office pickup - unrecorded (inferred)",
+          "formula": null
+        },
+        {
+          "cell": "C211",
+          "value": null,
+          "formula": "=COUNTIF(om_channel,\"Pickup - unrecorded\")"
+        }
+      ]
+    },
+    {
+      "row": 212,
+      "cells": [
+        {
+          "cell": "B212",
+          "value": "  never fulfilled",
+          "formula": null
+        },
+        {
+          "cell": "C212",
+          "value": null,
+          "formula": "=COUNTIF(om_channel,\"Not fulfilled\")"
+        }
+      ]
+    },
+    {
+      "row": 213,
+      "cells": [
+        {
+          "cell": "B213",
+          "value": "Cancelled pre-dispatch",
+          "formula": null
+        },
+        {
+          "cell": "C213",
+          "value": null,
+          "formula": "=COUNTIF(om_stage,\"Pre-dispatch\")"
+        }
+      ]
+    },
+    {
+      "row": 214,
+      "cells": [
+        {
+          "cell": "B214",
+          "value": "Cancelled post-dispatch",
+          "formula": null
+        },
+        {
+          "cell": "C214",
+          "value": null,
+          "formula": "=COUNTIF(om_stage,\"Post-dispatch\")"
+        }
+      ]
+    },
+    {
+      "row": 215,
+      "cells": [
+        {
+          "cell": "B215",
+          "value": "Channel counts reconcile?",
+          "formula": null
+        },
+        {
+          "cell": "C215",
+          "value": null,
+          "formula": "=IF(COUNTIF(om_channel,\"Bosta\")+COUNTIF(om_channel,\"Office pickup\")+COUNTIF(om_channel,\"Pickup - unrecorded\")+COUNTIF(om_channel,\"Not fulfilled\")=SUMPRODUCT(--(om_ref<>\"\")),\"YES - all orders land in exactly one channel\",\"NO - CHANNEL LOGIC BROKEN, do not use the v3.0 views\")"
+        }
+      ]
+    },
+    {
+      "row": 216,
+      "cells": [
+        {
+          "cell": "B216",
+          "value": "Shopify data loaded?",
+          "formula": null
+        },
+        {
+          "cell": "C216",
+          "value": null,
+          "formula": "=IF(SUMPRODUCT(--(om_ref<>\"\"))=0,\"NO - RAW_Shopify is empty, every v3.0 view is suppressed\",\"YES\")"
+        }
+      ]
+    },
+    {
+      "row": 217,
+      "cells": [
+        {
+          "cell": "B217",
+          "value": "Orders that join to Bosta",
+          "formula": null
+        },
+        {
+          "cell": "C217",
+          "value": null,
+          "formula": "=TEXT(SUMPRODUCT(--(om_disp=\"Yes\")),\"0\")&\" of \"&TEXT(SUMPRODUCT(--(om_ref<>\"\")),\"0\")"
+        }
+      ]
+    },
+    {
+      "row": 218,
+      "cells": [
+        {
+          "cell": "B218",
+          "value": "Orders flagged by audit",
+          "formula": null
+        },
+        {
+          "cell": "C218",
+          "value": null,
+          "formula": "=SUMPRODUCT(--(om_flags<>\"\"))"
+        }
+      ]
+    },
+    {
+      "row": 221,
+      "cells": [
+        {
+          "cell": "B221",
+          "value": "17  v3.0 TRAFFIC LIGHTS  -  [CONFIRM]  NOT YET SET BY OMAR.  These are starting values proposed by the build, not sourced benchmarks and not agreed targets.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 222,
+      "cells": [
+        {
+          "cell": "B222",
+          "value": "Metric",
+          "formula": null
+        },
+        {
+          "cell": "C222",
+          "value": "Red below / above",
+          "formula": null
+        },
+        {
+          "cell": "D222",
+          "value": "Status",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 223,
+      "cells": [
+        {
+          "cell": "B223",
+          "value": "Confirmation coverage - red below",
+          "formula": null
+        },
+        {
+          "cell": "C223",
+          "value": 0.6,
+          "formula": null
+        },
+        {
+          "cell": "D223",
+          "value": "[CONFIRM]",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 224,
+      "cells": [
+        {
+          "cell": "B224",
+          "value": "Omar intervention rate - red above",
+          "formula": null
+        },
+        {
+          "cell": "C224",
+          "value": 0.15,
+          "formula": null
+        },
+        {
+          "cell": "D224",
+          "value": "[CONFIRM]",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 225,
+      "cells": [
+        {
+          "cell": "B225",
+          "value": "Pickup no-show rate - red above",
+          "formula": null
+        },
+        {
+          "cell": "C225",
+          "value": 0.3,
+          "formula": null
+        },
+        {
+          "cell": "D225",
+          "value": "[CONFIRM]",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 226,
+      "cells": [
+        {
+          "cell": "B226",
+          "value": "Config section 5 carries the same warning for the v2.0 metrics: internal targets, not benchmarks. No external benchmark for Egyptian apparel COD confirmation or store-pickup collection has been sourced, and none was invented. Set these three deliberately, then delete the [CONFIRM] marks.",
+          "formula": null
+        }
+      ]
+    }
+  ],
+  "Change_Log": [
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "B2",
+          "value": "Change log",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "cell": "B3",
+          "value": "Every structural change. One line each. This is the handover document when the system moves to Claude Code or the ERP.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "B5",
+          "value": "Date",
+          "formula": null
+        },
+        {
+          "cell": "C5",
+          "value": "Who",
+          "formula": null
+        },
+        {
+          "cell": "D5",
+          "value": "What changed",
+          "formula": null
+        },
+        {
+          "cell": "E5",
+          "value": "Why",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "B6",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C6",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D6",
+          "value": "System v1.0 built",
+          "formula": null
+        },
+        {
+          "cell": "E6",
+          "value": "Replaced the static return manager.xlsx with a formula-driven system: raw paste zones, one transform layer, role-scoped views.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "B7",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C7",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D7",
+          "value": "Root cause taxonomy introduced (Config s7)",
+          "formula": null
+        },
+        {
+          "cell": "E7",
+          "value": "Free text produced 46% unusable records and 23 dates typed into a text field.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "cell": "B8",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C8",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D8",
+          "value": "call_status split from root_cause",
+          "formula": null
+        },
+        {
+          "cell": "E8",
+          "value": "'dead customer' conflated 'could not reach' with 'no reason given'. Different problems, different fixes.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "B9",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C9",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D9",
+          "value": "v2.0 - rebuilt on the live Bosta export",
+          "formula": null
+        },
+        {
+          "cell": "E9",
+          "value": "RAW_Bosta is now column-for-column identical to the Bosta download. No mapping step, nothing to get wrong on paste.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "cell": "B10",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C10",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D10",
+          "value": "Three return channels separated",
+          "formula": null
+        },
+        {
+          "cell": "E10",
+          "value": "RTO, CUSTOMER_RETURN_PICKUP and EXCHANGE_return were being counted as one thing. 15 post-delivery returns and 10 exchange legs were invisible in v1.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "cell": "B11",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C11",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D11",
+          "value": "Denominator fixed to SEND + RTO",
+          "formula": null
+        },
+        {
+          "cell": "E11",
+          "value": "v1 divided by a hardcoded guess of 149 orders. The real outbound count is now read from the export.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "B12",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C12",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D12",
+          "value": "Line items parsed from the Description field",
+          "formula": null
+        },
+        {
+          "cell": "E12",
+          "value": "Bosta carries the product string. Parsing it removed the need for a separate store export and made product and size analysis self-updating.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "B13",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C13",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D13",
+          "value": "RAW_SKU added",
+          "formula": null
+        },
+        {
+          "cell": "E13",
+          "value": "One row per variant with price and cost. Replaces the AOV proxy once filled.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "cell": "B14",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C14",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D14",
+          "value": "RAW_Costs added",
+          "formula": null
+        },
+        {
+          "cell": "E14",
+          "value": "Bosta zeroes COD on returns and carries no fee column, so courier cost has to come from the wallet export.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "cell": "B15",
+          "value": 46253,
+          "formula": null
+        },
+        {
+          "cell": "C15",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D15",
+          "value": "AOV computed live instead of assumed",
+          "formula": null
+        },
+        {
+          "cell": "E15",
+          "value": "v1 used a manual AOV cell. It is now the measured mean of delivered COD orders, and every figure derived from it is tagged VALUE-IS-PROXY.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "cell": "B16",
+          "value": 46256,
+          "formula": null
+        },
+        {
+          "cell": "C16",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D16",
+          "value": "Config s2 rate card and s3 scenario modifiers marked OUT OF USE",
+          "formula": null
+        },
+        {
+          "cell": "E16",
+          "value": "All 237 shipments price from the Bosta wallet (fee_source = Bosta wallet, 237/237). Fallback never hit; filling it would create a silent-error path. Retained as ERP-migration shell.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "cell": "B17",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C17",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D17",
+          "value": "v3.0 - RAW_Shopify added as the third source",
+          "formula": null
+        },
+        {
+          "cell": "E17",
+          "value": "Bosta and the call log both start at dispatch. Shopify is the only source that sees the order before it ships, so the confirmation stage was invisible.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "cell": "B18",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C18",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D18",
+          "value": "Three-way join proven before any build",
+          "formula": null
+        },
+        {
+          "cell": "E18",
+          "value": "Shopify order name = Bosta Business Reference Number on 227 of 234 shipment rows (97.0%); all 7 misses are order refs below the export window. Hadeer order ID = Bosta tracking number, 63/63 in-window.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "cell": "B19",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C19",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D19",
+          "value": "Orders_Master added at ORDER grain",
+          "formula": null
+        },
+        {
+          "cell": "E19",
+          "value": "DATA_Master is shipment grain and 13 orders produced 2-3 shipments each. Putting confirmation fields on a shipment row would have double-counted every order with a return leg.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "cell": "B20",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C20",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D20",
+          "value": "Confirmation tag vocabulary recorded in Config s13",
+          "formula": null
+        },
+        {
+          "cell": "E20",
+          "value": "Read off the live export, not guessed. The plan had assumed \"confirmed by omar\"; the real string is \"confirmed omar\". There is no Whappi-cancelled tag and no Cancel Reason column - both reported MISSING.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "cells": [
+        {
+          "cell": "B21",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C21",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D21",
+          "value": "Hadeer KPI rules fixed",
+          "formula": null
+        },
+        {
+          "cell": "E21",
+          "value": "Denominator is all orders placed. Whappi is a separate segment. \"confirmed omar\" counts as a miss for Hadeer because she did not get to it.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "cells": [
+        {
+          "cell": "B22",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C22",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D22",
+          "value": "Office pickup recognised as a third fulfilment channel",
+          "formula": null
+        },
+        {
+          "cell": "E22",
+          "value": "Shipping method \"90 Office\" - 30 orders, 43,253 EGP, none of them in Bosta. The workbook had been measuring the Bosta slice and labelling it the business.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "cell": "B23",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C23",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D23",
+          "value": "Pickup ageing rule set: flag at 3 days, kill at 7 (Config s15)",
+          "formula": null
+        },
+        {
+          "cell": "E23",
+          "value": "Four pickup orders were cleared in one manual sweep on 1 Aug aged 32-43 days, and four more were 35-48 days old and still open. Nothing was watching the shelf.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "cell": "B24",
+          "value": 46262,
+          "formula": null
+        },
+        {
+          "cell": "C24",
+          "value": "Omar / Claude",
+          "formula": null
+        },
+        {
+          "cell": "D24",
+          "value": "FALSE ALARM RECORDED: RAW_Bosta is NOT incomplete",
+          "formula": null
+        },
+        {
+          "cell": "E24",
+          "value": "An early read called the 18-28 Jun period a missing-data gap. Wrong. RAW_Bosta and RAW_Costs carry identical 237 tracking numbers, Bosta never billed for the absent orders, and Shopify financial status predicts the Bosta outcome (131/131 delivered = paid, 66/77 RTO = voided). The period is a Bosta onboarding ramp, not lost rows. Recorded so nobody re-opens it.",
+          "formula": null
+        }
+      ]
+    }
+  ]
+}

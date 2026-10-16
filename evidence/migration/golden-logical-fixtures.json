@@ -1,0 +1,724 @@
+{
+  "dataset_id": "OpsHub-GD-logical-inputs",
+  "version": 1,
+  "data_class": "SYNTHETIC_ONLY",
+  "execution_status": "CONTRACT_NOT_EXECUTED",
+  "purpose": "Independent logical source facts and exact expected bindings/members; provider payload/DB realization remains separately reviewed future work",
+  "test_policy_rules": {
+    "window": "[2026-08-17T00:00:00+03:00, 2026-08-24T00:00:00+03:00), as-of 2026-08-24T12:00:00Z",
+    "cohorts": {
+      "confirmation": "first evidenced process-entry local calendar date",
+      "delivery_rto": "outbound native creation local date",
+      "pickup": "evidenced purpose-specific case-entry local date",
+      "reach": "first actual contact local date",
+      "action_completion": "first explicit action-required local date",
+      "product_sales": "source item/order placement local date",
+      "roas": "aligned selected revenue/spend reporting interval under fixture method"
+    },
+    "date_precision": "Date-only supports this fixture's approved calendar-date cohorts; never proves spacing. Ambiguous local instant held until zone/offset is evidenced.",
+    "finality": {
+      "delivered": "qualified native outbound recipient-delivery",
+      "rto": "qualified original outbound RTO",
+      "final_other": "explicit terminal nonsuccess",
+      "pending": "positively nonfinal",
+      "unknown": "unmapped finality; calculable known subset PROVISIONAL"
+    },
+    "confirmation": "entry survives withdrawal; source tags without entry do not invent process entry or time",
+    "contact": "identified actual events only; later failed reach does not erase earlier reach; one case/objective across reopen; reservations are not events",
+    "required_action": "all independently evidenced required effects complete; approval/reach/exhaustion cannot establish completion",
+    "revenue": "A full eligible net by item under fixture-supplied eligibility; one linked reversal counted once, not return+refund twice",
+    "allocation": "SP01 direct A; SP02 80 percent A and 20 percent unallocated, decimal exact on these fixture amounts",
+    "production_policy_approval": false
+  },
+  "source_bindings": [
+    {
+      "merchant": "MA",
+      "account": "SYN-SHOP-A",
+      "kind": "Order",
+      "native_id": "NATIVE-OA",
+      "alias": "SYN-ORDER-1",
+      "expected_canonical": "OA",
+      "disposition": "accepted",
+      "locator": "synthetic://shop-a/order/OA"
+    },
+    {
+      "merchant": "MB",
+      "account": "SYN-SHOP-B",
+      "kind": "Order",
+      "native_id": "NATIVE-OA",
+      "alias": "SYN-ORDER-1",
+      "expected_canonical": "MB-OA",
+      "disposition": "accepted",
+      "locator": "synthetic://shop-b/order/OA"
+    },
+    {
+      "merchant": "MA",
+      "account": "SYN-SHOP-A",
+      "kind": "Customer",
+      "native_id": "CUST-A",
+      "phone": "PHONE_SENTINEL",
+      "expected_canonical": "MA-CUSTOMER",
+      "disposition": "accepted",
+      "locator": "synthetic://shop-a/customer/A"
+    },
+    {
+      "merchant": "MB",
+      "account": "SYN-SHOP-B",
+      "kind": "Customer",
+      "native_id": "CUST-B",
+      "phone": "PHONE_SENTINEL",
+      "expected_canonical": "MB-CUSTOMER",
+      "disposition": "accepted",
+      "locator": "synthetic://shop-b/customer/B"
+    },
+    {
+      "merchant": "MA",
+      "account": "SYN-SHOP-A",
+      "kind": "Variant",
+      "native_id": "NATIVE-A1",
+      "sku": "SYN-SKU",
+      "expected_canonical": "A1",
+      "parent_product": "A",
+      "disposition": "accepted",
+      "locator": "synthetic://shop-a/variant/A1"
+    },
+    {
+      "merchant": "MA",
+      "account": "SYN-SHOP-A",
+      "kind": "Variant",
+      "native_id": "NATIVE-A2",
+      "sku": "SYN-SKU",
+      "expected_canonical": "A2",
+      "parent_product": "A",
+      "disposition": "accepted",
+      "locator": "synthetic://shop-a/variant/A2"
+    },
+    {
+      "merchant": "MB",
+      "account": "SYN-SHOP-B",
+      "kind": "Variant",
+      "native_id": "NATIVE-A1",
+      "sku": "SYN-SKU",
+      "expected_canonical": "MB-A1",
+      "parent_product": "MB-A",
+      "disposition": "accepted",
+      "locator": "synthetic://shop-b/variant/A1"
+    }
+  ],
+  "repeated_line_fixture": {
+    "merchant": "MA",
+    "account": "SYN-SHOP-A",
+    "order_native": "NATIVE-REPEAT",
+    "lines": [
+      {
+        "native_id": "LINE-X1",
+        "variant_native": "NATIVE-A1",
+        "quantity": "1",
+        "expected_item": "ITEM-X1"
+      },
+      {
+        "native_id": "LINE-X2",
+        "variant_native": "NATIVE-A1",
+        "quantity": "1",
+        "expected_item": "ITEM-X2"
+      }
+    ],
+    "expected_distinct_items": 2,
+    "expected_units": "2"
+  },
+  "contact_events": [
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE01",
+      "case_id": "C01",
+      "occurred_at": "2026-08-18T09:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "reached",
+      "locator": "synthetic://contact/CE01",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE01"
+    },
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE02",
+      "case_id": "C01",
+      "occurred_at": "2026-08-19T09:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "no_answer",
+      "locator": "synthetic://contact/CE02",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE02"
+    },
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE03",
+      "case_id": "C02",
+      "occurred_at": "2026-08-18T10:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "reached",
+      "locator": "synthetic://contact/CE03",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE03"
+    },
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE04",
+      "case_id": "C03",
+      "occurred_at": "2026-08-18T11:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "reached",
+      "locator": "synthetic://contact/CE04",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE04"
+    },
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE05",
+      "case_id": "C04",
+      "occurred_at": "2026-08-18T09:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "no_answer",
+      "locator": "synthetic://contact/CE05",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE05"
+    },
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE06",
+      "case_id": "C04",
+      "occurred_at": "2026-08-19T09:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "no_answer",
+      "locator": "synthetic://contact/CE06",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE06"
+    },
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE07",
+      "case_id": "C04",
+      "occurred_at": "2026-08-20T09:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "no_answer",
+      "locator": "synthetic://contact/CE07",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE07"
+    },
+    {
+      "merchant": "MA",
+      "source_account": "SYN-CONTACT-A",
+      "native_id": "CE08",
+      "case_id": "C05",
+      "occurred_at": "2026-08-18T12:00:00+03:00",
+      "observed_at": "2026-08-21T09:00:00+03:00",
+      "reach": "no_answer",
+      "locator": "synthetic://contact/CE08",
+      "expected_disposition": "accepted",
+      "expected_event_id": "CE08"
+    }
+  ],
+  "contact_summaries": [
+    {
+      "merchant": "MA",
+      "source": "SYN-INTAKE-A",
+      "locator": "synthetic://intake/summary/07",
+      "case_candidate": "C07",
+      "cumulative_attempts": 3,
+      "occurrence_date": null,
+      "expected_disposition": "unresolved",
+      "expected_new_events": 0,
+      "expected_contact_start": "held"
+    }
+  ],
+  "requirements": [
+    {
+      "case": "C01",
+      "requirement": "REQ01",
+      "effect": "EFF01",
+      "state": "Succeeded",
+      "result_native": "SYN-RESULT-01",
+      "basis": "qualified positive result",
+      "expected_complete": true
+    },
+    {
+      "case": "C02",
+      "requirement": "REQ02",
+      "effect": "EFF02",
+      "state": "AwaitingApproval",
+      "result_native": null,
+      "expected_complete": false
+    },
+    {
+      "case": "C03",
+      "requirement": "REQ03",
+      "effect": "EFF03",
+      "state": "OutcomeUnknown",
+      "result_native": null,
+      "expected_complete": false
+    },
+    {
+      "case": "C04",
+      "requirement": "REQ04",
+      "effect": "EFF04",
+      "state": "Requested",
+      "result_native": null,
+      "expected_complete": false
+    },
+    {
+      "case": "C06",
+      "requirement": "REQ06",
+      "effect": "EFF06",
+      "state": "Requested",
+      "result_native": null,
+      "expected_complete": false
+    }
+  ],
+  "prior_period": {
+    "start_local": "2026-08-10",
+    "end_exclusive_local": "2026-08-17",
+    "timezone": "Africa/Cairo",
+    "as_of": "2026-08-24T12:00:00Z",
+    "items": [
+      {
+        "id": "PI01",
+        "order": "PO01",
+        "shipment": "PS01",
+        "product": "A",
+        "variant": "A1",
+        "quantity": "1",
+        "gross": "4000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "4000",
+        "placed_at": "2026-08-11T09:00:00+03:00",
+        "merchant": "MA"
+      },
+      {
+        "id": "PI02",
+        "order": "PO02",
+        "shipment": "PS02",
+        "product": "A",
+        "variant": "A1",
+        "quantity": "1",
+        "gross": "4000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "4000",
+        "placed_at": "2026-08-11T09:00:00+03:00",
+        "merchant": "MA"
+      },
+      {
+        "id": "PI03",
+        "order": "PO03",
+        "shipment": "PS03",
+        "product": "A",
+        "variant": "A1",
+        "quantity": "1",
+        "gross": "4000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "4000",
+        "placed_at": "2026-08-11T09:00:00+03:00",
+        "merchant": "MA"
+      },
+      {
+        "id": "PI04",
+        "order": "PO04",
+        "shipment": "PS04",
+        "product": "A",
+        "variant": "A1",
+        "quantity": "1",
+        "gross": "3000",
+        "discount": "0",
+        "reversal": "0",
+        "net": "3000",
+        "placed_at": "2026-08-11T09:00:00+03:00",
+        "merchant": "MA"
+      }
+    ],
+    "shipments": [
+      {
+        "id": "PS01",
+        "order_id": "PO01",
+        "created_at": "2026-08-11T10:00:00+03:00",
+        "outcome": "delivered",
+        "merchant": "MA"
+      },
+      {
+        "id": "PS02",
+        "order_id": "PO02",
+        "created_at": "2026-08-11T10:00:00+03:00",
+        "outcome": "delivered",
+        "merchant": "MA"
+      },
+      {
+        "id": "PS03",
+        "order_id": "PO03",
+        "created_at": "2026-08-11T10:00:00+03:00",
+        "outcome": "delivered",
+        "merchant": "MA"
+      },
+      {
+        "id": "PS04",
+        "order_id": "PO04",
+        "created_at": "2026-08-11T10:00:00+03:00",
+        "outcome": "rto",
+        "merchant": "MA"
+      }
+    ],
+    "expected_revenue_contributors": {
+      "PI01": "4000",
+      "PI02": "4000",
+      "PI03": "4000",
+      "PI04": "3000"
+    },
+    "expected_units": "4",
+    "expected_net": "15000",
+    "delivered_members": [
+      "PS01",
+      "PS02",
+      "PS03"
+    ],
+    "final_members": [
+      "PS01",
+      "PS02",
+      "PS03",
+      "PS04"
+    ],
+    "exclusions": [],
+    "expected_delivery": "3/4",
+    "wrong_equal_total_mutation": "Replace PS04 by unqualified PS99; same 3/4 must FAIL member equality"
+  },
+  "partial_attribution": {
+    "source_method": "FIXTURE-ITEM-ELIGIBILITY-v1",
+    "contributors": [
+      {
+        "item": "OA-A1",
+        "eligible": "4000",
+        "attributed": "4000",
+        "unattributed": "0",
+        "basis": "fixture fully eligible"
+      },
+      {
+        "item": "OA-A2",
+        "eligible": "8000",
+        "attributed": "8000",
+        "unattributed": "0",
+        "basis": "fixture fully eligible"
+      },
+      {
+        "item": "OB-A1",
+        "eligible": "8000",
+        "attributed": "3000",
+        "unattributed": "5000",
+        "basis": "fixture explicit 3000 eligible portion"
+      }
+    ],
+    "expected_roas": "3",
+    "wrong_equal_total_mutation": "OA-A1 attributed1000/OB-A1 attributed6000 gives same15000 but must FAIL amount/member basis"
+  },
+  "spend_revision": {
+    "selected_revision": 2,
+    "contributors": {
+      "SP01@r1/A": "3000",
+      "SP02@r2/A": "2080"
+    },
+    "unallocated_contributors": {
+      "SP02@r2/unallocated": "520"
+    },
+    "source_contributors": {
+      "SP01@r1": "3000",
+      "SP02@r2": "2600"
+    },
+    "expected_roas": "500/127",
+    "retained_prior_contributors": {
+      "SP01@r1/A": "3000",
+      "SP02@r1/A": "2000"
+    },
+    "retained_prior_roas": "4"
+  },
+  "temporal_cases": [
+    {
+      "id": "TC01",
+      "kind": "shipment_and_product",
+      "order": "TO01",
+      "shipment": "TS01",
+      "placed_at": "2026-08-16T09:00:00+03:00",
+      "created_at": "2026-08-18T09:00:00+03:00",
+      "outcome": "delivered",
+      "occurred_at": "2026-08-19T09:00:00+03:00",
+      "observed_at": "2026-08-24T10:00:00+03:00",
+      "expected_current_delivery_numerator": [
+        "TS01"
+      ],
+      "expected_current_delivery_denominator": [
+        "TS01"
+      ],
+      "expected_current_product_sales_orders": [],
+      "expected_prior_product_sales_orders": [
+        "TO01"
+      ]
+    },
+    {
+      "id": "TC02",
+      "kind": "confirmation",
+      "order": "TCF01",
+      "placed_at": "2026-08-15T09:00:00+03:00",
+      "entry_at": "2026-08-16T10:00:00+03:00",
+      "observed_at": "2026-08-18T11:00:00+03:00",
+      "state": "affirmative",
+      "expected_current_members": [],
+      "expected_prior_num": [
+        "TCF01"
+      ],
+      "expected_prior_den": [
+        "TCF01"
+      ]
+    },
+    {
+      "id": "TC03",
+      "kind": "pickup",
+      "case": "TP01",
+      "entry_at": "2026-08-23T23:59:00+03:00",
+      "collected_at": "2026-08-24T01:00:00+03:00",
+      "observed_at": "2026-08-24T02:00:00+03:00",
+      "expected_current_num": [
+        "TP01"
+      ],
+      "expected_current_den": [
+        "TP01"
+      ],
+      "reason": "entry cohort evaluated at later as-of; physical event date does not rebucket"
+    },
+    {
+      "id": "TC04",
+      "kind": "contact_action",
+      "case": "TCA01",
+      "action_required_at": "2026-08-16T09:00:00+03:00",
+      "first_attempt_at": "2026-08-18T09:00:00+03:00",
+      "reached": true,
+      "all_action_complete_at": "2026-08-23T09:00:00+03:00",
+      "expected_current_reach_num": [
+        "TCA01"
+      ],
+      "expected_current_reach_den": [
+        "TCA01"
+      ],
+      "expected_current_action_den": [],
+      "expected_prior_action_num": [
+        "TCA01"
+      ],
+      "expected_prior_action_den": [
+        "TCA01"
+      ]
+    },
+    {
+      "id": "TC05",
+      "kind": "exclusive_end",
+      "case": "TCE01",
+      "first_attempt_at": "2026-08-23T21:00:00Z",
+      "equivalent_local": "2026-08-24T00:00:00+03:00",
+      "reached": true,
+      "expected_current_num": [],
+      "expected_current_den": []
+    },
+    {
+      "id": "TC06",
+      "kind": "date_only",
+      "case": "TDATE01",
+      "first_attempt_date": "2026-08-23",
+      "timezone": "Africa/Cairo",
+      "time_precision": "date_only",
+      "reached": true,
+      "expected_current_num": [
+        "TDATE01"
+      ],
+      "expected_current_den": [
+        "TDATE01"
+      ],
+      "expected_new_contact_start": "held_spacing_unknown"
+    },
+    {
+      "id": "TC07",
+      "kind": "offset_transition",
+      "timezone": "America/New_York",
+      "tzdb": "version recorded at future realization",
+      "window_start": "2026-11-01T01:15:00-04:00",
+      "window_end_exclusive": "2026-11-01T01:45:00-04:00",
+      "events": [
+        {
+          "id": "FOLD01",
+          "at": "2026-11-01T01:30:00-04:00"
+        },
+        {
+          "id": "FOLD02",
+          "at": "2026-11-01T01:30:00-05:00"
+        },
+        {
+          "id": "FOLD_UNKNOWN",
+          "local": "2026-11-01T01:30:00",
+          "offset": null
+        }
+      ],
+      "expected_members": [
+        "FOLD01"
+      ],
+      "excluded": [
+        "FOLD02"
+      ],
+      "held": [
+        "FOLD_UNKNOWN"
+      ]
+    },
+    {
+      "id": "TC08",
+      "kind": "late_correction",
+      "subject": "TS01",
+      "effective_at": "2026-08-19T09:00:00+03:00",
+      "recorded_at": "2026-08-25T09:00:00+03:00",
+      "old_generation_as_of": "2026-08-24T12:00:00Z",
+      "new_generation_as_of": "2026-08-26T12:00:00Z",
+      "old_selected_state": "delivered",
+      "new_selected_state": "final_other",
+      "old_num": [
+        "TS01"
+      ],
+      "new_num": [],
+      "old_den": [
+        "TS01"
+      ],
+      "new_den": [
+        "TS01"
+      ],
+      "reason": "late recording revises interpretation of original creation cohort, preserves old as-of"
+    },
+    {
+      "id": "TC09",
+      "kind": "confirmation_entry_after_placement",
+      "order": "TCF02",
+      "placed_at": "2026-08-16T09:00:00+03:00",
+      "entry_at": "2026-08-18T10:00:00+03:00",
+      "observed_at": "2026-08-19T11:00:00+03:00",
+      "state": "affirmative",
+      "expected_current_num": [
+        "TCF02"
+      ],
+      "expected_current_den": [
+        "TCF02"
+      ],
+      "expected_prior_members": [],
+      "reason": "Placement prior, entry current; wrong placement cohort must fail"
+    }
+  ],
+  "changing_capture": {
+    "source_account": "SYN-SHOP-A",
+    "barriers": [
+      "page1",
+      "source_change",
+      "page2",
+      "cursor_expiry",
+      "retry",
+      "bounded_catchup",
+      "independent_inventory"
+    ],
+    "inputs": [
+      {
+        "id": "N01",
+        "version": 1
+      },
+      {
+        "id": "N02",
+        "version": 1
+      }
+    ],
+    "changes": [
+      {
+        "id": "N02",
+        "version": 2,
+        "sort_position": "before_already_read_boundary"
+      },
+      {
+        "id": "N03",
+        "version": 1,
+        "updated_at": "exact_cutoff"
+      },
+      {
+        "id": "N04",
+        "version": 1,
+        "visibility": "late_before_cutoff"
+      },
+      {
+        "parent": "N02",
+        "child": "LINE-OLD",
+        "change": "qualified_authoritative_removal"
+      }
+    ],
+    "expected_current_objects": [
+      "N01@v1",
+      "N02@v2",
+      "N03@v1",
+      "N04@v1"
+    ],
+    "expected_historical_removed_child": "LINE-OLD retained as prior assertion, excluded from current complete parent revision",
+    "without_qualified_closure": "coverage unresolved; continuity-dependent activation HELD"
+  },
+  "inherited_safety_seed": {
+    "marker_type": "migration-safety-seed-v1",
+    "merchant": "MA",
+    "run": "SYN-RUN-1",
+    "inherited_scopes": [
+      {
+        "order": "OA",
+        "native_order": "NATIVE-OA",
+        "scope": "sole_outbound",
+        "effect_state": "legacy_outcome_unknown",
+        "commerce_account": "SYN-SHOP-A",
+        "courier_account": "SYN-BOSTA-A",
+        "scope_confidence": "verified_native_order_unknown_effect"
+      },
+      {
+        "case": "C04",
+        "order": "SYN-ORDER-C04",
+        "contact_used": 3,
+        "occurrence_precision": "evidenced_events",
+        "native_order": "NATIVE-C04",
+        "commerce_account": "SYN-SHOP-A",
+        "contact_source": "SYN-CONTACT-A",
+        "actual_event_ids": [
+          "CE05",
+          "CE06",
+          "CE07"
+        ],
+        "case_purpose": "return_follow_up"
+      },
+      {
+        "case": "C07",
+        "contact_used": null,
+        "summary_count": 3,
+        "state": "uncertain_allowance",
+        "native_order": null,
+        "contact_source": "SYN-CONTACT-A",
+        "scope_confidence": "unresolved",
+        "required_quarantine": "MA contact workflow until native/business mapping is established"
+      }
+    ],
+    "independent_retention": "all allowed restore horizons plus unresolved holds under approved policy",
+    "restore_before_migration_post_ops_markers": 0,
+    "expected_new_dispatches": 0,
+    "expected_new_contact_starts": 0,
+    "missing_seed_coverage": "quarantine affected merchant/connection",
+    "source_accounts": {
+      "commerce": "SYN-SHOP-A",
+      "courier": "SYN-BOSTA-A",
+      "contact": "SYN-CONTACT-A"
+    }
+  },
+  "reviewed_realization_gate": "Before V2 pass, complete provider-shaped synthetic fixture manifest for EVERY scenario, exact source locators/events/effects/policies/expected bindings/dispositions/generations; independently reviewed; no production-code-derived expected inputs"
+}

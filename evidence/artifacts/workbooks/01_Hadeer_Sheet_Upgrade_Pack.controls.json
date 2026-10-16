@@ -1,0 +1,1305 @@
+{
+  "Setup guide": [
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "B2",
+          "value": "Upgrading Hadeer's returns sheet - in place",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "cell": "B3",
+          "value": "Google Sheet \"return manager\"  |  about 15 minutes, once  |  nothing she does today breaks",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "B5",
+          "value": "WHAT YOU ARE ADDING",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "C6",
+          "value": "Six new columns, J to O",
+          "formula": null
+        },
+        {
+          "cell": "D6",
+          "value": "Her existing columns A to I are untouched. Column F, the free-text return reason, stays exactly as it is - it is the most valuable field in the whole system and nothing replaces it.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "C7",
+          "value": "Two optional, P and Q",
+          "formula": null
+        },
+        {
+          "cell": "D7",
+          "value": "Refund EGP and Recoverable. Add them only if you want refund totals in the workbook. Everything else works without them.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "B9",
+          "value": "STEP BY STEP",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "cell": "B10",
+          "value": "1",
+          "formula": null
+        },
+        {
+          "cell": "C10",
+          "value": "Add a Lists tab",
+          "formula": null
+        },
+        {
+          "cell": "D10",
+          "value": "In her sheet: bottom bar, plus icon, rename the new tab to Lists. Then open the 'Paste into Lists' tab of this file, copy the whole block A1:L26, and paste it into Lists!A1. This tab holds every dropdown value plus the two translation tables the migration formulas need.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "cell": "B11",
+          "value": "2",
+          "formula": null
+        },
+        {
+          "cell": "C11",
+          "value": "Protect the Lists tab",
+          "formula": null
+        },
+        {
+          "cell": "D11",
+          "value": "Right-click the Lists tab, Protect sheet, restrict to yourself. If this tab gets edited the dropdowns drift and the workbook stops recognising her answers.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "B12",
+          "value": "3",
+          "formula": null
+        },
+        {
+          "cell": "C12",
+          "value": "Type the six new headers",
+          "formula": null
+        },
+        {
+          "cell": "D12",
+          "value": "In Sheet1, go to J1 and type across: return type, call status, call attempts, root cause, size detail, resolution. Exact spelling, lowercase. The workbook reads by position, but you will thank yourself later.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "B13",
+          "value": "4",
+          "formula": null
+        },
+        {
+          "cell": "C13",
+          "value": "Add the dropdowns",
+          "formula": null
+        },
+        {
+          "cell": "D13",
+          "value": "Select J2:J1000, Data > Data validation > Dropdown (from a range) > Lists!E2:E4. Repeat for the other four: K uses Lists!B2:B8, M uses Lists!A2:A26, N uses Lists!C2:C9, O uses Lists!D2:D8. Leave L (call attempts) as a plain number column.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "cell": "B14",
+          "value": "5",
+          "formula": null
+        },
+        {
+          "cell": "C14",
+          "value": "Set rejection on invalid input",
+          "formula": null
+        },
+        {
+          "cell": "D14",
+          "value": "In each of those validation rules, choose 'Reject the input' rather than 'Show a warning'. A warning gets clicked through; a rejection is what actually keeps the taxonomy clean.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "cell": "B15",
+          "value": "6",
+          "formula": null
+        },
+        {
+          "cell": "C15",
+          "value": "Run the migration once",
+          "formula": null
+        },
+        {
+          "cell": "D15",
+          "value": "Open the 'Migration formulas' tab of this file and paste each formula into row 2 of its column, then drag down to the last row. They read her old columns G and H and fill the new ones automatically - no risk of anything landing on the wrong row.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "cell": "B16",
+          "value": "7",
+          "formula": null
+        },
+        {
+          "cell": "C16",
+          "value": "Freeze the formulas",
+          "formula": null
+        },
+        {
+          "cell": "D16",
+          "value": "Select J2:O1000, Ctrl+C, then Ctrl+Shift+V to paste as values only. This is important. If you leave them as formulas, the moment Hadeer types over one it breaks the column.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "cell": "B17",
+          "value": "8",
+          "formula": null
+        },
+        {
+          "cell": "C17",
+          "value": "Add the duplicate check",
+          "formula": null
+        },
+        {
+          "cell": "D17",
+          "value": "Put the formula from the 'Migration formulas' tab into S2 and drag down. It flags any order ID entered twice. You paste new returns weekly, so this is what stops the same return being worked and counted twice.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "cell": "B18",
+          "value": "9",
+          "formula": null
+        },
+        {
+          "cell": "C18",
+          "value": "Colour the new block",
+          "formula": null
+        },
+        {
+          "cell": "D18",
+          "value": "Select J1:O1 and give it a fill so she can see at a glance where her new work starts. Yellow works.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "cell": "B19",
+          "value": "10",
+          "formula": null
+        },
+        {
+          "cell": "C19",
+          "value": "Walk her through it once",
+          "formula": null
+        },
+        {
+          "cell": "D19",
+          "value": "Fifteen minutes with her, live, on three real returns. The SOP alone will not do it - the dropdown habit has to be built once by hand.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "cells": [
+        {
+          "cell": "B21",
+          "value": "THE ONE THING TO EXPLAIN TO HER",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "cells": [
+        {
+          "cell": "C22",
+          "value": "Stop using 2/2",
+          "formula": null
+        },
+        {
+          "cell": "D22",
+          "value": "She has been writing 2/2 in the Follow up column to mean two call attempts. That is genuinely useful information and it is why her data looked broken on export - Excel converts it to a date. From now on that goes in two places instead: call status = No Answer, call attempts = 2. Tell her the old convention was right, the column was wrong.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "cell": "C23",
+          "value": "Root cause only when reached",
+          "formula": null
+        },
+        {
+          "cell": "D23",
+          "value": "If she did not speak to the customer, root cause stays blank. A guess there is worse than a gap, because a guess gets counted.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "cell": "C24",
+          "value": "Size detail is new",
+          "formula": null
+        },
+        {
+          "cell": "D24",
+          "value": "When the reason is fit, say which way it was wrong. Too tight and too loose lead to opposite fixes and the old sheet could not tell them apart.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "cell": "B26",
+          "value": "WHAT NEEDS A HUMAN PASS",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "cells": [
+        {
+          "cell": "C27",
+          "value": "Rows marked resolved",
+          "formula": null
+        },
+        {
+          "cell": "D27",
+          "value": "About five rows have Follow up = resolved. That could mean an exchange, a reship or a refund - the old sheet did not record which. The migration leaves resolution blank on those. Go through them once and pick the right value.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "cells": [
+        {
+          "cell": "C28",
+          "value": "The customer problem entries",
+          "formula": null
+        },
+        {
+          "cell": "D28",
+          "value": "A category called 'customer problem' appeared this month. Reading the note, it maps to Changed mind, owner Customer. The migration does that automatically. If you read it differently, change the mapping in Lists!I:J before running step 6.",
+          "formula": null
+        }
+      ]
+    }
+  ],
+  "Paste into Lists": [
+    {
+      "row": 1,
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "root cause",
+          "formula": null
+        },
+        {
+          "cell": "B1",
+          "value": "call status",
+          "formula": null
+        },
+        {
+          "cell": "C1",
+          "value": "size detail",
+          "formula": null
+        },
+        {
+          "cell": "D1",
+          "value": "resolution",
+          "formula": null
+        },
+        {
+          "cell": "E1",
+          "value": "return type",
+          "formula": null
+        },
+        {
+          "cell": "I1",
+          "value": "legacy category",
+          "formula": null
+        },
+        {
+          "cell": "J1",
+          "value": "maps to root cause",
+          "formula": null
+        },
+        {
+          "cell": "K1",
+          "value": "legacy follow up",
+          "formula": null
+        },
+        {
+          "cell": "L1",
+          "value": "maps to resolution",
+          "formula": null
+        },
+        {
+          "cell": "N1",
+          "value": "Copy A1:L26 and paste into Lists!A1 of her Google Sheet. Do not reorder these columns - the migration formulas reference them by position.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "A2",
+          "value": "Fit - too small",
+          "formula": null
+        },
+        {
+          "cell": "B2",
+          "value": "Not Called Yet",
+          "formula": null
+        },
+        {
+          "cell": "C2",
+          "value": "N/A",
+          "formula": null
+        },
+        {
+          "cell": "D2",
+          "value": "Pending",
+          "formula": null
+        },
+        {
+          "cell": "E2",
+          "value": "Failed delivery (RTO)",
+          "formula": null
+        },
+        {
+          "cell": "I2",
+          "value": "bad fit or wrong size",
+          "formula": null
+        },
+        {
+          "cell": "J2",
+          "value": "LEGACY - fit, size unspecified",
+          "formula": null
+        },
+        {
+          "cell": "K2",
+          "value": "dead customer",
+          "formula": null
+        },
+        {
+          "cell": "L2",
+          "value": "Not recoverable",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "cell": "A3",
+          "value": "Fit - too large",
+          "formula": null
+        },
+        {
+          "cell": "B3",
+          "value": "Reached",
+          "formula": null
+        },
+        {
+          "cell": "C3",
+          "value": "Too tight overall",
+          "formula": null
+        },
+        {
+          "cell": "D3",
+          "value": "Exchange requested",
+          "formula": null
+        },
+        {
+          "cell": "E3",
+          "value": "Returned after delivery",
+          "formula": null
+        },
+        {
+          "cell": "I3",
+          "value": "quality problem",
+          "formula": null
+        },
+        {
+          "cell": "J3",
+          "value": "LEGACY - quality unspecified",
+          "formula": null
+        },
+        {
+          "cell": "K3",
+          "value": "follow up",
+          "formula": null
+        },
+        {
+          "cell": "L3",
+          "value": "Pending",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "cells": [
+        {
+          "cell": "A4",
+          "value": "Fit - length or proportion",
+          "formula": null
+        },
+        {
+          "cell": "B4",
+          "value": "No Answer",
+          "formula": null
+        },
+        {
+          "cell": "C4",
+          "value": "Too loose overall",
+          "formula": null
+        },
+        {
+          "cell": "D4",
+          "value": "Exchange completed",
+          "formula": null
+        },
+        {
+          "cell": "E4",
+          "value": "Exchange return leg",
+          "formula": null
+        },
+        {
+          "cell": "I4",
+          "value": "no reason",
+          "formula": null
+        },
+        {
+          "cell": "J4",
+          "value": "Customer refused to give reason",
+          "formula": null
+        },
+        {
+          "cell": "K4",
+          "value": "Need review",
+          "formula": null
+        },
+        {
+          "cell": "L4",
+          "value": "Pending",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "A5",
+          "value": "Quality - fabric or material",
+          "formula": null
+        },
+        {
+          "cell": "B5",
+          "value": "Phone Off",
+          "formula": null
+        },
+        {
+          "cell": "C5",
+          "value": "Too short",
+          "formula": null
+        },
+        {
+          "cell": "D5",
+          "value": "Refund issued",
+          "formula": null
+        },
+        {
+          "cell": "I5",
+          "value": "wrong item",
+          "formula": null
+        },
+        {
+          "cell": "J5",
+          "value": "Wrong item shipped",
+          "formula": null
+        },
+        {
+          "cell": "K5",
+          "value": "Need review ",
+          "formula": null
+        },
+        {
+          "cell": "L5",
+          "value": "Pending",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "A6",
+          "value": "Quality - changed after wash",
+          "formula": null
+        },
+        {
+          "cell": "B6",
+          "value": "Wrong Number",
+          "formula": null
+        },
+        {
+          "cell": "C6",
+          "value": "Too long",
+          "formula": null
+        },
+        {
+          "cell": "D6",
+          "value": "Reshipped",
+          "formula": null
+        },
+        {
+          "cell": "I6",
+          "value": "fake update",
+          "formula": null
+        },
+        {
+          "cell": "J6",
+          "value": "Courier never called",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "A7",
+          "value": "Colour differs from website",
+          "formula": null
+        },
+        {
+          "cell": "B7",
+          "value": "Refused to Talk",
+          "formula": null
+        },
+        {
+          "cell": "C7",
+          "value": "Sleeve length wrong",
+          "formula": null
+        },
+        {
+          "cell": "D7",
+          "value": "Customer lost",
+          "formula": null
+        },
+        {
+          "cell": "I7",
+          "value": "customer problem",
+          "formula": null
+        },
+        {
+          "cell": "J7",
+          "value": "Changed mind",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "cell": "A8",
+          "value": "Item damaged in transit",
+          "formula": null
+        },
+        {
+          "cell": "B8",
+          "value": "Number Unreachable",
+          "formula": null
+        },
+        {
+          "cell": "C8",
+          "value": "Shoulders wrong",
+          "formula": null
+        },
+        {
+          "cell": "D8",
+          "value": "Not recoverable",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "A9",
+          "value": "Wrong item shipped",
+          "formula": null
+        },
+        {
+          "cell": "C9",
+          "value": "Waist wrong",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "cell": "A10",
+          "value": "Wrong size shipped",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "cell": "A11",
+          "value": "Courier never called",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "A12",
+          "value": "Courier late - customer gone",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "A13",
+          "value": "Wrong address captured",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "cell": "A14",
+          "value": "Area not covered",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "cell": "A15",
+          "value": "Changed mind",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "cell": "A16",
+          "value": "Found it cheaper elsewhere",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "cell": "A17",
+          "value": "Ordered by mistake or duplicate",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "cell": "A18",
+          "value": "Could not pay COD",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "cell": "A19",
+          "value": "Not available at delivery",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "cell": "A20",
+          "value": "Travelling or out of city",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "cells": [
+        {
+          "cell": "A21",
+          "value": "Order never confirmed by us",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "cells": [
+        {
+          "cell": "A22",
+          "value": "Dispatch delayed by us",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "cell": "A23",
+          "value": "Customer unreachable",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "cell": "A24",
+          "value": "Customer refused to give reason",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "cells": [
+        {
+          "cell": "A25",
+          "value": "LEGACY - fit, size unspecified",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "cell": "A26",
+          "value": "LEGACY - quality unspecified",
+          "formula": null
+        }
+      ]
+    }
+  ],
+  "Migration formulas": [
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "B2",
+          "value": "Paste each of these into row 2 of its column, then drag down",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "cell": "B3",
+          "value": "They read her existing columns G (reason category) and H (Follow up). Nothing is keyed on row position, so nothing can land on the wrong order.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "B5",
+          "value": "Cell",
+          "formula": null
+        },
+        {
+          "cell": "C5",
+          "value": "Formula",
+          "formula": null
+        },
+        {
+          "cell": "D5",
+          "value": "What it does",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "B6",
+          "value": "J2",
+          "formula": null
+        },
+        {
+          "cell": "C6",
+          "value": null,
+          "formula": "=IF($D2=\"\",\"\",\"\")"
+        },
+        {
+          "cell": "D6",
+          "value": "Return type - leave blank. You fill this when you paste new returns, from the Bosta Type column: RTO, CUSTOMER_RETURN_PICKUP or EXCHANGE_return.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "B7",
+          "value": "K2",
+          "formula": null
+        },
+        {
+          "cell": "C7",
+          "value": null,
+          "formula": "=IF($D2=\"\",\"\",IF(TRIM($H2)=\"2/2\",\"No Answer\",IF(TRIM($G2)<>\"\",\"Reached\",\"\")))"
+        },
+        {
+          "cell": "D7",
+          "value": "Call status. If Follow up says 2/2 she called and got no answer. If she recorded a category, she reached them.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "cell": "B8",
+          "value": "L2",
+          "formula": null
+        },
+        {
+          "cell": "C8",
+          "value": null,
+          "formula": "=IF($D2=\"\",\"\",IF(TRIM($H2)=\"2/2\",2,IF(TRIM($G2)<>\"\",1,\"\")))"
+        },
+        {
+          "cell": "D8",
+          "value": "Call attempts. Recovers the number she was already tracking inside 2/2.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "B9",
+          "value": "M2",
+          "formula": null
+        },
+        {
+          "cell": "C9",
+          "value": null,
+          "formula": "=IF($D2=\"\",\"\",IFERROR(VLOOKUP(TRIM($G2),[1]lists!$I$2:$J$7,2,FALSE()),\"\"))"
+        },
+        {
+          "cell": "D9",
+          "value": "Root cause. Translates her old category into the governed taxonomy.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "cell": "B10",
+          "value": "N2",
+          "formula": null
+        },
+        {
+          "cell": "C10",
+          "value": "(leave empty)",
+          "formula": null
+        },
+        {
+          "cell": "D10",
+          "value": "Size detail - leave blank. The old sheet never captured which way the fit was wrong, so there is nothing to migrate. She fills this going forward.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "cell": "B11",
+          "value": "O2",
+          "formula": null
+        },
+        {
+          "cell": "C11",
+          "value": null,
+          "formula": "=IF($D2=\"\",\"\",IFERROR(VLOOKUP(TRIM($H2),[1]lists!$K$2:$L$5,2,FALSE()),\"\"))"
+        },
+        {
+          "cell": "D11",
+          "value": "Resolution. Rows marked resolved come back blank on purpose - see the setup guide.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "B12",
+          "value": "S2",
+          "formula": null
+        },
+        {
+          "cell": "C12",
+          "value": null,
+          "formula": "=IF($D2=\"\",\"\",IF(COUNTIF($D$2:$D2,$D2)>1,\"DUPLICATE\",\"\"))"
+        },
+        {
+          "cell": "D12",
+          "value": "Duplicate check. Flags an order ID that already appears higher up. Run your eye down this column every time you paste new returns.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "B13",
+          "value": "T2",
+          "formula": null
+        },
+        {
+          "cell": "C13",
+          "value": null,
+          "formula": "=IF($D2=\"\",\"\",IF(AND($K2=\"Reached\",$M2=\"\"),\"NEEDS A REASON\",\"\"))"
+        },
+        {
+          "cell": "D13",
+          "value": "Quality check. Catches the exact defect worth eliminating: she reached the customer but the answer was never written down.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "cell": "B15",
+          "value": "After dragging down: select J2:O1000, copy, then Ctrl+Shift+V to paste as values. Leaving them as live formulas means the first time Hadeer types over one, the column breaks.",
+          "formula": null
+        }
+      ]
+    }
+  ],
+  "Your weekly paste": [
+    {
+      "row": 2,
+      "cells": [
+        {
+          "cell": "B2",
+          "value": "Adding new returns each week",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "cells": [
+        {
+          "cell": "B4",
+          "value": "YOUR THREE MINUTES",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "cell": "B5",
+          "value": "1",
+          "formula": null
+        },
+        {
+          "cell": "C5",
+          "value": "Filter the Bosta export",
+          "formula": null
+        },
+        {
+          "cell": "D5",
+          "value": "In your downloaded Bosta file, filter Type to RTO, CUSTOMER_RETURN_PICKUP and EXCHANGE_return. Those are the only rows Hadeer needs.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "cell": "B6",
+          "value": "2",
+          "formula": null
+        },
+        {
+          "cell": "C6",
+          "value": "Paste at the bottom of her sheet",
+          "formula": null
+        },
+        {
+          "cell": "D6",
+          "value": "Map across: Created At to A, Consignee Name to B, Consignee phone to C, Tracking Number to D, Description to E. Leave F to I empty - those are hers.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "cell": "B7",
+          "value": "3",
+          "formula": null
+        },
+        {
+          "cell": "C7",
+          "value": "Fill column J",
+          "formula": null
+        },
+        {
+          "cell": "D7",
+          "value": "Return type, from the Bosta Type column. This is what tells her which question to ask - a post-delivery return needs a completely different conversation from a failed delivery.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "cell": "B8",
+          "value": "4",
+          "formula": null
+        },
+        {
+          "cell": "C8",
+          "value": "Check column S",
+          "formula": null
+        },
+        {
+          "cell": "D8",
+          "value": "Any row reading DUPLICATE was already in the sheet. Delete the new one, not the old one - the old one may already have her notes on it.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "cell": "B9",
+          "value": "5",
+          "formula": null
+        },
+        {
+          "cell": "C9",
+          "value": "Tell her it is ready",
+          "formula": null
+        },
+        {
+          "cell": "D9",
+          "value": "One message. The queue only works if she knows it was topped up.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "cell": "B11",
+          "value": "AND BACK INTO THE WORKBOOK",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "cell": "B12",
+          "value": "6",
+          "formula": null
+        },
+        {
+          "cell": "C12",
+          "value": "Download her sheet",
+          "formula": null
+        },
+        {
+          "cell": "D12",
+          "value": "File > Download > Microsoft Excel.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "cell": "B13",
+          "value": "7",
+          "formula": null
+        },
+        {
+          "cell": "C13",
+          "value": "Paste into RAW_Intake",
+          "formula": null
+        },
+        {
+          "cell": "D13",
+          "value": "Whole sheet, values only, into A3 of the RAW_Intake tab. The workbook now reads her exact column layout - order ID in column D, her answers in J to Q - so there is no mapping step and nothing to get wrong.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "cell": "B14",
+          "value": "8",
+          "formula": null
+        },
+        {
+          "cell": "C14",
+          "value": "Recalculate",
+          "formula": null
+        },
+        {
+          "cell": "D14",
+          "value": "Ctrl+Alt+F9, then read Data_Quality before anything else.",
+          "formula": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-14",
+  "scope": "Accepted Phase 3 baseline before bounded OD08/OD09 correction",
+  "files": [
+    {
+      "path": "docs/product/00-owner-decisions.md",
+      "sha256": "cff0f5f2c29fc01f840910842d48e490b0558dccf76481c3953dc3a4b62c4f40"
+    },
+    {
+      "path": "docs/product/01-product-vision-and-scope.md",
+      "sha256": "d14ffcb3b56fb7d81ea7fd71e58a1acb92c9a5b79faac877549df2959c10b81a"
+    },
+    {
+      "path": "docs/product/02-personas-and-permissions.md",
+      "sha256": "07f791afb800b42c2d618e1dda95505611f8ebf63f33b5601db3753e7db2373b"
+    },
+    {
+      "path": "docs/product/03-mvp-feature-prioritization.md",
+      "sha256": "de94b2a777df0e16ec1ee2f777494b3d8e9d0f01f2dbadc9b844db07aa3185a4"
+    },
+    {
+      "path": "docs/product/04-merchant-workflows.md",
+      "sha256": "e3745e156d45ae97b498518bfddac99b9fd08d7c6a4a50fae0e374e62954f846"
+    },
+    {
+      "path": "docs/product/05-platform-admin-workflows.md",
+      "sha256": "f78a2ab7e7b5012c56ac083c7a5126ff6d940cc15740fef7ee63d40483a6f491"
+    },
+    {
+      "path": "docs/product/06-analytics-and-kpis.md",
+      "sha256": "0a0de299157af912f47a72d6e2a8d100ae3d1df351f15bc840d3c90dac8373f0"
+    },
+    {
+      "path": "docs/product/07-configuration-and-policy.md",
+      "sha256": "0c2f6dc19fe2cd3ae9ce5d20ac3fb921a7e561a9afe45677d648fa9f07459234"
+    },
+    {
+      "path": "docs/product/08-data-ingestion-and-integrations-requirements.md",
+      "sha256": "09ffb0aceaf3b97849b6fed5e6f6ccf0e00efe9332001423e6d7ed7d09c02d5e"
+    },
+    {
+      "path": "docs/product/09-saas-commercial-requirements.md",
+      "sha256": "1595dc3c9c97f4107ec3455adccf091f98f99e917d8abc1912d8ede9ca950f0a"
+    },
+    {
+      "path": "docs/product/10-audit-data-quality-and-trust.md",
+      "sha256": "11f70930cd2d94ae47c09725912412ef7f770e9342e94489e063ec6931597143"
+    },
+    {
+      "path": "docs/product/11-mvp-acceptance-criteria.md",
+      "sha256": "011363a998b431a555347089a1fd8686889ad4b929e7606b4feb8ac6e96f1e53"
+    },
+    {
+      "path": "docs/product/12-out-of-scope-and-future.md",
+      "sha256": "2991f82a31f1df7a630bd1a4ade31e176439899417350abbac72a91e5295ae29"
+    },
+    {
+      "path": "docs/product/13-open-product-decisions.md",
+      "sha256": "b1232ecbaee4d25b06b5c533ff73b752815ebcfc760cc7f377922c53df7106dd"
+    },
+    {
+      "path": "docs/product/14-prd.md",
+      "sha256": "09a2e7d9a7b9b1df3d355d0a0b7971ae30e09951ba1c819aecff699f446f3a4b"
+    }
+  ]
+}

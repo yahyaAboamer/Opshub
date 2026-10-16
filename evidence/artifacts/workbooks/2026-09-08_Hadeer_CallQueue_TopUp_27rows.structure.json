@@ -1,0 +1,100 @@
+{
+  "source": "2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx",
+  "sha256": "1ba59341a7edd715ba00a301647e9e755825e4db64c57941b058dcabf8d3cfed",
+  "size_bytes": 8507,
+  "sheets": [
+    {
+      "name": "READ_ME",
+      "visibility": "visible",
+      "dimension": "A1:A29",
+      "populated_cells": 29,
+      "stored_cells": 29,
+      "max_populated_row": 29,
+      "headers_row1": [
+        {
+          "cell": "A1",
+          "label": "Gentry — Hadeer call-queue top-up"
+        }
+      ],
+      "formula_count": 0,
+      "formula_patterns": [],
+      "formula_functions": {},
+      "formula_sheet_dependencies": {},
+      "formula_cache_missing_count": 0,
+      "errors": [],
+      "data_validations": [],
+      "conditional_formats": [],
+      "auto_filter": null,
+      "merged_ranges": [],
+      "hidden_rows": [],
+      "hidden_columns": [],
+      "charts": [],
+      "freeze_panes": [],
+      "sheet_protection_present": false
+    },
+    {
+      "name": "PASTE_AT_A102",
+      "visibility": "visible",
+      "dimension": "A1:E28",
+      "populated_cells": 140,
+      "stored_cells": 140,
+      "max_populated_row": 28,
+      "headers_row1": [
+        {
+          "cell": "A1",
+          "label": "Date"
+        },
+        {
+          "cell": "B1",
+          "label": "customer name"
+        },
+        {
+          "cell": "C1",
+          "label": "phone number"
+        },
+        {
+          "cell": "D1",
+          "label": "order ID"
+        },
+        {
+          "cell": "E1",
+          "label": "ordered items"
+        }
+      ],
+      "formula_count": 0,
+      "formula_patterns": [],
+      "formula_functions": {},
+      "formula_sheet_dependencies": {},
+      "formula_cache_missing_count": 0,
+      "errors": [],
+      "data_validations": [],
+      "conditional_formats": [],
+      "auto_filter": null,
+      "merged_ranges": [],
+      "hidden_rows": [],
+      "hidden_columns": [],
+      "charts": [],
+      "freeze_panes": [
+        {
+          "ySplit": "1",
+          "topLeftCell": "A2",
+          "activePane": "bottomLeft",
+          "state": "frozen"
+        }
+      ],
+      "sheet_protection_present": false
+    }
+  ],
+  "calculation_properties": {
+    "calcId": "124519",
+    "fullCalcOnLoad": "1"
+  },
+  "defined_names": [],
+  "external_link_files": [],
+  "chart_parts": [],
+  "table_parts": [],
+  "pivot_parts": [],
+  "connection_parts": [],
+  "vba_present": false,
+  "workbook_protection_present": true
+}
