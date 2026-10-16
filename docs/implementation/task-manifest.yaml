@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "cde9bfb99b7e23982285e81b9458af0939cd1d1b806e3d40d6a76b8dce0fcccf",
+  "plan_digest": "76f68ea2d6599022da59337630e3b346c0383eacc88e61bbee61bfa49f21db87",
   "topological_order": [
     "T0001",
     "T0002",
@@ -660,7 +660,7 @@
       "id": "T0003",
       "milestone": "M0",
       "title": "Qualify PostgreSQL Kysely and explicit migration tooling",
-      "status": "IN_REVIEW",
+      "status": "ACCEPTED",
       "type": "QUALIFICATION",
       "risk": "HIGH",
       "complexity": "M",
@@ -844,16 +844,11 @@
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
       "readiness_after_local_approval": "READY",
       "execution_claim": {
-        "owner": "Claude Code (integration owner: repository owner)",
-        "branch": "claude/t0003-implementation-9f6b77",
-        "worktree": ".claude/worktrees/t0003-implementation-9f6b77",
-        "base_main_revision": "c5560f94de7c135080f08629af52e332e0c4c352",
-        "locks": [
-          "boundary:database",
-          "database-migration-order",
-          "database-grant-catalog",
-          "root-contracts"
-        ]
+        "owner": null,
+        "branch": null,
+        "worktree": null,
+        "base_main_revision": null,
+        "locks": []
       }
     },
     {
@@ -867,11 +862,6 @@
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
       "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0003",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "A08-NEST",
@@ -1484,11 +1474,6 @@
       "blockers": [
         {
           "kind": "DEPENDENCY",
-          "id": "T0003",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        },
-        {
-          "kind": "DEPENDENCY",
           "id": "T0006",
           "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
         },
@@ -1687,11 +1672,6 @@
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
       "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0003",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0006",
@@ -2303,11 +2283,6 @@
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
       "readiness": "WAITING_DEPENDENCIES",
       "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "T0003",
-          "detail": "Predecessor must be ACCEPTED on current main with actual contract/evidence"
-        },
         {
           "kind": "DEPENDENCY",
           "id": "T0004",
