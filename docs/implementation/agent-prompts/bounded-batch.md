@@ -34,5 +34,7 @@ Completion:
 - Update the produced C-task-v1 record and actual completion-evidence links; independent reviewer/integration owner decides acceptance and merge. Update canonical status/readiness/digest and generated views through that owner; preserve unrelated changes.
 - A qualification dossier can be complete while its capability is unavailable; required core qualification remains blocked until its required actual verdict. Local completion does not imply real integrated MVP readiness or production approval.
 
+The named set is a scope ceiling. Claude Code does not move from one completed Task ID to the next on its own: give the Accepted Task Recap after each acceptance, then wait for a fresh explicit human selection before starting the next Task ID from the set. Give the Task Start Brief before each selected task.
+
 Choose only eligible tasks from the named set in dependency/lock order. Work one claimed task at a time unless two independent agents have explicit nonoverlapping assignments. Stop when all named tasks are accepted or all remaining named tasks are genuinely blocked. Record accepted evidence, exact remaining blockers and resumption IDs. Do not proceed to the next milestone, real provider calls, messages, deploy or cutover by implication.
 ```

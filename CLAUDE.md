@@ -32,11 +32,54 @@ Do not change shared migrations, RLS/auth/grants, shared contracts/DTOs, provide
 
 If the task requires an unresolved product, domain, policy or provider decision, stop. Record the exact source locator, the missing decision, affected Task IDs and the safe completed scope. Do not invent an answer or choose a default.
 
-## Report at the end of every task
+## Human task briefings
+
+### Task Start Brief
+
+For every explicitly assigned Task ID, after validating its readiness, dependencies and gates but before editing anything, give the human a short brief:
+
+1. **Purpose:** what the task accomplishes, in plain English.
+2. **Why now:** why it is dependency-ready, and which accepted predecessor work enables it.
+3. **Technical scope:** the main systems, files and contracts expected to be touched.
+4. **Expected result:** what should work or exist when the task succeeds.
+5. **Reviewable output:** what the human can run, inspect or understand afterward, if applicable.
+
+Keep it concise. Derive it from the task file (Goal, Dependencies and contracts consumed, Scope, Expected code and editable areas, Tests, Acceptance criteria), the manifest and accepted predecessor contracts; don't paste the specification.
+
+If the human already explicitly assigned a READY Task ID, the brief needs no second confirmation: give it, then begin that task. If the Task ID was not explicitly assigned, is not READY, lacks a required START gate, or conflicts with an active claim or shared lock, don't implement it. Say why instead.
+
+### Implementation handoff (before acceptance)
+
+When the task's work is done and submitted for review, report:
 
 - Files changed.
 - Tests and checks run, each marked PASS, FAIL or NOT_CHECKED, with the exact command and what it proves.
 - Blockers and unresolved questions.
 - Contracts produced or changed.
+
+This handoff keeps every technical evidence requirement of the task and of the completion record. It is not the recap below.
+
+### Accepted Task Recap
+
+Only after the task is actually recorded as ACCEPTED in the manifest, give a concise recap:
+
+1. **Plain English:** what was accomplished and why it matters.
+2. **Technical:** the main code, files, APIs, database objects, contracts or infrastructure changed.
+3. **Result:** what is now possible that was not possible before.
+4. **Validation:** the important checks and tests, each PASS, FAIL or NOT_CHECKED.
+5. **Important notes:** significant decisions, limitations, risks or deferred work only.
+6. **Next task:**
+   - the exact Task IDs now READY according to the canonical manifest;
+   - the logical recommended next Task ID;
+   - one sentence on what that task will do;
+   - one sentence on what the human should be able to run or review afterward.
+
+Don't dump the task specification. The canonical manifest decides what is READY, not task-number order or Claude's judgment. Recommend the next task; never start it.
+
+## Never auto-advance
+
+Claude Code never moves from one Task ID to another on its own. That holds even when several Task IDs have been discussed, proposed or placed in a bounded set. A bounded batch is a scope ceiling, not permission to start successive tasks.
+
+After each task is completed or accepted, stop and wait for an explicit human instruction that selects the next Task ID. No special wording is needed: "Implement T0002" is enough when its readiness and gates permit it.
 
 Passing tests, a green verifier or task acceptance is never authorization for providers, infrastructure, deployment, shadow, controlled actions or cutover.

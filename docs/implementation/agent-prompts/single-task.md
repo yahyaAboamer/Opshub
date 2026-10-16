@@ -14,6 +14,7 @@ Before any edit:
 - Inspect the existing repository, actual Git/worktree/base-main revisions, current user changes and previously completed work. Never overwrite or redo unrelated work. T0001 may establish Git if still absent; other tasks require the accepted repository.
 - Confirm the current direct or recorded human authorization covers local implementation of the selected scope; record it. Phase6 planning alone does not authorize coding. Do not demand repeated permission when the human has already explicitly authorized that scope.
 - Validate accepted predecessor contracts merged on current main, fixture inputs, effective START/current-stage gates and environment readiness. A future SHADOW/ACTION_ENABLEMENT/CUTOVER gate does not block unrelated synthetic code. A missing required start gate does.
+- Once readiness, gates and claims check out, and before editing, give the human the Task Start Brief: purpose, why now, technical scope, expected result and reviewable output, derived from the task file, manifest and accepted predecessor contracts. If the human already selected this eligible task, don't ask for confirmation again; proceed after the brief.
 - Claim one Task ID/branch/worktree and all editable-area/shared locks through the integration owner. Codex and Claude Code never concurrently own the same ID or overlapping write/lock boundary. Do not edit the canonical manifest concurrently; the integration owner owns status/claims/acceptance.
 - Follow listed permitted environments/effects and filesystem/tool permissions. Local approval does not permit provisioning services, sending account/customer messages, calling real provider APIs, controlled real effects, deployment, production shadow or cutover; those need their own explicit envelope and current authority.
 
@@ -34,5 +35,9 @@ Completion:
 - Update the produced C-task-v1 record and actual completion-evidence links; independent reviewer/integration owner decides acceptance and merge. Update canonical status/readiness/digest and generated views through that owner; preserve unrelated changes.
 - A qualification dossier can be complete while its capability is unavailable; required core qualification remains blocked until its required actual verdict. Local completion does not imply real integrated MVP readiness or production approval.
 
-Stop after this task is accepted or genuinely blocked. Report exact completed evidence/blocker and next eligible IDs; do not implement another task or infer deployment/cutover permission.
+Stop after this task is accepted or genuinely blocked.
+- Before acceptance: give the implementation handoff with the full completion evidence above.
+- After the task is recorded ACCEPTED: give the Accepted Task Recap: plain English, technical changes, result, validation (PASS/FAIL/NOT_CHECKED), important notes, and next task (the Task IDs READY in the canonical manifest, one recommended ID, what it will do and what the human can then run or review).
+- If blocked: report the exact blocker.
+Recommend the next task but never execute it. Stop and wait for the human to explicitly assign the next Task ID. Do not infer deployment/cutover permission.
 ```
