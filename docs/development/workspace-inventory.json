@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0",
+  "task": "T0001",
+  "contract": "C-T0001-v1",
+  "approved": "Repository owner, in chat, 2026-10-16: trackable allowlist \"Exclude + purge history\"; line endings \"Yes, fix line endings\".",
+  "baseline": {
+    "path": "evidence/implementation/phase6-input-baseline.json",
+    "sha256": "edc6d6e7d5130312dff8ba52388ae6d5dc91985c1b52b2a38f3f0cb8088bb52a",
+    "protected_files": 298
+  },
+  "custody_location": "Primary workspace on the owner's computer (D:\\Desktop\\Opshub). Private-custody files are never copied into Git, a clone, a fixture or a review bundle.",
+  "trackable_root_files": [
+    ".gitattributes",
+    ".gitignore",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "package.json",
+    "package-lock.json"
+  ],
+  "trackable_root_dirs": [
+    ".github/",
+    "apps/",
+    "docs/",
+    "evidence/",
+    "ops/",
+    "packages/",
+    "scripts/",
+    "tests/"
+  ],
+  "private_custody_rules": [
+    {
+      "class": "SOURCE_ORIGINAL",
+      "regex": "^source/"
+    },
+    {
+      "class": "VERBATIM_SOURCE_EXTRACT",
+      "regex": "^evidence/artifacts/text/[^/]+\\.(extracted\\.txt|blocks\\.json|pdf-text\\.json)$"
+    },
+    {
+      "class": "RENDERED_SOURCE_PAGE",
+      "regex": "^evidence/artifacts/text/review-page-[^/]+\\.png$"
+    },
+    {
+      "class": "CAPTURED_THIRD_PARTY_CODE",
+      "regex": "^evidence/live/phase1b/assets/"
+    }
+  ],
+  "byte_exact_paths": [
+    "docs/architecture/",
+    "docs/domain/",
+    "docs/migration/",
+    "docs/product/",
+    "docs/reconstruction/",
+    "evidence/ (except evidence/implementation/)"
+  ],
+  "counts": {
+    "protected_trackable": 225,
+    "private_custody": 70,
+    "excluded_generated": 3
+  },
+  "private_custody": [
+    {
+      "path": "evidence/artifacts/text/03_SOP_Customer_Support_Calls.blocks.json",
+      "sha256": "02ad470e5dddd4a09ff40fae6a181c96b70f44a217e9939566fef07bb91abcc3",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/03_SOP_Customer_Support_Calls.extracted.txt",
+      "sha256": "71e247698b0a8695ccd437a21df3f07904d3181a97ae31ac44fb83d8193296f5",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/03_SOP_Hadeer_Returns_Calls.blocks.json",
+      "sha256": "ee422007df0d4e7d2b68ad412acde40418b14f87da3b09566f42902a56a78ec8",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/03_SOP_Hadeer_Returns_Calls.extracted.txt",
+      "sha256": "9487d1fb35efe05ab903056eb74a1af9643d292514ae46ca40d396029a56d7f4",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/04_SOP_Omar_Weekly_Routine.blocks.json",
+      "sha256": "fc87bc2c00247375fa59cb087f24470f99618e0601ee940072ce26843d13b49e",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/04_SOP_Omar_Weekly_Routine.extracted.txt",
+      "sha256": "56c1727dcdb76aec7532708cd2ae51d0b62db4e7bb0eebcaf12fd7ebe32066c5",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/04_SOP_Operations_Weekly_Routine.blocks.json",
+      "sha256": "0646b42ed9578ea413388080f8a35905cd0f40b4a090a886bdf4f2dcd2b294de",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/04_SOP_Operations_Weekly_Routine.extracted.txt",
+      "sha256": "5e262032900ac2297e132c8d74813809d043bafec8e079bdf6bae8202807608a",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/05_Executive_Brief_How_To_Read_It.blocks.json",
+      "sha256": "e7f0e4be6c7082de7561294cdf638f213a6ef5de2375d13c7bd5bc5f07038066",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/05_Executive_Brief_How_To_Read_It.extracted.txt",
+      "sha256": "aaf3cd5b29355d8639d461f76f19c0f40fa5789e7ad5b29052f48a55ddaf278b",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/05_Hassan_How_To_Read_Your_Page.blocks.json",
+      "sha256": "cfa08d48c3e9fc140794f7951a4e226decbdf19695aa7479216bde20483c56e2",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/05_Hassan_How_To_Read_Your_Page.extracted.txt",
+      "sha256": "3542f20adf1cdf1bc257d484f55ba9247b2b93991de8577ba76fe7ac69a34c2a",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/2026-09-08_Delivery_Operations_Review_Jul-Sep.blocks.json",
+      "sha256": "fa732121aa0d62b38b5374efe0c3922f69839831846582b5da0867f135e28859",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/2026-09-08_Delivery_Operations_Review_Jul-Sep.extracted.txt",
+      "sha256": "b73ef5f4eb22629406d07797058fccfc0673eeb07d33c04f122c246ceedfa1de",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/2026-09-08_Delivery_Operations_Review_Jul-Sep.pdf-text.json",
+      "sha256": "76cef08a6c7c2b179096e174c1bcd0c0d367c3dcc81452dd5db97c3e5ce4962b",
+      "class": "VERBATIM_SOURCE_EXTRACT"
+    },
+    {
+      "path": "evidence/artifacts/text/review-page-1.png",
+      "sha256": "ed4c543793601578566261908aa91d7922f03fdf5407e7486a023b15a3faa38a",
+      "class": "RENDERED_SOURCE_PAGE"
+    },
+    {
+      "path": "evidence/artifacts/text/review-page-2.png",
+      "sha256": "253763e8df71b7b319825d167e382ed7d53d59278b518b919055dc053b49c2a7",
+      "class": "RENDERED_SOURCE_PAGE"
+    },
+    {
+      "path": "evidence/artifacts/text/review-page-3.png",
+      "sha256": "c50a401cbdede56deb4713c0d69313594278c0bcdd607dc1351c5f1c66954b04",
+      "class": "RENDERED_SOURCE_PAGE"
+    },
+    {
+      "path": "evidence/artifacts/text/review-page-4.png",
+      "sha256": "8e025555d388924c7c5fd4b098c3ef0d204de34ee788be75b474e9567bfb1ebf",
+      "class": "RENDERED_SOURCE_PAGE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/0ay527mnq1105.js",
+      "sha256": "2368ef325d81513f60e286733d37e6be76e5b3d0e73d3429db72abf9006727ea",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/0cz1d0mv5g_q7.js",
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/14x5k9f0fswg1.js",
+      "sha256": "23480916be9a48548f94c1aec63e10bef09425ced8c212e04d6b9b6e7ae5182a",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/15qydxckj0uxx.js",
+      "sha256": "ecaa1fdf9295d81cbdcccf43db9bebab6a7ac59f8f5a69458168ccb155c6fc07",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/1986ffcy11vyr.js",
+      "sha256": "52687d447ced8983e3afce973bfc047630af4d1c1f04ab9fb07de68be0b26423",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/19mx3mg6lkumu.js",
+      "sha256": "170f3982866674a829571beec30cc23c69fcd36196739ff34b9d586b3ad73cd7",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/1t_el1w5uiobt.js",
+      "sha256": "8772c75206b9db716cfdd19be56a78a9b0628f655fb054ee4f3f86e434a2f8fd",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/27t_qfc-3_lzs.js",
+      "sha256": "f71552684e86daa3e94faad9002fb69d4e8d308a997ca88fdde74e54b5191870",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/2bub_m4veo3fm.js",
+      "sha256": "f81e2790bc130e3c14fa59a6b3c1b13d47334ac22ca28ee5c8db4907f4438670",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/310vm2bl3xxpt.js",
+      "sha256": "8a943b00599e56b53569f36f4341e3465ae7705c1391562cd6c7e1f290c0c387",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/356upgw1p449j.js",
+      "sha256": "b32c96b3d7d1ca8d4b3ca777f4053b5c77af96e03f14ec70aa5b7a97776af2bb",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/3fntmmi971322.js",
+      "sha256": "34ed6abf4c6d0d1bb3dc56d3f133d2a5dbc3a3c89c791deab314e27143ac14ce",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "evidence/live/phase1b/assets/turbopack-3bohnvk-2ex_3.js",
+      "sha256": "7719f5eb20708ceada88e0a2629f542a6f9439385c9e5b3552cf6162aa6be5d6",
+      "class": "CAPTURED_THIRD_PARTY_CODE"
+    },
+    {
+      "path": "source/00_Delivery_Performance_System_Architecture.md",
+      "sha256": "ad2c483d64e885182c61d4ea153f44b9f0bb4cf5f59e85a26038f2acba049e84",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/01.1_Gentry_ReturnType_Dependent_Dropdown.gs",
+      "sha256": "2d87d62d9f3a809131631ad8ed9403188962e493308655209e3f3b566d9130f5",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/01_Hadeer_Sheet_Upgrade_Pack.xlsx",
+      "sha256": "ea91f86c1543b97c4bb6ece45a4117b6a2d1c4efcf87ee072c30dd141f97b2d8",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/02_Gentry_Delivery_Performance_System.xlsx",
+      "sha256": "45512a432bab5ba5640e468b379d9de801d6bc9596c4f85a9ce163b10f92e2ae",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/02_Gentry_Delivery_Performance_System_v2.0_BACKUP_2026-08-28.xlsx",
+      "sha256": "479efb8b605b33423113cce02097d36c30285b96fedb8f7b12c192f5d9852f00",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/02_Gentry_Delivery_Performance_System_v3.0_BACKUP_2026-09-08.xlsx",
+      "sha256": "6d502a2332f72469ce7da37c1696c8e247eefe22f01e1ab76caaedb5566de949",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/03_SOP_Customer_Support_Calls.docx",
+      "sha256": "9d1367ce7cc6d8a8fe5d97f27ef8187d687de47a689685518a293d0d0b0f6fdb",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/04_SOP_Operations_Weekly_Routine.docx",
+      "sha256": "3f82ec1785defd1d2b9817e4bc1dff8e45fd034aca7c17a93dfa22f107352f72",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/05_Executive_Brief_How_To_Read_It.docx",
+      "sha256": "13c77217391856ecbd7de93f6d21ce3c51bf3b5bff742ec2fcba7bc2835f4d1e",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/06.1_v3.0_Kickoff_Prompt.md",
+      "sha256": "50ea92151db7988f29385851361a398f1dd45f936c55a41d4424436c9bb2d170",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/06_v3.0_PreDispatch_Confirmation_Layer_PLAN.md",
+      "sha256": "bfeefe3b09ac57a0b88e356756616c828852072bea865bb83405e506ea956439",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/2026-08-22_Config_Audit.md",
+      "sha256": "48e87e5a05ce8a1b979a40bf59f01e3ae0ca8e25680daa6b0351e81fd70e599b",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/2026-08-28_Shopify_orders_18Jun-17Aug.csv",
+      "sha256": "8ffa643d235477518f96d2fdc4ec639cf2a0b001d726e9086365ed0d5e20dbb0",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/2026-09-08_Hadeer_CallQueue_TopUp_27rows.xlsx",
+      "sha256": "1ba59341a7edd715ba00a301647e9e755825e4db64c57941b058dcabf8d3cfed",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/2026-09-08_RAW_Bosta_STAGED_20May-06Sep.xlsx",
+      "sha256": "fb2638530ffe25beb4cfaf4dec9849d666f2e527d57d515cd7a1e69b8a4375ea",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/2026-09-08_RAW_SKU_ADDITIONS.xlsx",
+      "sha256": "b50c01862e18a57166b86c216f25c728571983c507e09185ba76eb6fdd114c73",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/2026-09-08_RAW_Shopify_STAGED_18Jun-08Sep.xlsx",
+      "sha256": "5310c47fdd1f4217c01e0f86ba2343eaaae0897abd5e9004e0ea19874538cc31",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/HANDOVER_README.md",
+      "sha256": "2f44792165603463acd25e61160904f0d5c62187c9f631267b69aeb322fc9cb1",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/_superseded/03_SOP_Hadeer_Returns_Calls.docx",
+      "sha256": "b393deb02c29847b80f3ab05d73f663fe6bc33baf7da01467bfe74bc988a2ffe",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/_superseded/04_SOP_Omar_Weekly_Routine.docx",
+      "sha256": "85c74b9df528d2b33ee0b2fbf165468043976b554e9dcb9d82b290d36eef7424",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/_superseded/05_Hassan_How_To_Read_Your_Page.docx",
+      "sha256": "a5d08c9d6ef1b5b446d108b7a94338a511498fd9417b2e658058e09d8e913ef9",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.docx",
+      "sha256": "8b7126428233fbfb59247d9d5265162f476aa09ad73fecfbffe6600adff8010b",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/reports/2026-09-08_Delivery_Operations_Review_Jul-Sep.pdf",
+      "sha256": "4b8e8d9361d637ddf5e7476077643265fe8168df53c29a32f4237b97429434f7",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+      "sha256": "ec15778c296239d3039fb51b6d285309e05e48673cc3e7a83cee6e6d27e5c934",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/build_report.py",
+      "sha256": "1797f59bb5fdca5e4c68fe381bbed4a5b783b8970693ad9090681e04809ab333",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/extract.py",
+      "sha256": "6674c3a0a2030a9486ccc1720fce1310003dbca89b82788a13a1cf76c06f5ec2",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/scripts/report_kit.py",
+      "sha256": "5246fc773f7f5f602b517de57529309e6c208ccae429e8aa51c34bfc9e6b73b3",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-delivery-report/state.json",
+      "sha256": "bba60450ccbdba9a343553bb10b86f7d3e7b551ec9956d4406277435ef07f45a",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/SKILL.md",
+      "sha256": "8f2257ef211a2ff8d37fef48c70b35ca72cd3e6ce3a198fb03bf3d1f1e31f15f",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/evals/evals.json",
+      "sha256": "5cfa4f05e3e1f50f0f965804d132c0b4b811c9af24b4071750a922f15776edbf",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/references/report_structure.md",
+      "sha256": "151e09408a8b5771d5707ffec6be9aaa2b03304c8ef69482e3af9d2f196d30b6",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/references/writing_rules.md",
+      "sha256": "17ee34a7301c80b47e071e440d9dc62f59befcd9e080495f643be4333986cc5d",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/__pycache__/report_kit.cpython-310.pyc",
+      "sha256": "7b53215db7866a06e3ad7715c6a3db0327233ce92ad65da098ec4a5d67ea4bf2",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/actions.py",
+      "sha256": "db478155cfea6c7194e1d5d444d9f6fd1bbeb0db957f8bf8d6b0ee3e3b94569b",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/extract_metrics.py",
+      "sha256": "eaf5b9cc0cc16df705b4de787cef2fb96968f8a55470ca8341e750c23fc30e24",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/make_chart.py",
+      "sha256": "f49a5aed8319735143403c615747e53ab4188102ffa7c7aac9b1833808f32e9a",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/skills/gentry-weekly-report/scripts/report_kit.py",
+      "sha256": "5246fc773f7f5f602b517de57529309e6c208ccae429e8aa51c34bfc9e6b73b3",
+      "class": "SOURCE_ORIGINAL"
+    },
+    {
+      "path": "source/~$02_Gentry_Delivery_Performance_System.xlsx",
+      "sha256": "1e0f49777e9cd82a24f3a5e1841c1fc7bc3ca98eca8d8139a373d1e8d91d5207",
+      "class": "SOURCE_ORIGINAL"
+    }
+  ],
+  "excluded_generated": [
+    {
+      "path": "evidence/artifacts/workbooks/__pycache__/deep_analysis.cpython-312.pyc",
+      "sha256": "da1a4bb2a4f6199d575cc68fb2f61e4a15f4781dad3912af0b827922364e5ffb",
+      "class": "PYTHON_BYTECODE_CACHE"
+    },
+    {
+      "path": "evidence/artifacts/workbooks/__pycache__/inspect_workbooks.cpython-312.pyc",
+      "sha256": "d29d0bcde5a233647b8e3eacbe85209ad3e520ae62021ceb2acebf5ea3f39f91",
+      "class": "PYTHON_BYTECODE_CACHE"
+    },
+    {
+      "path": "evidence/artifacts/workbooks/__pycache__/reconcile_workbooks.cpython-312.pyc",
+      "sha256": "567808b3e5954b9648efeaaafb4d49fe2ca9d5e6d8f582a6ce065552b87daccb",
+      "class": "PYTHON_BYTECODE_CACHE"
+    }
+  ]
+}

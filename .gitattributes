@@ -1,0 +1,15 @@
+# OpsHub line-ending policy — T0001, contract docs/contracts/C-T0001-v1.md (owner-approved 2026-10-16).
+# Default: text is stored and checked out with LF; binary files are detected automatically.
+* text=auto eol=lf
+
+# Protected Phase 1-5 documents and evidence keep their original bytes exactly (no conversion), so every
+# checkout reproduces the SHA-256 digests in evidence/implementation/phase6-input-baseline.json.
+/docs/architecture/** -text
+/docs/domain/** -text
+/docs/migration/** -text
+/docs/product/** -text
+/docs/reconstruction/** -text
+/evidence/** -text
+# Phase 6 planning outputs are ordinary LF text, except the baseline whose own digest is pinned in the manifest.
+/evidence/implementation/** text=auto eol=lf
+/evidence/implementation/phase6-input-baseline.json -text

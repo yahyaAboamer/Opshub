@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "7813c84982f54df00d2499949f5d2c1091b9213ee067ff34dcb4c00c0445c88a",
+  "plan_digest": "b1e7a84ee987ed148de6bc77ab47c12c0babf4357bea67a7fe7e1bca3f2dfe8c",
   "topological_order": [
     "T0001",
     "T0002",
@@ -393,7 +393,7 @@
       "id": "T0001",
       "milestone": "M0",
       "title": "Initialize the versioned workspace boundary",
-      "status": "NOT_STARTED",
+      "status": "IN_PROGRESS",
       "type": "ENGINEERING",
       "risk": "LOW",
       "complexity": "S",
@@ -508,11 +508,14 @@
       "engineering_justification": "Necessary enabling or verification dependency of ADR-001; no extra product capability.",
       "readiness_after_local_approval": "READY",
       "execution_claim": {
-        "owner": null,
-        "branch": null,
-        "worktree": null,
-        "base_main_revision": null,
-        "locks": []
+        "owner": "Claude Code (integration owner: repository owner)",
+        "branch": "claude/t0001-workspace-boundary",
+        "worktree": ".claude/worktrees/opshub-phase6-housekeeping-02cda3",
+        "base_main_revision": "9894fb9b801fee81ff1dc38236931f33bc9d434d",
+        "locks": [
+          "boundary:repo",
+          "root-contracts"
+        ]
       }
     },
     {

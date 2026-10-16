@@ -10,6 +10,12 @@ ROOT=Path(__file__).resolve().parents[2]
 def read(path): return json.loads((ROOT/path).read_text(encoding='utf-8'))
 def sha(path): return hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
 def sha_lf(path): return hashlib.sha256((ROOT/path).read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+CUSTODY='docs/development/workspace-inventory.json'
+def custody_digests():
+    """T0001 private-custody and excluded-generated files: path -> baseline digest (empty before T0001)."""
+    if not (ROOT/CUSTODY).is_file(): return {}
+    inv=read(CUSTODY)
+    return {x['path']:x['sha256'] for x in inv['private_custody']+inv['excluded_generated']}
 
 def validate(m,coverage,gates,inventory,files=True):
     errors=[]
@@ -141,17 +147,24 @@ def validate(m,coverage,gates,inventory,files=True):
         baseline=read(m['input_baseline']['path'])
         # A protected file may differ from baseline only via an owner-approved amendment recorded with both digests.
         amended={a['path']:a for a in (read(p6res['approval_record']).get('authorized_protected_amendments',[]) if p6res.get('approval_record') else [])}
+        custody=custody_digests()
         for record in baseline['protected_files']:
-            if not (ROOT/record['path']).is_file(): fail('PROTECTED_INPUT',record['path']); continue
+            if not (ROOT/record['path']).is_file():
+                # T0001 private custody: absent from a Git checkout by design; NOT_CHECKED here, never silently passed.
+                if custody.get(record['path'])!=record['sha256']: fail('PROTECTED_INPUT',record['path'])
+                continue
             if sha(record['path'])==record['sha256']: continue
             a=amended.get(record['path'])
             if not a or a['baseline_sha256']!=record['sha256'] or sha_lf(record['path'])!=a['amended_sha256_lf']: fail('PROTECTED_INPUT',record['path'])
         protected={x['path'] for x in baseline['protected_files']}
+        # Implementation outputs are authorized only inside some task's declared editable area.
+        areas=[a.split('<')[0] for t in m['tasks'] for a in t['editable_areas']]
+        def in_area(rel): return any(rel==a or (a.endswith('/') and rel.startswith(a)) for a in areas)
         for folder in ('source','docs','evidence'):
             for p in (ROOT/folder).rglob('*'):
                 if p.is_file():
                     rel=p.relative_to(ROOT).as_posix()
-                    if rel not in protected and not rel.startswith(('docs/implementation/','evidence/implementation/')): fail('UNAUTHORIZED_OUTPUT',rel)
+                    if rel not in protected and not rel.startswith(('docs/implementation/','evidence/implementation/')) and not in_area(rel): fail('UNAUTHORIZED_OUTPUT',rel)
         if read('evidence/implementation/source-inventory.json')!=derive(): fail('INVENTORY_DRIFT','Inventory must be independently reproducible from protected inputs')
         topo=read('docs/implementation/task-order.json')
         if topo['topological_order']!=order or topo['plan_digest']!=m['plan_digest']: fail('ORDER_VIEW','Task-order drift')
@@ -213,7 +226,7 @@ def main():
     output={'schema_version':'1.0','generated_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'plan_revision':m['plan_revision'],'plan_digest':m['plan_digest'],
         'result':'PASS' if not errors and all(x['result']=='PASS' for x in controls) else 'FAIL',
         'scope':'Static schema, independently derived declared traceability, dependency/gate/contract/parallel/view integrity and protected content digests only. Not application execution or semantic/security/provider certification.',
-        'counts':{'tasks':len(m['tasks']),'milestones':len(m['milestones']),'source_requirements':len(inventory['requirements']),'mvp_capabilities':sum(r['kind']=='MVP' for r in inventory['requirements']),'owner_decisions':sum(r['kind']=='OWNER_DECISION' for r in inventory['requirements']),'adrs':sum(r['kind']=='ADR' for r in inventory['requirements']),'architecture_modules':sum(r['kind']=='ARCHITECTURE_MODULE' for r in inventory['requirements']),'source_decisions':len(inventory['decisions']),'gates':len(g['gates']),'golden_scenarios':sum(bool(re.fullmatch(r'GD\d{2}',r['id'])) for r in inventory['requirements']),'kpi_contracts':sum(bool(re.fullmatch(r'KR\d{2}',r['id'])) for r in inventory['requirements']),'protected_files':len(read(m['input_baseline']['path'])['protected_files'])},
+        'counts':{'tasks':len(m['tasks']),'milestones':len(m['milestones']),'source_requirements':len(inventory['requirements']),'mvp_capabilities':sum(r['kind']=='MVP' for r in inventory['requirements']),'owner_decisions':sum(r['kind']=='OWNER_DECISION' for r in inventory['requirements']),'adrs':sum(r['kind']=='ADR' for r in inventory['requirements']),'architecture_modules':sum(r['kind']=='ARCHITECTURE_MODULE' for r in inventory['requirements']),'source_decisions':len(inventory['decisions']),'gates':len(g['gates']),'golden_scenarios':sum(bool(re.fullmatch(r'GD\d{2}',r['id'])) for r in inventory['requirements']),'kpi_contracts':sum(bool(re.fullmatch(r'KR\d{2}',r['id'])) for r in inventory['requirements']),'protected_files':len(read(m['input_baseline']['path'])['protected_files']),'protected_in_private_custody_not_checked':sum(not (ROOT/p).is_file() for p in custody_digests())},
         'negative_controls':controls,'errors':errors,'runtime_checks':{'application_unit_database_rls_browser':'NOT_CHECKED','actual_provider_capability_and_effects':'NOT_CHECKED','actual_s3_auth0_resend_telemetry':'NOT_CHECKED','restore_performance_shadow_cutover':'NOT_CHECKED'},
         'review_evidence':['evidence/implementation/independent-review.md','evidence/implementation/quality-review.md']}
     (ROOT/'evidence/implementation/verification.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
