@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "9d8921c45320c4cbfc260e5c34a674bdffa43f2f6a5037e50eacbfef0e680599",
+  "plan_digest": "cde9bfb99b7e23982285e81b9458af0939cd1d1b806e3d40d6a76b8dce0fcccf",
   "topological_order": [
     "T0001",
     "T0002",
@@ -660,7 +660,7 @@
       "id": "T0003",
       "milestone": "M0",
       "title": "Qualify PostgreSQL Kysely and explicit migration tooling",
-      "status": "IN_PROGRESS",
+      "status": "IN_REVIEW",
       "type": "QUALIFICATION",
       "risk": "HIGH",
       "complexity": "M",
@@ -823,7 +823,12 @@
         }
       ],
       "acceptance_summary": "Use disposable PostgreSQL17, Kysely and pg; establish target-database identity guard, migration owner versus runtime roles, serialized ordered SQL migration protocol and forward repair; prove local container or equivalent disposable DB route.",
-      "completion_evidence_refs": [],
+      "completion_evidence_refs": [
+        "docs/implementation/completion/T0003.md",
+        "docs/contracts/C-T0003-v1.md",
+        "tests/tasks/T0003/database-qualification.test.mjs",
+        "packages/database/package-lock.json"
+      ],
       "goal": "Qualify PostgreSQL Kysely and explicit migration tooling",
       "why": "Required traceability is recorded in requirement_ids/validation_contract_ids and requirements-coverage.yaml; this boundary produces the named predecessor contract for consumers.",
       "scope": "Use disposable PostgreSQL17, Kysely and pg; establish target-database identity guard, migration owner versus runtime roles, serialized ordered SQL migration protocol and forward repair; prove local container or equivalent disposable DB route.",
