@@ -18,6 +18,8 @@ Before any edit:
 - Follow listed permitted environments/effects and filesystem/tool permissions. Local approval does not permit provisioning services, sending account/customer messages, calling real provider APIs, controlled real effects, deployment, production shadow or cutover; those need their own explicit envelope and current authority.
 
 During the task:
+- For a user-facing task (an `apps/web/features/` area): write the journey client contract against accepted producer ports before components; build UI with its listed read adapter as one vertical slice; reuse the T0004 shell, tokens and state primitives; represent loading/empty/validation-error/forbidden/stale/pending/unknown/partial-source/success states; prove the journey in the browser against the running web/API/PostgreSQL (worker if asynchronous) with fake providers at narrow and desktop viewports with keyboard/focus/label review. API-only evidence cannot accept it. A missing producer field/state stops the task with a bounded contract amendment request.
+- Skill routing: use specialized skills only when relevant to the selected task (UI tasks: approved frontend-design/web-design/React skills; PostgreSQL/RLS: approved Postgres skill; high-risk security/recovery: approved review skills). Tests and approved acceptance criteria remain authoritative; never load unrelated skill packs because they are installed; an unavailable skill is not a blocker.
 - Use the approved architecture and actual accepted boundary contracts. Resolve concrete file allocation inside the listed areas; do not invent neighboring interfaces or silently change a shared protocol.
 - Fix independent synthetic expected inputs/results before evaluation. Implement the bounded actor/data/workflow behavior and named negative tests, including UI navigation/loading/empty/error/stale/permission/accessibility where specified.
 - Keep source/, Phases1–5 and existing evidence unchanged. No raw customer/secret data in code, fixtures, prompts or output. Separate facts, selection/interpretation and unknown evidence.
@@ -27,7 +29,7 @@ During the task:
 - Unexpected XL/broad scope must split with new stable IDs before execution; no ID recycling.
 
 Completion:
-- Provide actual base/head/main revisions, exact commands/environment/tool versions, independent fixture/policy/source digests, actual pass/fail/not-checked output and what each proves; request/effect/start counts and fault barriers for safety; synthetic browser/visual journey evidence for UI.
+- Provide actual base/head/main revisions, exact commands/environment/tool versions, independent fixture/policy/source digests, actual pass/fail/not-checked output and what each proves; request/effect/start counts and fault barriers for safety; synthetic browser journey evidence for UI against the running stack, with viewport and accessibility results.
 - All command names in the plan are PLANNED until the repository defines them. Do not fabricate scripts/results or mark not-executed tests PASS.
 - Update the produced C-task-v1 record and actual completion-evidence links; independent reviewer/integration owner decides acceptance and merge. Update canonical status/readiness/digest and generated views through that owner; preserve unrelated changes.
 - A qualification dossier can be complete while its capability is unavailable; required core qualification remains blocked until its required actual verdict. Local completion does not imply real integrated MVP readiness or production approval.

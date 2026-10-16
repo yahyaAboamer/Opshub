@@ -2,6 +2,8 @@
 
 Numbers group outcomes; use the task DAG for order. Each local demonstration below uses synthetic data/fake adapters and is **PLANNED**, not executed. A milestone containing controlled qualification or an operational task is not Done merely because its local demo passes.
 
+**Vertical slices (amended 16 October 2026).** A milestone with required product UI is not Done until each listed vertical-slice journey passes in the browser against the real OpsHub web/API/PostgreSQL (and worker where the journey is asynchronous), with fake/synthetic provider boundaries, at narrow and desktop viewports with keyboard/focus/label review. API-only or mocked-API evidence cannot satisfy it. See [execution principles](01-execution-principles.md) and [Definition of Done](19-definition-of-done.md).
+
 ## M0 — Engineering foundation
 
 Actor: **Engineer**. Included **10 tasks**: [T0001](tasks/T0001.md), [T0002](tasks/T0002.md), [T0003](tasks/T0003.md), [T0004](tasks/T0004.md), [T0005](tasks/T0005.md), [T0006](tasks/T0006.md), [T0007](tasks/T0007.md), [T0008](tasks/T0008.md), [T0009](tasks/T0009.md), [T0010](tasks/T0010.md).
@@ -9,6 +11,8 @@ Actor: **Engineer**. Included **10 tasks**: [T0001](tasks/T0001.md), [T0002](tas
 Local entry: accepted no predecessor contracts for T0001, appropriate synthetic environment and human local implementation permission. Each other task starts only on its exact predecessors. Whole-milestone external contracts needed before all tasks can exit: none.
 
 Demonstration: Initialize a synthetic checkout, run the qualified toolchain/DB/queue harness, start web/API and worker with fake services.
+
+Vertical-slice journey: T0004 browser shell and health/readiness page against the real API and disposable PostgreSQL, reused by every later slice. No feature screens.
 
 Expected visible/test result: Health/readiness and redacted correlation are visible; wrong DB and failed atomic enqueue are rejected; no business capability exists.
 
@@ -22,6 +26,8 @@ Local entry: accepted T0003, T0004 contracts for T0101, appropriate synthetic en
 
 Demonstration: Use synthetic OIDC; verify initial Admin, accept invitation, change/suspend a member, switch MA Admin to MB Operator and attempt a foreign record.
 
+Vertical-slice journey: T0108 sign-in, invitation, member administration and tenant switch in the browser.
+
 Expected visible/test result: Accessible access/member/context views work; foreign data and platform business commands are denied; last Admin preserved.
 
 Exit evidence: all included tasks accepted in their declared scopes; produced boundaries/actual test and review evidence; relevant browser journey and tenant/security/golden assertions; stage-applicable decisions and rollback/disable proof. Local identity journey; actual Auth0/Resend, representative/session/suspension policies remain gated.
@@ -33,6 +39,8 @@ Actor: **Merchant Operator and Admin**. Included **10 tasks**: [T0201](tasks/T02
 Local entry: accepted T0109 contracts for T0201, appropriate synthetic environment and human local implementation permission. Each other task starts only on its exact predecessors. Whole-milestone external contracts needed before all tasks can exit: T0006, T0007, T0008, T0103, T0105, T0108, T0109.
 
 Demonstration: Preview an invalid/repeated synthetic intake, inspect each disposition/provenance, submit/approve a correction, replay a suppressed snapshot and repair an ambiguous native binding.
+
+Vertical-slice journey: T0205 trust review and correction in the browser.
 
 Expected visible/test result: Exact accounting and selected-versus-source history visible; missing coverage/inherited hold blocks relevant work.
 
@@ -46,6 +54,8 @@ Local entry: accepted T0201, T0105, T0005 contracts for T0301, appropriate synth
 
 Demonstration: Connect fake Shopify, receive order with repeated native line contents and catalog bindings, search Order/items, inspect evidence; simulate missing scope and fallback import.
 
+Vertical-slice journey: T0306 Orders search/detail and T0307 source readiness/fallback in the browser over fake-Shopify-ingested data.
+
 Expected visible/test result: Own Orders/catalog/source-readiness journey usable, incomplete inputs explicit; mutations0.
 
 Exit evidence: all included tasks accepted in their declared scopes; produced boundaries/actual test and review evidence; relevant browser journey and tenant/security/golden assertions; stage-applicable decisions and rollback/disable proof. Local normal read loop plus separately authorized actual read qualification; no provider account required for demo.
@@ -57,6 +67,8 @@ Actor: **Merchant Operator**. Included **6 tasks**: [T0401](tasks/T0401.md), [T0
 Local entry: accepted T0302, T0303 contracts for T0401, appropriate synthetic environment and human local implementation permission. Each other task starts only on its exact predecessors. Whole-milestone external contracts needed before all tasks can exit: T0207, T0301, T0302, T0303, T0305, T0306, T1204.
 
 Demonstration: Attach fake Bosta shipment, deliver duplicate/out-of-order callback and reverse Delivered evidence, inspect shipment detail/source conflict.
+
+Vertical-slice journey: T0403 order-to-shipment detail and attention in the browser over fake-Bosta-ingested data.
 
 Expected visible/test result: One accepted outbound, real extra consignment retained as discrepancy, counter is not timeline; separate business/courier truth.
 
@@ -70,6 +82,8 @@ Local entry: accepted T0303, T0401, T0209 contracts for T0501, appropriate synth
 
 Demonstration: Enter confirmation; reserve/start a fake external-call slot, record failed→reached→failed near approved test spacing, reopen and request fourth; inspect reached action work.
 
+Vertical-slice journey: T0506 queue, Start contact and evidence in the browser, including held/unknown start and exhausted states.
+
 Expected visible/test result: Only three ordinary authorized slots; fourth denied for both roles; reach retained and unfinished action visible; backlog unaffected by dashboard dates.
 
 Exit evidence: all included tasks accepted in their declared scopes; produced boundaries/actual test and review evidence; relevant browser journey and tenant/security/golden assertions; stage-applicable decisions and rollback/disable proof. Synthetic contact starts only. Production timing/history and actual S3/recovery/exclusive authority precede T1303.
@@ -81,6 +95,8 @@ Actor: **Merchant Operator and Admin with deterministic worker harness**. Includ
 Local entry: accepted T0501, T0105, T0202 contracts for T0601, appropriate synthetic environment and human local implementation permission. Each other task starts only on its exact predecessors. Whole-milestone external contracts needed before all tasks can exit: T0007, T0008, T0103, T0105, T0202, T0206, T0208, T0209, T0301, T0402, T0501, T0504, T0506, T0507.
 
 Demonstration: Prepare/approve same fake booking twice; race workers, lose response after effect, attempt fallback, then recover positive native result; restore before objective.
+
+Vertical-slice journey: T0607 request/approve/result/recovery in the browser with the worker and fake provider running, including pending, may-have-sent and unknown states.
 
 Expected visible/test result: At most one controlled dispatch, unknown holds both paths, native result reconciles once; restored access/privacy/authority gates distinct from egress.
 
@@ -94,6 +110,8 @@ Local entry: accepted T0608, T0305 contracts for T0702, appropriate synthetic en
 
 Demonstration: With fakes compare annotation triggers, booking, replacement creation and cancellation; exercise result/unknown path for each; inspect capability dossier.
 
+Vertical-slice journey: per-class results surface through the accepted T0607 UI; M7 adds no new product screen.
+
 Expected visible/test result: Each class has independent evidence/state, no automatic first class, unsupported capability visibly unavailable.
 
 Exit evidence: all included tasks accepted in their declared scopes; produced boundaries/actual test and review evidence; relevant browser journey and tenant/security/golden assertions; stage-applicable decisions and rollback/disable proof. Local class adapters plus separately authorized actual qualification. T0701 owner selection uses actual evidence; no pilot class enabled.
@@ -105,6 +123,8 @@ Actor: **Merchant Operator and Admin**. Included **6 tasks**: [T0801](tasks/T080
 Local entry: accepted T0505, T0404 contracts for T0801, appropriate synthetic environment and human local implementation permission. Each other task starts only on its exact predecessors. Whole-milestone external contracts needed before all tasks can exit: T0205, T0404, T0505, T0605, T0607, T0702, T0703, T0704.
 
 Demonstration: Inspect unpaid-collected versus paid-pending pickup, separate RTO/post-receipt return, request linked replacement, fail booking after create, investigate cleanup predicate.
+
+Vertical-slice journey: T0805 return/pickup/replacement and T0806 cleanup in the browser with worker and fake providers.
 
 Expected visible/test result: Independent physical/payment/return truth, one new linked Order retained, incomplete effects remain open; cleanup explains actual predicate.
 
@@ -118,6 +138,8 @@ Local entry: accepted T0202, T0304, T0404, T0507, T0007 contracts for T0901, app
 
 Demonstration: Use fixed cohort, inspect six KPIs; open A/B Product/SKU and ROAS contributors; revise spend, compare prior period, export same generation then revoke permission.
 
+Vertical-slice journey: T0909 dashboard/drill-down and T0910 Product/SKU/ROAS in the browser from published generations.
+
 Expected visible/test result: 6/10,3/5,1/5,2/4,3/5,1/5 and ROAS4.0 reproduce; A/B overlap not additive; partial/revised/missing states match exports; download revoked.
 
 Exit evidence: all included tasks accepted in their declared scopes; produced boundaries/actual test and review evidence; relevant browser journey and tenant/security/golden assertions; stage-applicable decisions and rollback/disable proof. Local analytics journey plus actual Meta input qualification; production MD06/MD07 definitions still gated.
@@ -129,6 +151,8 @@ Actor: **Scoped Platform Admin and Merchant Admin**. Included **5 tasks**: [T100
 Local entry: accepted T0108, T0109, T0307 contracts for T1001, appropriate synthetic environment and human local implementation permission. Each other task starts only on its exact predecessors. Whole-milestone external contracts needed before all tasks can exit: T0005, T0106, T0108, T0109, T0205, T0307, T0606, T0901, T0910, T0911.
 
 Demonstration: Provision MA within assigned scope, inspect safe health; suspend/reactivate $0 offering, try customer drill-down/self-grant; merchant reviews settings/service notices.
+
+Vertical-slice journey: T1001 platform administration, T1002 platform health and T1004 merchant settings in the browser.
 
 Expected visible/test result: Separate readiness/service/commercial history; preserved data and bounded reconciliation; customer/merchant business access denied to platform.
 
@@ -142,6 +166,8 @@ Local entry: accepted T0308, T0405, T0914, T0206 contracts for T1101, appropriat
 
 Demonstration: Parse synthetic mixed groups into inactive run, crash/replay, inspect all dispositions, exact/explained/untrusted oracle differences, seed/repair/privacy holds and drifted read approval.
 
+Vertical-slice journey: T1107 run/disposition/signoff review in the browser.
+
 Expected visible/test result: Usable run report and one validated read generation only; missing closure/continuity blocks publication; external action/contact counts0.
 
 Exit evidence: all included tasks accepted in their declared scopes; produced boundaries/actual test and review evidence; relevant browser journey and tenant/security/golden assertions; stage-applicable decisions and rollback/disable proof. Local migration tools plus separately authorized private census/rehearsal. No production activation/cutover implied.
@@ -154,6 +180,8 @@ Local entry: accepted T0004, T0005, T0009 contracts for T1201, appropriate synth
 
 Demonstration: Against synthetic staging/mock source run disabled shadow comparison, isolated restore and key/coverage/revocation failure probes; inspect readiness report.
 
+Vertical-slice journey: operational readiness milestone; no new product screen. Any surfaced state uses the accepted T1002/T1107 UI.
+
 Expected visible/test result: Current grant/privacy checks precede access; separate egress holds reconstructed; source/KPI/queue discrepancies actionable and calls/mutations disabled.
 
 Exit evidence: all included tasks accepted in their declared scopes; produced boundaries/actual test and review evidence; relevant browser journey and tenant/security/golden assertions; stage-applicable decisions and rollback/disable proof. Actual provisioning/deployment/read shadow require separate permission, measured targets and real source qualification. Local demo is not real shadow completion.
@@ -165,6 +193,8 @@ Actor: **Owner/current Merchant Admin and authorized operations lead**. Included
 Local entry: accepted T1207, T0701, T0805, T0608, T1205 contracts for T1301, appropriate synthetic environment and human local implementation permission. Each other task starts only on its exact predecessors. Whole-milestone external contracts needed before all tasks can exit: T0507, T0606, T0608, T0701, T0707, T0708, T0709, T0710, T0804, T0805, T1108, T1202, T1205, T1207.
 
 Demonstration: In synthetic rehearsal hold incumbent starts, drain paused sender, select one class, preserve contact budget, apply continuous-traffic delta and exceed approved held-start window.
+
+Vertical-slice journey: operational authorization milestone; no new product screen. Visible states use the accepted T0506/T0607 UI.
 
 Expected visible/test result: One compatible authority or safe held gap; material drift invalidates signoff; abort never blindly enables incumbent; existing business effects preserved.
 
