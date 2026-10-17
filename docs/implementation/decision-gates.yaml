@@ -2673,13 +2673,21 @@
     {
       "id": "A08-NEST",
       "category": "ENGINEERING_OR_QUALIFICATION_EVIDENCE",
-      "status": "PENDING",
+      "status": "SATISFIED",
       "responsible_decision_maker": "Independent technical reviewer and applicable account/merchant/recovery signer",
       "acceptance_evidence": "Pinned Node24/Nest Express/Vite/TypeScript/Vitest decorator/typecheck and raw-body compatibility evidence.",
       "resolution_mode": "REVIEWED_TASK_EVIDENCE_WITH_VERDICT",
       "required_task_ids": [
         "T0002"
       ],
+      "resolution": {
+        "decision": "PASS_WITH_STATED_SCOPE",
+        "decided_by": "Human owner, adopting the verdict of the owner-designated independent technical reviewer (fresh Claude review session); no account/merchant/recovery signer applies to this LOCAL_SYNTHETIC gate",
+        "decision_date": "2026-10-17",
+        "scope": "LOCAL_SYNTHETIC",
+        "scope_detail": "Pinned C-T0002-v1 stack on Windows 10 x64 / Node v24.16.0: Nest Express DI with emitted decorator metadata under Vitest (Oxc), exact raw-body bytes, separate tsc typecheck lane, React/jsdom client test, vite build. Linux/CI runners, production server emit, Vite dev/HMR, TS compiler API, Testcontainers and Playwright NOT qualified.",
+        "approval_record": "docs/implementation/completion/T0002.md#gate-a08-nest-verdict"
+      },
       "applications": [
         {
           "task_id": "T0004",
