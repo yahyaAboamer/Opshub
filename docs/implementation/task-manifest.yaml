@@ -18,7 +18,7 @@
     "future_accepted_branch": "main",
     "plan_digest_method": "SHA-256 over canonical sorted JSON excluding plan_digest; status/metadata changes require a new digest"
   },
-  "plan_digest": "76f68ea2d6599022da59337630e3b346c0383eacc88e61bbee61bfa49f21db87",
+  "plan_digest": "6aba8e103a2234bfbcce6ec4dd42e485ff352e34b1aa275d22247cd7e496cd3c",
   "topological_order": [
     "T0001",
     "T0002",
@@ -860,14 +860,8 @@
       "risk": "MEDIUM",
       "complexity": "L",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_DEPENDENCIES",
-      "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "A08-NEST",
-          "detail": "Pinned framework/test compatibility"
-        }
-      ],
+      "readiness": "READY",
+      "blockers": [],
       "dependencies": [
         "T0002",
         "T0003"
@@ -1074,7 +1068,7 @@
       "branch_isolation": "One claimed Task ID: codex/t0004-<short-scope> or claude/t0004-<short-scope>, in its own worktree after Git exists. Never dual-own. Base on accepted main; update from current main after any predecessor/shared contract merge and rerun affected checks before acceptance.",
       "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
       "complexity_rationale": "One runtime boundary plus the minimal shared frontend shell, primitives, responsive/accessibility baseline and health demonstration; no feature screens, so it stays below XL.",
-      "readiness_after_local_approval": "WAITING_DEPENDENCIES",
+      "readiness_after_local_approval": "READY",
       "execution_claim": {
         "owner": null,
         "branch": null,
@@ -1264,14 +1258,8 @@
       "risk": "MEDIUM",
       "complexity": "M",
       "accountable_role": "IMPLEMENTING_AGENT_WITH_INDEPENDENT_REVIEWER",
-      "readiness": "WAITING_DEPENDENCIES",
-      "blockers": [
-        {
-          "kind": "DEPENDENCY",
-          "id": "A08-NEST",
-          "detail": "Pinned framework/test compatibility"
-        }
-      ],
+      "readiness": "READY",
+      "blockers": [],
       "dependencies": [
         "T0002"
       ],
@@ -1452,7 +1440,7 @@
       "merge_order": "All declared predecessors merge before this task. Acquire every shared-change lock for the session; migration order allocated by integration owner. Integration owner updates main and manifest only after independent review/evidence; no parallel branch may accept against stale main.",
       "complexity_rationale": "One named boundary and independent review/test cycle; do not broaden into adjacent modules.",
       "engineering_justification": "Necessary enabling or verification dependency of GD01; no extra product capability.",
-      "readiness_after_local_approval": "WAITING_DEPENDENCIES",
+      "readiness_after_local_approval": "READY",
       "execution_claim": {
         "owner": null,
         "branch": null,

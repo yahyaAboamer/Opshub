@@ -31,7 +31,7 @@ def render():
             t['blockers']=[] if approved else [{'kind':'AUTHORIZATION','id':'G-P6','detail':'Phase6/local implementation approval pending'}]
             t['blockers'] += [{'kind':'DEPENDENCY','id':d,'detail':'Predecessor must be ACCEPTED on current main with actual contract/evidence'} for d in t['dependencies'] if not (approved and status[d]=='ACCEPTED')]
             for ref in t['decision_gates']:
-                if ref['stage']=='START' and ref['gate_id']!='G-P6':
+                if ref['stage']=='START' and ref['gate_id']!='G-P6' and gates[ref['gate_id']]['status']!='SATISFIED':
                     gate=gates[ref['gate_id']]
                     kind='AUTHORIZATION' if gate['category']=='AUTHORIZATION' else 'DEPENDENCY' if gate.get('required_task_ids') else 'DECISION'
                     t['blockers'].append({'kind':kind,'id':ref['gate_id'],'detail':ref['capability']})
